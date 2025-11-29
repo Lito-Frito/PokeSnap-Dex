@@ -122,5 +122,28 @@ gallery.addEventListener('click', (event) => {
     }
 });
 
+// Keyboard navigation for gallery
+document.addEventListener('keydown', (event) => {
+    if (gallery.classList.contains('hidden')) return;
+
+    if (event.key === 'ArrowLeft') {
+        event.preventDefault();
+        if (currentEntry) {
+            currentVariantIndex = (currentVariantIndex - 1 + pokedexData[currentEntry].variants.length) % pokedexData[currentEntry].variants.length;
+            updateGalleryImage();
+        }
+    } else if (event.key === 'ArrowRight') {
+        event.preventDefault();
+        if (currentEntry) {
+            currentVariantIndex = (currentVariantIndex + 1) % pokedexData[currentEntry].variants.length;
+            updateGalleryImage();
+        }
+    } else if (event.key === 'Escape') {
+        event.preventDefault();
+        gallery.classList.add('hidden');
+        currentEntry = null;
+    }
+});
+
 // Initialize
 loadData();
