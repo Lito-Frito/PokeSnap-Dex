@@ -92,3 +92,9 @@ See the included `data.json` for sample entries.
 - If images don't load, ensure URLs are public and correct.
 - For GitHub Pages, changes may take a few minutes to deploy.
 - No server setup required—this is fully static HTML/CSS/JS.
+
+## License
+
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+
+This project is licensed under the GNU General Public License v3.0 - see the [LICENSE](LICENSE) file for details.
