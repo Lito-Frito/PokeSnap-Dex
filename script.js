@@ -66,11 +66,35 @@ let currentVariantIndex = 0;
 
 // Theme toggle
 const themeToggle = document.getElementById('theme-toggle');
+const searchInput = document.getElementById('search-input');
 themeToggle.addEventListener('click', () => {
     document.body.classList.toggle('dark-mode');
     themeToggle.textContent = document.body.classList.contains('dark-mode') ? 'Toggle Light Mode' : 'Toggle Dark Mode';
 });
 themeToggle.textContent = 'Toggle Light Mode'; // Since starts dark
+
+// Search functionality
+searchInput.addEventListener('input', (e) => {
+    const query = e.target.value.toLowerCase();
+    const entries = dexContainer.querySelectorAll('.entry');
+    let visibleCount = 0;
+    entries.forEach(entry => {
+        const name = entry.dataset.name.toLowerCase();
+        if (name.includes(query)) {
+            entry.style.display = '';
+            visibleCount++;
+        } else {
+            entry.style.display = 'none';
+        }
+    });
+    if (visibleCount <= 2) {
+        dexContainer.classList.add('flex-layout');
+        dexContainer.classList.remove('grid-layout');
+    } else {
+        dexContainer.classList.add('grid-layout');
+        dexContainer.classList.remove('flex-layout');
+    }
+});
 
 // Render the grid
 function renderDex() {
@@ -80,6 +104,7 @@ function renderDex() {
         const entryDiv = document.createElement('div');
         entryDiv.className = 'entry';
         entryDiv.dataset.number = number;
+        entryDiv.dataset.name = pokedexData[number].name;
 
         const firstWithImage = pokedexData[number].variants.findIndex(v => v.image && v.image !== "https://your-image-url-here.jpg");
         if (pokedexData[number] && pokedexData[number].variants.length > 0 && firstWithImage !== -1) {

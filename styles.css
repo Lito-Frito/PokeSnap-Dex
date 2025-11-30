@@ -25,6 +25,21 @@ header {
     margin: 10px 0 5px 0;
 }
 
+#search-input {
+    padding: 8px;
+    margin: 10px 0;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+.dark-mode #search-input {
+    background-color: #555;
+    color: white;
+    border-color: #777;
+}
+
 .dark-mode header {
     background-color: #333;
 }
@@ -68,8 +83,16 @@ header {
     padding: 20px;
     max-height: 1800px;
     overflow-y: auto;
-    max-width: 1800px;
-    margin: 0 auto;
+}
+
+#dex-container.flex-layout {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 6px;
+    padding: 20px;
+    max-height: none;
+    overflow-y: visible;
 }
 
 .entry {
