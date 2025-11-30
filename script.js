@@ -220,7 +220,11 @@ function openGallery(number) {
 // Update gallery image
 function updateGalleryImage() {
     if (currentEntry && pokedexData[currentEntry]) {
-        galleryImage.src = pokedexData[currentEntry].variants[currentVariantIndex].image;
+        let imageSrc = pokedexData[currentEntry].variants[currentVariantIndex].image;
+        if (imageSrc === "https://your-image-url-here.jpg") {
+            imageSrc = "https://i.imgur.com/m3idMCk.png";
+        }
+        galleryImage.src = imageSrc;
         const variant = pokedexData[currentEntry].variants[currentVariantIndex];
         const baseName = pokedexData[currentEntry].name;
         const label = variant.label;
@@ -231,11 +235,13 @@ function updateGalleryImage() {
                 displayName = `${baseName} - ${prefix}`;
             }
         }
-        galleryImage.alt = displayName;
+        galleryImage.alt = imageSrc === "https://i.imgur.com/m3idMCk.png" ? "Missing Snap" : displayName;
         galleryName.textContent = displayName;
         galleryImage.style.objectPosition = pokedexData[currentEntry].variants[currentVariantIndex].position || 'center';
         galleryImage.style.objectFit = pokedexData[currentEntry].variants[currentVariantIndex].fit || 'contain';
-        if (pokedexData[currentEntry].variants[currentVariantIndex].fit === 'contain') {
+        if (imageSrc === "https://i.imgur.com/m3idMCk.png") {
+            galleryImage.style.backgroundColor = 'grey';
+        } else if (pokedexData[currentEntry].variants[currentVariantIndex].fit === 'contain') {
             galleryImage.style.backgroundColor = '#000';
         } else {
             galleryImage.style.backgroundColor = '';
