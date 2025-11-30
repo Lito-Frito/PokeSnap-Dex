@@ -100,6 +100,7 @@ header {
         font-size: calc(0.139 * 160px);
     }
     #dex-container {
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
         max-height: 1494px;
     }
 }
@@ -112,6 +113,7 @@ header {
         font-size: calc(0.139 * 128px);
     }
     #dex-container {
+        grid-template-columns: repeat(auto-fit, minmax(128px, 1fr));
         max-height: 1206px;
     }
 }
@@ -124,6 +126,7 @@ header {
         font-size: calc(0.139 * 96px);
     }
     #dex-container {
+        grid-template-columns: repeat(auto-fit, minmax(96px, 1fr));
         max-height: 918px;
     }
 }
@@ -136,6 +139,7 @@ header {
         font-size: calc(0.139 * 64px);
     }
     #dex-container {
+        grid-template-columns: repeat(auto-fit, minmax(64px, 1fr));
         max-height: 630px;
     }
 }
