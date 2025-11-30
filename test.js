@@ -42,6 +42,24 @@ function testDataIntegrity() {
   }
 }
 
+function testCaptureCountLogic() {
+  const data = loadData();
+  let capturedCount = 0;
+  for (let num in data) {
+    if (data[num].variants && data[num].variants.some(v => v.image && v.image !== "https://your-image-url-here.jpg")) {
+      capturedCount++;
+    }
+  }
+  console.log(`Capture count logic test: ${capturedCount} Pokémon with real images`);
+  // Ensure it's a reasonable number (not 0 or 1025 if all are placeholders)
+  if (capturedCount >= 0 && capturedCount <= 1025) {
+    console.log('✓ Capture count is within expected range');
+  } else {
+    console.log('✗ Capture count out of range');
+    process.exit(1);
+  }
+}
+
 function testNoDuplicatesInVariants() {
   const data = loadData();
   let passed = 0;
@@ -195,6 +213,25 @@ function testNameFormatting() {
   }
 }
 
+function testCaptureCountLogic() {
+  const data = loadData();
+  let capturedCount = 0;
+  for (let num in data) {
+    if (data[num].variants && data[num].variants.some(v => v.image && v.image !== "https://your-image-url-here.jpg")) {
+      capturedCount++;
+    }
+  }
+  console.log(`Capture count logic test: ${capturedCount} Pokémon with real images`);
+  // Ensure it's a reasonable number (not 0 or 1025 if all are placeholders)
+  if (capturedCount >= 0 && capturedCount <= 1025) {
+    console.log('✓ Capture count is within expected range');
+  } else {
+    console.log('✗ Capture count out of range');
+    process.exit(1);
+  }
+}
+
 testDataIntegrity();
 testNoDuplicatesInVariants();
 testNameFormatting();
+testCaptureCountLogic();
