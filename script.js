@@ -49,7 +49,7 @@ function renderDex() {
         entryDiv.className = 'entry';
         entryDiv.dataset.number = number;
 
-        const firstWithImage = pokedexData[number].variants.findIndex(v => v.image);
+        const firstWithImage = pokedexData[number].variants.findIndex(v => v.image && v.image !== "https://your-image-url-here.jpg");
         if (pokedexData[number] && pokedexData[number].variants.length > 0 && firstWithImage !== -1) {
             const img = document.createElement('img');
             img.src = pokedexData[number].variants[firstWithImage].image;
@@ -79,7 +79,7 @@ function renderDex() {
 // Open gallery for an entry
 function openGallery(number) {
     currentEntry = number;
-    const firstWithImage = pokedexData[number].variants.findIndex(v => v.image);
+    const firstWithImage = pokedexData[number].variants.findIndex(v => v.image && v.image !== "https://your-image-url-here.jpg");
     currentVariantIndex = firstWithImage !== -1 ? firstWithImage : 0;
     updateGalleryImage();
     gallery.classList.remove('hidden');
