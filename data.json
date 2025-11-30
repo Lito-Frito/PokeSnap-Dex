@@ -2068,18 +2068,16 @@
     "name": "Gastly",
     "variants": [
       {
-        "image": "https://your-image-url-here.jpg",
+        "image": "https://i.imgur.com/0H3RAo6.jpeg",
         "label": "Gastly",
         "position": "right",
-        "fit": "cover",
-        "name": "Gastly"
+        "fit": "cover"
       },
       {
-        "image": "https://your-image-url-here.jpg",
+        "image": "https://i.imgur.com/0H3RAo6.jpeg",
         "label": "Shiny Gastly",
         "position": "left",
-        "fit": "cover",
-        "name": "Gastly"
+        "fit": "cover"
       }
     ]
   },
@@ -3187,11 +3185,10 @@
     "name": "Zapdos",
     "variants": [
       {
-        "image": "https://your-image-url-here.jpg",
+        "image": "https://i.imgur.com/HqBB184.jpeg",
         "label": "Zapdos",
         "position": "center",
-        "fit": "contain",
-        "name": "Zapdos"
+        "fit": "contain"
       },
       {
         "image": "https://your-image-url-here.jpg",
@@ -5301,11 +5298,10 @@
         "name": "Ho oh"
       },
       {
-        "image": "https://your-image-url-here.jpg",
+        "image": "https://i.imgur.com/n4L0Fbb.jpeg",
         "label": "Shiny Ho-oh",
         "position": "center",
-        "fit": "contain",
-        "name": "Ho oh"
+        "fit": "contain"
       }
     ]
   },
@@ -15783,11 +15779,10 @@
     "name": "Solgaleo",
     "variants": [
       {
-        "image": "https://your-image-url-here.jpg",
+        "image": "https://i.imgur.com/wiTNAqK.jpeg",
         "label": "Solgaleo",
         "position": "center",
-        "fit": "contain",
-        "name": "Solgaleo"
+        "fit": "contain"
       },
       {
         "image": "https://your-image-url-here.jpg",
