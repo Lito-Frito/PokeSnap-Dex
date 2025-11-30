@@ -10,7 +10,7 @@ async function loadData() {
     console.log('Data loaded:', Object.keys(pokedexData).length, 'entries');
     let capturedCount = 0;
     for (let num in pokedexData) {
-        if (pokedexData[num].variants && pokedexData[num].variants.some(v => v.image)) {
+        if (pokedexData[num].variants && pokedexData[num].variants.some(v => v.image && v.image !== "https://your-image-url-here.jpg")) {
             capturedCount++;
         }
     }
