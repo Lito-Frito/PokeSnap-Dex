@@ -1,8 +1,8 @@
 /**
- * PhotoDex - A Pokémon AR Photo Collection App
+ * PokeSnap-Dex - A Pokémon AR Photo Collection App
  *
  * Overview:
- * This is a web-based PhotoDex clone inspired by Pokémon GO's AR photo feature.
+ * This is a web-based PokeSnap-Dex inspired by Pokémon GO's AR photo feature.
  * It displays a grid of 1025 Pokémon (Gen 1-9) with variants (base, shiny, regional, etc.).
  * Users can view captured Pokémon, browse galleries, and toggle themes.
  *
