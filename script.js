@@ -240,6 +240,10 @@ function updateGalleryImage() {
         } else {
             galleryImage.style.backgroundColor = '';
         }
+        const prevButton = document.getElementById('prev-variant');
+        const nextButton = document.getElementById('next-variant');
+        prevButton.disabled = currentVariantIndex === 0;
+        nextButton.disabled = currentVariantIndex === pokedexData[currentEntry].variants.length - 1;
     }
 }
 

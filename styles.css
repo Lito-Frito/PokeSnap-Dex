@@ -130,6 +130,23 @@ header {
     color: #333;
 }
 
+#prev-variant, #next-variant, #close-gallery {
+    background-color: #007BFF;
+    color: white;
+    border: 2px solid #007BFF;
+    padding: 5px 10px;
+    font-size: 0.8em;
+    width: 70px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.dark-mode #prev-variant, .dark-mode #next-variant, .dark-mode #close-gallery {
+    background-color: #555;
+    color: white;
+    border: 2px solid #555;
+}
+
 .dark-mode .entry {
     background-color: #000;
     color: #ccc;
@@ -258,9 +275,8 @@ header {
 
 #gallery-image {
     max-width: 90vw;
-    max-height: 90vh;
+    height: 60vh;
     width: auto;
-    height: auto;
     object-fit: contain;
 }
 
@@ -275,6 +291,11 @@ header {
     display: flex;
     justify-content: center;
     gap: 10px;
+}
+
+.gallery-buttons button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
 }
 
 /* Responsive adjustments for gallery */
@@ -413,6 +434,10 @@ button {
         padding: 5px 10px;
         font-size: 0.8em;
         width: 70px;
+    }
+    .gallery-buttons button:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
     }
     #captured-count {
         padding: 6.4px 12.8px;
