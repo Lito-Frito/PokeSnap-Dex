@@ -63,10 +63,16 @@ const closeButton = document.getElementById('close-gallery');
 
 let currentEntry = null;
 let currentVariantIndex = 0;
+let showAll = false;
 
 // Theme toggle
 const themeToggle = document.getElementById('theme-toggle');
 const searchInput = document.getElementById('search-input');
+const capturedCountBtn = document.getElementById('captured-count');
+const capturedModal = document.getElementById('captured-modal');
+const capturedList = document.getElementById('captured-list');
+const closeCapturedModal = document.getElementById('close-captured-modal');
+const toggleShowAll = document.getElementById('toggle-show-all');
 themeToggle.addEventListener('click', () => {
     document.body.classList.toggle('dark-mode');
     themeToggle.textContent = document.body.classList.contains('dark-mode') ? 'Toggle Light Mode' : 'Toggle Dark Mode';
@@ -95,6 +101,64 @@ searchInput.addEventListener('input', (e) => {
         dexContainer.classList.remove('flex-layout');
     }
 });
+
+// Captured modal
+capturedCountBtn.addEventListener('click', () => {
+    showCapturedModal();
+});
+
+closeCapturedModal.addEventListener('click', () => {
+    capturedModal.style.display = 'none';
+});
+
+toggleShowAll.addEventListener('click', () => {
+    showAll = !showAll;
+    toggleShowAll.textContent = showAll ? 'Show Less' : 'Show All';
+    updateCapturedList();
+});
+
+window.addEventListener('click', (e) => {
+    if (e.target === capturedModal) {
+        capturedModal.style.display = 'none';
+    }
+});
+
+function showCapturedModal() {
+    updateCapturedList();
+    capturedModal.style.display = 'block';
+}
+
+function updateCapturedList() {
+    capturedList.innerHTML = '';
+    let count = 0;
+    for (let i = 1; i <= 1025; i++) {
+        const number = i.toString().padStart(3, '0');
+        const firstWithImage = pokedexData[number].variants.findIndex(v => v.image && v.image !== "https://your-image-url-here.jpg");
+        if (firstWithImage !== -1) {
+            const li = document.createElement('li');
+            li.textContent = `${number}: ${pokedexData[number].name}`;
+            li.style.cursor = 'pointer';
+            li.addEventListener('click', () => {
+                scrollToPokemon(number);
+                capturedModal.style.display = 'none';
+            });
+            capturedList.appendChild(li);
+            count++;
+        }
+    }
+    if (showAll) {
+        capturedList.classList.add('show-all');
+    } else {
+        capturedList.classList.remove('show-all');
+    }
+}
+
+function scrollToPokemon(number) {
+    const entry = document.querySelector(`.entry[data-number="${number}"]`);
+    if (entry) {
+        entry.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+}
 
 // Render the grid
 function renderDex() {

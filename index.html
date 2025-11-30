@@ -41,13 +41,21 @@ Notes for Future Development:
     <header>
         <h1>PhotoDex Clone</h1>
         <p>Gotta snap 'em all!</p>
-        <p id="captured-count">Captured: 0</p>
+        <button id="captured-count">Captured: 0</button>
         <input type="text" id="search-input" placeholder="Search Pokémon...">
         <button id="theme-toggle">Toggle Dark Mode</button>
     </header>
     <main id="dex-container">
         <!-- Grid will be populated by JS -->
     </main>
+    <div id="captured-modal" class="modal">
+        <div class="modal-content">
+            <span id="close-captured-modal" class="close">&times;</span>
+            <h2>Captured Pokémon</h2>
+            <button id="toggle-show-all">Show All</button>
+            <div id="captured-list"></div>
+        </div>
+    </div>
     <div id="gallery" class="hidden">
         <img id="gallery-image" src="" alt="Gallery Image">
         <button id="prev-variant">Prev</button>
