@@ -297,5 +297,6 @@ document.addEventListener('keydown', (event) => {
     }
 });
 
+// Fixes issue 11
 // Initialize
 loadData();
