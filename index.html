@@ -1,4 +1,35 @@
 <!DOCTYPE html>
+<!--
+PhotoDex - A Pokémon AR Photo Collection App
+
+Overview:
+This is a web-based PhotoDex clone inspired by Pokémon GO's AR photo feature.
+It displays a grid of 1025 Pokémon (Gen 1-9) with variants (base, shiny, regional, etc.).
+Users can view captured Pokémon, browse galleries, and toggle themes.
+
+Key Features:
+- Grid view: Shows first available real image variant per Pokémon (ignores placeholders).
+- Capture count: Counts only Pokémon with at least one real image (not placeholders).
+- Gallery: Modal view with variant navigation (keyboard: arrows, escape).
+- Responsive design: Adapts to mobile with dynamic grid sizing.
+- Theme toggle: Dark/light mode.
+- Data integrity: 1025 entries, no duplicates, proper naming.
+
+Data Structure (data.json):
+- Keys: '001' to '1025' (Pokémon numbers).
+- Each entry: { name: string, variants: [{ label: string, image: url }] }
+- Placeholders: "https://your-image-url-here.jpg" for missing images.
+
+Branches:
+- main/Public: Placeholder images for public demo.
+- LitoFrito: Real image URLs for personal use.
+
+Notes for Future Development:
+- Ensure capture count excludes placeholders.
+- Grid/gallery use findIndex for first real image variant.
+- Run tests (node test.js) for data integrity.
+- Mobile: CSS grid with auto-fit and min-width.
+-->
 <html lang="en">
 <head>
     <meta charset="UTF-8">

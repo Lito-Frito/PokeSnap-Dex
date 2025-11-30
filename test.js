@@ -1,5 +1,10 @@
-// Simple unit tests for Pokemon name formatting
+// Unit tests for PhotoDex app data integrity and logic
 // Run with Node.js: node test.js
+//
+// Tests:
+// - Data integrity: 1025 entries, sequential keys, no duplicates in variants.
+// - Name formatting: Correct Pokémon names (e.g., Mr. Mime, Nidoran♀/♂).
+// - Capture count logic: Counts only Pokémon with real images (not placeholders).
 
 const fs = require('fs');
 
