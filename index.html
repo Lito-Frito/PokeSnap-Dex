@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <!--
-PhotoDex - A Pokémon AR Photo Collection App
+PokeSnap-Dex - A Pokémon AR Photo Collection App
 
 Overview:
-This is a web-based PhotoDex clone inspired by Pokémon GO's AR photo feature.
+This is a web-based PokeSnap-Dex clone inspired by Pokémon GO's AR photo feature.
 It displays a grid of 1025 Pokémon (Gen 1-9) with variants (base, shiny, regional, etc.).
 Users can view captured Pokémon, browse galleries, and toggle themes.
 
@@ -34,16 +34,18 @@ Notes for Future Development:
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PhotoDex Clone</title>
+    <title>PokeSnap-Dex</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body class="dark-mode">
     <header>
-        <h1>PhotoDex Clone</h1>
+        <h1>PokeSnap-Dex</h1>
         <p>Gotta snap 'em all!</p>
-        <button id="captured-count">Captured: 0</button>
-        <input type="text" id="search-input" placeholder="Search Pokémon...">
-        <button id="theme-toggle">Toggle Dark Mode</button>
+        <div class="header-controls">
+            <button id="captured-count">Captured: 0</button>
+            <input type="text" id="search-input" placeholder="Search Pokémon...">
+            <button id="theme-toggle">Toggle Dark Mode</button>
+        </div>
     </header>
     <main id="dex-container">
         <!-- Grid will be populated by JS -->
