@@ -264,6 +264,19 @@ header {
     object-fit: contain;
 }
 
+#gallery-name {
+    color: white;
+    font-size: 1.5em;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.gallery-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
 /* Responsive adjustments for gallery */
 @media (min-width: 768px) {
     #gallery-image {
@@ -392,6 +405,14 @@ button {
     }
     .header-controls > * {
         width: 100%;
+    }
+    .gallery-buttons {
+        gap: 5px;
+    }
+    .gallery-buttons button {
+        padding: 5px 10px;
+        font-size: 0.8em;
+        width: 70px;
     }
     #captured-count {
         padding: 6.4px 12.8px;

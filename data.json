@@ -5288,20 +5288,21 @@
     ]
   },
   "250": {
-    "name": "Ho oh",
+    "name": "Ho-Oh",
     "variants": [
       {
         "image": "https://your-image-url-here.jpg",
-        "label": "Ho-oh",
+        "label": "Ho-Oh",
         "position": "center",
         "fit": "contain",
-        "name": "Ho oh"
+        "name": "Ho-Oh"
       },
       {
         "image": "https://i.imgur.com/n4L0Fbb.jpeg",
-        "label": "Shiny Ho-oh",
+        "label": "Shiny Ho-Oh",
         "position": "center",
-        "fit": "contain"
+        "fit": "contain",
+        "name": "Ho-Oh"
       }
     ]
   },

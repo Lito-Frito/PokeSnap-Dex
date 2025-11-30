@@ -57,6 +57,7 @@ async function loadData() {
 const dexContainer = document.getElementById('dex-container');
 const gallery = document.getElementById('gallery');
 const galleryImage = document.getElementById('gallery-image');
+const galleryName = document.getElementById('gallery-name');
 const prevButton = document.getElementById('prev-variant');
 const nextButton = document.getElementById('next-variant');
 const closeButton = document.getElementById('close-gallery');
@@ -174,7 +175,17 @@ function renderDex() {
         if (pokedexData[number] && pokedexData[number].variants.length > 0 && firstWithImage !== -1) {
             const img = document.createElement('img');
             img.src = pokedexData[number].variants[firstWithImage].image;
-            img.alt = `${pokedexData[number].name} - ${pokedexData[number].variants[firstWithImage].label}`;
+            const variant = pokedexData[number].variants[firstWithImage];
+            const baseName = pokedexData[number].name;
+            const label = variant.label;
+            let displayName = baseName;
+        if (label !== baseName) {
+            const suffix = label.replace(baseName + ' ', '');
+            displayName = `${baseName} - ${suffix}`;
+        }
+        displayName = displayName.replace(/-/g, ' ');
+            displayName = displayName.replace(/-/g, ' ');
+            img.alt = displayName;
             img.style.objectPosition = pokedexData[number].variants[firstWithImage].position || 'center';
             img.style.objectFit = pokedexData[number].variants[firstWithImage].fit || 'contain';
             img.onerror = () => {
@@ -210,7 +221,18 @@ function openGallery(number) {
 function updateGalleryImage() {
     if (currentEntry && pokedexData[currentEntry]) {
         galleryImage.src = pokedexData[currentEntry].variants[currentVariantIndex].image;
-        galleryImage.alt = `${pokedexData[currentEntry].name} - ${pokedexData[currentEntry].variants[currentVariantIndex].label}`;
+        const variant = pokedexData[currentEntry].variants[currentVariantIndex];
+        const baseName = pokedexData[currentEntry].name;
+        const label = variant.label;
+        let displayName = baseName;
+        if (label.endsWith(baseName)) {
+            const prefix = label.substring(0, label.length - baseName.length - 1);
+            if (prefix) {
+                displayName = `${baseName} - ${prefix}`;
+            }
+        }
+        galleryImage.alt = displayName;
+        galleryName.textContent = displayName;
         galleryImage.style.objectPosition = pokedexData[currentEntry].variants[currentVariantIndex].position || 'center';
         galleryImage.style.objectFit = pokedexData[currentEntry].variants[currentVariantIndex].fit || 'contain';
         if (pokedexData[currentEntry].variants[currentVariantIndex].fit === 'contain') {
