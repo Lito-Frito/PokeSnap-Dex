@@ -1,4 +1,4 @@
-/* Basic styles for PhotoDex clone */
+/* Basic styles for PokeSnap-Dex */
 body {
     font-family: Arial, sans-serif;
     background-color: #fafafa;
@@ -19,6 +19,19 @@ header {
     transition: background-color 0.3s;
 }
 
+.header-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
+    gap: 20px;
+}
+
+.header-controls > * {
+    margin: 0;
+}
+
 #captured-count {
     background-color: #CC0000;
     color: white;
@@ -27,7 +40,8 @@ header {
     font-weight: bold;
     font-size: 1.2em;
     cursor: pointer;
-    margin: 10px 0 5px 0;
+    margin: 0;
+    width: 180px;
     border-radius: 4px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: box-shadow 0.2s;
@@ -71,8 +85,8 @@ header {
 
 #search-input {
     padding: 8px;
-    margin: 10px 0;
-    width: 200px;
+    margin: 0;
+    width: 180px;
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 1em;
@@ -95,7 +109,8 @@ header {
     padding: 10px 15px;
     cursor: pointer;
     border-radius: 5px;
-    margin-top: 10px;
+    margin: 0;
+    width: 180px;
     transition: all 0.3s;
 }
 
@@ -368,4 +383,26 @@ button {
 
 .dark-mode #captured-list li:hover {
     background-color: #555;
+}
+
+@media (max-width: 768px) {
+    .header-controls {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .header-controls > * {
+        width: 100%;
+    }
+    #captured-count {
+        padding: 6.4px 12.8px;
+        font-size: 0.96em;
+    }
+    #search-input {
+        padding: 6.4px;
+        font-size: 0.8em;
+    }
+    #theme-toggle {
+        padding: 8px 12px;
+        font-size: 0.8em;
+    }
 }
