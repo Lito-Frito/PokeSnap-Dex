@@ -1127,13 +1127,6 @@
       },
       {
         "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Meowth",
-        "position": "center",
-        "fit": "contain",
-        "name": "Meowth"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
         "label": "Shiny Alolan Meowth",
         "position": "center",
         "fit": "contain",
@@ -10110,13 +10103,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Oshawott"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Oshawott",
-        "position": "center",
-        "fit": "contain",
-        "name": "Oshawott"
       }
     ]
   },
@@ -10136,13 +10122,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Dewott"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Dewott",
-        "position": "center",
-        "fit": "contain",
-        "name": "Dewott"
       }
     ]
   },
@@ -10152,13 +10131,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Samurott",
-        "position": "center",
-        "fit": "contain",
-        "name": "Samurott"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Samurott",
         "position": "center",
         "fit": "contain",
         "name": "Samurott"
@@ -10202,13 +10174,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Patrat"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Patrat",
-        "position": "center",
-        "fit": "contain",
-        "name": "Patrat"
       }
     ]
   },
@@ -10218,13 +10183,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Watchog",
-        "position": "center",
-        "fit": "contain",
-        "name": "Watchog"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Watchog",
         "position": "center",
         "fit": "contain",
         "name": "Watchog"
@@ -10254,13 +10212,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Lillipup"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Lillipup",
-        "position": "center",
-        "fit": "contain",
-        "name": "Lillipup"
       }
     ]
   },
@@ -10270,13 +10221,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Herdier",
-        "position": "center",
-        "fit": "contain",
-        "name": "Herdier"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Herdier",
         "position": "center",
         "fit": "contain",
         "name": "Herdier"
@@ -10306,13 +10250,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Stoutland"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Stoutland",
-        "position": "center",
-        "fit": "contain",
-        "name": "Stoutland"
       }
     ]
   },
@@ -10322,13 +10259,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Purrloin",
-        "position": "center",
-        "fit": "contain",
-        "name": "Purrloin"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Purrloin",
         "position": "center",
         "fit": "contain",
         "name": "Purrloin"
@@ -10358,13 +10288,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Liepard"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Liepard",
-        "position": "center",
-        "fit": "contain",
-        "name": "Liepard"
       }
     ]
   },
@@ -10374,13 +10297,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Pansage",
-        "position": "center",
-        "fit": "contain",
-        "name": "Pansage"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Pansage",
         "position": "center",
         "fit": "contain",
         "name": "Pansage"
@@ -10410,13 +10326,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Simisage"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Simisage",
-        "position": "center",
-        "fit": "contain",
-        "name": "Simisage"
       }
     ]
   },
@@ -10426,13 +10335,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Pansear",
-        "position": "center",
-        "fit": "contain",
-        "name": "Pansear"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Pansear",
         "position": "center",
         "fit": "contain",
         "name": "Pansear"
@@ -10462,13 +10364,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Simisear"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Simisear",
-        "position": "center",
-        "fit": "contain",
-        "name": "Simisear"
       }
     ]
   },
@@ -10478,13 +10373,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Panpour",
-        "position": "center",
-        "fit": "contain",
-        "name": "Panpour"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Panpour",
         "position": "center",
         "fit": "contain",
         "name": "Panpour"
@@ -10514,13 +10402,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Simipour"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Simipour",
-        "position": "center",
-        "fit": "contain",
-        "name": "Simipour"
       }
     ]
   },
@@ -10530,13 +10411,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Munna",
-        "position": "center",
-        "fit": "contain",
-        "name": "Munna"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Munna",
         "position": "center",
         "fit": "contain",
         "name": "Munna"
@@ -10566,13 +10440,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Musharna"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Musharna",
-        "position": "center",
-        "fit": "contain",
-        "name": "Musharna"
       }
     ]
   },
@@ -10582,13 +10449,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Pidove",
-        "position": "center",
-        "fit": "contain",
-        "name": "Pidove"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Pidove",
         "position": "center",
         "fit": "contain",
         "name": "Pidove"
@@ -10618,13 +10478,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Tranquill"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Tranquill",
-        "position": "center",
-        "fit": "contain",
-        "name": "Tranquill"
       }
     ]
   },
@@ -10634,13 +10487,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Unfezant",
-        "position": "center",
-        "fit": "contain",
-        "name": "Unfezant"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Unfezant",
         "position": "center",
         "fit": "contain",
         "name": "Unfezant"
@@ -10670,13 +10516,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Blitzle"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Blitzle",
-        "position": "center",
-        "fit": "contain",
-        "name": "Blitzle"
       }
     ]
   },
@@ -10686,13 +10525,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Zebstrika",
-        "position": "center",
-        "fit": "contain",
-        "name": "Zebstrika"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Zebstrika",
         "position": "center",
         "fit": "contain",
         "name": "Zebstrika"
@@ -10722,13 +10554,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Roggenrola"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Roggenrola",
-        "position": "center",
-        "fit": "contain",
-        "name": "Roggenrola"
       }
     ]
   },
@@ -10738,13 +10563,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Boldore",
-        "position": "center",
-        "fit": "contain",
-        "name": "Boldore"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Boldore",
         "position": "center",
         "fit": "contain",
         "name": "Boldore"
@@ -10774,13 +10592,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Gigalith"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Gigalith",
-        "position": "center",
-        "fit": "contain",
-        "name": "Gigalith"
       }
     ]
   },
@@ -10790,13 +10601,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Woobat",
-        "position": "center",
-        "fit": "contain",
-        "name": "Woobat"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Woobat",
         "position": "center",
         "fit": "contain",
         "name": "Woobat"
@@ -10826,13 +10630,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Swoobat"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Swoobat",
-        "position": "center",
-        "fit": "contain",
-        "name": "Swoobat"
       }
     ]
   },
@@ -10842,13 +10639,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Drilbur",
-        "position": "center",
-        "fit": "contain",
-        "name": "Drilbur"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Drilbur",
         "position": "center",
         "fit": "contain",
         "name": "Drilbur"
@@ -10878,13 +10668,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Excadrill"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Excadrill",
-        "position": "center",
-        "fit": "contain",
-        "name": "Excadrill"
       }
     ]
   },
@@ -10894,13 +10677,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Audino",
-        "position": "center",
-        "fit": "contain",
-        "name": "Audino"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Audino",
         "position": "center",
         "fit": "contain",
         "name": "Audino"
@@ -10930,13 +10706,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Timburr"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Timburr",
-        "position": "center",
-        "fit": "contain",
-        "name": "Timburr"
       }
     ]
   },
@@ -10946,13 +10715,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Gurdurr",
-        "position": "center",
-        "fit": "contain",
-        "name": "Gurdurr"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Gurdurr",
         "position": "center",
         "fit": "contain",
         "name": "Gurdurr"
@@ -10982,13 +10744,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Conkeldurr"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Conkeldurr",
-        "position": "center",
-        "fit": "contain",
-        "name": "Conkeldurr"
       }
     ]
   },
@@ -10998,13 +10753,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Tympole",
-        "position": "center",
-        "fit": "contain",
-        "name": "Tympole"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Tympole",
         "position": "center",
         "fit": "contain",
         "name": "Tympole"
@@ -11034,13 +10782,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Palpitoad"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Palpitoad",
-        "position": "center",
-        "fit": "contain",
-        "name": "Palpitoad"
       }
     ]
   },
@@ -11050,13 +10791,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Seismitoad",
-        "position": "center",
-        "fit": "contain",
-        "name": "Seismitoad"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Seismitoad",
         "position": "center",
         "fit": "contain",
         "name": "Seismitoad"
@@ -11086,13 +10820,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Throh"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Throh",
-        "position": "center",
-        "fit": "contain",
-        "name": "Throh"
       }
     ]
   },
@@ -11102,13 +10829,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Sawk",
-        "position": "center",
-        "fit": "contain",
-        "name": "Sawk"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Sawk",
         "position": "center",
         "fit": "contain",
         "name": "Sawk"
@@ -11138,13 +10858,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Sewaddle"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Sewaddle",
-        "position": "center",
-        "fit": "contain",
-        "name": "Sewaddle"
       }
     ]
   },
@@ -11154,13 +10867,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Swadloon",
-        "position": "center",
-        "fit": "contain",
-        "name": "Swadloon"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Swadloon",
         "position": "center",
         "fit": "contain",
         "name": "Swadloon"
@@ -11190,13 +10896,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Leavanny"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Leavanny",
-        "position": "center",
-        "fit": "contain",
-        "name": "Leavanny"
       }
     ]
   },
@@ -11206,13 +10905,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Venipede",
-        "position": "center",
-        "fit": "contain",
-        "name": "Venipede"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Venipede",
         "position": "center",
         "fit": "contain",
         "name": "Venipede"
@@ -11242,13 +10934,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Whirlipede"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Whirlipede",
-        "position": "center",
-        "fit": "contain",
-        "name": "Whirlipede"
       }
     ]
   },
@@ -11258,13 +10943,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Scolipede",
-        "position": "center",
-        "fit": "contain",
-        "name": "Scolipede"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Scolipede",
         "position": "center",
         "fit": "contain",
         "name": "Scolipede"
@@ -11294,13 +10972,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Cottonee"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Cottonee",
-        "position": "center",
-        "fit": "contain",
-        "name": "Cottonee"
       }
     ]
   },
@@ -11310,13 +10981,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Whimsicott",
-        "position": "center",
-        "fit": "contain",
-        "name": "Whimsicott"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Whimsicott",
         "position": "center",
         "fit": "contain",
         "name": "Whimsicott"
@@ -11346,13 +11010,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Petilil"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Petilil",
-        "position": "center",
-        "fit": "contain",
-        "name": "Petilil"
       }
     ]
   },
@@ -11362,13 +11019,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Lilligant",
-        "position": "center",
-        "fit": "contain",
-        "name": "Lilligant"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Lilligant",
         "position": "center",
         "fit": "contain",
         "name": "Lilligant"
@@ -11412,13 +11062,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Basculin red striped"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Basculin-red-striped",
-        "position": "center",
-        "fit": "contain",
-        "name": "Basculin red striped"
       }
     ]
   },
@@ -11428,13 +11071,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Sandile",
-        "position": "center",
-        "fit": "contain",
-        "name": "Sandile"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Sandile",
         "position": "center",
         "fit": "contain",
         "name": "Sandile"
@@ -11464,13 +11100,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Krokorok"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Krokorok",
-        "position": "center",
-        "fit": "contain",
-        "name": "Krokorok"
       }
     ]
   },
@@ -11490,13 +11119,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Krookodile"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Krookodile",
-        "position": "center",
-        "fit": "contain",
-        "name": "Krookodile"
       }
     ]
   },
@@ -11506,13 +11128,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Darumaka",
-        "position": "center",
-        "fit": "contain",
-        "name": "Darumaka"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Darumaka",
         "position": "center",
         "fit": "contain",
         "name": "Darumaka"
@@ -11559,13 +11174,6 @@
       },
       {
         "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Darmanitan-standard",
-        "position": "center",
-        "fit": "contain",
-        "name": "Darmanitan standard"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
         "label": "Galarian Darmanitan",
         "position": "center",
         "fit": "contain",
@@ -11596,13 +11204,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Maractus"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Maractus",
-        "position": "center",
-        "fit": "contain",
-        "name": "Maractus"
       }
     ]
   },
@@ -11612,13 +11213,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Dwebble",
-        "position": "center",
-        "fit": "contain",
-        "name": "Dwebble"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Dwebble",
         "position": "center",
         "fit": "contain",
         "name": "Dwebble"
@@ -11648,13 +11242,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Crustle"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Crustle",
-        "position": "center",
-        "fit": "contain",
-        "name": "Crustle"
       }
     ]
   },
@@ -11664,13 +11251,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Scraggy",
-        "position": "center",
-        "fit": "contain",
-        "name": "Scraggy"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Scraggy",
         "position": "center",
         "fit": "contain",
         "name": "Scraggy"
@@ -11700,13 +11280,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Scrafty"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Scrafty",
-        "position": "center",
-        "fit": "contain",
-        "name": "Scrafty"
       }
     ]
   },
@@ -11726,13 +11299,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Sigilyph"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Sigilyph",
-        "position": "center",
-        "fit": "contain",
-        "name": "Sigilyph"
       }
     ]
   },
@@ -11742,13 +11308,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Yamask",
-        "position": "center",
-        "fit": "contain",
-        "name": "Yamask"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Yamask",
         "position": "center",
         "fit": "contain",
         "name": "Yamask"
@@ -11792,13 +11351,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Cofagrigus"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Cofagrigus",
-        "position": "center",
-        "fit": "contain",
-        "name": "Cofagrigus"
       }
     ]
   },
@@ -11808,13 +11360,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Tirtouga",
-        "position": "center",
-        "fit": "contain",
-        "name": "Tirtouga"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Tirtouga",
         "position": "center",
         "fit": "contain",
         "name": "Tirtouga"
@@ -11844,13 +11389,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Carracosta"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Carracosta",
-        "position": "center",
-        "fit": "contain",
-        "name": "Carracosta"
       }
     ]
   },
@@ -11860,13 +11398,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Archen",
-        "position": "center",
-        "fit": "contain",
-        "name": "Archen"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Archen",
         "position": "center",
         "fit": "contain",
         "name": "Archen"
@@ -11896,13 +11427,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Archeops"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Archeops",
-        "position": "center",
-        "fit": "contain",
-        "name": "Archeops"
       }
     ]
   },
@@ -11912,13 +11436,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Trubbish",
-        "position": "center",
-        "fit": "contain",
-        "name": "Trubbish"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Trubbish",
         "position": "center",
         "fit": "contain",
         "name": "Trubbish"
@@ -11948,13 +11465,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Garbodor"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Garbodor",
-        "position": "center",
-        "fit": "contain",
-        "name": "Garbodor"
       }
     ]
   },
@@ -11964,13 +11474,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Zorua",
-        "position": "center",
-        "fit": "contain",
-        "name": "Zorua"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Zorua",
         "position": "center",
         "fit": "contain",
         "name": "Zorua"
@@ -12017,13 +11520,6 @@
       },
       {
         "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Zoroark",
-        "position": "center",
-        "fit": "contain",
-        "name": "Zoroark"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
         "label": "Hisuian Zoroark",
         "position": "center",
         "fit": "contain",
@@ -12054,13 +11550,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Minccino"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Minccino",
-        "position": "center",
-        "fit": "contain",
-        "name": "Minccino"
       }
     ]
   },
@@ -12070,13 +11559,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Cinccino",
-        "position": "center",
-        "fit": "contain",
-        "name": "Cinccino"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Cinccino",
         "position": "center",
         "fit": "contain",
         "name": "Cinccino"
@@ -12106,13 +11588,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Gothita"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Gothita",
-        "position": "center",
-        "fit": "contain",
-        "name": "Gothita"
       }
     ]
   },
@@ -12122,13 +11597,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Gothorita",
-        "position": "center",
-        "fit": "contain",
-        "name": "Gothorita"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Gothorita",
         "position": "center",
         "fit": "contain",
         "name": "Gothorita"
@@ -12158,13 +11626,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Gothitelle"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Gothitelle",
-        "position": "center",
-        "fit": "contain",
-        "name": "Gothitelle"
       }
     ]
   },
@@ -12174,13 +11635,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Solosis",
-        "position": "center",
-        "fit": "contain",
-        "name": "Solosis"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Solosis",
         "position": "center",
         "fit": "contain",
         "name": "Solosis"
@@ -12210,13 +11664,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Duosion"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Duosion",
-        "position": "center",
-        "fit": "contain",
-        "name": "Duosion"
       }
     ]
   },
@@ -12226,13 +11673,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Reuniclus",
-        "position": "center",
-        "fit": "contain",
-        "name": "Reuniclus"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Reuniclus",
         "position": "center",
         "fit": "contain",
         "name": "Reuniclus"
@@ -12262,13 +11702,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Ducklett"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Ducklett",
-        "position": "center",
-        "fit": "contain",
-        "name": "Ducklett"
       }
     ]
   },
@@ -12278,13 +11711,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Swanna",
-        "position": "center",
-        "fit": "contain",
-        "name": "Swanna"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Swanna",
         "position": "center",
         "fit": "contain",
         "name": "Swanna"
@@ -12314,13 +11740,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Vanillite"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Vanillite",
-        "position": "center",
-        "fit": "contain",
-        "name": "Vanillite"
       }
     ]
   },
@@ -12330,13 +11749,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Vanillish",
-        "position": "center",
-        "fit": "contain",
-        "name": "Vanillish"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Vanillish",
         "position": "center",
         "fit": "contain",
         "name": "Vanillish"
@@ -12366,13 +11778,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Vanilluxe"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Vanilluxe",
-        "position": "center",
-        "fit": "contain",
-        "name": "Vanilluxe"
       }
     ]
   },
@@ -12382,13 +11787,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Deerling",
-        "position": "center",
-        "fit": "contain",
-        "name": "Deerling"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Deerling",
         "position": "center",
         "fit": "contain",
         "name": "Deerling"
@@ -12418,13 +11816,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Sawsbuck"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Sawsbuck",
-        "position": "center",
-        "fit": "contain",
-        "name": "Sawsbuck"
       }
     ]
   },
@@ -12434,13 +11825,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Emolga",
-        "position": "center",
-        "fit": "contain",
-        "name": "Emolga"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Emolga",
         "position": "center",
         "fit": "contain",
         "name": "Emolga"
@@ -12470,13 +11854,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Karrablast"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Karrablast",
-        "position": "center",
-        "fit": "contain",
-        "name": "Karrablast"
       }
     ]
   },
@@ -12486,13 +11863,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Escavalier",
-        "position": "center",
-        "fit": "contain",
-        "name": "Escavalier"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Escavalier",
         "position": "center",
         "fit": "contain",
         "name": "Escavalier"
@@ -12522,13 +11892,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Foongus"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Foongus",
-        "position": "center",
-        "fit": "contain",
-        "name": "Foongus"
       }
     ]
   },
@@ -12538,13 +11901,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Amoonguss",
-        "position": "center",
-        "fit": "contain",
-        "name": "Amoonguss"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Amoonguss",
         "position": "center",
         "fit": "contain",
         "name": "Amoonguss"
@@ -12574,13 +11930,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Frillish"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Frillish",
-        "position": "center",
-        "fit": "contain",
-        "name": "Frillish"
       }
     ]
   },
@@ -12590,13 +11939,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Jellicent",
-        "position": "center",
-        "fit": "contain",
-        "name": "Jellicent"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Jellicent",
         "position": "center",
         "fit": "contain",
         "name": "Jellicent"
@@ -12626,13 +11968,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Alomomola"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Alomomola",
-        "position": "center",
-        "fit": "contain",
-        "name": "Alomomola"
       }
     ]
   },
@@ -12642,13 +11977,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Joltik",
-        "position": "center",
-        "fit": "contain",
-        "name": "Joltik"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Joltik",
         "position": "center",
         "fit": "contain",
         "name": "Joltik"
@@ -12678,13 +12006,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Galvantula"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Galvantula",
-        "position": "center",
-        "fit": "contain",
-        "name": "Galvantula"
       }
     ]
   },
@@ -12694,13 +12015,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Ferroseed",
-        "position": "center",
-        "fit": "contain",
-        "name": "Ferroseed"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Ferroseed",
         "position": "center",
         "fit": "contain",
         "name": "Ferroseed"
@@ -12730,13 +12044,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Ferrothorn"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Ferrothorn",
-        "position": "center",
-        "fit": "contain",
-        "name": "Ferrothorn"
       }
     ]
   },
@@ -12746,13 +12053,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Klink",
-        "position": "center",
-        "fit": "contain",
-        "name": "Klink"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Klink",
         "position": "center",
         "fit": "contain",
         "name": "Klink"
@@ -12782,13 +12082,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Klang"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Klang",
-        "position": "center",
-        "fit": "contain",
-        "name": "Klang"
       }
     ]
   },
@@ -12798,13 +12091,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Klinklang",
-        "position": "center",
-        "fit": "contain",
-        "name": "Klinklang"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Klinklang",
         "position": "center",
         "fit": "contain",
         "name": "Klinklang"
@@ -12834,13 +12120,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Tynamo"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Tynamo",
-        "position": "center",
-        "fit": "contain",
-        "name": "Tynamo"
       }
     ]
   },
@@ -12850,13 +12129,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Eelektrik",
-        "position": "center",
-        "fit": "contain",
-        "name": "Eelektrik"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Eelektrik",
         "position": "center",
         "fit": "contain",
         "name": "Eelektrik"
@@ -12886,13 +12158,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Eelektross"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Eelektross",
-        "position": "center",
-        "fit": "contain",
-        "name": "Eelektross"
       }
     ]
   },
@@ -12902,13 +12167,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Elgyem",
-        "position": "center",
-        "fit": "contain",
-        "name": "Elgyem"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Elgyem",
         "position": "center",
         "fit": "contain",
         "name": "Elgyem"
@@ -12938,13 +12196,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Beheeyem"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Beheeyem",
-        "position": "center",
-        "fit": "contain",
-        "name": "Beheeyem"
       }
     ]
   },
@@ -12954,13 +12205,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Litwick",
-        "position": "center",
-        "fit": "contain",
-        "name": "Litwick"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Litwick",
         "position": "center",
         "fit": "contain",
         "name": "Litwick"
@@ -12990,13 +12234,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Lampent"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Lampent",
-        "position": "center",
-        "fit": "contain",
-        "name": "Lampent"
       }
     ]
   },
@@ -13006,13 +12243,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Chandelure",
-        "position": "center",
-        "fit": "contain",
-        "name": "Chandelure"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Chandelure",
         "position": "center",
         "fit": "contain",
         "name": "Chandelure"
@@ -13042,13 +12272,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Axew"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Axew",
-        "position": "center",
-        "fit": "contain",
-        "name": "Axew"
       }
     ]
   },
@@ -13058,13 +12281,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Fraxure",
-        "position": "center",
-        "fit": "contain",
-        "name": "Fraxure"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Fraxure",
         "position": "center",
         "fit": "contain",
         "name": "Fraxure"
@@ -13094,13 +12310,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Haxorus"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Haxorus",
-        "position": "center",
-        "fit": "contain",
-        "name": "Haxorus"
       }
     ]
   },
@@ -13110,13 +12319,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Cubchoo",
-        "position": "center",
-        "fit": "contain",
-        "name": "Cubchoo"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Cubchoo",
         "position": "center",
         "fit": "contain",
         "name": "Cubchoo"
@@ -13146,13 +12348,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Beartic"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Beartic",
-        "position": "center",
-        "fit": "contain",
-        "name": "Beartic"
       }
     ]
   },
@@ -13162,13 +12357,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Cryogonal",
-        "position": "center",
-        "fit": "contain",
-        "name": "Cryogonal"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Cryogonal",
         "position": "center",
         "fit": "contain",
         "name": "Cryogonal"
@@ -13198,13 +12386,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Shelmet"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Shelmet",
-        "position": "center",
-        "fit": "contain",
-        "name": "Shelmet"
       }
     ]
   },
@@ -13224,13 +12405,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Accelgor"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Accelgor",
-        "position": "center",
-        "fit": "contain",
-        "name": "Accelgor"
       }
     ]
   },
@@ -13240,13 +12414,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Stunfisk",
-        "position": "center",
-        "fit": "contain",
-        "name": "Stunfisk"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Stunfisk",
         "position": "center",
         "fit": "contain",
         "name": "Stunfisk"
@@ -13290,13 +12457,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Mienfoo"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Mienfoo",
-        "position": "center",
-        "fit": "contain",
-        "name": "Mienfoo"
       }
     ]
   },
@@ -13306,13 +12466,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Mienshao",
-        "position": "center",
-        "fit": "contain",
-        "name": "Mienshao"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Mienshao",
         "position": "center",
         "fit": "contain",
         "name": "Mienshao"
@@ -13342,13 +12495,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Druddigon"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Druddigon",
-        "position": "center",
-        "fit": "contain",
-        "name": "Druddigon"
       }
     ]
   },
@@ -13358,13 +12504,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Golett",
-        "position": "center",
-        "fit": "contain",
-        "name": "Golett"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Golett",
         "position": "center",
         "fit": "contain",
         "name": "Golett"
@@ -13394,13 +12533,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Golurk"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Golurk",
-        "position": "center",
-        "fit": "contain",
-        "name": "Golurk"
       }
     ]
   },
@@ -13410,13 +12542,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Pawniard",
-        "position": "center",
-        "fit": "contain",
-        "name": "Pawniard"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Pawniard",
         "position": "center",
         "fit": "contain",
         "name": "Pawniard"
@@ -13446,13 +12571,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Bisharp"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Bisharp",
-        "position": "center",
-        "fit": "contain",
-        "name": "Bisharp"
       }
     ]
   },
@@ -13462,13 +12580,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Bouffalant",
-        "position": "center",
-        "fit": "contain",
-        "name": "Bouffalant"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Bouffalant",
         "position": "center",
         "fit": "contain",
         "name": "Bouffalant"
@@ -13498,13 +12609,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Rufflet"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Rufflet",
-        "position": "center",
-        "fit": "contain",
-        "name": "Rufflet"
       }
     ]
   },
@@ -13514,13 +12618,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Braviary",
-        "position": "center",
-        "fit": "contain",
-        "name": "Braviary"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Braviary",
         "position": "center",
         "fit": "contain",
         "name": "Braviary"
@@ -13564,13 +12661,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Vullaby"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Vullaby",
-        "position": "center",
-        "fit": "contain",
-        "name": "Vullaby"
       }
     ]
   },
@@ -13580,13 +12670,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Mandibuzz",
-        "position": "center",
-        "fit": "contain",
-        "name": "Mandibuzz"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Mandibuzz",
         "position": "center",
         "fit": "contain",
         "name": "Mandibuzz"
@@ -13616,13 +12699,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Heatmor"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Heatmor",
-        "position": "center",
-        "fit": "contain",
-        "name": "Heatmor"
       }
     ]
   },
@@ -13632,13 +12708,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Durant",
-        "position": "center",
-        "fit": "contain",
-        "name": "Durant"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Durant",
         "position": "center",
         "fit": "contain",
         "name": "Durant"
@@ -13668,13 +12737,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Deino"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Deino",
-        "position": "center",
-        "fit": "contain",
-        "name": "Deino"
       }
     ]
   },
@@ -13684,13 +12746,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Zweilous",
-        "position": "center",
-        "fit": "contain",
-        "name": "Zweilous"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Zweilous",
         "position": "center",
         "fit": "contain",
         "name": "Zweilous"
@@ -13720,13 +12775,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Hydreigon"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Hydreigon",
-        "position": "center",
-        "fit": "contain",
-        "name": "Hydreigon"
       }
     ]
   },
@@ -13736,13 +12784,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Larvesta",
-        "position": "center",
-        "fit": "contain",
-        "name": "Larvesta"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Larvesta",
         "position": "center",
         "fit": "contain",
         "name": "Larvesta"
@@ -13772,13 +12813,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Volcarona"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Volcarona",
-        "position": "center",
-        "fit": "contain",
-        "name": "Volcarona"
       }
     ]
   },
@@ -13788,13 +12822,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Cobalion",
-        "position": "center",
-        "fit": "contain",
-        "name": "Cobalion"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Cobalion",
         "position": "center",
         "fit": "contain",
         "name": "Cobalion"
@@ -13824,13 +12851,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Terrakion"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Terrakion",
-        "position": "center",
-        "fit": "contain",
-        "name": "Terrakion"
       }
     ]
   },
@@ -13840,13 +12860,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Virizion",
-        "position": "center",
-        "fit": "contain",
-        "name": "Virizion"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Virizion",
         "position": "center",
         "fit": "contain",
         "name": "Virizion"
@@ -13876,13 +12889,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Tornadus incarnate"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Tornadus-incarnate",
-        "position": "center",
-        "fit": "contain",
-        "name": "Tornadus incarnate"
       }
     ]
   },
@@ -13892,13 +12898,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Thundurus-incarnate",
-        "position": "center",
-        "fit": "contain",
-        "name": "Thundurus incarnate"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Thundurus-incarnate",
         "position": "center",
         "fit": "contain",
         "name": "Thundurus incarnate"
@@ -13928,13 +12927,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Reshiram"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Reshiram",
-        "position": "center",
-        "fit": "contain",
-        "name": "Reshiram"
       }
     ]
   },
@@ -13944,13 +12936,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Zekrom",
-        "position": "center",
-        "fit": "contain",
-        "name": "Zekrom"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Zekrom",
         "position": "center",
         "fit": "contain",
         "name": "Zekrom"
@@ -13980,13 +12965,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Landorus incarnate"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Landorus-incarnate",
-        "position": "center",
-        "fit": "contain",
-        "name": "Landorus incarnate"
       }
     ]
   },
@@ -13996,13 +12974,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Kyurem",
-        "position": "center",
-        "fit": "contain",
-        "name": "Kyurem"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Kyurem",
         "position": "center",
         "fit": "contain",
         "name": "Kyurem"
@@ -14032,13 +13003,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Keldeo ordinary"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Keldeo-ordinary",
-        "position": "center",
-        "fit": "contain",
-        "name": "Keldeo ordinary"
       }
     ]
   },
@@ -14048,13 +13012,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Meloetta-aria",
-        "position": "center",
-        "fit": "contain",
-        "name": "Meloetta aria"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Meloetta-aria",
         "position": "center",
         "fit": "contain",
         "name": "Meloetta aria"
@@ -14084,13 +13041,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Genesect"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Genesect",
-        "position": "center",
-        "fit": "contain",
-        "name": "Genesect"
       }
     ]
   },
@@ -14100,13 +13050,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Chespin",
-        "position": "center",
-        "fit": "contain",
-        "name": "Chespin"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Chespin",
         "position": "center",
         "fit": "contain",
         "name": "Chespin"
@@ -14136,13 +13079,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Quilladin"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Quilladin",
-        "position": "center",
-        "fit": "contain",
-        "name": "Quilladin"
       }
     ]
   },
@@ -14152,13 +13088,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Chesnaught",
-        "position": "center",
-        "fit": "contain",
-        "name": "Chesnaught"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Chesnaught",
         "position": "center",
         "fit": "contain",
         "name": "Chesnaught"
@@ -14188,13 +13117,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Fennekin"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Fennekin",
-        "position": "center",
-        "fit": "contain",
-        "name": "Fennekin"
       }
     ]
   },
@@ -14204,13 +13126,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Braixen",
-        "position": "center",
-        "fit": "contain",
-        "name": "Braixen"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Braixen",
         "position": "center",
         "fit": "contain",
         "name": "Braixen"
@@ -14240,13 +13155,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Delphox"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Delphox",
-        "position": "center",
-        "fit": "contain",
-        "name": "Delphox"
       }
     ]
   },
@@ -14256,13 +13164,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Froakie",
-        "position": "center",
-        "fit": "contain",
-        "name": "Froakie"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Froakie",
         "position": "center",
         "fit": "contain",
         "name": "Froakie"
@@ -14292,13 +13193,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Frogadier"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Frogadier",
-        "position": "center",
-        "fit": "contain",
-        "name": "Frogadier"
       }
     ]
   },
@@ -14308,13 +13202,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Greninja",
-        "position": "center",
-        "fit": "contain",
-        "name": "Greninja"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Greninja",
         "position": "center",
         "fit": "contain",
         "name": "Greninja"
@@ -14344,13 +13231,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Bunnelby"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Bunnelby",
-        "position": "center",
-        "fit": "contain",
-        "name": "Bunnelby"
       }
     ]
   },
@@ -14360,13 +13240,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Diggersby",
-        "position": "center",
-        "fit": "contain",
-        "name": "Diggersby"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Diggersby",
         "position": "center",
         "fit": "contain",
         "name": "Diggersby"
@@ -14396,13 +13269,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Fletchling"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Fletchling",
-        "position": "center",
-        "fit": "contain",
-        "name": "Fletchling"
       }
     ]
   },
@@ -14412,13 +13278,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Fletchinder",
-        "position": "center",
-        "fit": "contain",
-        "name": "Fletchinder"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Fletchinder",
         "position": "center",
         "fit": "contain",
         "name": "Fletchinder"
@@ -14448,13 +13307,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Talonflame"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Talonflame",
-        "position": "center",
-        "fit": "contain",
-        "name": "Talonflame"
       }
     ]
   },
@@ -14464,13 +13316,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Scatterbug",
-        "position": "center",
-        "fit": "contain",
-        "name": "Scatterbug"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Scatterbug",
         "position": "center",
         "fit": "contain",
         "name": "Scatterbug"
@@ -14500,13 +13345,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Spewpa"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Spewpa",
-        "position": "center",
-        "fit": "contain",
-        "name": "Spewpa"
       }
     ]
   },
@@ -14516,13 +13354,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Vivillon",
-        "position": "center",
-        "fit": "contain",
-        "name": "Vivillon"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Vivillon",
         "position": "center",
         "fit": "contain",
         "name": "Vivillon"
@@ -14552,13 +13383,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Litleo"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Litleo",
-        "position": "center",
-        "fit": "contain",
-        "name": "Litleo"
       }
     ]
   },
@@ -14568,13 +13392,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Pyroar",
-        "position": "center",
-        "fit": "contain",
-        "name": "Pyroar"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Pyroar",
         "position": "center",
         "fit": "contain",
         "name": "Pyroar"
@@ -14604,13 +13421,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Flabebe"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Flabebe",
-        "position": "center",
-        "fit": "contain",
-        "name": "Flabebe"
       }
     ]
   },
@@ -14620,13 +13430,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Floette",
-        "position": "center",
-        "fit": "contain",
-        "name": "Floette"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Floette",
         "position": "center",
         "fit": "contain",
         "name": "Floette"
@@ -14656,13 +13459,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Florges"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Florges",
-        "position": "center",
-        "fit": "contain",
-        "name": "Florges"
       }
     ]
   },
@@ -14672,13 +13468,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Skiddo",
-        "position": "center",
-        "fit": "contain",
-        "name": "Skiddo"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Skiddo",
         "position": "center",
         "fit": "contain",
         "name": "Skiddo"
@@ -14708,13 +13497,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Gogoat"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Gogoat",
-        "position": "center",
-        "fit": "contain",
-        "name": "Gogoat"
       }
     ]
   },
@@ -14724,13 +13506,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Pancham",
-        "position": "center",
-        "fit": "contain",
-        "name": "Pancham"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Pancham",
         "position": "center",
         "fit": "contain",
         "name": "Pancham"
@@ -14760,13 +13535,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Pangoro"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Pangoro",
-        "position": "center",
-        "fit": "contain",
-        "name": "Pangoro"
       }
     ]
   },
@@ -14776,13 +13544,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Furfrou",
-        "position": "center",
-        "fit": "contain",
-        "name": "Furfrou"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Furfrou",
         "position": "center",
         "fit": "contain",
         "name": "Furfrou"
@@ -14812,13 +13573,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Espurr"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Espurr",
-        "position": "center",
-        "fit": "contain",
-        "name": "Espurr"
       }
     ]
   },
@@ -14828,13 +13582,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Meowstic-male",
-        "position": "center",
-        "fit": "contain",
-        "name": "Meowstic"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Meowstic-male",
         "position": "center",
         "fit": "contain",
         "name": "Meowstic"
@@ -14864,13 +13611,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Honedge"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Honedge",
-        "position": "center",
-        "fit": "contain",
-        "name": "Honedge"
       }
     ]
   },
@@ -14880,13 +13620,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Doublade",
-        "position": "center",
-        "fit": "contain",
-        "name": "Doublade"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Doublade",
         "position": "center",
         "fit": "contain",
         "name": "Doublade"
@@ -14916,13 +13649,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Aegislash shield"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Aegislash-shield",
-        "position": "center",
-        "fit": "contain",
-        "name": "Aegislash shield"
       }
     ]
   },
@@ -14932,13 +13658,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Spritzee",
-        "position": "center",
-        "fit": "contain",
-        "name": "Spritzee"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Spritzee",
         "position": "center",
         "fit": "contain",
         "name": "Spritzee"
@@ -14968,13 +13687,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Aromatisse"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Aromatisse",
-        "position": "center",
-        "fit": "contain",
-        "name": "Aromatisse"
       }
     ]
   },
@@ -14984,13 +13696,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Swirlix",
-        "position": "center",
-        "fit": "contain",
-        "name": "Swirlix"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Swirlix",
         "position": "center",
         "fit": "contain",
         "name": "Swirlix"
@@ -15020,13 +13725,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Slurpuff"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Slurpuff",
-        "position": "center",
-        "fit": "contain",
-        "name": "Slurpuff"
       }
     ]
   },
@@ -15036,13 +13734,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Inkay",
-        "position": "center",
-        "fit": "contain",
-        "name": "Inkay"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Inkay",
         "position": "center",
         "fit": "contain",
         "name": "Inkay"
@@ -15072,13 +13763,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Malamar"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Malamar",
-        "position": "center",
-        "fit": "contain",
-        "name": "Malamar"
       }
     ]
   },
@@ -15088,13 +13772,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Binacle",
-        "position": "center",
-        "fit": "contain",
-        "name": "Binacle"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Binacle",
         "position": "center",
         "fit": "contain",
         "name": "Binacle"
@@ -15124,13 +13801,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Barbaracle"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Barbaracle",
-        "position": "center",
-        "fit": "contain",
-        "name": "Barbaracle"
       }
     ]
   },
@@ -15140,13 +13810,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Skrelp",
-        "position": "center",
-        "fit": "contain",
-        "name": "Skrelp"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Skrelp",
         "position": "center",
         "fit": "contain",
         "name": "Skrelp"
@@ -15176,13 +13839,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Dragalge"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Dragalge",
-        "position": "center",
-        "fit": "contain",
-        "name": "Dragalge"
       }
     ]
   },
@@ -15192,13 +13848,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Clauncher",
-        "position": "center",
-        "fit": "contain",
-        "name": "Clauncher"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Clauncher",
         "position": "center",
         "fit": "contain",
         "name": "Clauncher"
@@ -15228,13 +13877,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Clawitzer"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Clawitzer",
-        "position": "center",
-        "fit": "contain",
-        "name": "Clawitzer"
       }
     ]
   },
@@ -15244,13 +13886,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Helioptile",
-        "position": "center",
-        "fit": "contain",
-        "name": "Helioptile"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Helioptile",
         "position": "center",
         "fit": "contain",
         "name": "Helioptile"
@@ -15280,13 +13915,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Heliolisk"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Heliolisk",
-        "position": "center",
-        "fit": "contain",
-        "name": "Heliolisk"
       }
     ]
   },
@@ -15296,13 +13924,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Tyrunt",
-        "position": "center",
-        "fit": "contain",
-        "name": "Tyrunt"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Tyrunt",
         "position": "center",
         "fit": "contain",
         "name": "Tyrunt"
@@ -15332,13 +13953,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Tyrantrum"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Tyrantrum",
-        "position": "center",
-        "fit": "contain",
-        "name": "Tyrantrum"
       }
     ]
   },
@@ -15348,13 +13962,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Amaura",
-        "position": "center",
-        "fit": "contain",
-        "name": "Amaura"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Amaura",
         "position": "center",
         "fit": "contain",
         "name": "Amaura"
@@ -15384,13 +13991,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Aurorus"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Aurorus",
-        "position": "center",
-        "fit": "contain",
-        "name": "Aurorus"
       }
     ]
   },
@@ -15400,13 +14000,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Sylveon",
-        "position": "center",
-        "fit": "contain",
-        "name": "Sylveon"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Sylveon",
         "position": "center",
         "fit": "contain",
         "name": "Sylveon"
@@ -15436,13 +14029,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Hawlucha"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Hawlucha",
-        "position": "center",
-        "fit": "contain",
-        "name": "Hawlucha"
       }
     ]
   },
@@ -15452,13 +14038,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Dedenne",
-        "position": "center",
-        "fit": "contain",
-        "name": "Dedenne"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Dedenne",
         "position": "center",
         "fit": "contain",
         "name": "Dedenne"
@@ -15488,13 +14067,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Carbink"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Carbink",
-        "position": "center",
-        "fit": "contain",
-        "name": "Carbink"
       }
     ]
   },
@@ -15514,13 +14086,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Goomy"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Goomy",
-        "position": "center",
-        "fit": "contain",
-        "name": "Goomy"
       }
     ]
   },
@@ -15530,13 +14095,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Sliggoo",
-        "position": "center",
-        "fit": "contain",
-        "name": "Sliggoo"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Sliggoo",
         "position": "center",
         "fit": "contain",
         "name": "Sliggoo"
@@ -15583,13 +14141,6 @@
       },
       {
         "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Goodra",
-        "position": "center",
-        "fit": "contain",
-        "name": "Goodra"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
         "label": "Hisuian Goodra",
         "position": "center",
         "fit": "contain",
@@ -15620,13 +14171,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Klefki"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Klefki",
-        "position": "center",
-        "fit": "contain",
-        "name": "Klefki"
       }
     ]
   },
@@ -15636,13 +14180,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Phantump",
-        "position": "center",
-        "fit": "contain",
-        "name": "Phantump"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Phantump",
         "position": "center",
         "fit": "contain",
         "name": "Phantump"
@@ -15672,13 +14209,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Trevenant"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Trevenant",
-        "position": "center",
-        "fit": "contain",
-        "name": "Trevenant"
       }
     ]
   },
@@ -15688,13 +14218,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Pumpkaboo-average",
-        "position": "center",
-        "fit": "contain",
-        "name": "Pumpkaboo"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Pumpkaboo-average",
         "position": "center",
         "fit": "contain",
         "name": "Pumpkaboo"
@@ -15724,13 +14247,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Gourgeist"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Gourgeist-average",
-        "position": "center",
-        "fit": "contain",
-        "name": "Gourgeist"
       }
     ]
   },
@@ -15750,13 +14266,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Bergmite"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Bergmite",
-        "position": "center",
-        "fit": "contain",
-        "name": "Bergmite"
       }
     ]
   },
@@ -15766,13 +14275,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Avalugg",
-        "position": "center",
-        "fit": "contain",
-        "name": "Avalugg"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Avalugg",
         "position": "center",
         "fit": "contain",
         "name": "Avalugg"
@@ -15816,13 +14318,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Noibat"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Noibat",
-        "position": "center",
-        "fit": "contain",
-        "name": "Noibat"
       }
     ]
   },
@@ -15832,13 +14327,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Noivern",
-        "position": "center",
-        "fit": "contain",
-        "name": "Noivern"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Noivern",
         "position": "center",
         "fit": "contain",
         "name": "Noivern"
@@ -15868,13 +14356,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Xerneas"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Xerneas",
-        "position": "center",
-        "fit": "contain",
-        "name": "Xerneas"
       }
     ]
   },
@@ -15884,13 +14365,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Yveltal",
-        "position": "center",
-        "fit": "contain",
-        "name": "Yveltal"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Yveltal",
         "position": "center",
         "fit": "contain",
         "name": "Yveltal"
@@ -15920,13 +14394,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Zygarde 50"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Zygarde-50",
-        "position": "center",
-        "fit": "contain",
-        "name": "Zygarde 50"
       }
     ]
   },
@@ -15936,13 +14403,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Diancie",
-        "position": "center",
-        "fit": "contain",
-        "name": "Diancie"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Diancie",
         "position": "center",
         "fit": "contain",
         "name": "Diancie"
@@ -15972,13 +14432,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Hoopa"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Hoopa",
-        "position": "center",
-        "fit": "contain",
-        "name": "Hoopa"
       }
     ]
   },
@@ -15988,13 +14441,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Volcanion",
-        "position": "center",
-        "fit": "contain",
-        "name": "Volcanion"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Volcanion",
         "position": "center",
         "fit": "contain",
         "name": "Volcanion"
@@ -16024,13 +14470,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Rowlet"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Rowlet",
-        "position": "center",
-        "fit": "contain",
-        "name": "Rowlet"
       }
     ]
   },
@@ -16050,13 +14489,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Dartrix"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Dartrix",
-        "position": "center",
-        "fit": "contain",
-        "name": "Dartrix"
       }
     ]
   },
@@ -16066,13 +14498,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Decidueye",
-        "position": "center",
-        "fit": "contain",
-        "name": "Decidueye"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Decidueye",
         "position": "center",
         "fit": "contain",
         "name": "Decidueye"
@@ -16116,13 +14541,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Litten"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Litten",
-        "position": "center",
-        "fit": "contain",
-        "name": "Litten"
       }
     ]
   },
@@ -16132,13 +14550,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Torracat",
-        "position": "center",
-        "fit": "contain",
-        "name": "Torracat"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Torracat",
         "position": "center",
         "fit": "contain",
         "name": "Torracat"
@@ -16168,13 +14579,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Incineroar"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Incineroar",
-        "position": "center",
-        "fit": "contain",
-        "name": "Incineroar"
       }
     ]
   },
@@ -16184,13 +14588,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Popplio",
-        "position": "center",
-        "fit": "contain",
-        "name": "Popplio"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Popplio",
         "position": "center",
         "fit": "contain",
         "name": "Popplio"
@@ -16220,13 +14617,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Brionne"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Brionne",
-        "position": "center",
-        "fit": "contain",
-        "name": "Brionne"
       }
     ]
   },
@@ -16236,13 +14626,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Primarina",
-        "position": "center",
-        "fit": "contain",
-        "name": "Primarina"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Primarina",
         "position": "center",
         "fit": "contain",
         "name": "Primarina"
@@ -16272,13 +14655,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Pikipek"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Pikipek",
-        "position": "center",
-        "fit": "contain",
-        "name": "Pikipek"
       }
     ]
   },
@@ -16288,13 +14664,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Trumbeak",
-        "position": "center",
-        "fit": "contain",
-        "name": "Trumbeak"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Trumbeak",
         "position": "center",
         "fit": "contain",
         "name": "Trumbeak"
@@ -16324,13 +14693,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Toucannon"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Toucannon",
-        "position": "center",
-        "fit": "contain",
-        "name": "Toucannon"
       }
     ]
   },
@@ -16340,13 +14702,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Yungoos",
-        "position": "center",
-        "fit": "contain",
-        "name": "Yungoos"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Yungoos",
         "position": "center",
         "fit": "contain",
         "name": "Yungoos"
@@ -16376,13 +14731,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Gumshoos"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Gumshoos",
-        "position": "center",
-        "fit": "contain",
-        "name": "Gumshoos"
       }
     ]
   },
@@ -16392,13 +14740,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Grubbin",
-        "position": "center",
-        "fit": "contain",
-        "name": "Grubbin"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Grubbin",
         "position": "center",
         "fit": "contain",
         "name": "Grubbin"
@@ -16428,13 +14769,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Charjabug"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Charjabug",
-        "position": "center",
-        "fit": "contain",
-        "name": "Charjabug"
       }
     ]
   },
@@ -16444,13 +14778,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Vikavolt",
-        "position": "center",
-        "fit": "contain",
-        "name": "Vikavolt"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Vikavolt",
         "position": "center",
         "fit": "contain",
         "name": "Vikavolt"
@@ -16480,13 +14807,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Crabrawler"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Crabrawler",
-        "position": "center",
-        "fit": "contain",
-        "name": "Crabrawler"
       }
     ]
   },
@@ -16496,13 +14816,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Crabominable",
-        "position": "center",
-        "fit": "contain",
-        "name": "Crabominable"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Crabominable",
         "position": "center",
         "fit": "contain",
         "name": "Crabominable"
@@ -16532,13 +14845,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Oricorio baile"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Oricorio-baile",
-        "position": "center",
-        "fit": "contain",
-        "name": "Oricorio baile"
       }
     ]
   },
@@ -16548,13 +14854,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Cutiefly",
-        "position": "center",
-        "fit": "contain",
-        "name": "Cutiefly"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Cutiefly",
         "position": "center",
         "fit": "contain",
         "name": "Cutiefly"
@@ -16584,13 +14883,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Ribombee"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Ribombee",
-        "position": "center",
-        "fit": "contain",
-        "name": "Ribombee"
       }
     ]
   },
@@ -16600,13 +14892,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Rockruff",
-        "position": "center",
-        "fit": "contain",
-        "name": "Rockruff"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Rockruff",
         "position": "center",
         "fit": "contain",
         "name": "Rockruff"
@@ -16636,13 +14921,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Lycanroc midday"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Lycanroc-midday",
-        "position": "center",
-        "fit": "contain",
-        "name": "Lycanroc midday"
       }
     ]
   },
@@ -16652,13 +14930,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Wishiwashi-solo",
-        "position": "center",
-        "fit": "contain",
-        "name": "Wishiwashi solo"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Wishiwashi-solo",
         "position": "center",
         "fit": "contain",
         "name": "Wishiwashi solo"
@@ -16688,13 +14959,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Mareanie"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Mareanie",
-        "position": "center",
-        "fit": "contain",
-        "name": "Mareanie"
       }
     ]
   },
@@ -16704,13 +14968,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Toxapex",
-        "position": "center",
-        "fit": "contain",
-        "name": "Toxapex"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Toxapex",
         "position": "center",
         "fit": "contain",
         "name": "Toxapex"
@@ -16740,13 +14997,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Mudbray"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Mudbray",
-        "position": "center",
-        "fit": "contain",
-        "name": "Mudbray"
       }
     ]
   },
@@ -16756,13 +15006,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Mudsdale",
-        "position": "center",
-        "fit": "contain",
-        "name": "Mudsdale"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Mudsdale",
         "position": "center",
         "fit": "contain",
         "name": "Mudsdale"
@@ -16792,13 +15035,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Dewpider"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Dewpider",
-        "position": "center",
-        "fit": "contain",
-        "name": "Dewpider"
       }
     ]
   },
@@ -16808,13 +15044,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Araquanid",
-        "position": "center",
-        "fit": "contain",
-        "name": "Araquanid"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Araquanid",
         "position": "center",
         "fit": "contain",
         "name": "Araquanid"
@@ -16844,13 +15073,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Fomantis"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Fomantis",
-        "position": "center",
-        "fit": "contain",
-        "name": "Fomantis"
       }
     ]
   },
@@ -16860,13 +15082,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Lurantis",
-        "position": "center",
-        "fit": "contain",
-        "name": "Lurantis"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Lurantis",
         "position": "center",
         "fit": "contain",
         "name": "Lurantis"
@@ -16896,13 +15111,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Morelull"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Morelull",
-        "position": "center",
-        "fit": "contain",
-        "name": "Morelull"
       }
     ]
   },
@@ -16912,13 +15120,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Shiinotic",
-        "position": "center",
-        "fit": "contain",
-        "name": "Shiinotic"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Shiinotic",
         "position": "center",
         "fit": "contain",
         "name": "Shiinotic"
@@ -16948,13 +15149,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Salandit"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Salandit",
-        "position": "center",
-        "fit": "contain",
-        "name": "Salandit"
       }
     ]
   },
@@ -16964,13 +15158,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Salazzle",
-        "position": "center",
-        "fit": "contain",
-        "name": "Salazzle"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Salazzle",
         "position": "center",
         "fit": "contain",
         "name": "Salazzle"
@@ -17000,13 +15187,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Stufful"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Stufful",
-        "position": "center",
-        "fit": "contain",
-        "name": "Stufful"
       }
     ]
   },
@@ -17016,13 +15196,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Bewear",
-        "position": "center",
-        "fit": "contain",
-        "name": "Bewear"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Bewear",
         "position": "center",
         "fit": "contain",
         "name": "Bewear"
@@ -17052,13 +15225,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Bounsweet"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Bounsweet",
-        "position": "center",
-        "fit": "contain",
-        "name": "Bounsweet"
       }
     ]
   },
@@ -17068,13 +15234,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Steenee",
-        "position": "center",
-        "fit": "contain",
-        "name": "Steenee"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Steenee",
         "position": "center",
         "fit": "contain",
         "name": "Steenee"
@@ -17104,13 +15263,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Tsareena"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Tsareena",
-        "position": "center",
-        "fit": "contain",
-        "name": "Tsareena"
       }
     ]
   },
@@ -17120,13 +15272,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Comfey",
-        "position": "center",
-        "fit": "contain",
-        "name": "Comfey"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Comfey",
         "position": "center",
         "fit": "contain",
         "name": "Comfey"
@@ -17156,13 +15301,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Oranguru"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Oranguru",
-        "position": "center",
-        "fit": "contain",
-        "name": "Oranguru"
       }
     ]
   },
@@ -17172,13 +15310,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Passimian",
-        "position": "center",
-        "fit": "contain",
-        "name": "Passimian"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Passimian",
         "position": "center",
         "fit": "contain",
         "name": "Passimian"
@@ -17208,13 +15339,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Wimpod"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Wimpod",
-        "position": "center",
-        "fit": "contain",
-        "name": "Wimpod"
       }
     ]
   },
@@ -17224,13 +15348,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Golisopod",
-        "position": "center",
-        "fit": "contain",
-        "name": "Golisopod"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Golisopod",
         "position": "center",
         "fit": "contain",
         "name": "Golisopod"
@@ -17260,13 +15377,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Sandygast"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Sandygast",
-        "position": "center",
-        "fit": "contain",
-        "name": "Sandygast"
       }
     ]
   },
@@ -17276,13 +15386,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Palossand",
-        "position": "center",
-        "fit": "contain",
-        "name": "Palossand"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Palossand",
         "position": "center",
         "fit": "contain",
         "name": "Palossand"
@@ -17312,13 +15415,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Pyukumuku"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Pyukumuku",
-        "position": "center",
-        "fit": "contain",
-        "name": "Pyukumuku"
       }
     ]
   },
@@ -17328,13 +15424,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Type-null",
-        "position": "center",
-        "fit": "contain",
-        "name": "Type: Null"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Type-null",
         "position": "center",
         "fit": "contain",
         "name": "Type: Null"
@@ -17364,13 +15453,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Silvally"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Silvally",
-        "position": "center",
-        "fit": "contain",
-        "name": "Silvally"
       }
     ]
   },
@@ -17380,13 +15462,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Minior-red-meteor",
-        "position": "center",
-        "fit": "contain",
-        "name": "Minior red meteor"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Minior-red-meteor",
         "position": "center",
         "fit": "contain",
         "name": "Minior red meteor"
@@ -17416,13 +15491,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Komala"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Komala",
-        "position": "center",
-        "fit": "contain",
-        "name": "Komala"
       }
     ]
   },
@@ -17432,13 +15500,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Turtonator",
-        "position": "center",
-        "fit": "contain",
-        "name": "Turtonator"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Turtonator",
         "position": "center",
         "fit": "contain",
         "name": "Turtonator"
@@ -17468,13 +15529,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Togedemaru"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Togedemaru",
-        "position": "center",
-        "fit": "contain",
-        "name": "Togedemaru"
       }
     ]
   },
@@ -17484,13 +15538,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Mimikyu-disguised",
-        "position": "center",
-        "fit": "contain",
-        "name": "Mimikyu disguised"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Mimikyu-disguised",
         "position": "center",
         "fit": "contain",
         "name": "Mimikyu disguised"
@@ -17520,13 +15567,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Bruxish"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Bruxish",
-        "position": "center",
-        "fit": "contain",
-        "name": "Bruxish"
       }
     ]
   },
@@ -17536,13 +15576,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Drampa",
-        "position": "center",
-        "fit": "contain",
-        "name": "Drampa"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Drampa",
         "position": "center",
         "fit": "contain",
         "name": "Drampa"
@@ -17572,13 +15605,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Dhelmise"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Dhelmise",
-        "position": "center",
-        "fit": "contain",
-        "name": "Dhelmise"
       }
     ]
   },
@@ -17588,13 +15614,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Jangmo-o",
-        "position": "center",
-        "fit": "contain",
-        "name": "Jangmo-o"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Jangmo-o",
         "position": "center",
         "fit": "contain",
         "name": "Jangmo-o"
@@ -17624,13 +15643,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Hakamo-o"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Hakamo-o",
-        "position": "center",
-        "fit": "contain",
-        "name": "Hakamo-o"
       }
     ]
   },
@@ -17640,13 +15652,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Kommo-o",
-        "position": "center",
-        "fit": "contain",
-        "name": "Kommo-o"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Kommo-o",
         "position": "center",
         "fit": "contain",
         "name": "Kommo-o"
@@ -17676,13 +15681,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Tapu Koko"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Tapu-koko",
-        "position": "center",
-        "fit": "contain",
-        "name": "Tapu Koko"
       }
     ]
   },
@@ -17692,13 +15690,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Tapu-lele",
-        "position": "center",
-        "fit": "contain",
-        "name": "Tapu Lele"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Tapu-lele",
         "position": "center",
         "fit": "contain",
         "name": "Tapu Lele"
@@ -17728,13 +15719,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Tapu Bulu"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Tapu-bulu",
-        "position": "center",
-        "fit": "contain",
-        "name": "Tapu Bulu"
       }
     ]
   },
@@ -17744,13 +15728,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Tapu-fini",
-        "position": "center",
-        "fit": "contain",
-        "name": "Tapu Fini"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Tapu-fini",
         "position": "center",
         "fit": "contain",
         "name": "Tapu Fini"
@@ -17780,13 +15757,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Cosmog"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Cosmog",
-        "position": "center",
-        "fit": "contain",
-        "name": "Cosmog"
       }
     ]
   },
@@ -17796,13 +15766,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Cosmoem",
-        "position": "center",
-        "fit": "contain",
-        "name": "Cosmoem"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Cosmoem",
         "position": "center",
         "fit": "contain",
         "name": "Cosmoem"
@@ -17832,13 +15795,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Solgaleo"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Solgaleo",
-        "position": "center",
-        "fit": "contain",
-        "name": "Solgaleo"
       }
     ]
   },
@@ -17848,13 +15804,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Lunala",
-        "position": "center",
-        "fit": "contain",
-        "name": "Lunala"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Lunala",
         "position": "center",
         "fit": "contain",
         "name": "Lunala"
@@ -17884,13 +15833,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Nihilego"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Nihilego",
-        "position": "center",
-        "fit": "contain",
-        "name": "Nihilego"
       }
     ]
   },
@@ -17900,13 +15842,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Buzzwole",
-        "position": "center",
-        "fit": "contain",
-        "name": "Buzzwole"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Buzzwole",
         "position": "center",
         "fit": "contain",
         "name": "Buzzwole"
@@ -17936,13 +15871,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Pheromosa"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Pheromosa",
-        "position": "center",
-        "fit": "contain",
-        "name": "Pheromosa"
       }
     ]
   },
@@ -17952,13 +15880,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Xurkitree",
-        "position": "center",
-        "fit": "contain",
-        "name": "Xurkitree"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Xurkitree",
         "position": "center",
         "fit": "contain",
         "name": "Xurkitree"
@@ -17988,13 +15909,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Celesteela"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Celesteela",
-        "position": "center",
-        "fit": "contain",
-        "name": "Celesteela"
       }
     ]
   },
@@ -18004,13 +15918,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Kartana",
-        "position": "center",
-        "fit": "contain",
-        "name": "Kartana"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Kartana",
         "position": "center",
         "fit": "contain",
         "name": "Kartana"
@@ -18040,13 +15947,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Guzzlord"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Guzzlord",
-        "position": "center",
-        "fit": "contain",
-        "name": "Guzzlord"
       }
     ]
   },
@@ -18056,13 +15956,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Necrozma",
-        "position": "center",
-        "fit": "contain",
-        "name": "Necrozma"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Necrozma",
         "position": "center",
         "fit": "contain",
         "name": "Necrozma"
@@ -18092,13 +15985,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Magearna"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Magearna",
-        "position": "center",
-        "fit": "contain",
-        "name": "Magearna"
       }
     ]
   },
@@ -18108,13 +15994,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Marshadow",
-        "position": "center",
-        "fit": "contain",
-        "name": "Marshadow"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Marshadow",
         "position": "center",
         "fit": "contain",
         "name": "Marshadow"
@@ -18144,13 +16023,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Poipole"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Poipole",
-        "position": "center",
-        "fit": "contain",
-        "name": "Poipole"
       }
     ]
   },
@@ -18160,13 +16032,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Naganadel",
-        "position": "center",
-        "fit": "contain",
-        "name": "Naganadel"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Naganadel",
         "position": "center",
         "fit": "contain",
         "name": "Naganadel"
@@ -18196,13 +16061,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Stakataka"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Stakataka",
-        "position": "center",
-        "fit": "contain",
-        "name": "Stakataka"
       }
     ]
   },
@@ -18212,13 +16070,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Blacephalon",
-        "position": "center",
-        "fit": "contain",
-        "name": "Blacephalon"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Blacephalon",
         "position": "center",
         "fit": "contain",
         "name": "Blacephalon"
@@ -18248,13 +16099,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Zeraora"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Zeraora",
-        "position": "center",
-        "fit": "contain",
-        "name": "Zeraora"
       }
     ]
   },
@@ -18264,13 +16108,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Meltan",
-        "position": "center",
-        "fit": "contain",
-        "name": "Meltan"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Meltan",
         "position": "center",
         "fit": "contain",
         "name": "Meltan"
@@ -18300,13 +16137,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Melmetal"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Melmetal",
-        "position": "center",
-        "fit": "contain",
-        "name": "Melmetal"
       }
     ]
   },
@@ -18316,13 +16146,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Grookey",
-        "position": "center",
-        "fit": "contain",
-        "name": "Grookey"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Grookey",
         "position": "center",
         "fit": "contain",
         "name": "Grookey"
@@ -18352,13 +16175,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Thwackey"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Thwackey",
-        "position": "center",
-        "fit": "contain",
-        "name": "Thwackey"
       }
     ]
   },
@@ -18368,13 +16184,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Rillaboom",
-        "position": "center",
-        "fit": "contain",
-        "name": "Rillaboom"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Rillaboom",
         "position": "center",
         "fit": "contain",
         "name": "Rillaboom"
@@ -18404,13 +16213,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Scorbunny"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Scorbunny",
-        "position": "center",
-        "fit": "contain",
-        "name": "Scorbunny"
       }
     ]
   },
@@ -18420,13 +16222,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Raboot",
-        "position": "center",
-        "fit": "contain",
-        "name": "Raboot"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Raboot",
         "position": "center",
         "fit": "contain",
         "name": "Raboot"
@@ -18456,13 +16251,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Cinderace"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Cinderace",
-        "position": "center",
-        "fit": "contain",
-        "name": "Cinderace"
       }
     ]
   },
@@ -18472,13 +16260,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Sobble",
-        "position": "center",
-        "fit": "contain",
-        "name": "Sobble"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Sobble",
         "position": "center",
         "fit": "contain",
         "name": "Sobble"
@@ -18508,13 +16289,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Drizzile"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Drizzile",
-        "position": "center",
-        "fit": "contain",
-        "name": "Drizzile"
       }
     ]
   },
@@ -18524,13 +16298,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Inteleon",
-        "position": "center",
-        "fit": "contain",
-        "name": "Inteleon"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Inteleon",
         "position": "center",
         "fit": "contain",
         "name": "Inteleon"
@@ -18560,13 +16327,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Skwovet"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Skwovet",
-        "position": "center",
-        "fit": "contain",
-        "name": "Skwovet"
       }
     ]
   },
@@ -18576,13 +16336,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Greedent",
-        "position": "center",
-        "fit": "contain",
-        "name": "Greedent"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Greedent",
         "position": "center",
         "fit": "contain",
         "name": "Greedent"
@@ -18612,13 +16365,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Rookidee"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Rookidee",
-        "position": "center",
-        "fit": "contain",
-        "name": "Rookidee"
       }
     ]
   },
@@ -18628,13 +16374,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Corvisquire",
-        "position": "center",
-        "fit": "contain",
-        "name": "Corvisquire"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Corvisquire",
         "position": "center",
         "fit": "contain",
         "name": "Corvisquire"
@@ -18664,13 +16403,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Corviknight"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Corviknight",
-        "position": "center",
-        "fit": "contain",
-        "name": "Corviknight"
       }
     ]
   },
@@ -18680,13 +16412,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Blipbug",
-        "position": "center",
-        "fit": "contain",
-        "name": "Blipbug"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Blipbug",
         "position": "center",
         "fit": "contain",
         "name": "Blipbug"
@@ -18716,13 +16441,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Dottler"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Dottler",
-        "position": "center",
-        "fit": "contain",
-        "name": "Dottler"
       }
     ]
   },
@@ -18732,13 +16450,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Orbeetle",
-        "position": "center",
-        "fit": "contain",
-        "name": "Orbeetle"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Orbeetle",
         "position": "center",
         "fit": "contain",
         "name": "Orbeetle"
@@ -18768,13 +16479,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Nickit"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Nickit",
-        "position": "center",
-        "fit": "contain",
-        "name": "Nickit"
       }
     ]
   },
@@ -18784,13 +16488,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Thievul",
-        "position": "center",
-        "fit": "contain",
-        "name": "Thievul"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Thievul",
         "position": "center",
         "fit": "contain",
         "name": "Thievul"
@@ -18820,13 +16517,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Gossifleur"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Gossifleur",
-        "position": "center",
-        "fit": "contain",
-        "name": "Gossifleur"
       }
     ]
   },
@@ -18836,13 +16526,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Eldegoss",
-        "position": "center",
-        "fit": "contain",
-        "name": "Eldegoss"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Eldegoss",
         "position": "center",
         "fit": "contain",
         "name": "Eldegoss"
@@ -18872,13 +16555,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Wooloo"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Wooloo",
-        "position": "center",
-        "fit": "contain",
-        "name": "Wooloo"
       }
     ]
   },
@@ -18888,13 +16564,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Dubwool",
-        "position": "center",
-        "fit": "contain",
-        "name": "Dubwool"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Dubwool",
         "position": "center",
         "fit": "contain",
         "name": "Dubwool"
@@ -18924,13 +16593,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Chewtle"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Chewtle",
-        "position": "center",
-        "fit": "contain",
-        "name": "Chewtle"
       }
     ]
   },
@@ -18940,13 +16602,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Drednaw",
-        "position": "center",
-        "fit": "contain",
-        "name": "Drednaw"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Drednaw",
         "position": "center",
         "fit": "contain",
         "name": "Drednaw"
@@ -18976,13 +16631,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Yamper"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Yamper",
-        "position": "center",
-        "fit": "contain",
-        "name": "Yamper"
       }
     ]
   },
@@ -18992,13 +16640,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Boltund",
-        "position": "center",
-        "fit": "contain",
-        "name": "Boltund"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Boltund",
         "position": "center",
         "fit": "contain",
         "name": "Boltund"
@@ -19028,13 +16669,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Rolycoly"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Rolycoly",
-        "position": "center",
-        "fit": "contain",
-        "name": "Rolycoly"
       }
     ]
   },
@@ -19044,13 +16678,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Carkol",
-        "position": "center",
-        "fit": "contain",
-        "name": "Carkol"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Carkol",
         "position": "center",
         "fit": "contain",
         "name": "Carkol"
@@ -19080,13 +16707,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Coalossal"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Coalossal",
-        "position": "center",
-        "fit": "contain",
-        "name": "Coalossal"
       }
     ]
   },
@@ -19096,13 +16716,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Applin",
-        "position": "center",
-        "fit": "contain",
-        "name": "Applin"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Applin",
         "position": "center",
         "fit": "contain",
         "name": "Applin"
@@ -19132,13 +16745,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Flapple"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Flapple",
-        "position": "center",
-        "fit": "contain",
-        "name": "Flapple"
       }
     ]
   },
@@ -19148,13 +16754,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Appletun",
-        "position": "center",
-        "fit": "contain",
-        "name": "Appletun"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Appletun",
         "position": "center",
         "fit": "contain",
         "name": "Appletun"
@@ -19184,13 +16783,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Silicobra"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Silicobra",
-        "position": "center",
-        "fit": "contain",
-        "name": "Silicobra"
       }
     ]
   },
@@ -19200,13 +16792,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Sandaconda",
-        "position": "center",
-        "fit": "contain",
-        "name": "Sandaconda"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Sandaconda",
         "position": "center",
         "fit": "contain",
         "name": "Sandaconda"
@@ -19236,13 +16821,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Cramorant"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Cramorant",
-        "position": "center",
-        "fit": "contain",
-        "name": "Cramorant"
       }
     ]
   },
@@ -19252,13 +16830,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Arrokuda",
-        "position": "center",
-        "fit": "contain",
-        "name": "Arrokuda"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Arrokuda",
         "position": "center",
         "fit": "contain",
         "name": "Arrokuda"
@@ -19288,13 +16859,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Barraskewda"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Barraskewda",
-        "position": "center",
-        "fit": "contain",
-        "name": "Barraskewda"
       }
     ]
   },
@@ -19304,13 +16868,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Toxel",
-        "position": "center",
-        "fit": "contain",
-        "name": "Toxel"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Toxel",
         "position": "center",
         "fit": "contain",
         "name": "Toxel"
@@ -19340,13 +16897,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Toxtricity"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Toxtricity-amped",
-        "position": "center",
-        "fit": "contain",
-        "name": "Toxtricity"
       }
     ]
   },
@@ -19356,13 +16906,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Sizzlipede",
-        "position": "center",
-        "fit": "contain",
-        "name": "Sizzlipede"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Sizzlipede",
         "position": "center",
         "fit": "contain",
         "name": "Sizzlipede"
@@ -19392,13 +16935,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Centiskorch"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Centiskorch",
-        "position": "center",
-        "fit": "contain",
-        "name": "Centiskorch"
       }
     ]
   },
@@ -19408,13 +16944,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Clobbopus",
-        "position": "center",
-        "fit": "contain",
-        "name": "Clobbopus"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Clobbopus",
         "position": "center",
         "fit": "contain",
         "name": "Clobbopus"
@@ -19444,13 +16973,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Grapploct"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Grapploct",
-        "position": "center",
-        "fit": "contain",
-        "name": "Grapploct"
       }
     ]
   },
@@ -19460,13 +16982,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Sinistea",
-        "position": "center",
-        "fit": "contain",
-        "name": "Sinistea"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Sinistea",
         "position": "center",
         "fit": "contain",
         "name": "Sinistea"
@@ -19496,13 +17011,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Polteageist"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Polteageist",
-        "position": "center",
-        "fit": "contain",
-        "name": "Polteageist"
       }
     ]
   },
@@ -19512,13 +17020,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Hatenna",
-        "position": "center",
-        "fit": "contain",
-        "name": "Hatenna"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Hatenna",
         "position": "center",
         "fit": "contain",
         "name": "Hatenna"
@@ -19548,13 +17049,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Hattrem"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Hattrem",
-        "position": "center",
-        "fit": "contain",
-        "name": "Hattrem"
       }
     ]
   },
@@ -19564,13 +17058,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Hatterene",
-        "position": "center",
-        "fit": "contain",
-        "name": "Hatterene"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Hatterene",
         "position": "center",
         "fit": "contain",
         "name": "Hatterene"
@@ -19600,13 +17087,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Impidimp"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Impidimp",
-        "position": "center",
-        "fit": "contain",
-        "name": "Impidimp"
       }
     ]
   },
@@ -19616,13 +17096,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Morgrem",
-        "position": "center",
-        "fit": "contain",
-        "name": "Morgrem"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Morgrem",
         "position": "center",
         "fit": "contain",
         "name": "Morgrem"
@@ -19652,13 +17125,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Grimmsnarl"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Grimmsnarl",
-        "position": "center",
-        "fit": "contain",
-        "name": "Grimmsnarl"
       }
     ]
   },
@@ -19668,13 +17134,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Obstagoon",
-        "position": "center",
-        "fit": "contain",
-        "name": "Obstagoon"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Obstagoon",
         "position": "center",
         "fit": "contain",
         "name": "Obstagoon"
@@ -19704,13 +17163,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Perrserker"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Perrserker",
-        "position": "center",
-        "fit": "contain",
-        "name": "Perrserker"
       }
     ]
   },
@@ -19720,13 +17172,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Cursola",
-        "position": "center",
-        "fit": "contain",
-        "name": "Cursola"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Cursola",
         "position": "center",
         "fit": "contain",
         "name": "Cursola"
@@ -19756,13 +17201,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Sirfetchd"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Sirfetchd",
-        "position": "center",
-        "fit": "contain",
-        "name": "Sirfetchd"
       }
     ]
   },
@@ -19772,13 +17210,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Mr-rime",
-        "position": "center",
-        "fit": "contain",
-        "name": "Mr. Rime"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Mr-rime",
         "position": "center",
         "fit": "contain",
         "name": "Mr. Rime"
@@ -19808,13 +17239,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Runerigus"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Runerigus",
-        "position": "center",
-        "fit": "contain",
-        "name": "Runerigus"
       }
     ]
   },
@@ -19824,13 +17248,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Milcery",
-        "position": "center",
-        "fit": "contain",
-        "name": "Milcery"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Milcery",
         "position": "center",
         "fit": "contain",
         "name": "Milcery"
@@ -19860,13 +17277,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Alcremie"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Alcremie",
-        "position": "center",
-        "fit": "contain",
-        "name": "Alcremie"
       }
     ]
   },
@@ -19876,13 +17286,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Falinks",
-        "position": "center",
-        "fit": "contain",
-        "name": "Falinks"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Falinks",
         "position": "center",
         "fit": "contain",
         "name": "Falinks"
@@ -19912,13 +17315,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Pincurchin"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Pincurchin",
-        "position": "center",
-        "fit": "contain",
-        "name": "Pincurchin"
       }
     ]
   },
@@ -19928,13 +17324,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Snom",
-        "position": "center",
-        "fit": "contain",
-        "name": "Snom"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Snom",
         "position": "center",
         "fit": "contain",
         "name": "Snom"
@@ -19964,13 +17353,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Frosmoth"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Frosmoth",
-        "position": "center",
-        "fit": "contain",
-        "name": "Frosmoth"
       }
     ]
   },
@@ -19980,13 +17362,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Stonjourner",
-        "position": "center",
-        "fit": "contain",
-        "name": "Stonjourner"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Stonjourner",
         "position": "center",
         "fit": "contain",
         "name": "Stonjourner"
@@ -20016,13 +17391,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Eiscue ice"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Eiscue-ice",
-        "position": "center",
-        "fit": "contain",
-        "name": "Eiscue ice"
       }
     ]
   },
@@ -20032,13 +17400,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Indeedee-male",
-        "position": "center",
-        "fit": "contain",
-        "name": "Indeedee male"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Indeedee-male",
         "position": "center",
         "fit": "contain",
         "name": "Indeedee male"
@@ -20068,13 +17429,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Morpeko"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Morpeko-full-belly",
-        "position": "center",
-        "fit": "contain",
-        "name": "Morpeko"
       }
     ]
   },
@@ -20084,13 +17438,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Cufant",
-        "position": "center",
-        "fit": "contain",
-        "name": "Cufant"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Cufant",
         "position": "center",
         "fit": "contain",
         "name": "Cufant"
@@ -20120,13 +17467,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Copperajah"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Copperajah",
-        "position": "center",
-        "fit": "contain",
-        "name": "Copperajah"
       }
     ]
   },
@@ -20136,13 +17476,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Dracozolt",
-        "position": "center",
-        "fit": "contain",
-        "name": "Dracozolt"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Dracozolt",
         "position": "center",
         "fit": "contain",
         "name": "Dracozolt"
@@ -20172,13 +17505,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Arctozolt"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Arctozolt",
-        "position": "center",
-        "fit": "contain",
-        "name": "Arctozolt"
       }
     ]
   },
@@ -20188,13 +17514,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Dracovish",
-        "position": "center",
-        "fit": "contain",
-        "name": "Dracovish"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Dracovish",
         "position": "center",
         "fit": "contain",
         "name": "Dracovish"
@@ -20224,13 +17543,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Arctovish"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Arctovish",
-        "position": "center",
-        "fit": "contain",
-        "name": "Arctovish"
       }
     ]
   },
@@ -20240,13 +17552,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Duraludon",
-        "position": "center",
-        "fit": "contain",
-        "name": "Duraludon"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Duraludon",
         "position": "center",
         "fit": "contain",
         "name": "Duraludon"
@@ -20276,13 +17581,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Dreepy"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Dreepy",
-        "position": "center",
-        "fit": "contain",
-        "name": "Dreepy"
       }
     ]
   },
@@ -20292,13 +17590,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Drakloak",
-        "position": "center",
-        "fit": "contain",
-        "name": "Drakloak"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Drakloak",
         "position": "center",
         "fit": "contain",
         "name": "Drakloak"
@@ -20328,13 +17619,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Dragapult"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Dragapult",
-        "position": "center",
-        "fit": "contain",
-        "name": "Dragapult"
       }
     ]
   },
@@ -20344,13 +17628,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Zacian",
-        "position": "center",
-        "fit": "contain",
-        "name": "Zacian"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Zacian",
         "position": "center",
         "fit": "contain",
         "name": "Zacian"
@@ -20380,13 +17657,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Zamazenta"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Zamazenta",
-        "position": "center",
-        "fit": "contain",
-        "name": "Zamazenta"
       }
     ]
   },
@@ -20396,13 +17666,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Eternatus",
-        "position": "center",
-        "fit": "contain",
-        "name": "Eternatus"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Eternatus",
         "position": "center",
         "fit": "contain",
         "name": "Eternatus"
@@ -20432,13 +17695,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Kubfu"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Kubfu",
-        "position": "center",
-        "fit": "contain",
-        "name": "Kubfu"
       }
     ]
   },
@@ -20448,13 +17704,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Urshifu-single-strike",
-        "position": "center",
-        "fit": "contain",
-        "name": "Urshifu"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Urshifu-single-strike",
         "position": "center",
         "fit": "contain",
         "name": "Urshifu"
@@ -20484,13 +17733,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Zarude"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Zarude",
-        "position": "center",
-        "fit": "contain",
-        "name": "Zarude"
       }
     ]
   },
@@ -20500,13 +17742,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Regieleki",
-        "position": "center",
-        "fit": "contain",
-        "name": "Regieleki"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Regieleki",
         "position": "center",
         "fit": "contain",
         "name": "Regieleki"
@@ -20536,13 +17771,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Regidrago"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Regidrago",
-        "position": "center",
-        "fit": "contain",
-        "name": "Regidrago"
       }
     ]
   },
@@ -20552,13 +17780,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Glastrier",
-        "position": "center",
-        "fit": "contain",
-        "name": "Glastrier"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Glastrier",
         "position": "center",
         "fit": "contain",
         "name": "Glastrier"
@@ -20588,13 +17809,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Spectrier"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Spectrier",
-        "position": "center",
-        "fit": "contain",
-        "name": "Spectrier"
       }
     ]
   },
@@ -20604,13 +17818,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Calyrex",
-        "position": "center",
-        "fit": "contain",
-        "name": "Calyrex"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Calyrex",
         "position": "center",
         "fit": "contain",
         "name": "Calyrex"
@@ -20640,13 +17847,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Wyrdeer"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Wyrdeer",
-        "position": "center",
-        "fit": "contain",
-        "name": "Wyrdeer"
       }
     ]
   },
@@ -20656,13 +17856,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Kleavor",
-        "position": "center",
-        "fit": "contain",
-        "name": "Kleavor"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Kleavor",
         "position": "center",
         "fit": "contain",
         "name": "Kleavor"
@@ -20692,13 +17885,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Ursaluna"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Ursaluna",
-        "position": "center",
-        "fit": "contain",
-        "name": "Ursaluna"
       }
     ]
   },
@@ -20708,13 +17894,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Basculegion-male",
-        "position": "center",
-        "fit": "contain",
-        "name": "Basculegion"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Basculegion-male",
         "position": "center",
         "fit": "contain",
         "name": "Basculegion"
@@ -20744,13 +17923,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Sneasler"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Sneasler",
-        "position": "center",
-        "fit": "contain",
-        "name": "Sneasler"
       }
     ]
   },
@@ -20760,13 +17932,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Overqwil",
-        "position": "center",
-        "fit": "contain",
-        "name": "Overqwil"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Overqwil",
         "position": "center",
         "fit": "contain",
         "name": "Overqwil"
@@ -20796,13 +17961,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Enamorus incarnate"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Enamorus-incarnate",
-        "position": "center",
-        "fit": "contain",
-        "name": "Enamorus incarnate"
       }
     ]
   },
@@ -20812,13 +17970,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Sprigatito",
-        "position": "center",
-        "fit": "contain",
-        "name": "Sprigatito"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Sprigatito",
         "position": "center",
         "fit": "contain",
         "name": "Sprigatito"
@@ -20848,13 +17999,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Floragato"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Floragato",
-        "position": "center",
-        "fit": "contain",
-        "name": "Floragato"
       }
     ]
   },
@@ -20864,13 +18008,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Meowscarada",
-        "position": "center",
-        "fit": "contain",
-        "name": "Meowscarada"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Meowscarada",
         "position": "center",
         "fit": "contain",
         "name": "Meowscarada"
@@ -20900,13 +18037,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Fuecoco"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Fuecoco",
-        "position": "center",
-        "fit": "contain",
-        "name": "Fuecoco"
       }
     ]
   },
@@ -20916,13 +18046,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Crocalor",
-        "position": "center",
-        "fit": "contain",
-        "name": "Crocalor"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Crocalor",
         "position": "center",
         "fit": "contain",
         "name": "Crocalor"
@@ -20952,13 +18075,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Skeledirge"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Skeledirge",
-        "position": "center",
-        "fit": "contain",
-        "name": "Skeledirge"
       }
     ]
   },
@@ -20968,13 +18084,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Quaxly",
-        "position": "center",
-        "fit": "contain",
-        "name": "Quaxly"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Quaxly",
         "position": "center",
         "fit": "contain",
         "name": "Quaxly"
@@ -21004,13 +18113,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Quaxwell"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Quaxwell",
-        "position": "center",
-        "fit": "contain",
-        "name": "Quaxwell"
       }
     ]
   },
@@ -21020,13 +18122,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Quaquaval",
-        "position": "center",
-        "fit": "contain",
-        "name": "Quaquaval"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Quaquaval",
         "position": "center",
         "fit": "contain",
         "name": "Quaquaval"
@@ -21056,13 +18151,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Lechonk"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Lechonk",
-        "position": "center",
-        "fit": "contain",
-        "name": "Lechonk"
       }
     ]
   },
@@ -21072,13 +18160,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Oinkologne-male",
-        "position": "center",
-        "fit": "contain",
-        "name": "Oinkologne male"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Oinkologne-male",
         "position": "center",
         "fit": "contain",
         "name": "Oinkologne male"
@@ -21108,13 +18189,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Tarountula"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Tarountula",
-        "position": "center",
-        "fit": "contain",
-        "name": "Tarountula"
       }
     ]
   },
@@ -21124,13 +18198,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Spidops",
-        "position": "center",
-        "fit": "contain",
-        "name": "Spidops"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Spidops",
         "position": "center",
         "fit": "contain",
         "name": "Spidops"
@@ -21160,13 +18227,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Nymble"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Nymble",
-        "position": "center",
-        "fit": "contain",
-        "name": "Nymble"
       }
     ]
   },
@@ -21176,13 +18236,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Lokix",
-        "position": "center",
-        "fit": "contain",
-        "name": "Lokix"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Lokix",
         "position": "center",
         "fit": "contain",
         "name": "Lokix"
@@ -21212,13 +18265,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Pawmi"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Pawmi",
-        "position": "center",
-        "fit": "contain",
-        "name": "Pawmi"
       }
     ]
   },
@@ -21228,13 +18274,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Pawmo",
-        "position": "center",
-        "fit": "contain",
-        "name": "Pawmo"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Pawmo",
         "position": "center",
         "fit": "contain",
         "name": "Pawmo"
@@ -21264,13 +18303,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Pawmot"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Pawmot",
-        "position": "center",
-        "fit": "contain",
-        "name": "Pawmot"
       }
     ]
   },
@@ -21280,13 +18312,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Tandemaus",
-        "position": "center",
-        "fit": "contain",
-        "name": "Tandemaus"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Tandemaus",
         "position": "center",
         "fit": "contain",
         "name": "Tandemaus"
@@ -21316,13 +18341,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Maushold"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Maushold-family-of-four",
-        "position": "center",
-        "fit": "contain",
-        "name": "Maushold"
       }
     ]
   },
@@ -21332,13 +18350,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Fidough",
-        "position": "center",
-        "fit": "contain",
-        "name": "Fidough"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Fidough",
         "position": "center",
         "fit": "contain",
         "name": "Fidough"
@@ -21368,13 +18379,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Dachsbun"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Dachsbun",
-        "position": "center",
-        "fit": "contain",
-        "name": "Dachsbun"
       }
     ]
   },
@@ -21384,13 +18388,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Smoliv",
-        "position": "center",
-        "fit": "contain",
-        "name": "Smoliv"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Smoliv",
         "position": "center",
         "fit": "contain",
         "name": "Smoliv"
@@ -21420,13 +18417,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Dolliv"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Dolliv",
-        "position": "center",
-        "fit": "contain",
-        "name": "Dolliv"
       }
     ]
   },
@@ -21436,13 +18426,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Arboliva",
-        "position": "center",
-        "fit": "contain",
-        "name": "Arboliva"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Arboliva",
         "position": "center",
         "fit": "contain",
         "name": "Arboliva"
@@ -21472,13 +18455,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Squawkabilly"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Squawkabilly-green-plumage",
-        "position": "center",
-        "fit": "contain",
-        "name": "Squawkabilly"
       }
     ]
   },
@@ -21488,13 +18464,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Nacli",
-        "position": "center",
-        "fit": "contain",
-        "name": "Nacli"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Nacli",
         "position": "center",
         "fit": "contain",
         "name": "Nacli"
@@ -21524,13 +18493,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Naclstack"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Naclstack",
-        "position": "center",
-        "fit": "contain",
-        "name": "Naclstack"
       }
     ]
   },
@@ -21540,13 +18502,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Garganacl",
-        "position": "center",
-        "fit": "contain",
-        "name": "Garganacl"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Garganacl",
         "position": "center",
         "fit": "contain",
         "name": "Garganacl"
@@ -21576,13 +18531,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Charcadet"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Charcadet",
-        "position": "center",
-        "fit": "contain",
-        "name": "Charcadet"
       }
     ]
   },
@@ -21592,13 +18540,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Armarouge",
-        "position": "center",
-        "fit": "contain",
-        "name": "Armarouge"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Armarouge",
         "position": "center",
         "fit": "contain",
         "name": "Armarouge"
@@ -21628,13 +18569,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Ceruledge"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Ceruledge",
-        "position": "center",
-        "fit": "contain",
-        "name": "Ceruledge"
       }
     ]
   },
@@ -21644,13 +18578,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Tadbulb",
-        "position": "center",
-        "fit": "contain",
-        "name": "Tadbulb"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Tadbulb",
         "position": "center",
         "fit": "contain",
         "name": "Tadbulb"
@@ -21680,13 +18607,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Bellibolt"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Bellibolt",
-        "position": "center",
-        "fit": "contain",
-        "name": "Bellibolt"
       }
     ]
   },
@@ -21696,13 +18616,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Wattrel",
-        "position": "center",
-        "fit": "contain",
-        "name": "Wattrel"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Wattrel",
         "position": "center",
         "fit": "contain",
         "name": "Wattrel"
@@ -21732,13 +18645,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Kilowattrel"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Kilowattrel",
-        "position": "center",
-        "fit": "contain",
-        "name": "Kilowattrel"
       }
     ]
   },
@@ -21748,13 +18654,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Maschiff",
-        "position": "center",
-        "fit": "contain",
-        "name": "Maschiff"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Maschiff",
         "position": "center",
         "fit": "contain",
         "name": "Maschiff"
@@ -21784,13 +18683,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Mabosstiff"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Mabosstiff",
-        "position": "center",
-        "fit": "contain",
-        "name": "Mabosstiff"
       }
     ]
   },
@@ -21800,13 +18692,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Shroodle",
-        "position": "center",
-        "fit": "contain",
-        "name": "Shroodle"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Shroodle",
         "position": "center",
         "fit": "contain",
         "name": "Shroodle"
@@ -21836,13 +18721,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Grafaiai"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Grafaiai",
-        "position": "center",
-        "fit": "contain",
-        "name": "Grafaiai"
       }
     ]
   },
@@ -21852,13 +18730,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Bramblin",
-        "position": "center",
-        "fit": "contain",
-        "name": "Bramblin"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Bramblin",
         "position": "center",
         "fit": "contain",
         "name": "Bramblin"
@@ -21888,13 +18759,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Brambleghast"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Brambleghast",
-        "position": "center",
-        "fit": "contain",
-        "name": "Brambleghast"
       }
     ]
   },
@@ -21904,13 +18768,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Toedscool",
-        "position": "center",
-        "fit": "contain",
-        "name": "Toedscool"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Toedscool",
         "position": "center",
         "fit": "contain",
         "name": "Toedscool"
@@ -21940,13 +18797,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Toedscruel"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Toedscruel",
-        "position": "center",
-        "fit": "contain",
-        "name": "Toedscruel"
       }
     ]
   },
@@ -21956,13 +18806,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Klawf",
-        "position": "center",
-        "fit": "contain",
-        "name": "Klawf"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Klawf",
         "position": "center",
         "fit": "contain",
         "name": "Klawf"
@@ -21992,13 +18835,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Capsakid"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Capsakid",
-        "position": "center",
-        "fit": "contain",
-        "name": "Capsakid"
       }
     ]
   },
@@ -22008,13 +18844,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Scovillain",
-        "position": "center",
-        "fit": "contain",
-        "name": "Scovillain"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Scovillain",
         "position": "center",
         "fit": "contain",
         "name": "Scovillain"
@@ -22044,13 +18873,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Rellor"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Rellor",
-        "position": "center",
-        "fit": "contain",
-        "name": "Rellor"
       }
     ]
   },
@@ -22060,13 +18882,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Rabsca",
-        "position": "center",
-        "fit": "contain",
-        "name": "Rabsca"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Rabsca",
         "position": "center",
         "fit": "contain",
         "name": "Rabsca"
@@ -22096,13 +18911,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Flittle"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Flittle",
-        "position": "center",
-        "fit": "contain",
-        "name": "Flittle"
       }
     ]
   },
@@ -22112,13 +18920,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Espathra",
-        "position": "center",
-        "fit": "contain",
-        "name": "Espathra"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Espathra",
         "position": "center",
         "fit": "contain",
         "name": "Espathra"
@@ -22148,13 +18949,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Tinkatink"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Tinkatink",
-        "position": "center",
-        "fit": "contain",
-        "name": "Tinkatink"
       }
     ]
   },
@@ -22164,13 +18958,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Tinkatuff",
-        "position": "center",
-        "fit": "contain",
-        "name": "Tinkatuff"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Tinkatuff",
         "position": "center",
         "fit": "contain",
         "name": "Tinkatuff"
@@ -22200,13 +18987,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Tinkaton"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Tinkaton",
-        "position": "center",
-        "fit": "contain",
-        "name": "Tinkaton"
       }
     ]
   },
@@ -22216,13 +18996,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Wiglett",
-        "position": "center",
-        "fit": "contain",
-        "name": "Wiglett"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Wiglett",
         "position": "center",
         "fit": "contain",
         "name": "Wiglett"
@@ -22252,13 +19025,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Wugtrio"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Wugtrio",
-        "position": "center",
-        "fit": "contain",
-        "name": "Wugtrio"
       }
     ]
   },
@@ -22268,13 +19034,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Bombirdier",
-        "position": "center",
-        "fit": "contain",
-        "name": "Bombirdier"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Bombirdier",
         "position": "center",
         "fit": "contain",
         "name": "Bombirdier"
@@ -22304,13 +19063,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Finizen"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Finizen",
-        "position": "center",
-        "fit": "contain",
-        "name": "Finizen"
       }
     ]
   },
@@ -22320,13 +19072,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Palafin-zero",
-        "position": "center",
-        "fit": "contain",
-        "name": "Palafin zero"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Palafin-zero",
         "position": "center",
         "fit": "contain",
         "name": "Palafin zero"
@@ -22356,13 +19101,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Varoom"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Varoom",
-        "position": "center",
-        "fit": "contain",
-        "name": "Varoom"
       }
     ]
   },
@@ -22372,13 +19110,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Revavroom",
-        "position": "center",
-        "fit": "contain",
-        "name": "Revavroom"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Revavroom",
         "position": "center",
         "fit": "contain",
         "name": "Revavroom"
@@ -22408,13 +19139,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Cyclizar"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Cyclizar",
-        "position": "center",
-        "fit": "contain",
-        "name": "Cyclizar"
       }
     ]
   },
@@ -22424,13 +19148,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Orthworm",
-        "position": "center",
-        "fit": "contain",
-        "name": "Orthworm"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Orthworm",
         "position": "center",
         "fit": "contain",
         "name": "Orthworm"
@@ -22460,13 +19177,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Glimmet"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Glimmet",
-        "position": "center",
-        "fit": "contain",
-        "name": "Glimmet"
       }
     ]
   },
@@ -22476,13 +19186,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Glimmora",
-        "position": "center",
-        "fit": "contain",
-        "name": "Glimmora"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Glimmora",
         "position": "center",
         "fit": "contain",
         "name": "Glimmora"
@@ -22512,13 +19215,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Greavard"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Greavard",
-        "position": "center",
-        "fit": "contain",
-        "name": "Greavard"
       }
     ]
   },
@@ -22528,13 +19224,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Houndstone",
-        "position": "center",
-        "fit": "contain",
-        "name": "Houndstone"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Houndstone",
         "position": "center",
         "fit": "contain",
         "name": "Houndstone"
@@ -22564,13 +19253,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Flamigo"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Flamigo",
-        "position": "center",
-        "fit": "contain",
-        "name": "Flamigo"
       }
     ]
   },
@@ -22580,13 +19262,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Cetoddle",
-        "position": "center",
-        "fit": "contain",
-        "name": "Cetoddle"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Cetoddle",
         "position": "center",
         "fit": "contain",
         "name": "Cetoddle"
@@ -22616,13 +19291,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Cetitan"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Cetitan",
-        "position": "center",
-        "fit": "contain",
-        "name": "Cetitan"
       }
     ]
   },
@@ -22632,13 +19300,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Veluza",
-        "position": "center",
-        "fit": "contain",
-        "name": "Veluza"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Veluza",
         "position": "center",
         "fit": "contain",
         "name": "Veluza"
@@ -22668,13 +19329,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Dondozo"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Dondozo",
-        "position": "center",
-        "fit": "contain",
-        "name": "Dondozo"
       }
     ]
   },
@@ -22684,13 +19338,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Tatsugiri-curly",
-        "position": "center",
-        "fit": "contain",
-        "name": "Tatsugiri curly"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Tatsugiri-curly",
         "position": "center",
         "fit": "contain",
         "name": "Tatsugiri curly"
@@ -22720,13 +19367,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Annihilape"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Annihilape",
-        "position": "center",
-        "fit": "contain",
-        "name": "Annihilape"
       }
     ]
   },
@@ -22736,13 +19376,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Clodsire",
-        "position": "center",
-        "fit": "contain",
-        "name": "Clodsire"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Clodsire",
         "position": "center",
         "fit": "contain",
         "name": "Clodsire"
@@ -22786,13 +19419,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Farigiraf"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Farigiraf",
-        "position": "center",
-        "fit": "contain",
-        "name": "Farigiraf"
       }
     ]
   },
@@ -22802,13 +19428,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Dudunsparce-two-segment",
-        "position": "center",
-        "fit": "contain",
-        "name": "Dudunsparce"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Dudunsparce-two-segment",
         "position": "center",
         "fit": "contain",
         "name": "Dudunsparce"
@@ -22838,13 +19457,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Kingambit"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Kingambit",
-        "position": "center",
-        "fit": "contain",
-        "name": "Kingambit"
       }
     ]
   },
@@ -22854,13 +19466,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Great-tusk",
-        "position": "center",
-        "fit": "contain",
-        "name": "Great tusk"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Great-tusk",
         "position": "center",
         "fit": "contain",
         "name": "Great tusk"
@@ -22890,13 +19495,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Scream Tail"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Scream-tail",
-        "position": "center",
-        "fit": "contain",
-        "name": "Scream Tail"
       }
     ]
   },
@@ -22906,13 +19504,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Brute-bonnet",
-        "position": "center",
-        "fit": "contain",
-        "name": "Brute Bonnet"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Brute-bonnet",
         "position": "center",
         "fit": "contain",
         "name": "Brute Bonnet"
@@ -22942,13 +19533,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Flutter Mane"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Flutter-mane",
-        "position": "center",
-        "fit": "contain",
-        "name": "Flutter Mane"
       }
     ]
   },
@@ -22958,13 +19542,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Slither-wing",
-        "position": "center",
-        "fit": "contain",
-        "name": "Slither Wing"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Slither-wing",
         "position": "center",
         "fit": "contain",
         "name": "Slither Wing"
@@ -22994,13 +19571,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Sandy Shocks"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Sandy-shocks",
-        "position": "center",
-        "fit": "contain",
-        "name": "Sandy Shocks"
       }
     ]
   },
@@ -23010,13 +19580,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Iron-treads",
-        "position": "center",
-        "fit": "contain",
-        "name": "Iron Treads"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Iron-treads",
         "position": "center",
         "fit": "contain",
         "name": "Iron Treads"
@@ -23046,13 +19609,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Iron Bundle"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Iron-bundle",
-        "position": "center",
-        "fit": "contain",
-        "name": "Iron Bundle"
       }
     ]
   },
@@ -23062,13 +19618,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Iron-hands",
-        "position": "center",
-        "fit": "contain",
-        "name": "Iron Hands"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Iron-hands",
         "position": "center",
         "fit": "contain",
         "name": "Iron Hands"
@@ -23098,13 +19647,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Iron Jugulis"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Iron-jugulis",
-        "position": "center",
-        "fit": "contain",
-        "name": "Iron Jugulis"
       }
     ]
   },
@@ -23114,13 +19656,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Iron-moth",
-        "position": "center",
-        "fit": "contain",
-        "name": "Iron Moth"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Iron-moth",
         "position": "center",
         "fit": "contain",
         "name": "Iron Moth"
@@ -23150,13 +19685,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Iron Thorns"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Iron-thorns",
-        "position": "center",
-        "fit": "contain",
-        "name": "Iron Thorns"
       }
     ]
   },
@@ -23166,13 +19694,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Frigibax",
-        "position": "center",
-        "fit": "contain",
-        "name": "Frigibax"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Frigibax",
         "position": "center",
         "fit": "contain",
         "name": "Frigibax"
@@ -23202,13 +19723,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Arctibax"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Arctibax",
-        "position": "center",
-        "fit": "contain",
-        "name": "Arctibax"
       }
     ]
   },
@@ -23218,13 +19732,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Baxcalibur",
-        "position": "center",
-        "fit": "contain",
-        "name": "Baxcalibur"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Baxcalibur",
         "position": "center",
         "fit": "contain",
         "name": "Baxcalibur"
@@ -23254,13 +19761,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Gimmighoul"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Gimmighoul",
-        "position": "center",
-        "fit": "contain",
-        "name": "Gimmighoul"
       }
     ]
   },
@@ -23270,13 +19770,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Gholdengo",
-        "position": "center",
-        "fit": "contain",
-        "name": "Gholdengo"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Gholdengo",
         "position": "center",
         "fit": "contain",
         "name": "Gholdengo"
@@ -23306,13 +19799,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Wo-Chien"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Wo-chien",
-        "position": "center",
-        "fit": "contain",
-        "name": "Wo-Chien"
       }
     ]
   },
@@ -23322,13 +19808,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Chien-pao",
-        "position": "center",
-        "fit": "contain",
-        "name": "Chien pao"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Chien-pao",
         "position": "center",
         "fit": "contain",
         "name": "Chien pao"
@@ -23358,13 +19837,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Ting-Lu"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Ting-lu",
-        "position": "center",
-        "fit": "contain",
-        "name": "Ting-Lu"
       }
     ]
   },
@@ -23374,13 +19846,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Chi-yu",
-        "position": "center",
-        "fit": "contain",
-        "name": "Chi-Yu"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Chi-yu",
         "position": "center",
         "fit": "contain",
         "name": "Chi-Yu"
@@ -23410,13 +19875,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Roaring Moon"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Roaring-moon",
-        "position": "center",
-        "fit": "contain",
-        "name": "Roaring Moon"
       }
     ]
   },
@@ -23426,13 +19884,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Iron-valiant",
-        "position": "center",
-        "fit": "contain",
-        "name": "Iron Valiant"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Iron-valiant",
         "position": "center",
         "fit": "contain",
         "name": "Iron Valiant"
@@ -23462,13 +19913,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Koraidon"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Koraidon",
-        "position": "center",
-        "fit": "contain",
-        "name": "Koraidon"
       }
     ]
   },
@@ -23478,13 +19922,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Miraidon",
-        "position": "center",
-        "fit": "contain",
-        "name": "Miraidon"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Miraidon",
         "position": "center",
         "fit": "contain",
         "name": "Miraidon"
@@ -23514,13 +19951,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Walking Wake"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Walking-wake",
-        "position": "center",
-        "fit": "contain",
-        "name": "Walking Wake"
       }
     ]
   },
@@ -23540,13 +19970,6 @@
         "position": "center",
         "fit": "contain",
         "name": "Iron Leaves"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Iron-leaves",
-        "position": "center",
-        "fit": "contain",
-        "name": "Iron Leaves"
       }
     ]
   },
@@ -23556,13 +19979,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Regular",
-        "position": "center",
-        "fit": "contain",
-        "name": "Dipplin"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Dipplin",
         "position": "center",
         "fit": "contain",
         "name": "Dipplin"
@@ -23602,13 +20018,6 @@
       },
       {
         "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Poltchageist",
-        "position": "center",
-        "fit": "contain",
-        "name": "Poltchageist"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
         "label": "Shiny Regular",
         "position": "center",
         "fit": "contain",
@@ -23622,13 +20031,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Regular",
-        "position": "center",
-        "fit": "contain",
-        "name": "Sinistcha"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Sinistcha",
         "position": "center",
         "fit": "contain",
         "name": "Sinistcha"
@@ -23668,13 +20070,6 @@
       },
       {
         "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Okidogi",
-        "position": "center",
-        "fit": "contain",
-        "name": "Okidogi"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
         "label": "Shiny Regular",
         "position": "center",
         "fit": "contain",
@@ -23688,13 +20083,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Regular",
-        "position": "center",
-        "fit": "contain",
-        "name": "Munkidori"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Munkidori",
         "position": "center",
         "fit": "contain",
         "name": "Munkidori"
@@ -23734,13 +20122,6 @@
       },
       {
         "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Fezandipiti",
-        "position": "center",
-        "fit": "contain",
-        "name": "Fezandipiti"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
         "label": "Shiny Regular",
         "position": "center",
         "fit": "contain",
@@ -23754,13 +20135,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Regular",
-        "position": "center",
-        "fit": "contain",
-        "name": "Ogerpon"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Ogerpon",
         "position": "center",
         "fit": "contain",
         "name": "Ogerpon"
@@ -23800,13 +20174,6 @@
       },
       {
         "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Archaludon",
-        "position": "center",
-        "fit": "contain",
-        "name": "Archaludon"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
         "label": "Shiny Regular",
         "position": "center",
         "fit": "contain",
@@ -23820,13 +20187,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Regular",
-        "position": "center",
-        "fit": "contain",
-        "name": "Hydrapple"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Hydrapple",
         "position": "center",
         "fit": "contain",
         "name": "Hydrapple"
@@ -23866,13 +20226,6 @@
       },
       {
         "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Gouging-fire",
-        "position": "center",
-        "fit": "contain",
-        "name": "Gouging fire"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
         "label": "Shiny Regular",
         "position": "center",
         "fit": "contain",
@@ -23886,13 +20239,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Regular",
-        "position": "center",
-        "fit": "contain",
-        "name": "Raging Bolt"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Raging-bolt",
         "position": "center",
         "fit": "contain",
         "name": "Raging Bolt"
@@ -23932,13 +20278,6 @@
       },
       {
         "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Iron-boulder",
-        "position": "center",
-        "fit": "contain",
-        "name": "Iron Boulder"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
         "label": "Shiny Regular",
         "position": "center",
         "fit": "contain",
@@ -23952,13 +20291,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Regular",
-        "position": "center",
-        "fit": "contain",
-        "name": "Iron Crown"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Iron-crown",
         "position": "center",
         "fit": "contain",
         "name": "Iron Crown"
@@ -23998,13 +20330,6 @@
       },
       {
         "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Terapagos",
-        "position": "center",
-        "fit": "contain",
-        "name": "Terapagos"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
         "label": "Shiny Regular",
         "position": "center",
         "fit": "contain",
@@ -24018,13 +20343,6 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Regular",
-        "position": "center",
-        "fit": "contain",
-        "name": "Pecharunt"
-      },
-      {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Pecharunt",
         "position": "center",
         "fit": "contain",
         "name": "Pecharunt"
