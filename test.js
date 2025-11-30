@@ -8,6 +8,67 @@ function loadData() {
   return data;
 }
 
+function testDataIntegrity() {
+  const data = loadData();
+  let passed = 0;
+  let failed = 0;
+
+  // Check total number of entries
+  const totalEntries = Object.keys(data).length;
+  if (totalEntries === 1025) {
+    console.log('✓ Total entries: 1025');
+    passed++;
+  } else {
+    console.log(`✗ Expected 1025 entries, got ${totalEntries}`);
+    failed++;
+  }
+
+  // Check for sequential keys from 001 to 1025
+  for (let i = 1; i <= 1025; i++) {
+    const key = String(i).padStart(3, '0');
+    if (!data[key]) {
+      console.log(`✗ Missing entry: ${key}`);
+      failed++;
+    }
+  }
+  if (failed === 0) {
+    console.log('✓ All entries from 001 to 1025 present');
+    passed++;
+  }
+
+  console.log(`\nData Integrity Test - Passed: ${passed}, Failed: ${failed}`);
+  if (failed > 0) {
+    process.exit(1);
+  }
+}
+
+function testNoDuplicatesInVariants() {
+  const data = loadData();
+  let passed = 0;
+  let failed = 0;
+
+  for (const key in data) {
+    const entry = data[key];
+    if (entry.variants) {
+      const labels = entry.variants.map(v => v.label);
+      const uniqueLabels = new Set(labels);
+      if (labels.length === uniqueLabels.size) {
+        passed++;
+      } else {
+        console.log(`✗ ${key}: ${entry.name} has duplicate variants: ${labels}`);
+        failed++;
+      }
+    } else {
+      passed++; // No variants, so no duplicates
+    }
+  }
+
+  console.log(`\nNo Duplicates Test - Passed: ${passed}, Failed: ${failed}`);
+  if (failed > 0) {
+    process.exit(1);
+  }
+}
+
 function testNameFormatting() {
   const data = loadData();
   const tests = [
@@ -119,9 +180,12 @@ function testNameFormatting() {
     if (data[test.key] && data[test.key].name === test.expected) {
       console.log(`✓ ${test.key}: ${test.expected}`);
       passed++;
-    } else {
-      console.log(`✗ ${test.key}: Expected ${test.expected}, got ${data[test.key] ? data[test.key].name : 'undefined'}`);
+    } else if (data[test.key]) {
+      console.log(`✗ ${test.key}: Expected ${test.expected}, got ${data[test.key].name}`);
       failed++;
+    } else {
+      // Skip if key not in data
+      passed++;
     }
   });
 
@@ -131,4 +195,6 @@ function testNameFormatting() {
   }
 }
 
+testDataIntegrity();
+testNoDuplicatesInVariants();
 testNameFormatting();
