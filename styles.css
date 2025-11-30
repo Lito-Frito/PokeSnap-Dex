@@ -175,20 +175,31 @@ header {
 }
 
 #gallery-image {
-    width: 500px;
-    height: 500px;
-    object-fit: cover;
+    max-width: 90vw;
+    max-height: 90vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Responsive adjustments for gallery */
+@media (min-width: 768px) {
+    #gallery-image {
+        max-height: 60vh;
+        margin-top: 20px;
+    }
 }
 
 button {
     margin: 10px;
     padding: 10px 20px;
-    background-color: #333;
+    background-color: #000;
     color: white;
     border: none;
     cursor: pointer;
+    font-weight: bold;
 }
 
 button:hover {
-    background-color: #555;
+    background-color: #333;
 }
