@@ -87,8 +87,9 @@ header {
     color: #fff;
     font-weight: 300;
     text-align: center;
-    line-height: 192px;
-    font-size: calc(0.2 * 192px);
+    line-height: 1.2;
+    font-size: calc(0.139 * 192px);
+    word-break: break-word;
 }
 
 @media (max-width: 1200px) {
@@ -96,8 +97,7 @@ header {
         width: 160px;
         height: 160px;
         margin: 5px;
-        line-height: 160px;
-        font-size: calc(0.2 * 160px);
+        font-size: calc(0.139 * 160px);
     }
     #dex-container {
         max-height: 1494px;
@@ -109,8 +109,7 @@ header {
         width: 128px;
         height: 128px;
         margin: 4px;
-        line-height: 128px;
-        font-size: calc(0.2 * 128px);
+        font-size: calc(0.139 * 128px);
     }
     #dex-container {
         max-height: 1206px;
@@ -122,8 +121,7 @@ header {
         width: 96px;
         height: 96px;
         margin: 3px;
-        line-height: 96px;
-        font-size: calc(0.2 * 96px);
+        font-size: calc(0.139 * 96px);
     }
     #dex-container {
         max-height: 918px;
@@ -135,8 +133,7 @@ header {
         width: 64px;
         height: 64px;
         margin: 2px;
-        line-height: 64px;
-        font-size: calc(0.2 * 64px);
+        font-size: calc(0.139 * 64px);
     }
     #dex-container {
         max-height: 630px;

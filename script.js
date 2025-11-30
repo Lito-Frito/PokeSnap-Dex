@@ -56,6 +56,11 @@ function renderDex() {
             img.alt = `${pokedexData[number].name} - ${pokedexData[number].variants[firstWithImage].label}`;
             img.style.objectPosition = pokedexData[number].variants[firstWithImage].position || 'center';
             img.style.objectFit = pokedexData[number].variants[firstWithImage].fit || 'contain';
+            img.onerror = () => {
+                img.style.display = 'none';
+                entryDiv.textContent = pokedexData[number].name;
+                entryDiv.classList.add('empty');
+            };
             if (pokedexData[number].variants[firstWithImage].fit === 'contain') {
                 // entryDiv.style.backgroundColor = document.body.classList.contains('dark-mode') ? '#555' : '#ddd';
             }
@@ -63,7 +68,7 @@ function renderDex() {
             entryDiv.addEventListener('click', () => openGallery(number));
         } else {
             entryDiv.className += ' empty';
-            entryDiv.textContent = number;
+            entryDiv.textContent = pokedexData[number].name;
         }
 
         dexContainer.appendChild(entryDiv);
