@@ -1,4 +1,4 @@
-# PhotoDex Clone
+# PokeSnap-Dex
 
 Gotta snap 'em all! A simple, static Pokédex for displaying your Pokémon photos.
 
@@ -7,7 +7,7 @@ Gotta snap 'em all! A simple, static Pokédex for displaying your Pokémon photo
 ### Option 1: Host Locally (Easiest for Testing)
 
 1. **Clone or Download the Repository**:
-   - If you have Git: `git clone https://github.com/yourusername/photodex-clone.git` (replace with your repo URL)
+   - If you have Git: `git clone https://github.com/yourusername/PokeSnap-Dex.git` (replace with your repo URL)
    - Or download the ZIP from GitHub and extract it.
 
 2. **Open in a Browser**:
@@ -18,13 +18,13 @@ Gotta snap 'em all! A simple, static Pokédex for displaying your Pokémon photo
 ### Option 2: Host Online (Free with GitHub Pages)
 
 1. **Fork and Clone**:
-   - Fork this repository on GitHub.
-   - Clone your fork: `git clone https://github.com/yourusername/photodex-clone.git`
+   - Fork the repository on GitHub.
+   - Clone your fork: `git clone https://github.com/yourusername/PokeSnap-Dex.git`
 
 2. **Enable GitHub Pages**:
    - Go to your repository on GitHub.
    - Settings > Pages > Source: "Deploy from a branch" > Branch: "main" > Save.
-   - Your site will be available at `https://yourusername.github.io/photodex-clone/`.
+   - Your site will be available at `https://yourusername.github.io/PokeSnap-Dex/`.
 
 3. **Customize and Push**:
    - Edit `data.json` with your photos (see below).
@@ -32,7 +32,7 @@ Gotta snap 'em all! A simple, static Pokédex for displaying your Pokémon photo
 
 ## How to Add Your Photos
 
-To populate your PhotoDex with images, follow these steps:
+To populate your PokeSnap-Dex with images, follow these steps:
 
 1. **Host Your Images Online**:
    - Upload your photos to a free image hosting service like [Imgur](https://imgur.com/), [GitHub](https://github.com/) (in a repo), or any public URL provider.

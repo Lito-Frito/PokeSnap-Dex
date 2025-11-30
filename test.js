@@ -1,4 +1,4 @@
-// Unit tests for PhotoDex app data integrity and logic
+// Unit tests for PokeSnap-Dex app data integrity and logic
 // Run with Node.js: node test.js
 //
 // Tests:
