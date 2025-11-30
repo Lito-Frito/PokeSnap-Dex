@@ -123,7 +123,7 @@ function updateGalleryImage() {
         galleryImage.src = pokedexData[currentEntry].variants[currentVariantIndex].image;
         galleryImage.alt = `${pokedexData[currentEntry].name} - ${pokedexData[currentEntry].variants[currentVariantIndex].label}`;
         galleryImage.style.objectPosition = pokedexData[currentEntry].variants[currentVariantIndex].position || 'center';
-        galleryImage.style.objectFit = 'cover';
+        galleryImage.style.objectFit = pokedexData[currentEntry].variants[currentVariantIndex].fit || 'contain';
         if (pokedexData[currentEntry].variants[currentVariantIndex].fit === 'contain') {
             galleryImage.style.backgroundColor = '#000';
         } else {
