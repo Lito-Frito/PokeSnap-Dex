@@ -238,7 +238,9 @@ function updateGalleryImage() {
         galleryImage.alt = imageSrc === "https://i.imgur.com/m3idMCk.png" ? "Missing Snap" : displayName;
         galleryName.textContent = displayName;
         galleryImage.style.objectPosition = pokedexData[currentEntry].variants[currentVariantIndex].position || 'center';
-        galleryImage.style.objectFit = pokedexData[currentEntry].variants[currentVariantIndex].fit || 'contain';
+        const fit = pokedexData[currentEntry].variants[currentVariantIndex].fit || 'contain';
+        const position = pokedexData[currentEntry].variants[currentVariantIndex].position || 'center';
+        galleryImage.style.objectFit = (position !== 'center') ? 'cover' : fit;
         if (imageSrc === "https://i.imgur.com/m3idMCk.png") {
             galleryImage.style.backgroundColor = 'grey';
         } else if (pokedexData[currentEntry].variants[currentVariantIndex].fit === 'contain') {
