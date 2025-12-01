@@ -274,9 +274,8 @@ header {
 }
 
 #gallery-image {
-    max-width: 90vw;
     height: 60vh;
-    width: auto;
+    width: 60vh;
     object-fit: contain;
 }
 
