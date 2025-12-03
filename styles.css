@@ -17,6 +17,9 @@ header {
     color: white;
     padding: 20px;
     transition: background-color 0.3s;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .header-controls {
