@@ -179,10 +179,14 @@ function renderDex() {
             const baseName = pokedexData[number].name;
             const label = variant.label;
             let displayName = baseName;
-        if (label !== baseName) {
-            const suffix = label.replace(baseName + ' ', '');
-            displayName = `${baseName} - ${suffix}`;
-        }
+            if (label && label !== baseName) {
+                if (label.includes(baseName)) {
+                    const suffix = label.replace(baseName, '').trim().replace(/^[- ]+/, '');
+                    displayName = suffix ? `${baseName} - ${suffix}` : baseName;
+                } else {
+                    displayName = `${baseName} - ${label}`;
+                }
+            }
         displayName = displayName.replace(/-/g, ' ');
             displayName = displayName.replace(/-/g, ' ');
             img.alt = displayName;
@@ -229,10 +233,12 @@ function updateGalleryImage() {
         const baseName = pokedexData[currentEntry].name;
         const label = variant.label;
         let displayName = baseName;
-        if (label.endsWith(baseName)) {
-            const prefix = label.substring(0, label.length - baseName.length - 1);
-            if (prefix) {
-                displayName = `${baseName} - ${prefix}`;
+        if (label && label !== baseName) {
+            if (label.includes(baseName)) {
+                const suffix = label.replace(baseName, '').trim().replace(/^[- ]+/, '');
+                displayName = suffix ? `${baseName} - ${suffix}` : baseName;
+            } else {
+                displayName = `${baseName} - ${label}`;
             }
         }
         galleryImage.alt = imageSrc === "https://i.imgur.com/m3idMCk.png" ? "Missing Snap" : displayName;
