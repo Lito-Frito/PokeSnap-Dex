@@ -468,36 +468,37 @@ button {
 
 @media (max-width: 768px) {
     header {
-        padding: 8px;
+        padding: 20px;
     }
     .header-controls {
+        flex-direction: row;
+        flex-wrap: wrap;
         gap: 10px;
-        justify-content: space-between;
     }
     .header-controls > * {
+        width: auto;
         font-size: 2.5vw;
     }
     #captured-count {
         padding: 2px 4px;
         font-size: 2.5vw;
-        width: auto;
+        flex: 1;
         white-space: nowrap;
         margin-right: 0;
         order: 1;
     }
     #search-input {
         padding: 2px 4px;
-        width: 105px;
-        flex: none;
+        flex-basis: 100%;
         font-size: 2.5vw;
         margin-right: 0;
-        order: 2;
+        order: 3;
     }
     #theme-toggle {
         padding: 1px 1px;
         font-size: 2.5vw;
-        width: auto;
-        order: 3;
+        flex: 1;
+        order: 2;
     }
     .gallery-buttons {
         gap: 5px;
