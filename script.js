@@ -66,7 +66,7 @@ let currentEntry = null;
 let currentVariantIndex = 0;
 let showAll = false;
 
-// Theme toggle
+// Theme toggle with persistence
 const themeToggle = document.getElementById('theme-toggle');
 const searchInput = document.getElementById('search-input');
 const capturedCountBtn = document.getElementById('captured-count');
@@ -74,11 +74,24 @@ const capturedModal = document.getElementById('captured-modal');
 const capturedList = document.getElementById('captured-list');
 const closeCapturedModal = document.getElementById('close-captured-modal');
 const toggleShowAll = document.getElementById('toggle-show-all');
+
+// Load saved theme preference
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme === 'dark') {
+    document.body.classList.add('dark-mode');
+} else if (savedTheme === 'light') {
+    document.body.classList.remove('dark-mode');
+}
+
 themeToggle.addEventListener('click', () => {
     document.body.classList.toggle('dark-mode');
-    themeToggle.textContent = document.body.classList.contains('dark-mode') ? 'Toggle Light Mode' : 'Toggle Dark Mode';
+    const isDark = document.body.classList.contains('dark-mode');
+    themeToggle.textContent = 'Toggle';
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
 });
-themeToggle.textContent = 'Toggle Light Mode'; // Since starts dark
+
+// Set initial toggle text
+themeToggle.textContent = 'Toggle';
 
 // Search functionality
 searchInput.addEventListener('input', (e) => {
