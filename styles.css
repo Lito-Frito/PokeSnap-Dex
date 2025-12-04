@@ -13,7 +13,7 @@ body {
 }
 
 header {
-    background-color: #CC0000;
+    background-color: #990000;
     color: white;
     padding: 20px;
     transition: background-color 0.3s;
@@ -36,9 +36,9 @@ header {
 }
 
 #captured-count {
-    background-color: #CC0000;
+    background-color: #990000;
     color: white;
-    border: 2px solid #CC0000;
+    border: 2px solid #990000;
     padding: 8px 16px;
     font-weight: bold;
     font-size: 1.2em;
@@ -78,7 +78,7 @@ header {
 }
 
 .dark-mode #captured-count:hover {
-    background-color: #555;
+    background-color: #AA0000;
     box-shadow: 0 6px 12px rgba(255, 255, 255, 0.2);
 }
 
@@ -107,8 +107,8 @@ header {
 
 #theme-toggle {
     background-color: white;
-    color: #CC0000;
-    border: 2px solid #CC0000;
+    color: #990000;
+    border: 2px solid #990000;
     padding: 10px 15px;
     cursor: pointer;
     border-radius: 5px;
@@ -118,7 +118,7 @@ header {
 }
 
 #theme-toggle:hover {
-    background-color: #CC0000;
+    background-color: #AA0000;
     color: white;
 }
 
@@ -131,6 +131,18 @@ header {
 .dark-mode #theme-toggle:hover {
     background-color: white;
     color: #333;
+}
+
+#power-indicator {
+    position: fixed;
+    right: 5%;
+    top: 30px;
+    width: 12px;
+    height: 12px;
+    background-color: #48BB78;
+    border-radius: 50%;
+    box-shadow: 0 0 5px #48BB78, 0 0 10px #48BB78, 0 0 15px #48BB78, 0 0 20px #48BB78;
+    margin: 0;
 }
 
 #prev-variant, #next-variant, #close-gallery {
