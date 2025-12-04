@@ -260,6 +260,13 @@ function updateGalleryImage() {
         const fit = pokedexData[currentEntry].variants[currentVariantIndex].fit || 'contain';
         const position = pokedexData[currentEntry].variants[currentVariantIndex].position || 'center';
         galleryImage.style.objectFit = (position !== 'center') ? 'cover' : fit;
+        if (position !== 'center') {
+            galleryImage.style.width = '50vh';
+            galleryImage.style.height = '50vh';
+        } else {
+            galleryImage.style.width = '50%';
+            galleryImage.style.height = '50%';
+        }
         if (imageSrc === "https://i.imgur.com/m3idMCk.png") {
             galleryImage.style.backgroundColor = 'grey';
         } else if (pokedexData[currentEntry].variants[currentVariantIndex].fit === 'contain') {
