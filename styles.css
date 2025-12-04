@@ -207,6 +207,7 @@ header {
     max-height: 1200px;
     overflow-y: auto;
     background-color: #2C3539;
+    position: relative;
 }
 
 #dex-container.flex-layout {
@@ -305,16 +306,18 @@ header {
 }
 
 #gallery {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    right: 0;
+    bottom: 0;
     background-color: rgba(0, 0, 0, 0.8);
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    z-index: 10;
+    padding-top: 20px;
 }
 
 #gallery.hidden {
@@ -322,8 +325,8 @@ header {
 }
 
 #gallery-image {
-    height: 60vh;
-    width: 60vh;
+    height: 50%;
+    width: 50%;
     object-fit: contain;
 }
 
