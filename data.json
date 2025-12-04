@@ -3,7 +3,7 @@
     "name": "Bulbasaur",
     "variants": [
       {
-        "image": "https://i.imgur.com/bHKUlR0.png",
+        "image": "https://your-image-url-here.jpg",
         "label": "Bulbasaur",
         "position": "center",
         "fit": "contain"
@@ -1838,13 +1838,13 @@
     "name": "Gastly",
     "variants": [
       {
-        "image": "https://your-image-url-here.jpg",
+        "image": "https://i.imgur.com/0H3RAo6.jpeg",
         "label": "Gastly",
         "position": "right",
         "fit": "cover"
       },
       {
-        "image": "https://your-image-url-here.jpg",
+        "image": "https://i.imgur.com/0H3RAo6.jpeg",
         "label": "Shiny Gastly",
         "position": "left",
         "fit": "cover"
@@ -1855,7 +1855,7 @@
     "name": "Haunter",
     "variants": [
       {
-        "image": "https://your-image-url-here.jpg",
+        "image": "https://i.imgur.com/mq4Avkq.jpeg",
         "label": "Haunter",
         "position": "center",
         "fit": "contain"
@@ -2687,7 +2687,7 @@
     "name": "Porygon",
     "variants": [
       {
-        "image": "https://your-image-url-here.jpg",
+        "image": "https://i.imgur.com/O2YXiid.jpeg",
         "label": "Porygon",
         "position": "center",
         "fit": "contain"
@@ -2789,7 +2789,7 @@
     "name": "Snorlax",
     "variants": [
       {
-        "image": "https://your-image-url-here.jpg",
+        "image": "https://i.imgur.com/H7H5rsF.jpeg",
         "label": "Snorlax",
         "position": "center",
         "fit": "contain"
@@ -2835,7 +2835,7 @@
     "name": "Zapdos",
     "variants": [
       {
-        "image": "https://your-image-url-here.jpg",
+        "image": "https://i.imgur.com/HqBB184.jpeg",
         "label": "Zapdos",
         "position": "center",
         "fit": "contain"
@@ -4722,7 +4722,7 @@
         "fit": "contain"
       },
       {
-        "image": "https://your-image-url-here.jpg",
+        "image": "https://i.imgur.com/n4L0Fbb.jpeg",
         "label": "Shiny Ho-Oh",
         "position": "center",
         "fit": "contain"
@@ -7035,7 +7035,7 @@
     "name": "Jirachi",
     "variants": [
       {
-        "image": "https://your-image-url-here.jpg",
+        "image": "https://i.imgur.com/k2tyvmW.jpeg",
         "label": "Jirachi",
         "position": "center",
         "fit": "contain"
@@ -10774,7 +10774,7 @@
     "name": "Klang",
     "variants": [
       {
-        "image": "https://your-image-url-here.jpg",
+        "image": "https://i.imgur.com/egeb4sF.jpeg",
         "label": "Klang",
         "position": "center",
         "fit": "contain"
@@ -10893,7 +10893,7 @@
     "name": "Litwick",
     "variants": [
       {
-        "image": "https://your-image-url-here.jpg",
+        "image": "https://i.imgur.com/HC29owm.jpeg",
         "label": "Litwick",
         "position": "center",
         "fit": "contain"
@@ -11920,14 +11920,14 @@
     "name": "Vivillon",
     "variants": [
       {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Vivillon",
+        "image": "https://i.imgur.com/ZvVeF0f.jpeg",
+        "label": "Modern",
         "position": "center",
         "fit": "contain"
       },
       {
         "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Vivillon",
+        "label": "Modern Shiny",
         "position": "center",
         "fit": "contain"
       }
@@ -13113,7 +13113,7 @@
         "fit": "contain"
       },
       {
-        "image": "https://your-image-url-here.jpg",
+        "image": "https://i.imgur.com/t2vY8jl.jpeg",
         "label": "Shiny Toucannon",
         "position": "center",
         "fit": "contain"
@@ -14093,7 +14093,7 @@
     "name": "Solgaleo",
     "variants": [
       {
-        "image": "https://your-image-url-here.jpg",
+        "image": "https://i.imgur.com/wiTNAqK.jpeg",
         "label": "Solgaleo",
         "position": "center",
         "fit": "contain"
@@ -15164,7 +15164,7 @@
     "name": "Sinistea",
     "variants": [
       {
-        "image": "https://your-image-url-here.jpg",
+        "image": "https://i.imgur.com/hCZbem6.jpeg",
         "label": "Sinistea",
         "position": "center",
         "fit": "contain"
@@ -16428,7 +16428,7 @@
         "fit": "contain"
       },
       {
-        "image": "https://your-image-url-here.jpg",
+        "image": "https://i.imgur.com/SYPNn3A.jpeg",
         "label": "Shiny Smoliv",
         "position": "center",
         "fit": "contain"
@@ -17269,17 +17269,41 @@
     ]
   },
   "978": {
-    "name": "Tatsugiri curly",
+    "name": "Tatsugiri",
     "variants": [
       {
         "image": "https://your-image-url-here.jpg",
-        "label": "Tatsugiri-curly",
+        "label": "Stretchy",
         "position": "center",
         "fit": "contain"
       },
       {
         "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Tatsugiri-curly",
+        "label": "Shiny Curly",
+        "position": "center",
+        "fit": "contain"
+      },
+      {
+        "image": "https://your-image-url-here.jpg",
+        "label": "Droopy",
+        "position": "center",
+        "fit": "contain"
+      },
+      {
+        "image": "https://your-image-url-here.jpg",
+        "label": "Shiny Droopy",
+        "position": "center",
+        "fit": "contain"
+      },
+      {
+        "image": "https://i.imgur.com/loKc6vf.jpeg",
+        "label": "Curly",
+        "position": "center",
+        "fit": "contain"
+      },
+      {
+        "image": "https://your-image-url-here.jpg",
+        "label": "Shiny Curly",
         "position": "center",
         "fit": "contain"
       }
