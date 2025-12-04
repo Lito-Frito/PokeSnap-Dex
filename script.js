@@ -86,13 +86,12 @@ if (savedTheme === 'dark') {
 themeToggle.addEventListener('click', () => {
     document.body.classList.toggle('dark-mode');
     const isDark = document.body.classList.contains('dark-mode');
-    themeToggle.textContent = isDark ? 'Toggle Light Mode' : 'Toggle Dark Mode';
+    themeToggle.textContent = 'Toggle';
     localStorage.setItem('theme', isDark ? 'dark' : 'light');
 });
 
 // Set initial toggle text
-themeToggle.textContent = document.body.classList.contains('dark-mode') ? 'Toggle Light Mode' : 'Toggle Dark Mode';
-themeToggle.textContent = 'Toggle Light Mode'; // Since starts dark
+themeToggle.textContent = 'Toggle';
 
 // Search functionality
 searchInput.addEventListener('input', (e) => {
