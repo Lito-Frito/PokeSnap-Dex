@@ -12,14 +12,41 @@ body {
     background-color: #222;
 }
 
+#app-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px 20px 20px;
+}
+
+.header-container {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
 header {
     background-color: #990000;
     color: white;
     padding: 20px;
     transition: background-color 0.3s;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    border-radius: 20px 20px 0 0;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.6), inset 0 -1px 0 rgba(0,0,0,0.6);
+}
+
+.divider {
+    height: 6px;
+    background: linear-gradient(to bottom, #a0a0a0 0%, #606060 100%);
+}
+
+.footer {
+    background-color: #990000;
+    border-radius: 0 0 20px 20px;
+    height: 20px;
+    transition: background-color 0.3s;
+}
+
+.dark-mode .footer {
+    background-color: #000;
 }
 
 .header-controls {
@@ -102,7 +129,7 @@ header {
 }
 
 .dark-mode header {
-    background-color: #333;
+    background-color: #000;
 }
 
 #theme-toggle {
@@ -134,8 +161,8 @@ header {
 }
 
 #power-indicator {
-    position: fixed;
-    right: 5%;
+    position: absolute;
+    right: 20px;
     top: 30px;
     width: 12px;
     height: 12px;
@@ -174,6 +201,7 @@ header {
     padding: 20px;
     max-height: 1800px;
     overflow-y: auto;
+    background-color: #2C3539;
 }
 
 #dex-container.flex-layout {
