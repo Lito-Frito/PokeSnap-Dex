@@ -309,7 +309,7 @@
     "name": "Rattata",
     "variants": [
       {
-        "image": "https://your-image-url-here.jpg",
+        "image": "https://i.imgur.com/xCD2uoq.jpeg",
         "label": "Rattata",
         "position": "center",
         "fit": "contain"
@@ -322,13 +322,13 @@
       },
       {
         "image": "https://your-image-url-here.jpg",
-        "label": "Alolan Rattata",
+        "label": "Alolan",
         "position": "center",
         "fit": "contain"
       },
       {
         "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Alolan Rattata",
+        "label": "Shiny Alolan",
         "position": "center",
         "fit": "contain"
       }
@@ -1048,7 +1048,7 @@
     "name": "Psyduck",
     "variants": [
       {
-        "image": "https://your-image-url-here.jpg",
+        "image": "https://i.imgur.com/RPumMrP.jpeg",
         "label": "Psyduck",
         "position": "center",
         "fit": "contain"
@@ -2061,7 +2061,7 @@
         "fit": "contain"
       },
       {
-        "image": "https://your-image-url-here.jpg",
+        "image": "https://i.imgur.com/RMrdcvC.jpeg",
         "label": "Alolan Exeggutor",
         "position": "center",
         "fit": "contain"
@@ -3330,7 +3330,7 @@
     "name": "Pichu",
     "variants": [
       {
-        "image": "https://your-image-url-here.jpg",
+        "image": "https://i.imgur.com/hGsepHG.jpeg",
         "label": "Pichu",
         "position": "center",
         "fit": "contain"
@@ -5726,7 +5726,7 @@
     "name": "Medicham",
     "variants": [
       {
-        "image": "https://your-image-url-here.jpg",
+        "image": "https://i.imgur.com/e42uYKs.jpeg",
         "label": "Medicham",
         "position": "center",
         "fit": "contain"
@@ -8582,7 +8582,7 @@
     "name": "Probopass",
     "variants": [
       {
-        "image": "https://your-image-url-here.jpg",
+        "image": "https://i.imgur.com/bh48JKc.jpeg",
         "label": "Probopass",
         "position": "center",
         "fit": "contain"
@@ -9648,7 +9648,7 @@
     "name": "Throh",
     "variants": [
       {
-        "image": "https://your-image-url-here.jpg",
+        "image": "https://i.imgur.com/T3iaDFf.jpeg",
         "label": "Throh",
         "position": "center",
         "fit": "contain"
@@ -9665,7 +9665,7 @@
     "name": "Sawk",
     "variants": [
       {
-        "image": "https://your-image-url-here.jpg",
+        "image": "https://i.imgur.com/uprN9Z8.jpeg",
         "label": "Sawk",
         "position": "center",
         "fit": "contain"
@@ -10519,14 +10519,49 @@
     "name": "Deerling",
     "variants": [
       {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Deerling",
+        "image": "https://i.imgur.com/ntOvz1W.jpeg",
+        "label": "Summer",
         "position": "center",
         "fit": "contain"
       },
       {
         "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Deerling",
+        "label": "Shiny Summer",
+        "position": "center",
+        "fit": "contain"
+      },
+      {
+        "image": "https://your-image-url-here.jpg",
+        "label": "Autumn",
+        "position": "center",
+        "fit": "contain"
+      },
+      {
+        "image": "https://your-image-url-here.jpg",
+        "label": "Shiny Autumn",
+        "position": "center",
+        "fit": "contain"
+      },{
+        "image": "https://your-image-url-here.jpg",
+        "label": "Winter",
+        "position": "center",
+        "fit": "contain"
+      },
+      {
+        "image": "https://your-image-url-here.jpg",
+        "label": "Shiny Winter",
+        "position": "center",
+        "fit": "contain"
+      },
+      {
+        "image": "https://your-image-url-here.jpg",
+        "label": "Spring",
+        "position": "center",
+        "fit": "contain"
+      },
+      {
+        "image": "https://your-image-url-here.jpg",
+        "label": "Shiny Spring",
         "position": "center",
         "fit": "contain"
       }
@@ -11971,14 +12006,50 @@
     "name": "Flabebe",
     "variants": [
       {
-        "image": "https://your-image-url-here.jpg",
-        "label": "Flabebe",
+        "image": "https://i.imgur.com/o6J2nwy.jpeg",
+        "label": "Yellow",
         "position": "center",
         "fit": "contain"
       },
       {
         "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Flabebe",
+        "label": "Shiny Yellow",
+        "position": "center",
+        "fit": "contain"
+      },
+      {
+        "image": "https://i.imgur.com/ZPaQ4fn.jpeg",
+        "label": "Blue",
+        "position": "center",
+        "fit": "contain"
+      },
+      {
+        "image": "https://your-image-url-here.jpg",
+        "label": "Shiny Blue",
+        "position": "center",
+        "fit": "contain"
+      },
+      {
+        "image": "https://your-image-url-here.jpg",
+        "label": "Red",
+        "position": "center",
+        "fit": "contain"
+      },
+      {
+        "image": "https://your-image-url-here.jpg",
+        "label": "Shiny Red",
+        "position": "center",
+        "fit": "contain"
+      },
+      {
+        "image": "https://i.imgur.com/fXfePZQ.jpeg",
+        "label": "Orange",
+        "position": "center",
+        "fit": "contain"
+      },
+      {
+        "image": "https://your-image-url-here.jpg",
+        "label": "Shiny Orange",
         "position": "center",
         "fit": "contain"
       }
@@ -13240,17 +13311,53 @@
     ]
   },
   "741": {
-    "name": "Oricorio baile",
+    "name": "Oricorio",
     "variants": [
       {
         "image": "https://your-image-url-here.jpg",
-        "label": "Oricorio-baile",
+        "label": "Baile",
         "position": "center",
         "fit": "contain"
       },
       {
         "image": "https://your-image-url-here.jpg",
-        "label": "Shiny Oricorio-baile",
+        "label": "Shiny Baile",
+        "position": "center",
+        "fit": "contain"
+      },
+      {
+        "image": "https://your-image-url-here.jpg",
+        "label": "Pom-Pom",
+        "position": "center",
+        "fit": "contain"
+      },
+      {
+        "image": "https://your-image-url-here.jpg",
+        "label": "Shiny Pom-Pom",
+        "position": "center",
+        "fit": "contain"
+      },
+      {
+        "image": "https://your-image-url-here.jpg",
+        "label": "Pa'u",
+        "position": "center",
+        "fit": "contain"
+      },
+      {
+        "image": "https://your-image-url-here.jpg",
+        "label": "Shiny Pa'u",
+        "position": "center",
+        "fit": "contain"
+      },
+      {
+        "image": "https://i.imgur.com/SBjv5lp.jpeg",
+        "label": "Sensu",
+        "position": "center",
+        "fit": "contain"
+      },
+      {
+        "image": "https://your-image-url-here.jpg",
+        "label": "Shiny Sensu",
         "position": "center",
         "fit": "contain"
       }
@@ -13906,13 +14013,13 @@
     "name": "Drampa",
     "variants": [
       {
-        "image": "https://your-image-url-here.jpg",
+        "image": "https://i.imgur.com/A3R4ycA.jpeg",
         "label": "Drampa",
         "position": "center",
         "fit": "contain"
       },
       {
-        "image": "https://your-image-url-here.jpg",
+        "image": "https://i.imgur.com/4GL7Vzv.jpeg",
         "label": "Shiny Drampa",
         "position": "center",
         "fit": "contain"
@@ -16099,7 +16206,7 @@
     "name": "Fuecoco",
     "variants": [
       {
-        "image": "https://your-image-url-here.jpg",
+        "image": "https://i.imgur.com/YB8o0Yl.jpeg",
         "label": "Fuecoco",
         "position": "center",
         "fit": "contain"
@@ -16507,7 +16614,7 @@
     "name": "Naclstack",
     "variants": [
       {
-        "image": "https://your-image-url-here.jpg",
+        "image": "https://i.imgur.com/FbZG4t3.jpeg",
         "label": "Naclstack",
         "position": "center",
         "fit": "contain"
@@ -17665,7 +17772,7 @@
     "name": "Gimmighoul",
     "variants": [
       {
-        "image": "https://your-image-url-here.jpg",
+        "image": "https://i.imgur.com/7USFKxY.jpeg",
         "label": "Gimmighoul",
         "position": "center",
         "fit": "contain"
@@ -17682,7 +17789,7 @@
     "name": "Gholdengo",
     "variants": [
       {
-        "image": "https://your-image-url-here.jpg",
+        "image": "https://i.imgur.com/r8VFMwy.jpeg",
         "label": "Gholdengo",
         "position": "center",
         "fit": "contain"
