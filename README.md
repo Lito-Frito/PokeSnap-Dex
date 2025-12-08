@@ -1,3 +1,5 @@
+[![pages-build-deployment](https://github.com/Lito-Frito/PokeSnap-Dex/actions/workflows/pages/pages-build-deployment/badge.svg?branch=LitoFrito&event=deployment_status)](https://github.com/Lito-Frito/PokeSnap-Dex/actions/workflows/pages/pages-build-deployment)
+
 # PokeSnap-Dex
 
 Gotta snap 'em all! A simple, static Pokédex for displaying your Pokémon photos.
