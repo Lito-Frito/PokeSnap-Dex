@@ -1,4 +1,4 @@
-[![pages-build-deployment](https://github.com/Lito-Frito/PokeSnap-Dex/actions/workflows/pages/pages-build-deployment/badge.svg?branch=LitoFrito&event=deployment_status)](https://github.com/Lito-Frito/PokeSnap-Dex/actions/workflows/pages/pages-build-deployment)
+[![pages-build-deployment](https://github.com/Lito-Frito/PokeSnap-Dex/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/Lito-Frito/PokeSnap-Dex/actions/workflows/pages/pages-build-deployment)
 
 # PokeSnap-Dex
 
