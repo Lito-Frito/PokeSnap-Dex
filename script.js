@@ -74,13 +74,32 @@ const capturedModal = document.getElementById('captured-modal');
 const capturedList = document.getElementById('captured-list');
 const closeCapturedModal = document.getElementById('close-captured-modal');
 const toggleShowAll = document.getElementById('toggle-show-all');
+const h1 = document.querySelector('h1');
+
+// Intersection Observer for lazy loading images
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const img = entry.target.querySelector('img');
+            if (img && img.dataset.src) {
+                img.src = img.dataset.src;
+                observer.unobserve(entry.target);
+            }
+        }
+    });
+}, { root: dexContainer, threshold: 0.1 });
+
+// Reset search input on page load
+searchInput.value = '';
 
 // Load saved theme preference
 const savedTheme = localStorage.getItem('theme');
 if (savedTheme === 'dark') {
     document.body.classList.add('dark-mode');
-} else if (savedTheme === 'light') {
+    h1.textContent = 'Unova Theme: PokeSnap Dex';
+} else {
     document.body.classList.remove('dark-mode');
+    h1.textContent = 'Kanto Theme: PokeSnap Dex';
 }
 
 themeToggle.addEventListener('click', () => {
@@ -88,6 +107,7 @@ themeToggle.addEventListener('click', () => {
     const isDark = document.body.classList.contains('dark-mode');
     themeToggle.textContent = 'Toggle';
     localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    h1.textContent = isDark ? 'Unova Theme: PokeSnap Dex' : 'Kanto Theme: PokeSnap Dex';
 });
 
 // Set initial toggle text
@@ -153,6 +173,9 @@ function updateCapturedList() {
             li.textContent = `${number}: ${pokedexData[number].name}`;
             li.style.cursor = 'pointer';
             li.addEventListener('click', () => {
+                // Clear search filter before navigating
+                searchInput.value = '';
+                searchInput.dispatchEvent(new Event('input'));
                 scrollToPokemon(number);
                 capturedModal.style.display = 'none';
             });
@@ -187,7 +210,8 @@ function renderDex() {
         const firstWithImage = pokedexData[number].variants.findIndex(v => v.image && v.image !== "https://your-image-url-here.jpg");
         if (pokedexData[number] && pokedexData[number].variants.length > 0 && firstWithImage !== -1) {
             const img = document.createElement('img');
-            img.src = pokedexData[number].variants[firstWithImage].image;
+            img.dataset.src = pokedexData[number].variants[firstWithImage].image;
+            img.loading = 'lazy';
             const variant = pokedexData[number].variants[firstWithImage];
             const baseName = pokedexData[number].name;
             const label = variant.label;
@@ -214,6 +238,7 @@ function renderDex() {
                 // entryDiv.style.backgroundColor = document.body.classList.contains('dark-mode') ? '#555' : '#ddd';
             }
             entryDiv.appendChild(img);
+            observer.observe(entryDiv);
             entryDiv.addEventListener('click', () => openGallery(number));
         } else {
             entryDiv.className += ' empty';

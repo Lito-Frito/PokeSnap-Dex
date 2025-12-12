@@ -3,6 +3,13 @@
 ## Overview
 PokeSnap-Dex is a web-based Pokémon photo collection app inspired by Pokémon GO's AR photo feature. It displays a grid of 1025 Pokémon (Gen 1-9 with variants) with thumbnails. Users can click thumbnails to open a gallery modal for viewing variants, search Pokémon, toggle themes, and see a capture count. The app uses vanilla HTML, CSS, and JavaScript with a JSON data file.
 
+## UI Design Rules
+- **Layering**: Header and footer are always on top of dex-container (z-index: 1000). Header and footer share the same layer.
+- **Widths**: Header, footer, and dex-container have matching visual widths (100% of #app-container, with box-sizing: border-box for dex-container to include padding).
+- **Sticky Elements**: Header sticks to top, footer sticks to bottom.
+- **Responsive Height**: Dex-container uses `height: calc(100vh - 100px)` to fill available space, capping rows before footer.
+- **Box-Sizing**: Dex-container uses `box-sizing: border-box` to ensure padding doesn't affect total width.
+
 ## File Structure
 - **`index.html`**: Main HTML structure. Includes header with controls (search, theme toggle, captured count), main grid container (`#dex-container`), and modals (gallery, captured list).
 - **`styles.css`**: CSS for layout (grid, flexbox), themes (dark/light), responsive design (mobile breakpoints), gallery modal styling, and animations.

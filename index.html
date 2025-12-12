@@ -6,13 +6,15 @@ Overview:
 This is a web-based PokeSnap-Dex clone inspired by Pokémon GO's AR photo feature.
 It displays a grid of 1025 Pokémon (Gen 1-9) with variants (base, shiny, regional, etc.).
 Users can view captured Pokémon, browse galleries, and toggle themes.
+UI: Sticky header/footer, responsive dex-container height, matching widths/layers.
 
 Key Features:
 - Grid view: Shows first available real image variant per Pokémon (ignores placeholders).
 - Capture count: Counts only Pokémon with at least one real image (not placeholders).
 - Gallery: Modal view with variant navigation (keyboard: arrows, escape).
-- Responsive design: Adapts to mobile with dynamic grid sizing.
+- Responsive design: Adapts to mobile with dynamic grid sizing. Dex-container height adjusts to viewport.
 - Theme toggle: Dark/light mode.
+- Sticky UI: Header sticks to top, footer to bottom, both on same layer above dex-container.
 - Data integrity: 1025 entries, no duplicates, proper naming.
 
 Data Structure (data.json):
@@ -29,6 +31,7 @@ Notes for Future Development:
 - Grid/gallery use findIndex for first real image variant.
 - Run tests (node test.js) for data integrity.
 - Mobile: CSS grid with auto-fit and min-width.
+- UI Rules: Header/footer z-index 1000, widths 100%, dex-container box-sizing border-box.
 -->
 <html lang="en">
 <head>
@@ -50,11 +53,12 @@ Notes for Future Development:
                 </div>
                 <div id="power-indicator"></div>
             </header>
-            <div class="divider"></div>
+            <div class="divider header-divider"></div>
         </div>
         <main id="dex-container">
             <!-- Grid will be populated by JS -->
         </main>
+        <div class="divider footer-divider"></div>
         <div class="footer"></div>
     </div>
     <div id="gallery" class="hidden">
