@@ -75,6 +75,9 @@ const capturedList = document.getElementById('captured-list');
 const closeCapturedModal = document.getElementById('close-captured-modal');
 const toggleShowAll = document.getElementById('toggle-show-all');
 
+// Reset search input on page load
+searchInput.value = '';
+
 // Load saved theme preference
 const savedTheme = localStorage.getItem('theme');
 if (savedTheme === 'dark') {
