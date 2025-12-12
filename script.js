@@ -153,6 +153,9 @@ function updateCapturedList() {
             li.textContent = `${number}: ${pokedexData[number].name}`;
             li.style.cursor = 'pointer';
             li.addEventListener('click', () => {
+                // Clear search filter before navigating
+                searchInput.value = '';
+                searchInput.dispatchEvent(new Event('input'));
                 scrollToPokemon(number);
                 capturedModal.style.display = 'none';
             });
