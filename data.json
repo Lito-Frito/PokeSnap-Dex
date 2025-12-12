@@ -546,6 +546,30 @@
         "label": "Shiny Alolan Raichu",
         "position": "center",
         "fit": "contain"
+      },
+      {
+        "image": "https://your-image-url-here.jpg",
+        "label": "Mega Raichu X",
+        "position": "center",
+        "fit": "contain"
+      },
+      {
+        "image": "https://your-image-url-here.jpg",
+        "label": "Shiny Mega Raichu X",
+        "position": "center",
+        "fit": "contain"
+      },
+      {
+        "image": "https://your-image-url-here.jpg",
+        "label": "Mega Raichu Y",
+        "position": "center",
+        "fit": "contain"
+      },
+      {
+        "image": "https://your-image-url-here.jpg",
+        "label": "Shiny Mega Raichu Y",
+        "position": "center",
+        "fit": "contain"
       }
     ]
   },
@@ -3091,6 +3115,18 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Shiny Dragonite",
+        "position": "center",
+        "fit": "contain"
+      },
+      {
+        "image": "https://your-image-url-here.jpg",
+        "label": "Mega Dragonite",
+        "position": "center",
+        "fit": "contain"
+      },
+      {
+        "image": "https://your-image-url-here.jpg",
+        "label": "Shiny Mega Dragonite",
         "position": "center",
         "fit": "contain"
       }
@@ -6994,6 +7030,18 @@
         "label": "Shiny Chimecho",
         "position": "center",
         "fit": "contain"
+      },
+      {
+        "image": "https://your-image-url-here.jpg",
+        "label": "Mega Chimecho",
+        "position": "center",
+        "fit": "contain"
+      },
+      {
+        "image": "https://your-image-url-here.jpg",
+        "label": "Shiny Mega Chimecho",
+        "position": "center",
+        "fit": "contain"
       }
     ]
   },
@@ -7021,6 +7069,18 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Shiny Mega Absol",
+        "position": "center",
+        "fit": "contain"
+      },
+      {
+        "image": "https://your-image-url-here.jpg",
+        "label": "Mega Absol Z",
+        "position": "center",
+        "fit": "contain"
+      },
+      {
+        "image": "https://your-image-url-here.jpg",
+        "label": "Shiny Mega Absol Z",
         "position": "center",
         "fit": "contain"
       }
@@ -7768,6 +7828,18 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Shiny Staraptor",
+        "position": "center",
+        "fit": "contain"
+      },
+      {
+        "image": "https://your-image-url-here.jpg",
+        "label": "Mega Staraptor",
+        "position": "center",
+        "fit": "contain"
+      },
+      {
+        "image": "https://your-image-url-here.jpg",
+        "label": "Shiny Mega Staraptor",
         "position": "center",
         "fit": "contain"
       }
@@ -8656,6 +8728,18 @@
         "label": "Shiny Mega Lucario",
         "position": "center",
         "fit": "contain"
+      },
+      {
+        "image": "https://your-image-url-here.jpg",
+        "label": "Mega Lucario Z",
+        "position": "center",
+        "fit": "contain"
+      },
+      {
+        "image": "https://your-image-url-here.jpg",
+        "label": "Shiny Mega Lucario Z",
+        "position": "center",
+        "fit": "contain"
       }
     ]
   },
@@ -9309,6 +9393,18 @@
         "label": "Shiny Heatran",
         "position": "center",
         "fit": "contain"
+      },
+      {
+        "image": "https://your-image-url-here.jpg",
+        "label": "Mega Heatran",
+        "position": "center",
+        "fit": "contain"
+      },
+      {
+        "image": "https://your-image-url-here.jpg",
+        "label": "Shiny Mega Heatran",
+        "position": "center",
+        "fit": "contain"
       }
     ]
   },
@@ -9409,6 +9505,18 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Shiny Darkrai",
+        "position": "center",
+        "fit": "contain"
+      },
+      {
+        "image": "https://your-image-url-here.jpg",
+        "label": "Mega Darkrai",
+        "position": "center",
+        "fit": "contain"
+      },
+      {
+        "image": "https://your-image-url-here.jpg",
+        "label": "Shiny Mega Darkrai",
         "position": "center",
         "fit": "contain"
       }
@@ -12781,6 +12889,30 @@
         "label": "Shiny Meowstic-male",
         "position": "center",
         "fit": "contain"
+      },
+      {
+        "image": "https://your-image-url-here.jpg",
+        "label": "Mega Meowstic Male",
+        "position": "center",
+        "fit": "contain"
+      },
+      {
+        "image": "https://your-image-url-here.jpg",
+        "label": "Shiny Mega Meowstic Male",
+        "position": "center",
+        "fit": "contain"
+      },
+      {
+        "image": "https://your-image-url-here.jpg",
+        "label": "Mega Meowstic Female",
+        "position": "center",
+        "fit": "contain"
+      },
+      {
+        "image": "https://your-image-url-here.jpg",
+        "label": "Shiny Mega Meowstic Female",
+        "position": "center",
+        "fit": "contain"
       }
     ]
   },
@@ -13895,6 +14027,18 @@
         "label": "Shiny Crabominable",
         "position": "center",
         "fit": "contain"
+      },
+      {
+        "image": "https://your-image-url-here.jpg",
+        "label": "Mega Crabominable",
+        "position": "center",
+        "fit": "contain"
+      },
+      {
+        "image": "https://your-image-url-here.jpg",
+        "label": "Shiny Mega Crabominable",
+        "position": "center",
+        "fit": "contain"
       }
     ]
   },
@@ -14405,6 +14549,18 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Shiny Golisopod",
+        "position": "center",
+        "fit": "contain"
+      },
+      {
+        "image": "https://your-image-url-here.jpg",
+        "label": "Mega Golisopod",
+        "position": "center",
+        "fit": "contain"
+      },
+      {
+        "image": "https://your-image-url-here.jpg",
+        "label": "Shiny Mega Golisopod",
         "position": "center",
         "fit": "contain"
       }
@@ -15068,6 +15224,18 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Shiny Zeraora",
+        "position": "center",
+        "fit": "contain"
+      },
+      {
+        "image": "https://your-image-url-here.jpg",
+        "label": "Mega Zeraora",
+        "position": "center",
+        "fit": "contain"
+      },
+      {
+        "image": "https://your-image-url-here.jpg",
+        "label": "Shiny Mega Zeraora",
         "position": "center",
         "fit": "contain"
       }
@@ -17535,6 +17703,18 @@
         "label": "Shiny Scovillain",
         "position": "center",
         "fit": "contain"
+      },
+      {
+        "image": "https://your-image-url-here.jpg",
+        "label": "Mega Scovillain",
+        "position": "center",
+        "fit": "contain"
+      },
+      {
+        "image": "https://your-image-url-here.jpg",
+        "label": "Shiny Mega Scovillain",
+        "position": "center",
+        "fit": "contain"
       }
     ]
   },
@@ -17841,6 +18021,18 @@
         "label": "Shiny Glimmora",
         "position": "center",
         "fit": "contain"
+      },
+      {
+        "image": "https://your-image-url-here.jpg",
+        "label": "Mega Glimmora",
+        "position": "center",
+        "fit": "contain"
+      },
+      {
+        "image": "https://your-image-url-here.jpg",
+        "label": "Shiny Mega Glimmora",
+        "position": "center",
+        "fit": "contain"
       }
     ]
   },
@@ -17999,6 +18191,42 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Shiny Curly",
+        "position": "center",
+        "fit": "contain"
+      },
+      {
+        "image": "https://your-image-url-here.jpg",
+        "label": "Mega Curly Tatsugiri",
+        "position": "center",
+        "fit": "contain"
+      },
+      {
+        "image": "https://your-image-url-here.jpg",
+        "label": "Shiny Mega Curly Tatsugiri",
+        "position": "center",
+        "fit": "contain"
+      },
+      {
+        "image": "https://your-image-url-here.jpg",
+        "label": "Mega Droopy Tatsugiri",
+        "position": "center",
+        "fit": "contain"
+      },
+      {
+        "image": "https://your-image-url-here.jpg",
+        "label": "Shiny Mega Droopy Tatsugiri",
+        "position": "center",
+        "fit": "contain"
+      },
+      {
+        "image": "https://your-image-url-here.jpg",
+        "label": "Mega Stretchy Tatsugiri",
+        "position": "center",
+        "fit": "contain"
+      },
+      {
+        "image": "https://your-image-url-here.jpg",
+        "label": "Shiny Mega Stretchy Tatsugiri",
         "position": "center",
         "fit": "contain"
       }
@@ -18351,6 +18579,18 @@
       {
         "image": "https://your-image-url-here.jpg",
         "label": "Shiny Baxcalibur",
+        "position": "center",
+        "fit": "contain"
+      },
+      {
+        "image": "https://your-image-url-here.jpg",
+        "label": "Mega Baxcalibur",
+        "position": "center",
+        "fit": "contain"
+      },
+      {
+        "image": "https://your-image-url-here.jpg",
+        "label": "Shiny Mega Baxcalibur",
         "position": "center",
         "fit": "contain"
       }
