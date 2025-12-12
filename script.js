@@ -76,6 +76,19 @@ const closeCapturedModal = document.getElementById('close-captured-modal');
 const toggleShowAll = document.getElementById('toggle-show-all');
 const h1 = document.querySelector('h1');
 
+// Intersection Observer for lazy loading images
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const img = entry.target.querySelector('img');
+            if (img && img.dataset.src) {
+                img.src = img.dataset.src;
+                observer.unobserve(entry.target);
+            }
+        }
+    });
+}, { root: dexContainer, threshold: 0.1 });
+
 // Reset search input on page load
 searchInput.value = '';
 
@@ -197,7 +210,8 @@ function renderDex() {
         const firstWithImage = pokedexData[number].variants.findIndex(v => v.image && v.image !== "https://your-image-url-here.jpg");
         if (pokedexData[number] && pokedexData[number].variants.length > 0 && firstWithImage !== -1) {
             const img = document.createElement('img');
-            img.src = pokedexData[number].variants[firstWithImage].image;
+            img.dataset.src = pokedexData[number].variants[firstWithImage].image;
+            img.loading = 'lazy';
             const variant = pokedexData[number].variants[firstWithImage];
             const baseName = pokedexData[number].name;
             const label = variant.label;
@@ -224,6 +238,7 @@ function renderDex() {
                 // entryDiv.style.backgroundColor = document.body.classList.contains('dark-mode') ? '#555' : '#ddd';
             }
             entryDiv.appendChild(img);
+            observer.observe(entryDiv);
             entryDiv.addEventListener('click', () => openGallery(number));
         } else {
             entryDiv.className += ' empty';
