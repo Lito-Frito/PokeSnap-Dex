@@ -45,20 +45,50 @@ header {
 }
 
 .footer {
-    background-color: #990000;
     border-radius: 0 0 20px 20px;
     height: 20px;
     transition: background-color 0.3s;
     position: fixed;
     bottom: 0;
     z-index: 1000;
-    width: 668px;
+    width: calc(100vw - 40px);
+    max-width: 668px;
     margin: 0 auto;
-    overflow: hidden;
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -20px;
+    right: -20px;
+    bottom: 0;
+    background: white;
+    z-index: -1;
+}
+
+.footer::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #990000;
+    border-radius: 0 0 20px 20px;
+    z-index: 1;
 }
 
 .dark-mode .footer {
     background-color: #000;
+}
+
+.dark-mode .footer::before {
+    background: white;
+}
+
+.dark-mode .footer::after {
+    background: #000;
 }
 
 .header-controls {
