@@ -195,6 +195,11 @@ header {
     margin: 0;
     width: 180px;
     transition: all 0.3s;
+    border-top: 2px solid #FF3333;
+    border-left: 2px solid #FF3333;
+    border-bottom: 2px solid #990000;
+    border-right: 2px solid #990000;
+    outline: 0.25px solid white;
 }
 
 #theme-toggle:hover {
@@ -206,6 +211,11 @@ header {
     background-color: #555;
     color: white;
     border: 2px solid #555;
+    border-top: 2px solid #666;
+    border-left: 2px solid #666;
+    border-bottom: 2px solid #000;
+    border-right: 2px solid #000;
+    outline: 0.25px solid white;
 }
 
 .dark-mode #theme-toggle:hover {

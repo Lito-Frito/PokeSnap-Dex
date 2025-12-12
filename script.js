@@ -74,6 +74,7 @@ const capturedModal = document.getElementById('captured-modal');
 const capturedList = document.getElementById('captured-list');
 const closeCapturedModal = document.getElementById('close-captured-modal');
 const toggleShowAll = document.getElementById('toggle-show-all');
+const h1 = document.querySelector('h1');
 
 // Reset search input on page load
 searchInput.value = '';
@@ -82,8 +83,10 @@ searchInput.value = '';
 const savedTheme = localStorage.getItem('theme');
 if (savedTheme === 'dark') {
     document.body.classList.add('dark-mode');
-} else if (savedTheme === 'light') {
+    h1.textContent = 'Unova Theme: PokeSnap Dex';
+} else {
     document.body.classList.remove('dark-mode');
+    h1.textContent = 'Kanto Theme: PokeSnap Dex';
 }
 
 themeToggle.addEventListener('click', () => {
@@ -91,6 +94,7 @@ themeToggle.addEventListener('click', () => {
     const isDark = document.body.classList.contains('dark-mode');
     themeToggle.textContent = 'Toggle';
     localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    h1.textContent = isDark ? 'Unova Theme: PokeSnap Dex' : 'Kanto Theme: PokeSnap Dex';
 });
 
 // Set initial toggle text
