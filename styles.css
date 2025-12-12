@@ -247,6 +247,10 @@ header {
     color: #ccc;
 }
 
+.dark-mode #dex-container {
+    background-color: #2C3539;
+}
+
 #dex-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(192px, 1fr));
@@ -254,7 +258,7 @@ header {
     padding: 20px;
     height: calc(100vh - 120px);
     overflow-y: auto;
-    background-color: #2C3539;
+    background-color: #001a3d;
     position: relative;
     width: 100%;
     box-sizing: border-box;
