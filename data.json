@@ -8643,6 +8643,66 @@
         "label": "Shiny Rotom",
         "position": "center",
         "fit": "contain"
+      },
+      {
+        "image": "https://your-image-url-here.jpg",
+        "label": "Heat Rotom",
+        "position": "center",
+        "fit": "contain"
+      },
+      {
+        "image": "https://your-image-url-here.jpg",
+        "label": "Shiny Heat Rotom",
+        "position": "center",
+        "fit": "contain"
+      },
+      {
+        "image": "https://your-image-url-here.jpg",
+        "label": "Wash Rotom",
+        "position": "center",
+        "fit": "contain"
+      },
+      {
+        "image": "https://your-image-url-here.jpg",
+        "label": "Shiny Wash Rotom",
+        "position": "center",
+        "fit": "contain"
+      },
+      {
+        "image": "https://your-image-url-here.jpg",
+        "label": "Frost Rotom",
+        "position": "center",
+        "fit": "contain"
+      },
+      {
+        "image": "https://your-image-url-here.jpg",
+        "label": "Shiny Frost Rotom",
+        "position": "center",
+        "fit": "contain"
+      },
+      {
+        "image": "https://your-image-url-here.jpg",
+        "label": "Fan Rotom",
+        "position": "center",
+        "fit": "contain"
+      },
+      {
+        "image": "https://your-image-url-here.jpg",
+        "label": "Shiny Fan Rotom",
+        "position": "center",
+        "fit": "contain"
+      },
+      {
+        "image": "https://your-image-url-here.jpg",
+        "label": "Mow Rotom",
+        "position": "center",
+        "fit": "contain"
+      },
+      {
+        "image": "https://your-image-url-here.jpg",
+        "label": "Shiny Mow Rotom",
+        "position": "center",
+        "fit": "contain"
       }
     ]
   },
