@@ -3,20 +3,20 @@
  *
  * Overview:
  * This is a web-based PokeSnap-Dex inspired by Pokémon GO's AR photo feature.
- * It displays a grid of 1025 Pokémon (Gen 1-9) with variants (base, shiny, regional, etc.).
+ * It displays a grid of Pokémon entries with variants (base, shiny, regional, etc.), allowing multiple images per variant.
  * Users can view captured Pokémon, browse galleries, and toggle themes.
  *
  * Key Features:
- * - Grid view: Shows first available real image variant per Pokémon (ignores placeholders).
- * - Capture count: Counts only Pokémon with at least one real image (not placeholders).
- * - Gallery: Modal view with variant navigation (keyboard: arrows, escape).
+ * - Grid view: Shows all real images per Pokémon variant (ignores placeholders).
+ * - Capture count: Counts Pokémon with at least one real image (not placeholders).
+ * - Gallery: Modal view with image navigation within a Pokémon's all images (keyboard: arrows, escape).
  * - Responsive design: Adapts to mobile with dynamic grid sizing.
  * - Theme toggle: Dark/light mode.
  * - Data integrity: 1025 entries, no duplicates, proper naming.
  *
  * Data Structure (data.json):
  * - Keys: '001' to '1025' (Pokémon numbers).
- * - Each entry: { name: string, variants: [{ label: string, image: url }] }
+ * - Each entry: { name: string, variants: [{ label: string, images: [url], position: string, fit: string }] }
  * - Placeholders: "https://your-image-url-here.jpg" for missing images.
  *
  * Branches:
@@ -25,7 +25,8 @@
  *
  * Notes for Future Development:
  * - Ensure capture count excludes placeholders.
- * - Grid/gallery use findIndex for first real image variant.
+ * - Grid creates multiple entries per Pokémon for each image in variants.
+ * - Gallery navigates through all images of the Pokémon.
  * - Run tests (node test.js) for data integrity.
  * - Mobile: CSS grid with auto-fit and min-width.
  */
@@ -40,9 +41,25 @@ async function loadData() {
     console.log('Fetch response:', response);
     pokedexData = await response.json();
     console.log('Data loaded:', Object.keys(pokedexData).length, 'entries');
+    // Create flattened allImages for each entry
+    for (let num in pokedexData) {
+      pokedexData[num].allImages = [];
+      for (let variant of pokedexData[num].variants) {
+        if (variant.images && variant.images.length > 0) {
+          for (let img of variant.images) {
+            pokedexData[num].allImages.push({
+              image: img,
+              label: variant.label,
+              position: variant.position || 'center',
+              fit: variant.fit || 'contain'
+            });
+          }
+        }
+      }
+    }
     let capturedCount = 0;
     for (let num in pokedexData) {
-        if (pokedexData[num].variants && pokedexData[num].variants.some(v => v.image && v.image !== "https://your-image-url-here.jpg")) {
+        if (pokedexData[num].allImages.some(imgObj => imgObj.image && imgObj.image !== "https://your-image-url-here.jpg")) {
             capturedCount++;
         }
     }
@@ -63,7 +80,7 @@ const nextButton = document.getElementById('next-variant');
 const closeButton = document.getElementById('close-gallery');
 
 let currentEntry = null;
-let currentVariantIndex = 0;
+let currentImageIndex = 0;
 let showAll = false;
 
 // Theme toggle with persistence
@@ -167,8 +184,7 @@ function updateCapturedList() {
     let count = 0;
     for (let i = 1; i <= 1025; i++) {
         const number = i.toString().padStart(3, '0');
-        const firstWithImage = pokedexData[number].variants.findIndex(v => v.image && v.image !== "https://your-image-url-here.jpg");
-        if (firstWithImage !== -1) {
+        if (pokedexData[number].allImages.some(imgObj => imgObj.image && imgObj.image !== "https://your-image-url-here.jpg")) {
             const li = document.createElement('li');
             li.textContent = `${number}: ${pokedexData[number].name}`;
             li.style.cursor = 'pointer';
@@ -202,19 +218,20 @@ function renderDex() {
     console.log('Rendering dex...');
     for (let i = 1; i <= 1025; i++) {  // All generations up to Paldea
         const number = i.toString().padStart(3, '0');
+        const entryData = pokedexData[number];
         const entryDiv = document.createElement('div');
         entryDiv.className = 'entry';
         entryDiv.dataset.number = number;
-        entryDiv.dataset.name = pokedexData[number].name;
+        entryDiv.dataset.name = entryData.name;
 
-        const firstWithImage = pokedexData[number].variants.findIndex(v => v.image && v.image !== "https://your-image-url-here.jpg");
-        if (pokedexData[number] && pokedexData[number].variants.length > 0 && firstWithImage !== -1) {
+        const firstRealImageIndex = entryData.allImages.findIndex(imgObj => imgObj.image && imgObj.image !== "https://your-image-url-here.jpg");
+        if (entryData && firstRealImageIndex !== -1) {
+            const imgObj = entryData.allImages[firstRealImageIndex];
             const img = document.createElement('img');
-            img.dataset.src = pokedexData[number].variants[firstWithImage].image;
+            img.dataset.src = imgObj.image;
             img.loading = 'lazy';
-            const variant = pokedexData[number].variants[firstWithImage];
-            const baseName = pokedexData[number].name;
-            const label = variant.label;
+            const baseName = entryData.name;
+            const label = imgObj.label;
             let displayName = baseName;
             if (label && label !== baseName) {
                 if (label.includes(baseName)) {
@@ -224,25 +241,24 @@ function renderDex() {
                     displayName = `${baseName} - ${label}`;
                 }
             }
-        displayName = displayName.replace(/-/g, ' ');
             displayName = displayName.replace(/-/g, ' ');
             img.alt = displayName;
-            img.style.objectPosition = pokedexData[number].variants[firstWithImage].position || 'center';
-            img.style.objectFit = pokedexData[number].variants[firstWithImage].fit || 'contain';
+            img.style.objectPosition = imgObj.position;
+            img.style.objectFit = imgObj.fit;
             img.onerror = () => {
                 img.style.display = 'none';
-                entryDiv.textContent = pokedexData[number].name;
+                entryDiv.textContent = entryData.name;
                 entryDiv.classList.add('empty');
             };
-            if (pokedexData[number].variants[firstWithImage].fit === 'contain') {
+            if (imgObj.fit === 'contain') {
                 // entryDiv.style.backgroundColor = document.body.classList.contains('dark-mode') ? '#555' : '#ddd';
             }
             entryDiv.appendChild(img);
             observer.observe(entryDiv);
-            entryDiv.addEventListener('click', () => openGallery(number));
+            entryDiv.addEventListener('click', () => openGallery(number, firstRealImageIndex));
         } else {
             entryDiv.className += ' empty';
-            entryDiv.textContent = pokedexData[number].name;
+            entryDiv.textContent = entryData.name;
         }
 
         dexContainer.appendChild(entryDiv);
@@ -251,10 +267,9 @@ function renderDex() {
 }
 
 // Open gallery for an entry
-function openGallery(number) {
+function openGallery(number, imgIndex) {
     currentEntry = number;
-    const firstWithImage = pokedexData[number].variants.findIndex(v => v.image && v.image !== "https://your-image-url-here.jpg");
-    currentVariantIndex = firstWithImage !== -1 ? firstWithImage : 0;
+    currentImageIndex = imgIndex;
     updateGalleryImage();
     gallery.classList.remove('hidden');
 }
@@ -262,14 +277,14 @@ function openGallery(number) {
 // Update gallery image
 function updateGalleryImage() {
     if (currentEntry && pokedexData[currentEntry]) {
-        let imageSrc = pokedexData[currentEntry].variants[currentVariantIndex].image;
+        const imgObj = pokedexData[currentEntry].allImages[currentImageIndex];
+        let imageSrc = imgObj.image;
         if (imageSrc === "https://your-image-url-here.jpg") {
             imageSrc = "https://i.imgur.com/m3idMCk.png";
         }
         galleryImage.src = imageSrc;
-        const variant = pokedexData[currentEntry].variants[currentVariantIndex];
         const baseName = pokedexData[currentEntry].name;
-        const label = variant.label;
+        const label = imgObj.label;
         let displayName = baseName;
         if (label && label !== baseName) {
             if (label.includes(baseName)) {
@@ -281,9 +296,9 @@ function updateGalleryImage() {
         }
         galleryImage.alt = imageSrc === "https://i.imgur.com/m3idMCk.png" ? "Missing Snap" : displayName;
         galleryName.textContent = displayName;
-        galleryImage.style.objectPosition = pokedexData[currentEntry].variants[currentVariantIndex].position || 'center';
-        const fit = pokedexData[currentEntry].variants[currentVariantIndex].fit || 'contain';
-        const position = pokedexData[currentEntry].variants[currentVariantIndex].position || 'center';
+        galleryImage.style.objectPosition = imgObj.position;
+        const fit = imgObj.fit;
+        const position = imgObj.position;
         galleryImage.style.objectFit = (position !== 'center') ? 'cover' : fit;
         if (position !== 'center') {
             galleryImage.style.width = '50vh';
@@ -294,29 +309,29 @@ function updateGalleryImage() {
         }
         if (imageSrc === "https://i.imgur.com/m3idMCk.png") {
             galleryImage.style.backgroundColor = 'grey';
-        } else if (pokedexData[currentEntry].variants[currentVariantIndex].fit === 'contain') {
+        } else if (imgObj.fit === 'contain') {
             galleryImage.style.backgroundColor = '#000';
         } else {
             galleryImage.style.backgroundColor = '';
         }
         const prevButton = document.getElementById('prev-variant');
         const nextButton = document.getElementById('next-variant');
-        prevButton.disabled = currentVariantIndex === 0;
-        nextButton.disabled = currentVariantIndex === pokedexData[currentEntry].variants.length - 1;
+        prevButton.disabled = currentImageIndex === 0;
+        nextButton.disabled = currentImageIndex === pokedexData[currentEntry].allImages.length - 1;
     }
 }
 
 // Event listeners
 prevButton.addEventListener('click', () => {
     if (currentEntry) {
-        currentVariantIndex = (currentVariantIndex - 1 + pokedexData[currentEntry].variants.length) % pokedexData[currentEntry].variants.length;
+        currentImageIndex = (currentImageIndex - 1 + pokedexData[currentEntry].allImages.length) % pokedexData[currentEntry].allImages.length;
         updateGalleryImage();
     }
 });
 
 nextButton.addEventListener('click', () => {
     if (currentEntry) {
-        currentVariantIndex = (currentVariantIndex + 1) % pokedexData[currentEntry].variants.length;
+        currentImageIndex = (currentImageIndex + 1) % pokedexData[currentEntry].allImages.length;
         updateGalleryImage();
     }
 });
@@ -340,13 +355,13 @@ document.addEventListener('keydown', (event) => {
     if (event.key === 'ArrowLeft') {
         event.preventDefault();
         if (currentEntry) {
-            currentVariantIndex = (currentVariantIndex - 1 + pokedexData[currentEntry].variants.length) % pokedexData[currentEntry].variants.length;
+            currentImageIndex = (currentImageIndex - 1 + pokedexData[currentEntry].allImages.length) % pokedexData[currentEntry].allImages.length;
             updateGalleryImage();
         }
     } else if (event.key === 'ArrowRight') {
         event.preventDefault();
         if (currentEntry) {
-            currentVariantIndex = (currentVariantIndex + 1) % pokedexData[currentEntry].variants.length;
+            currentImageIndex = (currentImageIndex + 1) % pokedexData[currentEntry].allImages.length;
             updateGalleryImage();
         }
     } else if (event.key === 'Escape') {
