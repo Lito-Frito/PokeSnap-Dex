@@ -297,22 +297,13 @@ function updateGalleryImage() {
         galleryImage.alt = imageSrc === "https://i.imgur.com/m3idMCk.png" ? "Missing Snap" : displayName;
         galleryName.textContent = displayName;
         galleryImage.style.objectPosition = imgObj.position;
-        const fit = imgObj.fit;
-        const position = imgObj.position;
-        galleryImage.style.objectFit = (position !== 'center') ? 'cover' : fit;
-        if (position !== 'center') {
-            galleryImage.style.width = '50vh';
-            galleryImage.style.height = '50vh';
-        } else {
-            galleryImage.style.width = '50%';
-            galleryImage.style.height = '50%';
-        }
+        galleryImage.style.objectFit = 'scale-down';
+        galleryImage.style.width = '50%';
+        galleryImage.style.height = '50%';
         if (imageSrc === "https://i.imgur.com/m3idMCk.png") {
             galleryImage.style.backgroundColor = 'grey';
-        } else if (imgObj.fit === 'contain') {
-            galleryImage.style.backgroundColor = '#000';
         } else {
-            galleryImage.style.backgroundColor = '';
+            galleryImage.style.backgroundColor = '#000';
         }
         const prevButton = document.getElementById('prev-variant');
         const nextButton = document.getElementById('next-variant');
