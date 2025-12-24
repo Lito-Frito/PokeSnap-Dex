@@ -267,7 +267,7 @@ header {
     grid-template-columns: repeat(auto-fit, minmax(192px, 1fr));
     gap: 6px;
     padding: 20px;
-    height: calc(100vh - 120px);
+    height: calc(100vh - 100px);
     overflow-y: auto;
     background-color: #001a3d;
     position: relative;
@@ -314,7 +314,6 @@ header {
     }
     #dex-container {
         grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-        max-height: 996px;
     }
 }
 
@@ -327,7 +326,6 @@ header {
     }
     #dex-container {
         grid-template-columns: repeat(auto-fit, minmax(128px, 1fr));
-        max-height: 804px;
     }
 }
 
@@ -340,7 +338,6 @@ header {
     }
     #dex-container {
         grid-template-columns: repeat(auto-fit, minmax(96px, 1fr));
-        max-height: 612px;
     }
 }
 
@@ -353,7 +350,6 @@ header {
     }
     #dex-container {
         grid-template-columns: repeat(auto-fit, minmax(64px, 1fr));
-        max-height: 420px;
     }
 }
 
