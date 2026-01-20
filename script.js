@@ -46,11 +46,24 @@ async function loadData() {
       pokedexData[num].allImages = [];
       for (let variant of pokedexData[num].variants) {
         if (variant.images && variant.images.length > 0) {
-          for (let img of variant.images) {
+          let positions = variant.position;
+          if (typeof positions === 'string') {
+            positions = new Array(variant.images.length).fill(positions);
+          } else if (Array.isArray(positions)) {
+            // Pad with 'center' if fewer positions than images
+            while (positions.length < variant.images.length) {
+              positions.push('center');
+            }
+          } else {
+            positions = new Array(variant.images.length).fill('center');
+          }
+          for (let i = 0; i < variant.images.length; i++) {
+            let img = variant.images[i];
+            let pos = positions[i];
             pokedexData[num].allImages.push({
               image: img,
               label: variant.label,
-              position: variant.position || 'center',
+              position: pos,
               fit: variant.fit || 'contain'
             });
           }

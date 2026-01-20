@@ -200,6 +200,42 @@ function testNameFormatting() {
   }
 }
 
+function testPositionArray() {
+  const data = loadData();
+  let passed = 0;
+  let failed = 0;
+
+  for (const key in data) {
+    const entry = data[key];
+    if (entry.variants) {
+      for (let variant of entry.variants) {
+        if (variant.images && variant.images.length > 0) {
+          let positions = variant.position;
+          if (Array.isArray(positions)) {
+            if (positions.length > variant.images.length) {
+              console.log(`✗ ${key}: ${entry.name} - ${variant.label} has more positions (${positions.length}) than images (${variant.images.length})`);
+              failed++;
+            } else {
+              passed++;
+            }
+          } else {
+            passed++; // string or undefined is fine
+          }
+        } else {
+          passed++;
+        }
+      }
+    } else {
+      passed++;
+    }
+  }
+
+  console.log(`\nPosition Array Test - Passed: ${passed}, Failed: ${failed}`);
+  if (failed > 0) {
+    process.exit(1);
+  }
+}
+
 function testCaptureCountLogic() {
   const data = loadData();
   let capturedCount = 0;
@@ -230,4 +266,6 @@ function testCaptureCountLogic() {
 testDataIntegrity();
 testNoDuplicatesInVariants();
 testNameFormatting();
+testPositionArray();
 testCaptureCountLogic();
+
