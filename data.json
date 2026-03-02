@@ -15919,7 +15919,7 @@
   ]
 },
   "669": {
-  "name": "Flabebe",
+  "name": "Flabébé",
   "variants": [
     {
       "label": "Yellow",
@@ -15979,6 +15979,22 @@
     },
     {
       "label": "Shiny Orange",
+      "position": "center",
+      "fit": "contain",
+      "images": [
+        "https://your-image-url-here.jpg"
+      ]
+    },
+    {
+      "label": "White",
+      "position": "center",
+      "fit": "contain",
+      "images": [
+        "https://i.imgur.com/fXfePZQ.jpeg"
+      ]
+    },
+    {
+      "label": "Shiny White",
       "position": "center",
       "fit": "contain",
       "images": [
