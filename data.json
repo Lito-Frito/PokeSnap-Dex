@@ -15045,7 +15045,7 @@
   "name": "Floette",
   "variants": [
     {
-      "label": "Floette",
+      "label": "Yellow",
       "position": "center",
       "fit": "contain",
       "images": [
@@ -15053,7 +15053,71 @@
       ]
     },
     {
-      "label": "Shiny Floette",
+      "label": "Shiny Yellow",
+      "position": "center",
+      "fit": "contain",
+      "images": [
+        "https://your-image-url-here.jpg"
+      ]
+    },
+    {
+      "label": "Blue",
+      "position": "center",
+      "fit": "contain",
+      "images": [
+        "https://your-image-url-here.jpg"
+      ]
+    },
+    {
+      "label": "Shiny Blue",
+      "position": "center",
+      "fit": "contain",
+      "images": [
+        "https://your-image-url-here.jpg"
+      ]
+    },
+    {
+      "label": "Red",
+      "position": "center",
+      "fit": "contain",
+      "images": [
+        "https://your-image-url-here.jpg"
+      ]
+    },
+    {
+      "label": "Shiny Red",
+      "position": "center",
+      "fit": "contain",
+      "images": [
+        "https://your-image-url-here.jpg"
+      ]
+    },
+    {
+      "label": "Orange",
+      "position": "center",
+      "fit": "contain",
+      "images": [
+        "https://your-image-url-here.jpg"
+      ]
+    },
+    {
+      "label": "Shiny Orange",
+      "position": "center",
+      "fit": "contain",
+      "images": [
+        "https://your-image-url-here.jpg"
+      ]
+    },
+    {
+      "label": "White",
+      "position": "center",
+      "fit": "contain",
+      "images": [
+        "https://your-image-url-here.jpg"
+      ]
+    },
+    {
+      "label": "Shiny White",
       "position": "center",
       "fit": "contain",
       "images": [
@@ -15066,7 +15130,7 @@
   "name": "Florges",
   "variants": [
     {
-      "label": "Florges",
+      "label": "Yellow",
       "position": "center",
       "fit": "contain",
       "images": [
@@ -15074,7 +15138,71 @@
       ]
     },
     {
-      "label": "Shiny Florges",
+      "label": "Shiny Yellow",
+      "position": "center",
+      "fit": "contain",
+      "images": [
+        "https://your-image-url-here.jpg"
+      ]
+    },
+    {
+      "label": "Blue",
+      "position": "center",
+      "fit": "contain",
+      "images": [
+        "https://your-image-url-here.jpg"
+      ]
+    },
+    {
+      "label": "Shiny Blue",
+      "position": "center",
+      "fit": "contain",
+      "images": [
+        "https://your-image-url-here.jpg"
+      ]
+    },
+    {
+      "label": "Red",
+      "position": "center",
+      "fit": "contain",
+      "images": [
+        "https://your-image-url-here.jpg"
+      ]
+    },
+    {
+      "label": "Shiny Red",
+      "position": "center",
+      "fit": "contain",
+      "images": [
+        "https://your-image-url-here.jpg"
+      ]
+    },
+    {
+      "label": "Orange",
+      "position": "center",
+      "fit": "contain",
+      "images": [
+        "https://your-image-url-here.jpg"
+      ]
+    },
+    {
+      "label": "Shiny Orange",
+      "position": "center",
+      "fit": "contain",
+      "images": [
+        "https://your-image-url-here.jpg"
+      ]
+    },
+    {
+      "label": "White",
+      "position": "center",
+      "fit": "contain",
+      "images": [
+        "https://your-image-url-here.jpg"
+      ]
+    },
+    {
+      "label": "Shiny White",
       "position": "center",
       "fit": "contain",
       "images": [
