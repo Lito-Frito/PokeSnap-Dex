@@ -14957,10 +14957,10 @@
   ]
 },
   "669": {
-  "name": "Flabebe",
+  "name": "Flabébé",
   "variants": [
     {
-      "label": "Flabebe",
+      "label": "Yellow",
       "position": "center",
       "fit": "contain",
       "images": [
@@ -14968,7 +14968,71 @@
       ]
     },
     {
-      "label": "Shiny Flabebe",
+      "label": "Shiny Yellow",
+      "position": "center",
+      "fit": "contain",
+      "images": [
+        "https://your-image-url-here.jpg"
+      ]
+    },
+    {
+      "label": "Blue",
+      "position": "center",
+      "fit": "contain",
+      "images": [
+        "https://your-image-url-here.jpg"
+      ]
+    },
+    {
+      "label": "Shiny Blue",
+      "position": "center",
+      "fit": "contain",
+      "images": [
+        "https://your-image-url-here.jpg"
+      ]
+    },
+    {
+      "label": "Red",
+      "position": "center",
+      "fit": "contain",
+      "images": [
+        "https://your-image-url-here.jpg"
+      ]
+    },
+    {
+      "label": "Shiny Red",
+      "position": "center",
+      "fit": "contain",
+      "images": [
+        "https://your-image-url-here.jpg"
+      ]
+    },
+    {
+      "label": "Orange",
+      "position": "center",
+      "fit": "contain",
+      "images": [
+        "https://your-image-url-here.jpg"
+      ]
+    },
+    {
+      "label": "Shiny Orange",
+      "position": "center",
+      "fit": "contain",
+      "images": [
+        "https://your-image-url-here.jpg"
+      ]
+    },
+    {
+      "label": "White",
+      "position": "center",
+      "fit": "contain",
+      "images": [
+        "https://your-image-url-here.jpg"
+      ]
+    },
+    {
+      "label": "Shiny White",
       "position": "center",
       "fit": "contain",
       "images": [
