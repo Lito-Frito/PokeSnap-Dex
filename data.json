@@ -9517,7 +9517,7 @@
   "name": "Shellos",
   "variants": [
     {
-      "label": "Shellos",
+      "label": "Shellos (East Sea Form)",
       "position": "center",
       "fit": "contain",
       "images": [
@@ -9525,7 +9525,23 @@
       ]
     },
     {
-      "label": "Shiny Shellos",
+      "label": "Shiny Shellos (East Sea Form)",
+      "position": "center",
+      "fit": "contain",
+      "images": [
+        "https://your-image-url-here.jpg"
+      ]
+    },
+    {
+      "label": "Shellos (West Sea Form)",
+      "position": "center",
+      "fit": "contain",
+      "images": [
+        "https://your-image-url-here.jpg"
+      ]
+    },
+    {
+      "label": "Shiny Shellos (West Sea Form)",
       "position": "center",
       "fit": "contain",
       "images": [
@@ -9538,7 +9554,7 @@
   "name": "Gastrodon",
   "variants": [
     {
-      "label": "Gastrodon",
+      "label": "Gastrodon (East Sea Form)",
       "position": "center",
       "fit": "contain",
       "images": [
@@ -9546,7 +9562,23 @@
       ]
     },
     {
-      "label": "Shiny Gastrodon",
+      "label": "Shiny Gastrodon (East Sea Form)",
+      "position": "center",
+      "fit": "contain",
+      "images": [
+        "https://your-image-url-here.jpg"
+      ]
+    },
+    {
+      "label": "Gastrodon (West Sea Form)",
+      "position": "center",
+      "fit": "contain",
+      "images": [
+        "https://your-image-url-here.jpg"
+      ]
+    },
+    {
+      "label": "Shiny Gastrodon (West Sea Form)",
       "position": "center",
       "fit": "contain",
       "images": [
