@@ -226,7 +226,12 @@ function updateCapturedList() {
 function scrollToPokemon(number) {
     const entry = document.querySelector(`.entry[data-number="${number}"]`);
     if (entry) {
-        entry.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        const dexContainer = document.getElementById('dex-container');
+        const entryTop = entry.offsetTop;
+        const entryHeight = entry.offsetHeight;
+        const containerHeight = dexContainer.clientHeight;
+        const scrollTop = entryTop - (containerHeight / 2) + (entryHeight / 2);
+        dexContainer.scrollTo({ top: scrollTop, behavior: 'smooth' });
     }
 }
 
