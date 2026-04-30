@@ -6,6 +6,11 @@ body {
     padding: 0;
     text-align: center;
     transition: background-color 0.3s;
+    overflow: hidden;
+}
+
+body.gallery-open {
+    overflow: hidden;
 }
 
 .dark-mode body {
@@ -371,7 +376,7 @@ header {
 }
 
 #gallery {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -382,6 +387,8 @@ header {
     align-items: center;
     justify-content: center;
     z-index: 2000;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 #gallery.hidden {
@@ -389,8 +396,8 @@ header {
 }
 
 #gallery-image {
-    height: 50%;
-    width: 50%;
+    max-width: 90vw;
+    max-height: 60vh;
     object-fit: contain;
 }
 
@@ -406,13 +413,19 @@ header {
     font-size: 1.1em;
     margin: 10px 20px;
     text-align: center;
-    max-width: 80%;
+    max-width: 100%;
     font-weight: bold;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-height: 100px; /* limit height to ensure buttons visible */
+    overflow-y: auto; /* scroll if needed */
 }
 
 .dex-entry-text {
     line-height: 1.4;
     font-weight: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .gallery-buttons {

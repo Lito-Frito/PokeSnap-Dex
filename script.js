@@ -226,7 +226,12 @@ function updateCapturedList() {
 function scrollToPokemon(number) {
     const entry = document.querySelector(`.entry[data-number="${number}"]`);
     if (entry) {
-        entry.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        const dexContainer = document.getElementById('dex-container');
+        const entryTop = entry.offsetTop;
+        const entryHeight = entry.offsetHeight;
+        const containerHeight = dexContainer.clientHeight;
+        const scrollTop = entryTop - (containerHeight / 2) + (entryHeight / 2);
+        dexContainer.scrollTo({ top: scrollTop, behavior: 'smooth' });
     }
 }
 
@@ -287,6 +292,7 @@ function renderDex() {
 function openGallery(number, imgIndex) {
     currentEntry = number;
     currentImageIndex = imgIndex;
+    document.body.classList.add('gallery-open');
     updateGalleryImage();
     gallery.classList.remove('hidden');
 }
@@ -299,6 +305,27 @@ function updateGalleryImage() {
         if (imageSrc === "https://your-image-url-here.jpg") {
             imageSrc = "https://i.imgur.com/m3idMCk.png";
         }
+        galleryImage.onload = () => {
+            const naturalWidth = galleryImage.naturalWidth;
+            const naturalHeight = galleryImage.naturalHeight;
+            const container = document.getElementById('dex-container');
+            const containerWidth = container.clientWidth - 40; // account for padding
+            const containerHeight = container.clientHeight - 40;
+            const reservedHeight = 200; // space for name, dex-entry, buttons
+            const availableHeight = containerHeight - reservedHeight;
+            const scale = Math.min(containerWidth / naturalWidth, availableHeight / naturalHeight);
+            if (scale < 1) {
+                galleryImage.style.width = (naturalWidth * scale) + 'px';
+                galleryImage.style.height = (naturalHeight * scale) + 'px';
+            } else {
+                galleryImage.style.width = naturalWidth + 'px';
+                galleryImage.style.height = naturalHeight + 'px';
+            }
+            galleryImage.style.maxWidth = containerWidth + 'px';
+            galleryImage.style.maxHeight = availableHeight + 'px';
+            galleryImage.style.objectFit = 'contain';
+            galleryImage.style.backgroundColor = '#000';
+        };
         galleryImage.src = imageSrc;
         const baseName = pokedexData[currentEntry].name;
         const label = imgObj.label;
@@ -313,15 +340,6 @@ function updateGalleryImage() {
         }
         galleryImage.alt = imageSrc === "https://i.imgur.com/m3idMCk.png" ? "Missing Snap" : displayName;
         galleryName.textContent = displayName;
-        galleryImage.style.objectPosition = imgObj.position;
-        galleryImage.style.objectFit = 'scale-down';
-        galleryImage.style.width = '50%';
-        galleryImage.style.height = '50%';
-        if (imageSrc === "https://i.imgur.com/m3idMCk.png") {
-            galleryImage.style.backgroundColor = 'grey';
-        } else {
-            galleryImage.style.backgroundColor = '#000';
-        }
         // Display Dex entries
         currentEntryIndex = 0;
         const entries = imgObj.entries;
@@ -330,6 +348,9 @@ function updateGalleryImage() {
         } else {
             dexEntry.innerHTML = '';
         }
+        // Set dex entry width to fit container
+        const container = document.getElementById('dex-container');
+        dexEntry.style.maxWidth = (container.clientWidth - 80) + 'px';
         const prevButton = document.getElementById('prev-variant');
         const nextButton = document.getElementById('next-variant');
         prevButton.disabled = currentImageIndex === 0;
@@ -365,12 +386,14 @@ otherEntriesButton.addEventListener('click', () => {
 
 closeButton.addEventListener('click', () => {
     gallery.classList.add('hidden');
+    document.body.classList.remove('gallery-open');
     currentEntry = null;
 });
 
 gallery.addEventListener('click', (event) => {
     if (event.target === gallery) {
         gallery.classList.add('hidden');
+        document.body.classList.remove('gallery-open');
         currentEntry = null;
     }
 });
@@ -394,6 +417,7 @@ document.addEventListener('keydown', (event) => {
     } else if (event.key === 'Escape') {
         event.preventDefault();
         gallery.classList.add('hidden');
+        document.body.classList.remove('gallery-open');
         currentEntry = null;
     }
 });
