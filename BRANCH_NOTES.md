@@ -12,6 +12,8 @@
 - When applying UI changes from `main` to `LitoFrito`, use cherry-pick or manual edits to avoid `data.json` conflicts.
 - Always keep `LitoFrito`'s `data.json` intact to preserve personal photo data.
 
-## Recent Changes
-- UI enhancements (colors, spacing, mobile responsiveness) applied selectively to `LitoFrito` via cherry-pick.
-- Gallery positioning reverted in `LitoFrito` to maintain functionality.
+## Branch Naming Conventions
+- Feature branches should match the issues they fix or close.
+- Format: `Issue{number}-{Issue_Title_With_Underscores}`
+- Example: For issue #100 titled "Fix Thing", use branch name `Issue100-Fix_Thing`
+- Use this for new features, bug fixes, or enhancements tied to specific issues.
