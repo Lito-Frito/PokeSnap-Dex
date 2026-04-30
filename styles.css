@@ -389,8 +389,8 @@ header {
 }
 
 #gallery-image {
-    height: 50%;
-    width: 50%;
+    max-width: 90vw;
+    max-height: 60vh;
     object-fit: contain;
 }
 
@@ -406,7 +406,7 @@ header {
     font-size: 1.1em;
     margin: 10px 20px;
     text-align: center;
-    max-width: 80%;
+    max-width: 90vw;
     font-weight: bold;
 }
 

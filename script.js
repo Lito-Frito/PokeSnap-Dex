@@ -315,8 +315,8 @@ function updateGalleryImage() {
         galleryName.textContent = displayName;
         galleryImage.style.objectPosition = imgObj.position;
         galleryImage.style.objectFit = 'scale-down';
-        galleryImage.style.width = '50%';
-        galleryImage.style.height = '50%';
+        galleryImage.style.width = 'auto';
+        galleryImage.style.height = 'auto';
         if (imageSrc === "https://i.imgur.com/m3idMCk.png") {
             galleryImage.style.backgroundColor = 'grey';
         } else {
