@@ -287,6 +287,7 @@ function renderDex() {
 function openGallery(number, imgIndex) {
     currentEntry = number;
     currentImageIndex = imgIndex;
+    document.body.classList.add('gallery-open');
     updateGalleryImage();
     gallery.classList.remove('hidden');
 }
@@ -380,12 +381,14 @@ otherEntriesButton.addEventListener('click', () => {
 
 closeButton.addEventListener('click', () => {
     gallery.classList.add('hidden');
+    document.body.classList.remove('gallery-open');
     currentEntry = null;
 });
 
 gallery.addEventListener('click', (event) => {
     if (event.target === gallery) {
         gallery.classList.add('hidden');
+        document.body.classList.remove('gallery-open');
         currentEntry = null;
     }
 });
@@ -409,6 +412,7 @@ document.addEventListener('keydown', (event) => {
     } else if (event.key === 'Escape') {
         event.preventDefault();
         gallery.classList.add('hidden');
+        document.body.classList.remove('gallery-open');
         currentEntry = null;
     }
 });
