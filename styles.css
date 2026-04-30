@@ -6,6 +6,11 @@ body {
     padding: 0;
     text-align: center;
     transition: background-color 0.3s;
+    overflow: hidden;
+}
+
+body.gallery-open {
+    overflow: hidden;
 }
 
 .dark-mode body {
