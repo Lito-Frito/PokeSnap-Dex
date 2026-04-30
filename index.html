@@ -19,7 +19,7 @@ Key Features:
 
 Data Structure (data.json):
 - Keys: '001' to '1025' (Pokémon numbers).
-- Each entry: { name: string, variants: [{ label: string, image: url }] }
+- Each entry: { name: string, variants: [{ label: string, images: [url], position: string, fit: string, entries: [string] }] }
 - Placeholders: "https://your-image-url-here.jpg" for missing images.
 
 Branches:
@@ -65,8 +65,10 @@ Notes for Future Development:
     <div id="gallery" class="hidden">
         <img id="gallery-image" src="" alt="Gallery Image">
         <h2 id="gallery-name"></h2>
+        <div id="dex-entry"></div>
         <div class="gallery-buttons">
             <button id="prev-variant">Prev</button>
+            <button id="other-entries">Next Entry</button>
             <button id="next-variant">Next</button>
             <button id="close-gallery">Close</button>
         </div>

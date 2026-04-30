@@ -161,3 +161,27 @@ Based on troubleshooting:
 - **Documentation:** Comment CSS/JS for clarity; this doc as reference.
 
 This should give a future engineer a solid foundation. If you need expansions or corrections, let me know!
+
+## 7. Commit Guidelines
+
+### Image Addition Commits
+When committing changes that add real image URLs to `data.json` (replacing placeholders), use the following standardized format for commit messages to ensure easy searching and consistency:
+
+```
+Add real image URLs for select Pokémon:
+
+Shinies:
+- [Pokémon Name]
+
+Regionals:
+- [Pokémon Name]
+
+Others:
+- [Pokémon Name]
+- [Pokémon Name]
+```
+
+- **Shinies:** List shiny variants added (e.g., "Jirachi").
+- **Regionals:** List regional variants added (e.g., "Galarian Darmanitan").
+- **Others:** List all other variants added (e.g., base forms like "Tangela", "Miltank", "Cherubi").
+- Use this exact verbiage and structure for all future image addition commits to maintain searchable history.

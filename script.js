@@ -16,7 +16,7 @@
  *
  * Data Structure (data.json):
  * - Keys: '001' to '1025' (Pokémon numbers).
- * - Each entry: { name: string, variants: [{ label: string, images: [url], position: string, fit: string }] }
+ * - Each entry: { name: string, variants: [{ label: string, images: [url], position: string, fit: string, entries: [string] }] }
  * - Placeholders: "https://your-image-url-here.jpg" for missing images.
  *
  * Branches:
@@ -64,7 +64,8 @@ async function loadData() {
               image: img,
               label: variant.label,
               position: pos,
-              fit: variant.fit || 'contain'
+              fit: variant.fit || 'contain',
+              entries: variant.entries || []
             });
           }
         }
@@ -88,12 +89,15 @@ const dexContainer = document.getElementById('dex-container');
 const gallery = document.getElementById('gallery');
 const galleryImage = document.getElementById('gallery-image');
 const galleryName = document.getElementById('gallery-name');
+const dexEntry = document.getElementById('dex-entry');
 const prevButton = document.getElementById('prev-variant');
 const nextButton = document.getElementById('next-variant');
+const otherEntriesButton = document.getElementById('other-entries');
 const closeButton = document.getElementById('close-gallery');
 
 let currentEntry = null;
 let currentImageIndex = 0;
+let currentEntryIndex = 0;
 let showAll = false;
 
 // Theme toggle with persistence
@@ -318,6 +322,14 @@ function updateGalleryImage() {
         } else {
             galleryImage.style.backgroundColor = '#000';
         }
+        // Display Dex entries
+        currentEntryIndex = 0;
+        const entries = imgObj.entries;
+        if (entries && entries.length > 0) {
+            dexEntry.innerHTML = `<p class="dex-entry-text">${entries[currentEntryIndex]}</p>`;
+        } else {
+            dexEntry.innerHTML = '';
+        }
         const prevButton = document.getElementById('prev-variant');
         const nextButton = document.getElementById('next-variant');
         prevButton.disabled = currentImageIndex === 0;
@@ -337,6 +349,17 @@ nextButton.addEventListener('click', () => {
     if (currentEntry) {
         currentImageIndex = (currentImageIndex + 1) % pokedexData[currentEntry].allImages.length;
         updateGalleryImage();
+    }
+});
+
+otherEntriesButton.addEventListener('click', () => {
+    if (currentEntry && pokedexData[currentEntry]) {
+        const imgObj = pokedexData[currentEntry].allImages[currentImageIndex];
+        const entries = imgObj.entries;
+        if (entries && entries.length > 0) {
+            currentEntryIndex = (currentEntryIndex + 1) % entries.length;
+            dexEntry.innerHTML = `<p class="dex-entry-text">${entries[currentEntryIndex]}</p>`;
+        }
     }
 });
 
