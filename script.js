@@ -92,13 +92,33 @@ const galleryName = document.getElementById('gallery-name');
 const dexEntry = document.getElementById('dex-entry');
 const prevButton = document.getElementById('prev-variant');
 const nextButton = document.getElementById('next-variant');
-const otherEntriesButton = document.getElementById('other-entries');
+const prevDescriptionButton = document.getElementById('prev-description');
+const nextDescriptionButton = document.getElementById('next-description');
 const closeButton = document.getElementById('close-gallery');
 
 let currentEntry = null;
 let currentImageIndex = 0;
 let currentEntryIndex = 0;
 let showAll = false;
+
+// Function to update the Dex entry display with styling
+function updateDexEntry() {
+    if (currentEntry && pokedexData[currentEntry]) {
+        const imgObj = pokedexData[currentEntry].allImages[currentImageIndex];
+        const entries = imgObj.entries;
+        if (entries && entries.length > 0) {
+            const entryText = entries[currentEntryIndex];
+            if (entryText.includes(' - ')) {
+                const [game, desc] = entryText.split(' - ', 2);
+                dexEntry.innerHTML = `<p class="dex-entry-text"><strong><em>${game}</em></strong> - ${desc}</p>`;
+            } else {
+                dexEntry.innerHTML = `<p class="dex-entry-text">${entryText}</p>`;
+            }
+        } else {
+            dexEntry.innerHTML = '';
+        }
+    }
+}
 
 // Theme toggle with persistence
 const themeToggle = document.getElementById('theme-toggle');
@@ -344,18 +364,7 @@ function updateGalleryImage() {
         galleryName.textContent = displayName;
         // Display Dex entries
         currentEntryIndex = 0;
-        const entries = imgObj.entries;
-        if (entries && entries.length > 0) {
-            const entryText = entries[currentEntryIndex];
-            if (entryText.includes(' - ')) {
-                const [game, desc] = entryText.split(' - ', 2);
-                dexEntry.innerHTML = `<p class="dex-entry-text"><strong><em>${game}</em></strong> - ${desc}</p>`;
-            } else {
-                dexEntry.innerHTML = `<p class="dex-entry-text">${entryText}</p>`;
-            }
-        } else {
-            dexEntry.innerHTML = '';
-        }
+        updateDexEntry();
         // Set dex entry width to fit container
         const container = document.getElementById('dex-container');
         dexEntry.style.maxWidth = (container.clientWidth - 80) + 'px';
@@ -381,13 +390,24 @@ nextButton.addEventListener('click', () => {
     }
 });
 
-otherEntriesButton.addEventListener('click', () => {
+prevDescriptionButton.addEventListener('click', () => {
+    if (currentEntry && pokedexData[currentEntry]) {
+        const imgObj = pokedexData[currentEntry].allImages[currentImageIndex];
+        const entries = imgObj.entries;
+        if (entries && entries.length > 0) {
+            currentEntryIndex = (currentEntryIndex - 1 + entries.length) % entries.length;
+            updateDexEntry();
+        }
+    }
+});
+
+nextDescriptionButton.addEventListener('click', () => {
     if (currentEntry && pokedexData[currentEntry]) {
         const imgObj = pokedexData[currentEntry].allImages[currentImageIndex];
         const entries = imgObj.entries;
         if (entries && entries.length > 0) {
             currentEntryIndex = (currentEntryIndex + 1) % entries.length;
-            dexEntry.innerHTML = `<p class="dex-entry-text">${entries[currentEntryIndex]}</p>`;
+            updateDexEntry();
         }
     }
 });
