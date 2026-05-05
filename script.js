@@ -346,7 +346,13 @@ function updateGalleryImage() {
         currentEntryIndex = 0;
         const entries = imgObj.entries;
         if (entries && entries.length > 0) {
-            dexEntry.innerHTML = `<p class="dex-entry-text">${entries[currentEntryIndex]}</p>`;
+            const entryText = entries[currentEntryIndex];
+            if (entryText.includes(' - ')) {
+                const [game, desc] = entryText.split(' - ', 2);
+                dexEntry.innerHTML = `<p class="dex-entry-text"><strong><em>${game}</em></strong> - ${desc}</p>`;
+            } else {
+                dexEntry.innerHTML = `<p class="dex-entry-text">${entryText}</p>`;
+            }
         } else {
             dexEntry.innerHTML = '';
         }
