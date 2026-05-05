@@ -340,7 +340,7 @@ function updateGalleryImage() {
         }
         galleryImage.alt = imageSrc === "https://i.imgur.com/m3idMCk.png" ? "Missing Snap" : displayName;
         const dexNumber = currentEntry.padStart(3, '0');
-        displayName = `${displayName} #${dexNumber}`;
+        displayName = `#${dexNumber} ${displayName}`;
         galleryName.textContent = displayName;
         // Display Dex entries
         currentEntryIndex = 0;
