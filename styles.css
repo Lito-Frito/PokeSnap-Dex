@@ -256,7 +256,7 @@ header {
     width: 90px;
 }
 
-.dark-mode #prev-variant, .dark-mode #next-variant, .dark-mode #prev-description, .dark-mode #next-description, .dark-mode #close-gallery {
+.dark-mode .gallery-buttons button {
     background-color: #555;
     color: white;
     border: 2px solid #555;
@@ -436,7 +436,21 @@ header {
 
 .gallery-buttons button {
     border-radius: 5px;
-    border: 2px solid #000;
+}
+
+#prev-description, #next-description {
+    background-color: #007BFF;
+    border: 2px solid #007BFF;
+}
+
+.dark-mode #prev-description, .dark-mode #next-description {
+    background-color: #555;
+    border: 2px solid #555;
+}
+
+.dark-mode #prev-variant, .dark-mode #next-variant, .dark-mode #close-gallery {
+    background-color: #555;
+    border: 2px solid #555;
 }
 
 .gallery-buttons button:disabled {
