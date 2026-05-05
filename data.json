@@ -1066,6 +1066,24 @@
           "https://your-image-url-here.jpg"
         ],
         "entries": []
+      },
+      {
+        "label": "Mega Clefable",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Shiny Mega Clefable",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
       }
     ]
   },
@@ -2045,6 +2063,24 @@
       },
       {
         "label": "Shiny Victreebel",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Mega Victreebel",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Shiny Mega Victreebel",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -3527,6 +3563,24 @@
           "https://your-image-url-here.jpg"
         ],
         "entries": []
+      },
+      {
+        "label": "Mega Starmie",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Shiny Mega Starmie",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
       }
     ]
   },
@@ -4484,6 +4538,24 @@
           "https://your-image-url-here.jpg"
         ],
         "entries": []
+      },
+      {
+        "label": "Mega Meganium",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Shiny Mega Meganium",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
       }
     ]
   },
@@ -4634,6 +4706,24 @@
       },
       {
         "label": "Shiny Feraligatr",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Mega Feraligatr",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Shiny Mega Feraligatr",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -6337,6 +6427,24 @@
       },
       {
         "label": "Shiny Skarmory",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Mega Skarmory",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Shiny Mega Skarmory",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -10441,6 +10549,24 @@
           "https://your-image-url-here.jpg"
         ],
         "entries": []
+      },
+      {
+        "label": "Mega Rayquaza",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Shiny Mega Rayquaza",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
       }
     ]
   },
@@ -11934,6 +12060,24 @@
           "https://your-image-url-here.jpg"
         ],
         "entries": []
+      },
+      {
+        "label": "Mega Garchomp Z",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Shiny Mega Garchomp Z",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
       }
     ]
   },
@@ -12765,6 +12909,24 @@
           "https://your-image-url-here.jpg"
         ],
         "entries": []
+      },
+      {
+        "label": "Mega Froslass",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Shiny Mega Froslass",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
       }
     ]
   },
@@ -13391,6 +13553,24 @@
       },
       {
         "label": "Shiny Emboar",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Mega Emboar",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Shiny Mega Emboar",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -14105,6 +14285,24 @@
           "https://your-image-url-here.jpg"
         ],
         "entries": []
+      },
+      {
+        "label": "Mega Excadrill",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Shiny Mega Excadrill",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
       }
     ]
   },
@@ -14462,6 +14660,24 @@
       },
       {
         "label": "Shiny Scolipede",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Mega Scolipede",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Shiny Mega Scolipede",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -14861,6 +15077,24 @@
       },
       {
         "label": "Shiny Scrafty",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Mega Scrafty",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Shiny Mega Scrafty",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -15988,6 +16222,24 @@
           "https://your-image-url-here.jpg"
         ],
         "entries": []
+      },
+      {
+        "label": "Mega Eelektross",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Shiny Mega Eelektross",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
       }
     ]
   },
@@ -16097,6 +16349,24 @@
       },
       {
         "label": "Shiny Chandelure",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Mega Chandelure",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Shiny Mega Chandelure",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -16437,6 +16707,24 @@
       },
       {
         "label": "Shiny Golurk",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Mega Golurk",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Shiny Mega Golurk",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -17128,6 +17416,24 @@
           "https://your-image-url-here.jpg"
         ],
         "entries": []
+      },
+      {
+        "label": "Mega Chesnaught",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Shiny Mega Chesnaught",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
       }
     ]
   },
@@ -17197,6 +17503,24 @@
           "https://your-image-url-here.jpg"
         ],
         "entries": []
+      },
+      {
+        "label": "Mega Delphox",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Shiny Mega Delphox",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
       }
     ]
   },
@@ -17260,6 +17584,24 @@
       },
       {
         "label": "Shiny Greninja",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Mega Greninja",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Shiny Mega Greninja",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -17496,6 +17838,24 @@
           "https://your-image-url-here.jpg"
         ],
         "entries": []
+      },
+      {
+        "label": "Mega Pyroar",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Shiny Mega Pyroar",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
       }
     ]
   },
@@ -17680,6 +18040,24 @@
       },
       {
         "label": "Shiny White",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Mega Floette Eternal Flower",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Shiny Mega Floette Eternal Flower",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -18185,6 +18563,24 @@
           "https://your-image-url-here.jpg"
         ],
         "entries": []
+      },
+      {
+        "label": "Mega Malamar",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Shiny Mega Malamar",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
       }
     ]
   },
@@ -18231,6 +18627,24 @@
           "https://your-image-url-here.jpg"
         ],
         "entries": []
+      },
+      {
+        "label": "Mega Barbaracle",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Shiny Mega Barbaracle",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
       }
     ]
   },
@@ -18271,6 +18685,24 @@
       },
       {
         "label": "Shiny Dragalge",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Mega Dragalge",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Shiny Mega Dragalge",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -18501,6 +18933,24 @@
       },
       {
         "label": "Shiny Hawlucha",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Mega Hawlucha",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Shiny Mega Hawlucha",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -18946,6 +19396,24 @@
       },
       {
         "label": "Shiny Zygarde-50",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Mega Zygarde",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Shiny Mega Zygarde",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -20504,6 +20972,24 @@
           "https://i.imgur.com/4GL7Vzv.jpeg"
         ],
         "entries": []
+      },
+      {
+        "label": "Mega Drampa",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Shiny Mega Drampa",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
       }
     ]
   },
@@ -20981,6 +21467,42 @@
       },
       {
         "label": "Shiny Magearna",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Mega Magearna",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Shiny Mega Magearna",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Mega Magearna Original Color",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Shiny Mega Magearna Original Color",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -22590,6 +23112,24 @@
         "fit": "contain",
         "images": [
           "https://i.imgur.com/DKe9eMP.jpeg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Mega Falinks",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Shiny Mega Falinks",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
         ],
         "entries": []
       }
@@ -25187,6 +25727,24 @@
       },
       {
         "label": "Shiny Mega Stretchy Tatsugiri",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Mega Tatsugiri",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Shiny Mega Tatsugiri",
         "position": "center",
         "fit": "contain",
         "images": [
