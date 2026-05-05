@@ -256,7 +256,7 @@ header {
     width: 90px;
 }
 
-.dark-mode #prev-variant, .dark-mode #next-variant, .dark-mode #other-entries, .dark-mode #close-gallery {
+.dark-mode #prev-variant, .dark-mode #next-variant, .dark-mode #prev-description, .dark-mode #next-description, .dark-mode #close-gallery {
     background-color: #555;
     color: white;
     border: 2px solid #555;
@@ -432,6 +432,11 @@ header {
     display: flex;
     justify-content: center;
     gap: 10px;
+}
+
+.gallery-buttons button {
+    border-radius: 5px;
+    border: 2px solid #000;
 }
 
 .gallery-buttons button:disabled {
