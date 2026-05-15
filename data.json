@@ -1910,7 +1910,7 @@
         "position": "center",
         "fit": "contain",
         "images": [
-          "https://your-image-url-here.jpg"
+          "https://i.imgur.com/8MOn4gs.jpeg"
         ],
         "entries": []
       },
@@ -9879,19 +9879,19 @@
     "variants": [
       {
         "label": "Snorunt",
-        "position": "center",
-        "fit": "contain",
+        "position": "right",
+        "fit": "cover",
         "images": [
-          "https://your-image-url-here.jpg"
+          "https://i.imgur.com/meOJ5aE.jpeg"
         ],
         "entries": []
       },
       {
         "label": "Shiny Snorunt",
-        "position": "center",
-        "fit": "contain",
+        "position": "right",
+        "fit": "cover",
         "images": [
-          "https://your-image-url-here.jpg"
+          "https://i.imgur.com/KtBEhYU.jpeg"
         ],
         "entries": []
       }
@@ -21447,7 +21447,7 @@
         "position": "center",
         "fit": "contain",
         "images": [
-          "https://your-image-url-here.jpg"
+          "https://i.imgur.com/gcvti4K.jpeg"
         ],
         "entries": []
       }
