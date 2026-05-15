@@ -21450,6 +21450,60 @@
           "https://i.imgur.com/gcvti4K.jpeg"
         ],
         "entries": []
+      },
+      {
+        "label": "Dusk Mane Necrozma",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Shiny Dusk Mane Necrozma",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Dawn Wings Necrozma",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Shiny Dawn Wings Necrozma",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Ultra Necrozma",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Shiny Ultra Necrozma",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
       }
     ]
   },
