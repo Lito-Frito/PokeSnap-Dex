@@ -13,6 +13,10 @@ function loadData() {
   return data;
 }
 
+function loadRawDataText() {
+  return fs.readFileSync('data.json', 'utf8');
+}
+
 function testDataIntegrity() {
   const data = loadData();
   let passed = 0;
@@ -43,6 +47,36 @@ function testDataIntegrity() {
 
   console.log(`\nData Integrity Test - Passed: ${passed}, Failed: ${failed}`);
   if (failed > 0) {
+    process.exit(1);
+  }
+}
+
+function testNumericFileOrder() {
+  const raw = loadRawDataText();
+  const keys = [...raw.matchAll(/^  "(\d{3,4})":/gm)].map(match => match[1]);
+  let passed = 0;
+  let failed = 0;
+
+  if (keys.length !== 1025) {
+    console.log(`✗ Expected 1025 top-level keys in file order, got ${keys.length}`);
+    process.exit(1);
+  }
+
+  for (let i = 1; i <= 1025; i++) {
+    const expected = String(i).padStart(3, '0');
+    const actual = keys[i - 1];
+    if (actual === expected) {
+      passed++;
+    } else {
+      console.log(`✗ File order mismatch at position ${i}: expected ${expected}, got ${actual}`);
+      failed++;
+      break;
+    }
+  }
+
+  if (failed === 0) {
+    console.log('✓ Top-level file order is sequential from 001 to 1025');
+  } else {
     process.exit(1);
   }
 }
@@ -264,6 +298,7 @@ function testCaptureCountLogic() {
 }
 
 testDataIntegrity();
+testNumericFileOrder();
 testNoDuplicatesInVariants();
 testNameFormatting();
 testPositionArray();
