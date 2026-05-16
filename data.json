@@ -10597,7 +10597,7 @@
     "name": "Deoxys",
     "variants": [
       {
-        "label": "Deoxys-normal",
+        "label": "Deoxys - Normal Forme",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -10606,7 +10606,61 @@
         "entries": []
       },
       {
-        "label": "Shiny Deoxys-normal",
+        "label": "Shiny Deoxys - Normal Forme",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Deoxys - Attack Forme",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Shiny Deoxys - Attack Forme",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Deoxys - Defense Forme",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Shiny Deoxys - Defense Forme",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Deoxys - Speed Forme",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Shiny Deoxys - Speed Forme",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -11213,7 +11267,7 @@
     "name": "Burmy",
     "variants": [
       {
-        "label": "Burmy",
+        "label": "Burmy - Plant Cloak",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -11222,7 +11276,43 @@
         "entries": []
       },
       {
-        "label": "Shiny Burmy",
+        "label": "Shiny Burmy - Plant Cloak",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Burmy - Sandy Cloak",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Shiny Burmy - Sandy Cloak",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Burmy - Trash Cloak",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Shiny Burmy - Trash Cloak",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -11236,7 +11326,7 @@
     "name": "Wormadam plant",
     "variants": [
       {
-        "label": "Wormadam-plant",
+        "label": "Wormadam - Plant Cloak",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -11245,7 +11335,43 @@
         "entries": []
       },
       {
-        "label": "Shiny Wormadam-plant",
+        "label": "Shiny Wormadam - Plant Cloak",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Wormadam - Sandy Cloak",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Shiny Wormadam - Sandy Cloak",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Wormadam - Trash Cloak",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Shiny Wormadam - Trash Cloak",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -11420,7 +11546,7 @@
     "name": "Cherrim",
     "variants": [
       {
-        "label": "Cherrim",
+        "label": "Cherrim - Overcast Form",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -11429,7 +11555,25 @@
         "entries": []
       },
       {
-        "label": "Shiny Cherrim",
+        "label": "Shiny Cherrim - Overcast Form",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Cherrim - Sunshine Form",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Shiny Cherrim - Sunshine Form",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -13226,7 +13370,7 @@
     "name": "Giratina",
     "variants": [
       {
-        "label": "Giratina-altered",
+        "label": "Giratina - Altered Forme",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -13235,7 +13379,25 @@
         "entries": []
       },
       {
-        "label": "Shiny Giratina-altered",
+        "label": "Shiny Giratina - Altered Forme",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Giratina - Origin Forme",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Shiny Giratina - Origin Forme",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -13359,7 +13521,7 @@
     "name": "Shaymin",
     "variants": [
       {
-        "label": "Shaymin-land",
+        "label": "Shaymin - Land Forme",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -13368,7 +13530,25 @@
         "entries": []
       },
       {
-        "label": "Shiny Shaymin-land",
+        "label": "Shiny Shaymin - Land Forme",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Shaymin - Sky Forme",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Shiny Shaymin - Sky Forme",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -14801,7 +14981,7 @@
     "name": "Basculin red striped",
     "variants": [
       {
-        "label": "Basculin-red-striped",
+        "label": "Basculin - Red-Striped Form",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -14810,7 +14990,43 @@
         "entries": []
       },
       {
-        "label": "Shiny Basculin-red-striped",
+        "label": "Shiny Basculin - Red-Striped Form",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Basculin - Blue-Striped Form",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Shiny Basculin - Blue-Striped Form",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Basculin - White-Striped Form",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Shiny Basculin - White-Striped Form",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -14934,7 +15150,7 @@
     "name": "Darmanitan standard",
     "variants": [
       {
-        "label": "Darmanitan-standard",
+        "label": "Darmanitan - Standard Mode",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -14943,7 +15159,7 @@
         "entries": []
       },
       {
-        "label": "Shiny Darmanitan-standard",
+        "label": "Shiny Darmanitan - Standard Mode",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -14952,7 +15168,25 @@
         "entries": []
       },
       {
-        "label": "Galarian Darmanitan",
+        "label": "Darmanitan - Zen Mode",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Shiny Darmanitan - Zen Mode",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Galarian Darmanitan - Standard Mode",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -14961,7 +15195,25 @@
         "entries": []
       },
       {
-        "label": "Shiny Galarian Darmanitan",
+        "label": "Shiny Galarian Darmanitan - Standard Mode",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Galarian Darmanitan - Zen Mode",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Shiny Galarian Darmanitan - Zen Mode",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -15715,7 +15967,25 @@
     "name": "Deerling",
     "variants": [
       {
-        "label": "Summer",
+        "label": "Deerling - Spring Form",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Shiny Deerling - Spring Form",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Deerling - Summer Form",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -15724,7 +15994,7 @@
         "entries": []
       },
       {
-        "label": "Shiny Summer",
+        "label": "Shiny Deerling - Summer Form",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -15733,7 +16003,7 @@
         "entries": []
       },
       {
-        "label": "Autumn",
+        "label": "Deerling - Autumn Form",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -15742,7 +16012,7 @@
         "entries": []
       },
       {
-        "label": "Shiny Autumn",
+        "label": "Shiny Deerling - Autumn Form",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -15751,7 +16021,7 @@
         "entries": []
       },
       {
-        "label": "Winter",
+        "label": "Deerling - Winter Form",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -15760,25 +16030,7 @@
         "entries": []
       },
       {
-        "label": "Shiny Winter",
-        "position": "center",
-        "fit": "contain",
-        "images": [
-          "https://your-image-url-here.jpg"
-        ],
-        "entries": []
-      },
-      {
-        "label": "Spring",
-        "position": "center",
-        "fit": "contain",
-        "images": [
-          "https://your-image-url-here.jpg"
-        ],
-        "entries": []
-      },
-      {
-        "label": "Shiny Spring",
+        "label": "Shiny Deerling - Winter Form",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -15792,7 +16044,7 @@
     "name": "Sawsbuck",
     "variants": [
       {
-        "label": "Sawsbuck",
+        "label": "Sawsbuck - Spring Form",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -15801,7 +16053,61 @@
         "entries": []
       },
       {
-        "label": "Shiny Sawsbuck",
+        "label": "Shiny Sawsbuck - Spring Form",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Sawsbuck - Summer Form",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Shiny Sawsbuck - Summer Form",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Sawsbuck - Autumn Form",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Shiny Sawsbuck - Autumn Form",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Sawsbuck - Winter Form",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Shiny Sawsbuck - Winter Form",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -17147,7 +17453,7 @@
     "name": "Tornadus",
     "variants": [
       {
-        "label": "Tornadus-incarnate",
+        "label": "Tornadus - Incarnate Forme",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -17156,7 +17462,25 @@
         "entries": []
       },
       {
-        "label": "Shiny Tornadus-incarnate",
+        "label": "Shiny Tornadus - Incarnate Forme",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Tornadus - Therian Forme",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Shiny Tornadus - Therian Forme",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -17170,7 +17494,7 @@
     "name": "Thundurus",
     "variants": [
       {
-        "label": "Thundurus-incarnate",
+        "label": "Thundurus - Incarnate Forme",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -17179,7 +17503,25 @@
         "entries": []
       },
       {
-        "label": "Shiny Thundurus-incarnate",
+        "label": "Shiny Thundurus - Incarnate Forme",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Thundurus - Therian Forme",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Shiny Thundurus - Therian Forme",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -17239,7 +17581,7 @@
     "name": "Landorus",
     "variants": [
       {
-        "label": "Landorus-incarnate",
+        "label": "Landorus - Incarnate Forme",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -17248,7 +17590,25 @@
         "entries": []
       },
       {
-        "label": "Shiny Landorus-incarnate",
+        "label": "Shiny Landorus - Incarnate Forme",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Landorus - Therian Forme",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Shiny Landorus - Therian Forme",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -17272,6 +17632,42 @@
       },
       {
         "label": "Shiny Kyurem",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "White Kyurem",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Shiny White Kyurem",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Black Kyurem",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Shiny Black Kyurem",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -17308,7 +17704,7 @@
     "name": "Meloetta",
     "variants": [
       {
-        "label": "Meloetta-aria",
+        "label": "Meloetta - Aria Forme",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -17317,7 +17713,25 @@
         "entries": []
       },
       {
-        "label": "Shiny Meloetta-aria",
+        "label": "Shiny Meloetta - Aria Forme",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Meloetta - Pirouette Forme",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Shiny Meloetta - Pirouette Forme",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -18258,7 +18672,7 @@
     "name": "Furfrou",
     "variants": [
       {
-        "label": "Furfrou",
+        "label": "Furfrou - Natural Form",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -18267,7 +18681,169 @@
         "entries": []
       },
       {
-        "label": "Shiny Furfrou",
+        "label": "Shiny Furfrou - Natural Form",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Furfrou - Heart Trim",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Shiny Furfrou - Heart Trim",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Furfrou - Star Trim",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Shiny Furfrou - Star Trim",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Furfrou - Diamond Trim",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Shiny Furfrou - Diamond Trim",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Furfrou - Debutante Trim",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Shiny Furfrou - Debutante Trim",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Furfrou - Matron Trim",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Shiny Furfrou - Matron Trim",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Furfrou - Dandy Trim",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Shiny Furfrou - Dandy Trim",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Furfrou - La Reine Trim",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Shiny Furfrou - La Reine Trim",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Furfrou - Kabuki Trim",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Shiny Furfrou - Kabuki Trim",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Furfrou - Pharaoh Trim",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Shiny Furfrou - Pharaoh Trim",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -18409,7 +18985,7 @@
     "name": "Aegislash shield",
     "variants": [
       {
-        "label": "Aegislash-shield",
+        "label": "Aegislash - Shield Forme",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -18418,7 +18994,25 @@
         "entries": []
       },
       {
-        "label": "Shiny Aegislash-shield",
+        "label": "Shiny Aegislash - Shield Forme",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Aegislash - Blade Forme",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Shiny Aegislash - Blade Forme",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -19340,7 +19934,7 @@
     "name": "Xerneas",
     "variants": [
       {
-        "label": "Xerneas",
+        "label": "Xerneas - Neutral Mode",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -19349,7 +19943,25 @@
         "entries": []
       },
       {
-        "label": "Shiny Xerneas",
+        "label": "Shiny Xerneas - Neutral Mode",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Xerneas - Active Mode",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Shiny Xerneas - Active Mode",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -19468,7 +20080,7 @@
     "name": "Hoopa",
     "variants": [
       {
-        "label": "Hoopa",
+        "label": "Hoopa Confined",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -19477,7 +20089,25 @@
         "entries": []
       },
       {
-        "label": "Shiny Hoopa",
+        "label": "Shiny Hoopa Confined",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Hoopa Unbound",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Shiny Hoopa Unbound",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -20133,7 +20763,7 @@
     "name": "Lycanroc midday",
     "variants": [
       {
-        "label": "Lycanroc-midday",
+        "label": "Lycanroc - Midday Form",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -20142,7 +20772,43 @@
         "entries": []
       },
       {
-        "label": "Shiny Lycanroc-midday",
+        "label": "Shiny Lycanroc - Midday Form",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Lycanroc - Midnight Form",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Shiny Lycanroc - Midnight Form",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Lycanroc - Dusk Form",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Shiny Lycanroc - Dusk Form",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -20156,7 +20822,7 @@
     "name": "Wishiwashi solo",
     "variants": [
       {
-        "label": "Wishiwashi-solo",
+        "label": "Wishiwashi - Solo Form",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -20165,7 +20831,25 @@
         "entries": []
       },
       {
-        "label": "Shiny Wishiwashi-solo",
+        "label": "Shiny Wishiwashi - Solo Form",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Wishiwashi - School Form",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Shiny Wishiwashi - School Form",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -20818,7 +21502,7 @@
     "name": "Minior red meteor",
     "variants": [
       {
-        "label": "Minior-red-meteor",
+        "label": "Minior - Meteor Form",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -20827,7 +21511,133 @@
         "entries": []
       },
       {
-        "label": "Shiny Minior-red-meteor",
+        "label": "Shiny Minior - Meteor Form",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Minior - Red Core",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Shiny Minior - Red Core",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Minior - Orange Core",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Shiny Minior - Orange Core",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Minior - Yellow Core",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Shiny Minior - Yellow Core",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Minior - Green Core",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Shiny Minior - Green Core",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Minior - Blue Core",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Shiny Minior - Blue Core",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Minior - Indigo Core",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Shiny Minior - Indigo Core",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Minior - Violet Core",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Shiny Minior - Violet Core",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -20910,7 +21720,7 @@
     "name": "Mimikyu disguised",
     "variants": [
       {
-        "label": "Mimikyu-disguised",
+        "label": "Mimikyu - Disguised Form",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -20919,7 +21729,25 @@
         "entries": []
       },
       {
-        "label": "Shiny Mimikyu-disguised",
+        "label": "Shiny Mimikyu - Disguised Form",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Mimikyu - Busted Form",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Shiny Mimikyu - Busted Form",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -21448,6 +22276,60 @@
         "fit": "contain",
         "images": [
           "https://i.imgur.com/gcvti4K.jpeg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Dusk Mane Necrozma",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Shiny Dusk Mane Necrozma",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Dawn Wings Necrozma",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Shiny Dawn Wings Necrozma",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Ultra Necrozma",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Shiny Ultra Necrozma",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
         ],
         "entries": []
       }
@@ -22539,6 +23421,42 @@
           "https://your-image-url-here.jpg"
         ],
         "entries": []
+      },
+      {
+        "label": "Cramorant - Gulping Form",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Shiny Cramorant - Gulping Form",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Cramorant - Gorging Form",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Shiny Cramorant - Gorging Form",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
       }
     ]
   },
@@ -22615,7 +23533,7 @@
     "name": "Toxtricity",
     "variants": [
       {
-        "label": "Toxtricity-amped",
+        "label": "Toxtricity - Amped Form",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -22624,7 +23542,25 @@
         "entries": []
       },
       {
-        "label": "Shiny Toxtricity-amped",
+        "label": "Shiny Toxtricity - Amped Form",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Toxtricity - Low Key Form",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Shiny Toxtricity - Low Key Form",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -22730,7 +23666,7 @@
     "name": "Sinistea",
     "variants": [
       {
-        "label": "Sinistea",
+        "label": "Sinistea - Phony Form",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -22739,7 +23675,25 @@
         "entries": []
       },
       {
-        "label": "Shiny Sinistea",
+        "label": "Shiny Sinistea - Phony Form",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Sinistea - Antique Form",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Shiny Sinistea - Antique Form",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -22753,7 +23707,7 @@
     "name": "Polteageist",
     "variants": [
       {
-        "label": "Polteageist",
+        "label": "Polteageist - Phony Form",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -22762,7 +23716,25 @@
         "entries": []
       },
       {
-        "label": "Shiny Polteageist",
+        "label": "Shiny Polteageist - Phony Form",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Polteageist - Antique Form",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Shiny Polteageist - Antique Form",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -23231,7 +24203,7 @@
     "name": "Eiscue ice",
     "variants": [
       {
-        "label": "Eiscue-ice",
+        "label": "Eiscue - Ice Face",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -23240,7 +24212,25 @@
         "entries": []
       },
       {
-        "label": "Shiny Eiscue-ice",
+        "label": "Shiny Eiscue - Ice Face",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Eiscue - Noice Face",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Shiny Eiscue - Noice Face",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -23277,7 +24267,7 @@
     "name": "Morpeko",
     "variants": [
       {
-        "label": "Morpeko-full-belly",
+        "label": "Morpeko - Full Belly Mode",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -23286,7 +24276,25 @@
         "entries": []
       },
       {
-        "label": "Shiny Morpeko-full-belly",
+        "label": "Shiny Morpeko - Full Belly Mode",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Morpeko - Hangry Mode",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Shiny Morpeko - Hangry Mode",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -23530,7 +24538,7 @@
     "name": "Zacian",
     "variants": [
       {
-        "label": "Zacian",
+        "label": "Zacian - Hero of Many Battles",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -23539,7 +24547,25 @@
         "entries": []
       },
       {
-        "label": "Shiny Zacian",
+        "label": "Shiny Zacian - Hero of Many Battles",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Zacian - Crowned Sword",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Shiny Zacian - Crowned Sword",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -23553,7 +24579,7 @@
     "name": "Zamazenta",
     "variants": [
       {
-        "label": "Zamazenta",
+        "label": "Zamazenta - Hero of Many Battles",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -23562,7 +24588,25 @@
         "entries": []
       },
       {
-        "label": "Shiny Zamazenta",
+        "label": "Shiny Zamazenta - Hero of Many Battles",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Zamazenta - Crowned Shield",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Shiny Zamazenta - Crowned Shield",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -23622,7 +24666,7 @@
     "name": "Urshifu",
     "variants": [
       {
-        "label": "Urshifu-single-strike",
+        "label": "Urshifu - Single Strike Style",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -23631,7 +24675,25 @@
         "entries": []
       },
       {
-        "label": "Shiny Urshifu-single-strike",
+        "label": "Shiny Urshifu - Single Strike Style",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Urshifu - Rapid Strike Style",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Shiny Urshifu - Rapid Strike Style",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -23776,6 +24838,42 @@
           "https://your-image-url-here.jpg"
         ],
         "entries": []
+      },
+      {
+        "label": "Ice Rider Calyrex",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Shiny Ice Rider Calyrex",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Shadow Rider Calyrex",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Shiny Shadow Rider Calyrex",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
       }
     ]
   },
@@ -23839,6 +24937,24 @@
       },
       {
         "label": "Shiny Ursaluna",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Bloodmoon Ursaluna",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Shiny Bloodmoon Ursaluna",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -23921,7 +25037,7 @@
     "name": "Enamorus",
     "variants": [
       {
-        "label": "Enamorus-incarnate",
+        "label": "Enamorus - Incarnate Forme",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -23930,7 +25046,25 @@
         "entries": []
       },
       {
-        "label": "Shiny Enamorus-incarnate",
+        "label": "Shiny Enamorus - Incarnate Forme",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Enamorus - Therian Forme",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Shiny Enamorus - Therian Forme",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -24381,7 +25515,7 @@
     "name": "Maushold",
     "variants": [
       {
-        "label": "Maushold-family-of-four",
+        "label": "Maushold - Family of Four",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -24390,7 +25524,25 @@
         "entries": []
       },
       {
-        "label": "Shiny Maushold-family-of-four",
+        "label": "Shiny Maushold - Family of Four",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Maushold - Family of Three",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Shiny Maushold - Family of Three",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -24519,7 +25671,7 @@
     "name": "Squawkabilly",
     "variants": [
       {
-        "label": "Squawkabilly-green-plumage",
+        "label": "Squawkabilly - Green Plumage",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -24528,7 +25680,61 @@
         "entries": []
       },
       {
-        "label": "Shiny Squawkabilly-green-plumage",
+        "label": "Shiny Squawkabilly - Green Plumage",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Squawkabilly - Blue Plumage",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Shiny Squawkabilly - Blue Plumage",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Squawkabilly - Yellow Plumage",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Shiny Squawkabilly - Yellow Plumage",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Squawkabilly - White Plumage",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Shiny Squawkabilly - White Plumage",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -25296,7 +26502,7 @@
     "name": "Palafin zero",
     "variants": [
       {
-        "label": "Palafin-zero",
+        "label": "Palafin - Zero Form",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -25305,7 +26511,25 @@
         "entries": []
       },
       {
-        "label": "Shiny Palafin-zero",
+        "label": "Shiny Palafin - Zero Form",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Palafin - Hero Form",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Shiny Palafin - Hero Form",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -25791,7 +27015,7 @@
     "name": "Dudunsparce",
     "variants": [
       {
-        "label": "Dudunsparce-two-segment",
+        "label": "Dudunsparce - Two-Segment Form",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -25800,7 +27024,25 @@
         "entries": []
       },
       {
-        "label": "Shiny Dudunsparce-two-segment",
+        "label": "Shiny Dudunsparce - Two-Segment Form",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Dudunsparce - Three-Segment Form",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Shiny Dudunsparce - Three-Segment Form",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -26508,7 +27750,7 @@
     "name": "Poltchageist",
     "variants": [
       {
-        "label": "Regular",
+        "label": "Poltchageist - Counterfeit Form",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -26517,7 +27759,7 @@
         "entries": []
       },
       {
-        "label": "Shiny Poltchageist",
+        "label": "Shiny Poltchageist - Counterfeit Form",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -26526,7 +27768,16 @@
         "entries": []
       },
       {
-        "label": "Shiny Regular",
+        "label": "Poltchageist - Artisan Form",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Shiny Poltchageist - Artisan Form",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -26540,7 +27791,7 @@
     "name": "Sinistcha",
     "variants": [
       {
-        "label": "Regular",
+        "label": "Sinistcha - Unremarkable Form",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -26549,7 +27800,7 @@
         "entries": []
       },
       {
-        "label": "Shiny Sinistcha",
+        "label": "Shiny Sinistcha - Unremarkable Form",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -26558,7 +27809,16 @@
         "entries": []
       },
       {
-        "label": "Shiny Regular",
+        "label": "Sinistcha - Masterpiece Form",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Shiny Sinistcha - Masterpiece Form",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -26668,7 +27928,7 @@
     "name": "Ogerpon",
     "variants": [
       {
-        "label": "Regular",
+        "label": "Ogerpon - Teal Mask",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -26677,7 +27937,7 @@
         "entries": []
       },
       {
-        "label": "Shiny Ogerpon",
+        "label": "Shiny Ogerpon - Teal Mask",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -26686,7 +27946,52 @@
         "entries": []
       },
       {
-        "label": "Shiny Regular",
+        "label": "Ogerpon - Wellspring Mask",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Shiny Ogerpon - Wellspring Mask",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Ogerpon - Hearthflame Mask",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Shiny Ogerpon - Hearthflame Mask",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Ogerpon - Cornerstone Mask",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ],
+        "entries": []
+      },
+      {
+        "label": "Shiny Ogerpon - Cornerstone Mask",
         "position": "center",
         "fit": "contain",
         "images": [
