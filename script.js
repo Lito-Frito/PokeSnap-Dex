@@ -370,8 +370,9 @@ function updateGalleryImage() {
         dexEntry.style.maxWidth = (container.clientWidth - 80) + 'px';
         const prevButton = document.getElementById('prev-variant');
         const nextButton = document.getElementById('next-variant');
-        prevButton.disabled = currentImageIndex === 0;
-        nextButton.disabled = currentImageIndex === pokedexData[currentEntry].allImages.length - 1;
+        const isSingleImage = pokedexData[currentEntry].allImages.length <= 1;
+        prevButton.disabled = isSingleImage;
+        nextButton.disabled = isSingleImage;
     }
 }
 
