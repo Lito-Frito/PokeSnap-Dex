@@ -142,7 +142,10 @@
         "images": [
           "https://your-image-url-here.jpg"
         ],
-        "entries": []
+        "entries": ["Red/Blue - It spits fire that is hot enough to melt boulders. It may cause forest fires by blowing flames.",
+          "Yellow - When expelling a blast of super hot fire, the red flame at the tip of its tail burns more intensely. If it is healthy, the flame burns brightly.",
+          "Gold - If Charizard becomes furious, the flame at the tip of its tail blazes with a fierce intensity.",
+          "Silver - Breathing intense, hot flames, it can melt anything in its path."]
       },
       {
         "label": "Shiny Charizard",
