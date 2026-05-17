@@ -312,6 +312,7 @@ function renderDex() {
 function openGallery(number, imgIndex) {
     currentEntry = number;
     currentImageIndex = imgIndex;
+    currentEntryIndex = 0;
     document.body.classList.add('gallery-open');
     updateGalleryImage();
     gallery.classList.remove('hidden');
@@ -362,8 +363,10 @@ function updateGalleryImage() {
         const dexNumber = currentEntry.padStart(3, '0');
         displayName = `#${dexNumber} ${displayName}`;
         galleryName.textContent = displayName;
-        // Display Dex entries
-        currentEntryIndex = 0;
+        // Display Dex entries — clamp index to valid range for new image's entries
+        const newEntries = imgObj.entries;
+        const maxIndex = newEntries && newEntries.length > 0 ? newEntries.length - 1 : 0;
+        currentEntryIndex = Math.min(currentEntryIndex, maxIndex);
         updateDexEntry();
         // Set dex entry width to fit container
         const container = document.getElementById('dex-container');
