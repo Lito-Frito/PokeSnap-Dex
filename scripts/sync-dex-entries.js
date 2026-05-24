@@ -4,6 +4,15 @@ const fs = require('fs');
 const https = require('https');
 
 const DATA_FILE = 'data.json';
+
+// Games introduced alongside each regional form prefix.
+// Source strings must match the output of normalizeSource().
+const REGIONAL_FORM_GAMES = {
+  Alolan: ['Sun', 'Moon', 'Ultra Sun', 'Ultra Moon'],
+  Galarian: ['Sword', 'Shield'],
+  Hisuian: ['Legends Arceus'],
+  Paldean: ['Scarlet', 'Violet']
+};
 const OUTPUT_FILE = 'data-entries.json';
 const TOTAL_POKEMON = 1025;
 const MAX_RETRIES = 3;
@@ -478,6 +487,31 @@ async function main() {
       default: item.entries,
       defaultGrouped: buildGroupedEntries(item.entries)
     };
+
+    // Build era-filtered variantsGrouped entries for any regional form variants
+    // present in data.json for this species.
+    const speciesVariants = (data[item.number] && data[item.number].variants) || [];
+    const seenPrefixes = new Set();
+    for (const variant of speciesVariants) {
+      const label = variant.label || '';
+      const baseLabel = label.startsWith('Shiny ') ? label.slice(6) : label;
+      const prefix = Object.keys(REGIONAL_FORM_GAMES).find(
+        (p) => baseLabel.startsWith(p + ' ') || baseLabel === p
+      );
+      if (!prefix || seenPrefixes.has(prefix)) {
+        continue;
+      }
+      seenPrefixes.add(prefix);
+      const allowedSources = REGIONAL_FORM_GAMES[prefix];
+      const filtered = item.entries.filter((e) => allowedSources.includes(e.source));
+      if (filtered.length === 0) {
+        continue;
+      }
+      if (!entries[item.number].variantsGrouped) {
+        entries[item.number].variantsGrouped = {};
+      }
+      entries[item.number].variantsGrouped[baseLabel] = buildGroupedEntries(filtered);
+    }
 
     totalEntries += item.entries.length;
     if (item.entries.length === 0) {

@@ -2,7 +2,7 @@
   "_meta": {
     "schemaVersion": 2,
     "source": "https://pokeapi.co/",
-    "generatedAt": "2026-05-24T21:26:28.583Z",
+    "generatedAt": "2026-05-24T21:53:04.237Z",
     "totalPokemon": 1025,
     "totalEntries": 14496,
     "emptySpeciesCount": 0
@@ -3172,7 +3172,27 @@
             "source": "Let's Go Pikachu/Let's Go Eevee",
             "text": "Will chew on anything with its fangs. If you see one, you can be certain that 40 more live in the area."
           }
-        ]
+        ],
+        "variantsGrouped": {
+          "Alolan Rattata": [
+            {
+              "source": "Sun",
+              "text": "Its incisors continue growing until its death. If its Trainer doesn’t offer it a file to gnaw on, it will gnaw on door frames, table legs, and so on."
+            },
+            {
+              "source": "Moon",
+              "text": "With their strong capacity for survival, they can live in dirty places without concern. Left unchecked, their numbers multiply rapidly."
+            },
+            {
+              "source": "Ultra Sun",
+              "text": "Its incisors grow continuously throughout its life. If its incisors get too long, this Pokémon becomes unable to eat, and it starves to death."
+            },
+            {
+              "source": "Ultra Moon",
+              "text": "This Pokémon is common but hazardous. Its sharp incisors can easily cut right through hard wood."
+            }
+          ]
+        }
       },
     "020": {
         "default": [
@@ -3370,7 +3390,27 @@
             "source": "Ultra Moon",
             "text": "Its whiskers are essential for maintaining its balance. No matter how friendly you are, it will get angry and bite you if you touch its whiskers."
           }
-        ]
+        ],
+        "variantsGrouped": {
+          "Alolan Raticate": [
+            {
+              "source": "Sun",
+              "text": "Its hind feet are webbed, so it’s a strong swimmer. It can cross rivers and sometimes even oceans."
+            },
+            {
+              "source": "Moon",
+              "text": "Its disposition is far more violent than its looks would suggest. Don’t let your hand get too close to its face, as it could bite your hand clean off."
+            },
+            {
+              "source": "Ultra Sun",
+              "text": "People say that it fled from its enemies by using its small webbed hind feet to swim from island to island in Alola."
+            },
+            {
+              "source": "Ultra Moon",
+              "text": "Its whiskers are essential for maintaining its balance. No matter how friendly you are, it will get angry and bite you if you touch its whiskers."
+            }
+          ]
+        }
       },
     "021": {
         "default": [
@@ -4518,7 +4558,27 @@
             "source": "Legends Arceus",
             "text": "It can discharge bursts of electricity exceeding 100,000 volts— a single strike with that amount of power would incapacitate one of the Copperajah of my homeland."
           }
-        ]
+        ],
+        "variantsGrouped": {
+          "Alolan Raichu": [
+            {
+              "source": "Sun",
+              "text": "It unleashes electric shocks that can reach 100,000 volts. When agitated, it can knock out even an Indian elephant."
+            },
+            {
+              "source": "Moon",
+              "text": "It becomes aggressive when it has electricity stored up. At such times, even its Trainer has to take care to avoid being attacked."
+            },
+            {
+              "source": "Ultra Sun",
+              "text": "As electricity builds up inside its body, it becomes more aggressive. One theory is that the electricity buildup is actually causing stress."
+            },
+            {
+              "source": "Ultra Moon",
+              "text": "Because so many Trainers like the way Pikachu looks, you don’t see this Pokémon very often."
+            }
+          ]
+        }
       },
     "027": {
         "default": [
@@ -4724,7 +4784,27 @@
             "source": "Shield",
             "text": "It burrows into the ground to create its nest. If hard stones impede its tunneling, it uses its sharp claws to shatter them and then carries on digging."
           }
-        ]
+        ],
+        "variantsGrouped": {
+          "Alolan Sandshrew": [
+            {
+              "source": "Sun",
+              "text": "It can roll its body into a ball. It moves through the desert by rolling at high speeds."
+            },
+            {
+              "source": "Moon",
+              "text": "It usually makes its home in deserts and arid zones, where rain does not fall. It digs holes to catch Bug-type Pokémon."
+            },
+            {
+              "source": "Ultra Sun",
+              "text": "It lives in areas of limited rainfall. When danger approaches, it curls up into a ball to protect its soft stomach."
+            },
+            {
+              "source": "Ultra Moon",
+              "text": "When its skin gets wrinkled from moisture, it heads for a volcano. It lies flat on a spot with a lot of geothermal heat and dries itself out."
+            }
+          ]
+        }
       },
     "028": {
         "default": [
@@ -4926,7 +5006,27 @@
             "source": "Shield",
             "text": "It climbs trees by hooking on with its sharp claws. Sandslash shares the berries it gathers, dropping them down to Sandshrew waiting below the tree."
           }
-        ]
+        ],
+        "variantsGrouped": {
+          "Alolan Sandslash": [
+            {
+              "source": "Sun",
+              "text": "Although they are sharp, its claws and spikes often break off. They grow back the next day, so it is not bothered by the temporary loss."
+            },
+            {
+              "source": "Moon",
+              "text": "It uses its claws to climb trees and then curls its body into a spiny ball, ready to drop onto any prey that appears."
+            },
+            {
+              "source": "Ultra Sun",
+              "text": "Its claws and horns often break off. The broken claws and horns can be used to carve plows for tilling farm fields."
+            },
+            {
+              "source": "Ultra Moon",
+              "text": "Thanks to its thick claws, it’s good at climbing trees. There are plenty of Sandslash that park themselves in trees and go right to sleep."
+            }
+          ]
+        }
       },
     "029": {
         "default": [
@@ -6576,7 +6676,27 @@
             "source": "Legends Arceus",
             "text": "In its belly burns a fire, which Vulpix spits out in the form of fireballs. When young, this Pokémon has but one white tail. As the Pokémon matures, this single tail splits into six."
           }
-        ]
+        ],
+        "variantsGrouped": {
+          "Alolan Vulpix": [
+            {
+              "source": "Sun",
+              "text": "Its beautiful fur and tails have made it very popular. As it grows, its tails split to form more tails."
+            },
+            {
+              "source": "Moon",
+              "text": "From its mouth spew flames that seem to resemble the spirits of the deceased. Some people mistakenly think this fire is a ghost."
+            },
+            {
+              "source": "Ultra Sun",
+              "text": "Its beautiful tails have made it very popular. However, if it’s not brushed diligently, it will be a mass of tangles before you know it."
+            },
+            {
+              "source": "Ultra Moon",
+              "text": "It manipulates balls of fire to catch its prey. If you raise one from when it’s young, it will grow close to you like a puppy Pokémon."
+            }
+          ]
+        }
       },
     "038": {
         "default": [
@@ -6790,7 +6910,27 @@
             "source": "Legends Arceus",
             "text": "The coat of gleaming golden fur is quite magnificent. This species is said to store sacred power in its nine long tails and to live for a millennium."
           }
-        ]
+        ],
+        "variantsGrouped": {
+          "Alolan Ninetales": [
+            {
+              "source": "Sun",
+              "text": "Legend has it that this mystical Pokémon was formed when nine saints coalesced into one."
+            },
+            {
+              "source": "Moon",
+              "text": "Said to live for a thousand years, this Pokémon uses its supernatural abilities to manipulate fire. It can burn its prey to a crisp as it pleases."
+            },
+            {
+              "source": "Ultra Sun",
+              "text": "It is vindictive and relentless by nature. Those who cross it even once will be cursed for a thousand years, along with their descendants."
+            },
+            {
+              "source": "Ultra Moon",
+              "text": "The flickering flames it spews from its mouth leave its opponents hypnotized. Then, this extremely intelligent Pokémon attacks."
+            }
+          ]
+        }
       },
     "039": {
         "default": [
@@ -9070,7 +9210,27 @@
             "source": "Ultra Moon",
             "text": "Around their crops, farmers plant the kind of tree that Diglett like to eat as a way of getting Diglett to plow the fields for them."
           }
-        ]
+        ],
+        "variantsGrouped": {
+          "Alolan Diglett": [
+            {
+              "source": "Sun",
+              "text": "It chews on plant roots underground. Farmers whose vegetables are vulnerable find it can be quite a pest."
+            },
+            {
+              "source": "Moon",
+              "text": "Many farmers cherish and nurture Diglett because its droppings enrich the soil it lives in."
+            },
+            {
+              "source": "Ultra Sun",
+              "text": "It travels through tunnels that it digs underground. It hates sunlight, so it comes out only after the sun goes down."
+            },
+            {
+              "source": "Ultra Moon",
+              "text": "Around their crops, farmers plant the kind of tree that Diglett like to eat as a way of getting Diglett to plow the fields for them."
+            }
+          ]
+        }
       },
     "051": {
         "default": [
@@ -9264,7 +9424,27 @@
             "source": "Let's Go Pikachu/Let's Go Eevee",
             "text": "A team of triplets that can burrow to a depth of 60 miles. It’s reported that this triggers an earthquake."
           }
-        ]
+        ],
+        "variantsGrouped": {
+          "Alolan Dugtrio": [
+            {
+              "source": "Sun",
+              "text": "This set of triplets moves cooperatively. It’s the power of teamwork that enables this Pokémon to dig to a depth of 60 miles."
+            },
+            {
+              "source": "Moon",
+              "text": "Despite the closeness between this Pokémon and farmers and other people, no one has ever seen the parts of it concealed underground."
+            },
+            {
+              "source": "Ultra Sun",
+              "text": "While the three of them normally get along splendidly, on rare occasions a huge fight will break out over which head gets to eat first."
+            },
+            {
+              "source": "Ultra Moon",
+              "text": "Dugtrio’s heads are sleek and smooth and incredibly hard. It can dig through any soil with its headbutts."
+            }
+          ]
+        }
       },
     "052": {
         "default": [
@@ -9470,7 +9650,37 @@
             "source": "Sword",
             "text": "It loves to collect shiny things. If it’s in a good mood, it might even let its Trainer have a look at its hoard of treasures."
           }
-        ]
+        ],
+        "variantsGrouped": {
+          "Alolan Meowth": [
+            {
+              "source": "Sun",
+              "text": "It lies around all day, becoming active near dusk. At night, it wanders the city in search of loose change."
+            },
+            {
+              "source": "Moon",
+              "text": "It loves shiny things. It often fights with Murkrow over prey they’re both trying to catch."
+            },
+            {
+              "source": "Ultra Sun",
+              "text": "When visiting a junkyard, you may catch sight of it having an intense fight with Murkrow over shiny objects."
+            },
+            {
+              "source": "Ultra Moon",
+              "text": "It loves coins, so if you give it one, you can make friends with Meowth easily. But it’s fickle, so you can’t count on that friendship lasting."
+            }
+          ],
+          "Galarian Meowth": [
+            {
+              "source": "Shield",
+              "text": "It washes its face regularly to keep the coin on its forehead spotless. It doesn’t get along with Galarian Meowth."
+            },
+            {
+              "source": "Sword",
+              "text": "It loves to collect shiny things. If it’s in a good mood, it might even let its Trainer have a look at its hoard of treasures."
+            }
+          ]
+        }
       },
     "053": {
         "default": [
@@ -9664,7 +9874,27 @@
             "source": "Shield",
             "text": "Its elegant and refined behavior clashes with that of the barbaric Perrserker. The relationship between the two is one of mutual disdain."
           }
-        ]
+        ],
+        "variantsGrouped": {
+          "Alolan Persian": [
+            {
+              "source": "Sun",
+              "text": "It has a violent temperament. It will attack anything that looks it in the eye. Its sharp claws inflict deep wounds."
+            },
+            {
+              "source": "Moon",
+              "text": "It has a high opinion of itself, although not to the same extent as the Alolan Persian. It’s quite difficult to make friends with this Pokémon."
+            },
+            {
+              "source": "Ultra Sun",
+              "text": "Although the jewel on its forehead appears to be a different color than those of Alolan Persian, it’s mostly made of the same material."
+            },
+            {
+              "source": "Ultra Moon",
+              "text": "This Pokémon is popular with rich people. It’s also targeted by hunters who are after the jewel in its forehead."
+            }
+          ]
+        }
       },
     "054": {
         "default": [
@@ -10694,7 +10924,15 @@
             "source": "Legends Arceus",
             "text": "They patrol their territory in pairs. I believe the igneous rock components in the fur of this species are the result of volcanic activity in its habitat."
           }
-        ]
+        ],
+        "variantsGrouped": {
+          "Hisuian Growlithe": [
+            {
+              "source": "Legends Arceus",
+              "text": "They patrol their territory in pairs. I believe the igneous rock components in the fur of this species are the result of volcanic activity in its habitat."
+            }
+          ]
+        }
       },
     "059": {
         "default": [
@@ -10904,7 +11142,15 @@
             "source": "Legends Arceus",
             "text": "Snaps at its foes with fangs cloaked in blazing flame. Despite its bulk, it deftly feints every which way, leading opponents on a deceptively merry chase as it all but dances around them."
           }
-        ]
+        ],
+        "variantsGrouped": {
+          "Hisuian Arcanine": [
+            {
+              "source": "Legends Arceus",
+              "text": "Snaps at its foes with fangs cloaked in blazing flame. Despite its bulk, it deftly feints every which way, leading opponents on a deceptively merry chase as it all but dances around them."
+            }
+          ]
+        }
       },
     "060": {
         "default": [
@@ -13946,7 +14192,27 @@
             "source": "Legends Arceus",
             "text": "Makes its home in mountainous regions, using its arms to climb along harsh mountain roads. Can be troublesome—carelessly kicking one will cause it to fly into a rage and chase after you."
           }
-        ]
+        ],
+        "variantsGrouped": {
+          "Alolan Geodude": [
+            {
+              "source": "Sun",
+              "text": "Its round body makes it easy to pick up, but it is hard and heavy. It’s dangerous to play with them as if they were snowballs."
+            },
+            {
+              "source": "Moon",
+              "text": "There are plenty of them to be found along any road. A scholar with too much free time once counted a hundred of them along a single route."
+            },
+            {
+              "source": "Ultra Sun",
+              "text": "Geodude that have lived a long life have had all their edges smoothed out until they’re totally round. They also have a calm, quiet disposition."
+            },
+            {
+              "source": "Ultra Moon",
+              "text": "It uses both hands to climb precipitous cliffs. People who see it in action have been known to take up bouldering."
+            }
+          ]
+        }
       },
     "075": {
         "default": [
@@ -14144,7 +14410,27 @@
             "source": "Legends Arceus",
             "text": "Dwells in holes dug into sheer walls of stone. It enjoys rolling down slopes as though it were a boulder during a rockfall, so keep an eye upward while traversing mountain roads."
           }
-        ]
+        ],
+        "variantsGrouped": {
+          "Alolan Graveler": [
+            {
+              "source": "Sun",
+              "text": "Mossy rocks are its favorite food. It can devour a ton a day while crunching loudly."
+            },
+            {
+              "source": "Moon",
+              "text": "This slow-footed Pokémon moves by curling up and rolling instead of walking. With enough momentum, its speed can exceed 60 mph."
+            },
+            {
+              "source": "Ultra Sun",
+              "text": "It climbs up cliffs as it heads toward the peak of a mountain. As soon as it reaches the summit, it rolls back down the way it came."
+            },
+            {
+              "source": "Ultra Moon",
+              "text": "It travels by rolling down cliffs. If it falls into a river, it will explode with its last gasp."
+            }
+          ]
+        }
       },
     "076": {
         "default": [
@@ -14354,7 +14640,27 @@
             "source": "Legends Arceus",
             "text": "The rocklike shell is shed each year. The cast-off shell then crumbles, reverting to a mass of soil, which can be spread across fields to promote crop growth."
           }
-        ]
+        ],
+        "variantsGrouped": {
+          "Alolan Golem": [
+            {
+              "source": "Sun",
+              "text": "Its body can survive dynamite blasts without a single scratch, but it hates rain and humidity."
+            },
+            {
+              "source": "Moon",
+              "text": "Once a year, this Pokémon molts, and its shed shell returns to the soil. This process creates enriched soil, so farmers collect the shells."
+            },
+            {
+              "source": "Ultra Sun",
+              "text": "When Golem grow old, they stop shedding their shells. Those that have lived a long, long time have shells green with moss."
+            },
+            {
+              "source": "Ultra Moon",
+              "text": "It detonates its own body. The power from that explosion can propel it up steep mountain paths with amazing speed."
+            }
+          ]
+        }
       },
     "077": {
         "default": [
@@ -14544,7 +14850,19 @@
             "source": "Legends Arceus",
             "text": "These Pokémon live in herds out in the grassland. Newborn foals lack their fiery manes, which will develop about an hour after birth."
           }
-        ]
+        ],
+        "variantsGrouped": {
+          "Galarian Ponyta": [
+            {
+              "source": "Sword",
+              "text": "It can’t run properly when it’s newly born. As it races around with others of its kind, its legs grow stronger."
+            },
+            {
+              "source": "Shield",
+              "text": "If you’ve been accepted by Ponyta, its burning mane is mysteriously no longer hot to the touch."
+            }
+          ]
+        }
       },
     "078": {
         "default": [
@@ -14734,7 +15052,19 @@
             "source": "Legends Arceus",
             "text": "Fiery mane aglow, Rapidash darts like an arrow across the land. This prodigiously swift creature can traverse the vast region of Hisui in a day and a half."
           }
-        ]
+        ],
+        "variantsGrouped": {
+          "Galarian Rapidash": [
+            {
+              "source": "Sword",
+              "text": "This Pokémon can be seen galloping through fields at speeds of up to 150 mph, its fiery mane fluttering in the wind."
+            },
+            {
+              "source": "Shield",
+              "text": "The fastest runner becomes the leader, and it decides the herd’s pace and direction of travel."
+            }
+          ]
+        }
       },
     "079": {
         "default": [
@@ -14932,7 +15262,19 @@
             "source": "Shield",
             "text": "When this Pokémon’s tail is soaked in water, sweetness seeps from it. Slowpoke uses this trait to lure in and fish up other Pokémon."
           }
-        ]
+        ],
+        "variantsGrouped": {
+          "Galarian Slowpoke": [
+            {
+              "source": "Sword",
+              "text": "Slow-witted and oblivious, this Pokémon won’t feel any pain if its tail gets eaten. It won’t notice when its tail grows back, either."
+            },
+            {
+              "source": "Shield",
+              "text": "When this Pokémon’s tail is soaked in water, sweetness seeps from it. Slowpoke uses this trait to lure in and fish up other Pokémon."
+            }
+          ]
+        }
       },
     "080": {
         "default": [
@@ -15134,7 +15476,19 @@
             "source": "Shield",
             "text": "Being bitten by a Shellder shocked this Pokémon into standing on two legs. If the Shellder lets go, it seems Slowbro will turn back into a Slowpoke."
           }
-        ]
+        ],
+        "variantsGrouped": {
+          "Galarian Slowbro": [
+            {
+              "source": "Sword",
+              "text": "Slowpoke became Slowbro when a Shellder bit on to its tail. Sweet flavors seeping from the tail make the Shellder feel as if its life is a dream."
+            },
+            {
+              "source": "Shield",
+              "text": "Being bitten by a Shellder shocked this Pokémon into standing on two legs. If the Shellder lets go, it seems Slowbro will turn back into a Slowpoke."
+            }
+          ]
+        }
       },
     "081": {
         "default": [
@@ -15764,7 +16118,19 @@
             "source": "Shield",
             "text": "They use a plant stalk as a weapon, but not all of them use it in the same way. Several distinct styles of stalk fighting have been observed."
           }
-        ]
+        ],
+        "variantsGrouped": {
+          "Galarian Farfetch'd": [
+            {
+              "source": "Sword",
+              "text": "The stalk this Pokémon carries in its wings serves as a sword to cut down opponents. In a dire situation, the stalk can also serve as food."
+            },
+            {
+              "source": "Shield",
+              "text": "They use a plant stalk as a weapon, but not all of them use it in the same way. Several distinct styles of stalk fighting have been observed."
+            }
+          ]
+        }
       },
     "084": {
         "default": [
@@ -16630,7 +16996,27 @@
             "source": "Let's Go Pikachu/Let's Go Eevee",
             "text": "Made of congealed sludge. It smells too putrid to touch. Even weeds won’t grow in its path."
           }
-        ]
+        ],
+        "variantsGrouped": {
+          "Alolan Grimer": [
+            {
+              "source": "Sun",
+              "text": "Its main source of food is the slimy industrial waste of factories. This Pokémon’s numbers have been decreasing in recent years."
+            },
+            {
+              "source": "Moon",
+              "text": "It was born from sludge transformed by exposure to X-rays from the moon. When its internal load of germs decreases, it dies."
+            },
+            {
+              "source": "Ultra Sun",
+              "text": "It was born from sludge on the ocean floor. In a sterile environment, the germs within its body can’t multiply, and it dies."
+            },
+            {
+              "source": "Ultra Moon",
+              "text": "The wastewater coming from factories is clean these days, so Grimer have nothing to eat. They’re said to be on the verge of extinction."
+            }
+          ]
+        }
       },
     "089": {
         "default": [
@@ -16828,7 +17214,27 @@
             "source": "Let's Go Pikachu/Let's Go Eevee",
             "text": "Smells so awful, it can cause fainting. Through degeneration of its nose, it lost its sense of smell."
           }
-        ]
+        ],
+        "variantsGrouped": {
+          "Alolan Muk": [
+            {
+              "source": "Sun",
+              "text": "The stench it gives off will make your nose scrunch up. Still, there are Muk fans who think that’s a good thing."
+            },
+            {
+              "source": "Moon",
+              "text": "After recent environmental improvements, this Pokémon is now hardly seen at all. People speculate that it may go extinct at some point."
+            },
+            {
+              "source": "Ultra Sun",
+              "text": "Their food sources have decreased, and their numbers have declined sharply. Sludge ponds are being built to prevent their extinction."
+            },
+            {
+              "source": "Ultra Moon",
+              "text": "Because they scatter germs everywhere, they’ve long been targeted for extermination, leading to a steep decline in their population."
+            }
+          ]
+        }
       },
     "090": {
         "default": [
@@ -18882,7 +19288,15 @@
             "source": "Legends Arceus",
             "text": "An enigmatic Pokémon that happens to bear a resemblance to a Poké Ball. When excited, it discharges the electric current it has stored in its belly, then lets out a great, uproarious laugh."
           }
-        ]
+        ],
+        "variantsGrouped": {
+          "Hisuian Voltorb": [
+            {
+              "source": "Legends Arceus",
+              "text": "An enigmatic Pokémon that happens to bear a resemblance to a Poké Ball. When excited, it discharges the electric current it has stored in its belly, then lets out a great, uproarious laugh."
+            }
+          ]
+        }
       },
     "101": {
         "default": [
@@ -19044,7 +19458,15 @@
             "source": "Legends Arceus",
             "text": "The tissue on the surface of its body is curiously similar in composition to an Apricorn. When irritated, this Pokémon lets loose an electric current equal to 20 lightning bolts."
           }
-        ]
+        ],
+        "variantsGrouped": {
+          "Hisuian Electrode": [
+            {
+              "source": "Legends Arceus",
+              "text": "The tissue on the surface of its body is curiously similar in composition to an Apricorn. When irritated, this Pokémon lets loose an electric current equal to 20 lightning bolts."
+            }
+          ]
+        }
       },
     "102": {
         "default": [
@@ -19460,7 +19882,27 @@
             "source": "Shield",
             "text": "When they work together, Exeggutor’s three heads can put out powerful psychic energy. Cloudy days make this Pokémon sluggish."
           }
-        ]
+        ],
+        "variantsGrouped": {
+          "Alolan Exeggutor": [
+            {
+              "source": "Sun",
+              "text": "Each of its heads has its own will. They use telepathy to discuss their plans before coming to a joint decision."
+            },
+            {
+              "source": "Moon",
+              "text": "When the time comes, one of its three heads falls off. Before long, the fallen head grows into an Exeggcute."
+            },
+            {
+              "source": "Ultra Sun",
+              "text": "It engages its enemies using psychic powers. Each of its three heads fires off psychokinetic energy, tripling its power."
+            },
+            {
+              "source": "Ultra Moon",
+              "text": "Each of its three heads has its own thoughts. When they want to go in different directions, Exeggutor becomes unable to move."
+            }
+          ]
+        }
       },
     "104": {
         "default": [
@@ -19860,7 +20302,27 @@
             "source": "Shield",
             "text": "When this Pokémon evolved, the skull of its mother fused to it. Marowak’s temperament also turned vicious at the same time."
           }
-        ]
+        ],
+        "variantsGrouped": {
+          "Alolan Marowak": [
+            {
+              "source": "Sun",
+              "text": "Originally, it was weak and timid. After evolution, its temperament becomes violent, and it begins to wield bones as weapons."
+            },
+            {
+              "source": "Moon",
+              "text": "This Pokémon is out for vengeance on its natural enemy, Mandibuzz. It throws bones like boomerangs to try to take it down."
+            },
+            {
+              "source": "Ultra Sun",
+              "text": "It throws bones at Mandibuzz to knock it down. It’s thought that Marowak is trying to avenge its parent."
+            },
+            {
+              "source": "Ultra Moon",
+              "text": "They thump their bones rhythmically to communicate among themselves. There are nearly 50 different rhythmic patterns."
+            }
+          ]
+        }
       },
     "106": {
         "default": [
@@ -20750,7 +21212,19 @@
             "source": "Shield",
             "text": "It can’t suck in air quite as well as a Galarian Weezing, but the toxins it creates are more potent than those of its counterpart."
           }
-        ]
+        ],
+        "variantsGrouped": {
+          "Galarian Weezing": [
+            {
+              "source": "Sword",
+              "text": "It mixes gases between its two bodies. It’s said that these Pokémon were seen all over the Galar region back in the day."
+            },
+            {
+              "source": "Shield",
+              "text": "It can’t suck in air quite as well as a Galarian Weezing, but the toxins it creates are more potent than those of its counterpart."
+            }
+          ]
+        }
       },
     "111": {
         "default": [
@@ -23114,7 +23588,19 @@
             "source": "Legends Arceus",
             "text": "The behavior of this clown-like Pokémon reminds one of pantomime. It creates invisible walls using a force emitted from its fingertips."
           }
-        ]
+        ],
+        "variantsGrouped": {
+          "Galarian Mr. Mime": [
+            {
+              "source": "Sword",
+              "text": "The broadness of its hands may be no coincidence—many scientists believe its palms became enlarged specifically for pantomiming."
+            },
+            {
+              "source": "Shield",
+              "text": "It’s known for its top-notch pantomime skills. It protects itself from all sorts of attacks by emitting auras from its fingers to create walls."
+            }
+          ]
+        }
       },
     "123": {
         "default": [
@@ -27630,7 +28116,19 @@
             "source": "Shield",
             "text": "This Pokémon can control ice at will. Articuno is said to live in snowy mountains riddled with permafrost."
           }
-        ]
+        ],
+        "variantsGrouped": {
+          "Galarian Articuno": [
+            {
+              "source": "Sword",
+              "text": "It’s said that this Pokémon’s beautiful blue wings are made of ice. Articuno flies over snowy mountains, its long tail fluttering along behind it."
+            },
+            {
+              "source": "Shield",
+              "text": "This Pokémon can control ice at will. Articuno is said to live in snowy mountains riddled with permafrost."
+            }
+          ]
+        }
       },
     "145": {
         "default": [
@@ -27800,7 +28298,19 @@
             "source": "Shield",
             "text": "Zapdos is a legendary bird Pokémon. It’s said that when Zapdos rubs its feathers together, lightning will fall immediately after."
           }
-        ]
+        ],
+        "variantsGrouped": {
+          "Galarian Zapdos": [
+            {
+              "source": "Sword",
+              "text": "This Pokémon has complete control over electricity. There are tales of Zapdos nesting in the dark depths of pitch-black thunderclouds."
+            },
+            {
+              "source": "Shield",
+              "text": "Zapdos is a legendary bird Pokémon. It’s said that when Zapdos rubs its feathers together, lightning will fall immediately after."
+            }
+          ]
+        }
       },
     "146": {
         "default": [
@@ -27966,7 +28476,19 @@
             "source": "Shield",
             "text": "There are stories of this Pokémon using its radiant, flame-cloaked wings to light up paths for those lost in the mountains."
           }
-        ]
+        ],
+        "variantsGrouped": {
+          "Galarian Moltres": [
+            {
+              "source": "Sword",
+              "text": "It’s one of the legendary bird Pokémon. When Moltres flaps its flaming wings, they glimmer with a dazzling red glow."
+            },
+            {
+              "source": "Shield",
+              "text": "There are stories of this Pokémon using its radiant, flame-cloaked wings to light up paths for those lost in the mountains."
+            }
+          ]
+        }
       },
     "147": {
         "default": [
@@ -29628,7 +30150,15 @@
             "source": "Legends Arceus",
             "text": "Said to purify lost, forsaken souls with its flames and guide them to the afterlife. I believe its form has been influenced by the energy of the sacred mountain towering at Hisui's center."
           }
-        ]
+        ],
+        "variantsGrouped": {
+          "Hisuian Typhlosion": [
+            {
+              "source": "Legends Arceus",
+              "text": "Said to purify lost, forsaken souls with its flames and guide them to the afterlife. I believe its form has been influenced by the energy of the sacred mountain towering at Hisui's center."
+            }
+          ]
+        }
       },
     "158": {
         "default": [
@@ -35808,7 +36338,19 @@
             "source": "Shield",
             "text": "Slowking can solve any problem presented to it, but no one can understand a thing Slowking says."
           }
-        ]
+        ],
+        "variantsGrouped": {
+          "Galarian Slowking": [
+            {
+              "source": "Sword",
+              "text": "Miraculously, this former Slowpoke’s latent intelligence was drawn out when Shellder poison raced through its brain."
+            },
+            {
+              "source": "Shield",
+              "text": "Slowking can solve any problem presented to it, but no one can understand a thing Slowking says."
+            }
+          ]
+        }
       },
     "200": {
         "default": [
@@ -37524,7 +38066,15 @@
             "source": "Legends Arceus",
             "text": "Fishers detest this troublesome Pokémon because it sprays poison from its spines, getting it everywhere. A different form of Qwilfish lives in other regions."
           }
-        ]
+        ],
+        "variantsGrouped": {
+          "Hisuian Qwilfish": [
+            {
+              "source": "Legends Arceus",
+              "text": "Fishers detest this troublesome Pokémon because it sprays poison from its spines, getting it everywhere. A different form of Qwilfish lives in other regions."
+            }
+          ]
+        }
       },
     "212": {
         "default": [
@@ -38196,7 +38746,15 @@
             "source": "Legends Arceus",
             "text": "Its sturdy, curved claws are ideal for traversing precipitous cliffs. From the tips of these claws drips a venom that infiltrates the nerves of any prey caught in Sneasel's grasp."
           }
-        ]
+        ],
+        "variantsGrouped": {
+          "Hisuian Sneasel": [
+            {
+              "source": "Legends Arceus",
+              "text": "Its sturdy, curved claws are ideal for traversing precipitous cliffs. From the tips of these claws drips a venom that infiltrates the nerves of any prey caught in Sneasel's grasp."
+            }
+          ]
+        }
       },
     "216": {
         "default": [
@@ -39170,7 +39728,19 @@
             "source": "Shield",
             "text": "These Pokémon live in warm seas. In prehistoric times, many lived in the oceans around the Galar region as well."
           }
-        ]
+        ],
+        "variantsGrouped": {
+          "Galarian Corsola": [
+            {
+              "source": "Sword",
+              "text": "It will regrow any branches that break off its head. People keep particularly beautiful Corsola branches as charms to promote safe childbirth."
+            },
+            {
+              "source": "Shield",
+              "text": "These Pokémon live in warm seas. In prehistoric times, many lived in the oceans around the Galar region as well."
+            }
+          ]
+        }
       },
     "223": {
         "default": [
@@ -44736,7 +45306,19 @@
             "source": "Shield",
             "text": "Zigzagoon that adapted to regions outside Galar acquired this appearance. If you’ve lost something, this Pokémon can likely find it."
           }
-        ]
+        ],
+        "variantsGrouped": {
+          "Galarian Zigzagoon": [
+            {
+              "source": "Sword",
+              "text": "It marks its territory by rubbing its bristly fur on trees. This variety of Zigzagoon is friendlier and calmer than the kind native to Galar."
+            },
+            {
+              "source": "Shield",
+              "text": "Zigzagoon that adapted to regions outside Galar acquired this appearance. If you’ve lost something, this Pokémon can likely find it."
+            }
+          ]
+        }
       },
     "264": {
         "default": [
@@ -44854,7 +45436,19 @@
             "source": "Shield",
             "text": "It uses its explosive speed and razor-sharp claws to bring down prey. Running along winding paths is not its strong suit."
           }
-        ]
+        ],
+        "variantsGrouped": {
+          "Galarian Linoone": [
+            {
+              "source": "Sword",
+              "text": "Its fur is strong and supple. Shaving brushes made with shed Linoone hairs are highly prized."
+            },
+            {
+              "source": "Shield",
+              "text": "It uses its explosive speed and razor-sharp claws to bring down prey. Running along winding paths is not its strong suit."
+            }
+          ]
+        }
       },
     "265": {
         "default": [
@@ -71324,7 +71918,15 @@
             "source": "Legends Arceus",
             "text": "Hard of heart and deft of blade, this rare form of Samurott is a product of the Pokémon's evolution in the region of Hisui. Its turbulent blows crash into foes like ceaseless pounding waves."
           }
-        ]
+        ],
+        "variantsGrouped": {
+          "Hisuian Samurott": [
+            {
+              "source": "Legends Arceus",
+              "text": "Hard of heart and deft of blade, this rare form of Samurott is a product of the Pokémon's evolution in the region of Hisui. Its turbulent blows crash into foes like ceaseless pounding waves."
+            }
+          ]
+        }
       },
     "504": {
         "default": [
@@ -74492,7 +75094,15 @@
             "source": "Legends Arceus",
             "text": "I suspect that its well-developed legs are the result of a life spent on mountains covered in deep snow. The scent it exudes from its flower crown heartens those in proximity."
           }
-        ]
+        ],
+        "variantsGrouped": {
+          "Hisuian Lilligant": [
+            {
+              "source": "Legends Arceus",
+              "text": "I suspect that its well-developed legs are the result of a life spent on mountains covered in deep snow. The scent it exudes from its flower crown heartens those in proximity."
+            }
+          ]
+        }
       },
     "550": {
         "default": [
@@ -74946,7 +75556,19 @@
             "source": "Shield",
             "text": "This popular symbol of good fortune will never fall over in its sleep, no matter how it’s pushed or pulled."
           }
-        ]
+        ],
+        "variantsGrouped": {
+          "Galarian Darumaka": [
+            {
+              "source": "Sword",
+              "text": "It derives its power from fire burning inside its body. If the fire dwindles, this Pokémon will immediately fall asleep."
+            },
+            {
+              "source": "Shield",
+              "text": "This popular symbol of good fortune will never fall over in its sleep, no matter how it’s pushed or pulled."
+            }
+          ]
+        }
       },
     "555": {
         "default": [
@@ -75016,7 +75638,19 @@
             "source": "Shield",
             "text": "This Pokémon’s power level rises along with the temperature of its fire, which can reach 2,500 degrees Fahrenheit."
           }
-        ]
+        ],
+        "variantsGrouped": {
+          "Galarian Darmanitan - Standard Mode": [
+            {
+              "source": "Sword",
+              "text": "The thick arms of this hot-blooded Pokémon can deliver punches capable of obliterating a dump truck."
+            },
+            {
+              "source": "Shield",
+              "text": "This Pokémon’s power level rises along with the temperature of its fire, which can reach 2,500 degrees Fahrenheit."
+            }
+          ]
+        }
       },
     "556": {
         "default": [
@@ -75510,7 +76144,19 @@
             "source": "Shield",
             "text": "The spirit of a person from a bygone age became this Pokémon. It rambles through ruins, searching for someone who knows its face."
           }
-        ]
+        ],
+        "variantsGrouped": {
+          "Galarian Yamask": [
+            {
+              "source": "Sword",
+              "text": "It wanders through ruins by night, carrying a mask that’s said to have been the face it had when it was still human."
+            },
+            {
+              "source": "Shield",
+              "text": "The spirit of a person from a bygone age became this Pokémon. It rambles through ruins, searching for someone who knows its face."
+            }
+          ]
+        }
       },
     "563": {
         "default": [
@@ -76254,7 +76900,15 @@
             "source": "Legends Arceus",
             "text": "A once-departed soul, returned to life in Hisui. Derives power from resentment, which rises as energy atop its head and takes on the forms of foes. In this way, Zorua vents lingering malice."
           }
-        ]
+        ],
+        "variantsGrouped": {
+          "Hisuian Zorua": [
+            {
+              "source": "Legends Arceus",
+              "text": "A once-departed soul, returned to life in Hisui. Derives power from resentment, which rises as energy atop its head and takes on the forms of foes. In this way, Zorua vents lingering malice."
+            }
+          ]
+        }
       },
     "571": {
         "default": [
@@ -76344,7 +76998,15 @@
             "source": "Legends Arceus",
             "text": "With its disheveled white fur, it looks like an embodiment of death. Heedless of its own safety, Zoroark attacks its nemeses with a bitter energy so intense, it lacerates Zoroark's own body."
           }
-        ]
+        ],
+        "variantsGrouped": {
+          "Hisuian Zoroark": [
+            {
+              "source": "Legends Arceus",
+              "text": "With its disheveled white fur, it looks like an embodiment of death. Heedless of its own safety, Zoroark attacks its nemeses with a bitter energy so intense, it lacerates Zoroark's own body."
+            }
+          ]
+        }
       },
     "572": {
         "default": [
@@ -79582,7 +80244,19 @@
             "source": "Shield",
             "text": "For some reason, this Pokémon smiles slightly when it emits a strong electric current from the yellow markings on its body."
           }
-        ]
+        ],
+        "variantsGrouped": {
+          "Galarian Stunfisk": [
+            {
+              "source": "Sword",
+              "text": "Thanks to bacteria that lived in the mud flats with it, this Pokémon developed the organs it uses to generate electricity."
+            },
+            {
+              "source": "Shield",
+              "text": "For some reason, this Pokémon smiles slightly when it emits a strong electric current from the yellow markings on its body."
+            }
+          ]
+        }
       },
     "619": {
         "default": [
@@ -80434,7 +81108,15 @@
             "source": "Legends Arceus",
             "text": "Screaming a bloodcurdling battle cry, this huge and ferocious bird Pokémon goes out on the hunt. It blasts lakes with shock waves, then scoops up any prey that float to the water's surface."
           }
-        ]
+        ],
+        "variantsGrouped": {
+          "Hisuian Braviary": [
+            {
+              "source": "Legends Arceus",
+              "text": "Screaming a bloodcurdling battle cry, this huge and ferocious bird Pokémon goes out on the hunt. It blasts lakes with shock waves, then scoops up any prey that float to the water's surface."
+            }
+          ]
+        }
       },
     "629": {
         "default": [
@@ -84716,7 +85398,15 @@
             "source": "Legends Arceus",
             "text": "A creature given to melancholy. I suspect its metallic shell developed as a result of the mucus on its skin reacting with the iron in Hisui's water."
           }
-        ]
+        ],
+        "variantsGrouped": {
+          "Hisuian Sliggoo": [
+            {
+              "source": "Legends Arceus",
+              "text": "A creature given to melancholy. I suspect its metallic shell developed as a result of the mucus on its skin reacting with the iron in Hisui's water."
+            }
+          ]
+        }
       },
     "706": {
         "default": [
@@ -84802,7 +85492,15 @@
             "source": "Legends Arceus",
             "text": "Able to freely control the hardness of its metallic shell. It loathes solitude and is extremely clingy—it will fume and run riot if those dearest to it ever leave its side."
           }
-        ]
+        ],
+        "variantsGrouped": {
+          "Hisuian Goodra": [
+            {
+              "source": "Legends Arceus",
+              "text": "Able to freely control the hardness of its metallic shell. It loathes solitude and is extremely clingy—it will fume and run riot if those dearest to it ever leave its side."
+            }
+          ]
+        }
       },
     "707": {
         "default": [
@@ -85236,7 +85934,15 @@
             "source": "Legends Arceus",
             "text": "The armor of ice covering its lower jaw puts steel to shame and can shatter rocks with ease. This Pokémon barrels along steep mountain paths, cleaving through the deep snow."
           }
-        ]
+        ],
+        "variantsGrouped": {
+          "Hisuian Avalugg": [
+            {
+              "source": "Legends Arceus",
+              "text": "The armor of ice covering its lower jaw puts steel to shame and can shatter rocks with ease. This Pokémon barrels along steep mountain paths, cleaving through the deep snow."
+            }
+          ]
+        }
       },
     "714": {
         "default": [
@@ -85766,7 +86472,15 @@
             "source": "Legends Arceus",
             "text": "The air stored inside the rachises of Decidueye's feathers insulates the Pokémon against Hisui's extreme cold. This is firm proof that evolution can be influenced by environment."
           }
-        ]
+        ],
+        "variantsGrouped": {
+          "Hisuian Decidueye": [
+            {
+              "source": "Legends Arceus",
+              "text": "The air stored inside the rachises of Decidueye's feathers insulates the Pokémon against Hisui's extreme cold. This is firm proof that evolution can be influenced by environment."
+            }
+          ]
+        }
       },
     "725": {
         "default": [
@@ -93510,7 +94224,19 @@
             "source": "Violet",
             "text": "It lives at the bottom of ponds and swamps. It will carry Wooper on its back and ferry them across water from one shore to the other."
           }
-        ]
+        ],
+        "variantsGrouped": {
+          "Paldean Clodsire": [
+            {
+              "source": "Scarlet",
+              "text": "When attacked, this Pokémon will retaliate by sticking thick spines out from its body. It’s a risky move that puts everything on the line."
+            },
+            {
+              "source": "Violet",
+              "text": "It lives at the bottom of ponds and swamps. It will carry Wooper on its back and ferry them across water from one shore to the other."
+            }
+          ]
+        }
       },
     "981": {
         "default": [
