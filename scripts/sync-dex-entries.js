@@ -153,6 +153,14 @@ function normalizeEntryText(text) {
     .trim();
 }
 
+function extractGenus(speciesPayload) {
+  const genera = speciesPayload.genera || [];
+  const englishGenus = genera.find((entry) => {
+    return entry.language && entry.language.name === 'en';
+  });
+  return englishGenus ? englishGenus.genus : '';
+}
+
 function buildStructuredEntries(speciesPayload) {
   const englishEntries = speciesPayload.flavor_text_entries.filter((entry) => {
     return entry.language && entry.language.name === 'en';
@@ -223,7 +231,6 @@ async function mapWithConcurrency(items, worker, concurrency) {
 async function main() {
   const data = readJson(DATA_FILE);
   const removedCount = stripEmbeddedEntries(data);
-  writeOrderedDataJson(DATA_FILE, data);
 
   const numbers = [];
   for (let i = 1; i <= TOTAL_POKEMON; i += 1) {
@@ -239,7 +246,8 @@ async function main() {
       const species = await fetchWithRetry(url, MAX_RETRIES);
       return {
         number: padDexNumber(number),
-        entries: buildStructuredEntries(species)
+        entries: buildStructuredEntries(species),
+        genus: extractGenus(species)
       };
     },
     CONCURRENCY
@@ -257,7 +265,15 @@ async function main() {
     if (item.entries.length === 0) {
       emptyCount += 1;
     }
+
+    // Add genus to data.json
+    if (data[item.number]) {
+      data[item.number].genus = item.genus;
+    }
   }
+
+  // Write updated data.json with genus fields
+  writeOrderedDataJson(DATA_FILE, data);
 
   const orderedEntries = {};
   for (let i = 1; i <= TOTAL_POKEMON; i += 1) {

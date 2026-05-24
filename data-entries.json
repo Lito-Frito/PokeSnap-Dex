@@ -2,7 +2,7 @@
   "_meta": {
     "schemaVersion": 1,
     "source": "https://pokeapi.co/",
-    "generatedAt": "2026-05-24T19:37:28.492Z",
+    "generatedAt": "2026-05-24T19:41:42.495Z",
     "totalPokemon": 1025,
     "totalEntries": 14496,
     "emptySpeciesCount": 0
@@ -13812,7 +13812,7 @@
           },
           {
             "source": "Silver",
-            "text": "Its brain devel­ oped when it began walking on hind legs. Its thick hide protects it even in magma."
+            "text": "Its brain devel�� oped when it began walking on hind legs. Its thick hide protects it even in magma."
           },
           {
             "source": "Crystal",
@@ -17756,7 +17756,7 @@
           },
           {
             "source": "Platinum",
-            "text": "A Pokémon that roamed the skies in the dinosaur era. Its teeth are like saw blades."
+            "text": "A Pok��mon that roamed the skies in the dinosaur era. Its teeth are like saw blades."
           },
           {
             "source": "HeartGold",
@@ -18696,7 +18696,7 @@
           },
           {
             "source": "Let's Go Eevee",
-            "text": "It is said that this Pokémon lives somewhere in the sea and that it flies. However, these are only rumors."
+            "text": "It is said that this Pok��mon lives somewhere in the sea and that it flies. However, these are only rumors."
           },
           {
             "source": "Sword",
@@ -21600,7 +21600,7 @@
           },
           {
             "source": "Alpha Sapphire",
-            "text": "Xatu is known to stand motionless while staring at the sun all day long. Some people revere it as a mystical Pok��mon out of their belief that Xatu is in possession of the power to see into the future."
+            "text": "Xatu is known to stand motionless while staring at the sun all day long. Some people revere it as a mystical Pokémon out of their belief that Xatu is in possession of the power to see into the future."
           },
           {
             "source": "Ultra Sun",
@@ -47236,7 +47236,7 @@
           },
           {
             "source": "Black 2",
-            "text": "A legendary Pok��mon of Sinnoh. It is said that time flows when Dialga’s heart beats."
+            "text": "A legendary Pokémon of Sinnoh. It is said that time flows when Dialga’s heart beats."
           },
           {
             "source": "White 2",
@@ -56792,7 +56792,7 @@
           },
           {
             "source": "Moon",
-            "text": "This Pokémon��s mucous can dissolve anything. Toothless, it sprays mucous on its prey. Once they’re nicely dissolved, it slurps them up."
+            "text": "This Pokémon’s mucous can dissolve anything. Toothless, it sprays mucous on its prey. Once they’re nicely dissolved, it slurps them up."
           },
           {
             "source": "Ultra Sun",
@@ -58180,7 +58180,7 @@
           },
           {
             "source": "Ultra Sun",
-            "text": "For self-protection, it pretends to be a bug Pokémon. Both of its arms bear keen-edged petals."
+            "text": "For self-protection, it pretends to be a bug Pok��mon. Both of its arms bear keen-edged petals."
           },
           {
             "source": "Ultra Moon",
@@ -59236,7 +59236,7 @@
           },
           {
             "source": "Ultra Sun",
-            "text": "Although it’s alien to this world and a danger here, it’s apparently a common organism in the world where it normally lives."
+            "text": "Although it’s alien to this world and a danger here, it��s apparently a common organism in the world where it normally lives."
           },
           {
             "source": "Ultra Moon",
@@ -59632,7 +59632,7 @@
           },
           {
             "source": "Shield",
-            "text": "Its nictitating membranes let it pick out foes�� weak points so it can precisely blast them with water that shoots from its fingertips at Mach 3."
+            "text": "Its nictitating membranes let it pick out foes’ weak points so it can precisely blast them with water that shoots from its fingertips at Mach 3."
           }
         ]
       },

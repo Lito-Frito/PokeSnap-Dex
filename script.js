@@ -406,18 +406,25 @@ function updateGalleryImage() {
         galleryImage.src = imageSrc;
         const baseName = pokedexData[currentEntry].name;
         const label = imgObj.label;
-        let displayName = baseName;
+        let variantSuffix = '';
         if (label && label !== baseName) {
             if (label.includes(baseName)) {
-                const suffix = label.replace(baseName, '').trim().replace(/^[- ]+/, '');
-                displayName = suffix ? `${baseName} - ${suffix}` : baseName;
+                variantSuffix = label.replace(baseName, '').trim().replace(/^[- ]+/, '');
             } else {
-                displayName = `${baseName} - ${label}`;
+                variantSuffix = label;
             }
         }
-        galleryImage.alt = imageSrc === "https://i.imgur.com/m3idMCk.png" ? "Missing Snap" : displayName;
+        const altName = variantSuffix ? `${baseName} - ${variantSuffix}` : baseName;
+        galleryImage.alt = imageSrc === "https://i.imgur.com/m3idMCk.png" ? "Missing Snap" : altName;
         const dexNumber = currentEntry.padStart(3, '0');
-        displayName = `#${dexNumber} ${displayName}`;
+        let displayName = `#${dexNumber} ${baseName}`;
+        const genus = pokedexData[currentEntry].genus;
+        if (genus) {
+            displayName = `${displayName} (${genus})`;
+        }
+        if (variantSuffix) {
+            displayName = `${displayName} - ${variantSuffix}`;
+        }
         galleryName.textContent = displayName;
         // Display Dex entries — clamp index to valid range for new image's entries
         const newEntries = imgObj.entries;
