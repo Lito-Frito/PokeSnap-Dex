@@ -439,41 +439,52 @@ function updateGalleryImage() {
     }
 }
 
+function navigateGalleryImage(delta) {
+    if (!currentEntry || !pokedexData[currentEntry]) {
+        return;
+    }
+
+    const imageCount = pokedexData[currentEntry].allImages.length;
+    currentImageIndex = (currentImageIndex + delta + imageCount) % imageCount;
+    updateGalleryImage();
+}
+
+function navigateGalleryEntry(delta) {
+    if (!currentEntry || !pokedexData[currentEntry]) {
+        return;
+    }
+
+    const imgObj = pokedexData[currentEntry].allImages[currentImageIndex];
+    const entries = imgObj.entries;
+    if (!entries || entries.length === 0) {
+        return;
+    }
+
+    currentEntryIndex = (currentEntryIndex + delta + entries.length) % entries.length;
+    updateDexEntry();
+}
+
+function closeGalleryModal() {
+    gallery.classList.add('hidden');
+    document.body.classList.remove('gallery-open');
+    currentEntry = null;
+}
+
 // Event listeners
 prevButton.addEventListener('click', () => {
-    if (currentEntry) {
-        currentImageIndex = (currentImageIndex - 1 + pokedexData[currentEntry].allImages.length) % pokedexData[currentEntry].allImages.length;
-        updateGalleryImage();
-    }
+    navigateGalleryImage(-1);
 });
 
 nextButton.addEventListener('click', () => {
-    if (currentEntry) {
-        currentImageIndex = (currentImageIndex + 1) % pokedexData[currentEntry].allImages.length;
-        updateGalleryImage();
-    }
+    navigateGalleryImage(1);
 });
 
 prevDescriptionButton.addEventListener('click', () => {
-    if (currentEntry && pokedexData[currentEntry]) {
-        const imgObj = pokedexData[currentEntry].allImages[currentImageIndex];
-        const entries = imgObj.entries;
-        if (entries && entries.length > 0) {
-            currentEntryIndex = (currentEntryIndex - 1 + entries.length) % entries.length;
-            updateDexEntry();
-        }
-    }
+    navigateGalleryEntry(-1);
 });
 
 nextDescriptionButton.addEventListener('click', () => {
-    if (currentEntry && pokedexData[currentEntry]) {
-        const imgObj = pokedexData[currentEntry].allImages[currentImageIndex];
-        const entries = imgObj.entries;
-        if (entries && entries.length > 0) {
-            currentEntryIndex = (currentEntryIndex + 1) % entries.length;
-            updateDexEntry();
-        }
-    }
+    navigateGalleryEntry(1);
 });
 
 window.addEventListener('resize', () => {
@@ -483,16 +494,12 @@ window.addEventListener('resize', () => {
 });
 
 closeButton.addEventListener('click', () => {
-    gallery.classList.add('hidden');
-    document.body.classList.remove('gallery-open');
-    currentEntry = null;
+    closeGalleryModal();
 });
 
 gallery.addEventListener('click', (event) => {
     if (event.target === gallery) {
-        gallery.classList.add('hidden');
-        document.body.classList.remove('gallery-open');
-        currentEntry = null;
+        closeGalleryModal();
     }
 });
 
@@ -500,23 +507,29 @@ gallery.addEventListener('click', (event) => {
 document.addEventListener('keydown', (event) => {
     if (gallery.classList.contains('hidden')) return;
 
-    if (event.key === 'ArrowLeft') {
+    const isCtrlOrMeta = event.ctrlKey || event.metaKey;
+
+    if (isCtrlOrMeta && event.key === 'ArrowLeft') {
         event.preventDefault();
-        if (currentEntry) {
-            currentImageIndex = (currentImageIndex - 1 + pokedexData[currentEntry].allImages.length) % pokedexData[currentEntry].allImages.length;
-            updateGalleryImage();
-        }
+        navigateGalleryEntry(-1);
+    } else if (isCtrlOrMeta && event.key === 'ArrowRight') {
+        event.preventDefault();
+        navigateGalleryEntry(1);
+    } else if (event.key === 'ArrowUp') {
+        event.preventDefault();
+        navigateGalleryEntry(-1);
+    } else if (event.key === 'ArrowDown') {
+        event.preventDefault();
+        navigateGalleryEntry(1);
+    } else if (event.key === 'ArrowLeft') {
+        event.preventDefault();
+        navigateGalleryImage(-1);
     } else if (event.key === 'ArrowRight') {
         event.preventDefault();
-        if (currentEntry) {
-            currentImageIndex = (currentImageIndex + 1) % pokedexData[currentEntry].allImages.length;
-            updateGalleryImage();
-        }
+        navigateGalleryImage(1);
     } else if (event.key === 'Escape') {
         event.preventDefault();
-        gallery.classList.add('hidden');
-        document.body.classList.remove('gallery-open');
-        currentEntry = null;
+        closeGalleryModal();
     }
 });
 
