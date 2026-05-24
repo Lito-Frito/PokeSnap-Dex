@@ -223,9 +223,13 @@ header p {
     background-color: #007BFF;
     color: white;
     border: 2px solid #007BFF;
-    padding: 6px 10px;
-    font-size: 0.85em;
-    width: 100%;
+    padding: 5px 10px;
+    font-size: 0.8em;
+    width: auto;
+    min-width: 96px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
     border-radius: 5px;
 }
@@ -432,20 +436,55 @@ header p {
 
 .gallery-buttons {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 10px;
-    width: 100%;
+    grid-template-columns: auto var(--gallery-center-gap, 12px) auto;
+    column-gap: 0;
+    row-gap: 8px;
+    width: auto;
+    max-width: none;
+    grid-column: 1 / -1;
+    justify-self: center;
 }
 
 .gallery-buttons button {
     border-radius: 5px;
+    width: auto;
+}
+
+#prev-variant,
+#prev-description {
+    grid-column: 1;
+    justify-self: end;
+}
+
+#next-variant,
+#next-description {
+    grid-column: 3;
+    justify-self: start;
 }
 
 .gallery-controls {
+    --gallery-center-gap: 12px;
     width: 100%;
     max-width: 560px;
     display: grid;
-    gap: 6px;
+    grid-template-columns: auto auto auto;
+    column-gap: var(--gallery-center-gap);
+    gap: 8px;
+    justify-items: stretch;
+    justify-content: center;
+}
+
+#close-gallery {
+    background-color: #007BFF;
+    border: 2px solid #007BFF;
+    color: white;
+    min-width: 88px;
+    grid-column: 2;
+    justify-self: center;
+}
+
+#close-gallery:hover {
+    background-color: #0069d9;
 }
 
 #prev-description, #next-description {
@@ -456,6 +495,12 @@ header p {
 .dark-mode #prev-description, .dark-mode #next-description {
     background-color: #555;
     border: 2px solid #555;
+}
+
+.dark-mode #close-gallery {
+    background-color: #555;
+    border: 2px solid #555;
+    color: white;
 }
 
 
@@ -638,10 +683,15 @@ button {
         gap: 6px;
     }
 
+    .gallery-controls {
+        --gallery-center-gap: 8px;
+    }
+
     .gallery-buttons button {
-        font-size: 0.75em;
-        padding: 5px 8px;
-        width: 100%;
+        font-size: 0.72em;
+        padding: 4px 8px;
+        min-width: 88px;
+        width: auto;
     }
 
     .gallery-buttons button:disabled {
