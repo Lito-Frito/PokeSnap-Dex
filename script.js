@@ -60,6 +60,33 @@ function normalizeEntryItem(entryItem) {
     return { source: 'Entry', text: '' };
 }
 
+function getVariantLabelCandidates(variantLabel) {
+    const candidates = [];
+
+    if (variantLabel) {
+        candidates.push(variantLabel);
+        if (/^Shiny\s+/.test(variantLabel)) {
+            candidates.push(variantLabel.replace(/^Shiny\s+/, '').trim());
+        }
+    }
+
+    return Array.from(new Set(candidates.filter(Boolean)));
+}
+
+function getVariantEntries(entryMap, labels) {
+    if (!entryMap || typeof entryMap !== 'object') {
+        return null;
+    }
+
+    for (const label of labels) {
+        if (Array.isArray(entryMap[label]) && entryMap[label].length > 0) {
+            return entryMap[label].map(normalizeEntryItem);
+        }
+    }
+
+    return null;
+}
+
 function getEntriesForVariant(number, variantLabel) {
     const speciesEntries = dexEntriesByNumber[number];
     if (!speciesEntries) {
@@ -70,12 +97,16 @@ function getEntriesForVariant(number, variantLabel) {
         return speciesEntries.map(normalizeEntryItem);
     }
 
-    if (speciesEntries.variants && Array.isArray(speciesEntries.variants[variantLabel])) {
-        return speciesEntries.variants[variantLabel].map(normalizeEntryItem);
+    const labelCandidates = getVariantLabelCandidates(variantLabel);
+
+    const variantEntries = getVariantEntries(speciesEntries.variants, labelCandidates);
+    if (variantEntries) {
+        return variantEntries;
     }
 
-    if (speciesEntries.variantsGrouped && Array.isArray(speciesEntries.variantsGrouped[variantLabel])) {
-        return speciesEntries.variantsGrouped[variantLabel].map(normalizeEntryItem);
+    const groupedVariantEntries = getVariantEntries(speciesEntries.variantsGrouped, labelCandidates);
+    if (groupedVariantEntries) {
+        return groupedVariantEntries;
     }
 
     if (Array.isArray(speciesEntries.defaultGrouped)) {
