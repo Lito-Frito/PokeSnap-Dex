@@ -17,6 +17,10 @@ function loadRawDataText() {
   return fs.readFileSync('data.json', 'utf8');
 }
 
+function loadEntriesData() {
+  return JSON.parse(fs.readFileSync('data-entries.json', 'utf8'));
+}
+
 function testDataIntegrity() {
   const data = loadData();
   let passed = 0;
@@ -297,10 +301,78 @@ function testCaptureCountLogic() {
   }
 }
 
+function testNoEmbeddedEntriesInDataJson() {
+  const data = loadData();
+  let failed = 0;
+
+  for (const key in data) {
+    const entry = data[key];
+    for (const variant of entry.variants || []) {
+      if (Object.prototype.hasOwnProperty.call(variant, 'entries')) {
+        console.log(`✗ ${key}: ${entry.name} has embedded variant.entries`);
+        failed++;
+      }
+    }
+  }
+
+  if (failed === 0) {
+    console.log('✓ data.json has no embedded variant entries');
+    return;
+  }
+
+  process.exit(1);
+}
+
+function testEntriesFileIntegrity() {
+  const payload = loadEntriesData();
+
+  if (!payload || typeof payload !== 'object') {
+    console.log('✗ data-entries.json payload is invalid');
+    process.exit(1);
+  }
+
+  if (!payload._meta || payload._meta.schemaVersion !== 1) {
+    console.log('✗ data-entries.json missing _meta.schemaVersion=1');
+    process.exit(1);
+  }
+
+  if (!payload.entries || typeof payload.entries !== 'object') {
+    console.log('✗ data-entries.json missing entries map');
+    process.exit(1);
+  }
+
+  const keys = Object.keys(payload.entries);
+  if (keys.length !== 1025) {
+    console.log(`✗ data-entries.json expected 1025 keys, got ${keys.length}`);
+    process.exit(1);
+  }
+
+  for (let i = 1; i <= 1025; i++) {
+    const key = String(i).padStart(3, '0');
+    const speciesEntries = payload.entries[key];
+
+    if (!speciesEntries || !Array.isArray(speciesEntries.default)) {
+      console.log(`✗ data-entries.json ${key} missing default entry array`);
+      process.exit(1);
+    }
+
+    for (const item of speciesEntries.default) {
+      if (!item || typeof item.source !== 'string' || typeof item.text !== 'string') {
+        console.log(`✗ data-entries.json ${key} has invalid entry item format`);
+        process.exit(1);
+      }
+    }
+  }
+
+  console.log('✓ data-entries.json schema and keys are valid');
+}
+
 testDataIntegrity();
 testNumericFileOrder();
 testNoDuplicatesInVariants();
 testNameFormatting();
 testPositionArray();
 testCaptureCountLogic();
+testNoEmbeddedEntriesInDataJson();
+testEntriesFileIntegrity();
 

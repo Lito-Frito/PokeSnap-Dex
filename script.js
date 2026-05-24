@@ -16,8 +16,12 @@
  *
  * Data Structure (data.json):
  * - Keys: '001' to '1025' (Pokémon numbers).
- * - Each entry: { name: string, variants: [{ label: string, images: [url], position: string, fit: string, entries: [string] }] }
+ * - Each entry: { name: string, variants: [{ label: string, images: [url], position: string, fit: string }] }
  * - Placeholders: "https://your-image-url-here.jpg" for missing images.
+ *
+ * Data Structure (data-entries.json):
+ * - entries[number].default: [{ source: string, text: string }]
+ * - Optional future extension: entries[number].variants[label] for variant-specific text.
  *
  * Branches:
  * - main/Public: Placeholder images for public demo.
@@ -27,19 +31,71 @@
  * - Ensure capture count excludes placeholders.
  * - Grid creates multiple entries per Pokémon for each image in variants.
  * - Gallery navigates through all images of the Pokémon.
+ * - Dex entries are sourced from data-entries.json and can be regenerated via sync script.
  * - Run tests (node test.js) for data integrity.
  * - Mobile: CSS grid with auto-fit and min-width.
  */
 
 // Load data from JSON
 let pokedexData = {};
+let dexEntriesByNumber = {};
+
+function normalizeEntryItem(entryItem) {
+    if (typeof entryItem === 'string') {
+        if (entryItem.includes(' - ')) {
+            const [source, text] = entryItem.split(' - ', 2);
+            return { source, text };
+        }
+        return { source: 'Entry', text: entryItem };
+    }
+
+    if (entryItem && typeof entryItem === 'object') {
+        return {
+            source: entryItem.source || 'Entry',
+            text: entryItem.text || ''
+        };
+    }
+
+    return { source: 'Entry', text: '' };
+}
+
+function getEntriesForVariant(number, variantLabel) {
+    const speciesEntries = dexEntriesByNumber[number];
+    if (!speciesEntries) {
+        return [];
+    }
+
+    if (Array.isArray(speciesEntries)) {
+        return speciesEntries.map(normalizeEntryItem);
+    }
+
+    if (speciesEntries.variants && Array.isArray(speciesEntries.variants[variantLabel])) {
+        return speciesEntries.variants[variantLabel].map(normalizeEntryItem);
+    }
+
+    if (Array.isArray(speciesEntries.default)) {
+        return speciesEntries.default.map(normalizeEntryItem);
+    }
+
+    return [];
+}
 
 async function loadData() {
   console.log('Starting to load data...');
   try {
-    const response = await fetch('data.json');
-    console.log('Fetch response:', response);
-    pokedexData = await response.json();
+        const [response, entriesResponse] = await Promise.all([
+            fetch('data.json'),
+            fetch('data-entries.json')
+        ]);
+        console.log('Fetch response:', response);
+        pokedexData = await response.json();
+        if (entriesResponse.ok) {
+            const entriesPayload = await entriesResponse.json();
+            dexEntriesByNumber = entriesPayload.entries || {};
+        } else {
+            dexEntriesByNumber = {};
+            console.warn('Could not load data-entries.json, continuing with empty entries.');
+        }
     console.log('Data loaded:', Object.keys(pokedexData).length, 'entries');
     // Create flattened allImages for each entry
     for (let num in pokedexData) {
@@ -65,7 +121,7 @@ async function loadData() {
               label: variant.label,
               position: pos,
               fit: variant.fit || 'contain',
-              entries: variant.entries || []
+              entries: getEntriesForVariant(num, variant.label)
             });
           }
         }
@@ -117,7 +173,7 @@ function updateDexEntry() {
         dexEntry.innerHTML = '';
 
         if (entries && entries.length > 0) {
-            const entryText = entries[currentEntryIndex];
+            const entryData = normalizeEntryItem(entries[currentEntryIndex]);
             const entryLayout = document.createElement('div');
             entryLayout.className = 'dex-entry-layout';
             const sourceColumn = document.createElement('div');
@@ -125,14 +181,8 @@ function updateDexEntry() {
             const descriptionColumn = document.createElement('div');
             descriptionColumn.className = 'dex-entry-description';
 
-            if (entryText.includes(' - ')) {
-                const [game, desc] = entryText.split(' - ', 2);
-                sourceColumn.textContent = game;
-                descriptionColumn.textContent = desc;
-            } else {
-                sourceColumn.textContent = 'Entry';
-                descriptionColumn.textContent = entryText;
-            }
+            sourceColumn.textContent = entryData.source || 'Entry';
+            descriptionColumn.textContent = entryData.text || '';
 
             entryLayout.appendChild(sourceColumn);
             entryLayout.appendChild(descriptionColumn);
