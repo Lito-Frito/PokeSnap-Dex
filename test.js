@@ -331,8 +331,8 @@ function testEntriesFileIntegrity() {
     process.exit(1);
   }
 
-  if (!payload._meta || payload._meta.schemaVersion !== 1) {
-    console.log('✗ data-entries.json missing _meta.schemaVersion=1');
+  if (!payload._meta || payload._meta.schemaVersion !== 2) {
+    console.log('✗ data-entries.json missing _meta.schemaVersion=2');
     process.exit(1);
   }
 
@@ -356,9 +356,21 @@ function testEntriesFileIntegrity() {
       process.exit(1);
     }
 
+    if (!Array.isArray(speciesEntries.defaultGrouped)) {
+      console.log(`✗ data-entries.json ${key} missing defaultGrouped entry array`);
+      process.exit(1);
+    }
+
     for (const item of speciesEntries.default) {
       if (!item || typeof item.source !== 'string' || typeof item.text !== 'string') {
         console.log(`✗ data-entries.json ${key} has invalid entry item format`);
+        process.exit(1);
+      }
+    }
+
+    for (const item of speciesEntries.defaultGrouped) {
+      if (!item || typeof item.source !== 'string' || typeof item.text !== 'string') {
+        console.log(`✗ data-entries.json ${key} has invalid grouped entry item format`);
         process.exit(1);
       }
     }

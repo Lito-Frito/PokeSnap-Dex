@@ -21,6 +21,7 @@
  *
  * Data Structure (data-entries.json):
  * - entries[number].default: [{ source: string, text: string }]
+ * - entries[number].defaultGrouped: grouped display entries for UI rendering
  * - Optional future extension: entries[number].variants[label] for variant-specific text.
  *
  * Branches:
@@ -71,6 +72,14 @@ function getEntriesForVariant(number, variantLabel) {
 
     if (speciesEntries.variants && Array.isArray(speciesEntries.variants[variantLabel])) {
         return speciesEntries.variants[variantLabel].map(normalizeEntryItem);
+    }
+
+    if (speciesEntries.variantsGrouped && Array.isArray(speciesEntries.variantsGrouped[variantLabel])) {
+        return speciesEntries.variantsGrouped[variantLabel].map(normalizeEntryItem);
+    }
+
+    if (Array.isArray(speciesEntries.defaultGrouped)) {
+        return speciesEntries.defaultGrouped.map(normalizeEntryItem);
     }
 
     if (Array.isArray(speciesEntries.default)) {

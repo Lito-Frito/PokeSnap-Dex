@@ -55,9 +55,9 @@ function writeOrderedDataJson(path, payload) {
 function fetchJson(url) {
   return new Promise((resolve, reject) => {
     const req = https.get(url, { headers: { 'User-Agent': 'PokeSnap-Dex sync script' } }, (res) => {
-      let body = '';
+      const chunks = [];
       res.on('data', (chunk) => {
-        body += chunk;
+        chunks.push(chunk);
       });
       res.on('end', () => {
         if (res.statusCode < 200 || res.statusCode >= 300) {
@@ -65,6 +65,7 @@ function fetchJson(url) {
           return;
         }
         try {
+          const body = Buffer.concat(chunks).toString('utf8');
           resolve(JSON.parse(body));
         } catch (error) {
           reject(new Error('Invalid JSON from ' + url + ': ' + error.message));
@@ -186,6 +187,110 @@ function buildStructuredEntries(speciesPayload) {
   }
 
   return normalized;
+}
+
+function normalizeTextForGrouping(text) {
+  return normalizeEntryText(text)
+    .normalize('NFKD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/[’']/g, "'")
+    .toLowerCase()
+    .replace(/\b([a-z]{4,})s\b/g, '$1')
+    .replace(/[^a-z0-9']+/g, ' ')
+    .trim();
+}
+
+function getDisplayTextPriority(text) {
+  const uppercaseWords = (text.match(/\b[A-Z][A-ZÉ'’-]{2,}\b/g) || []).length;
+  const legacyPokemonWord = /POK.?.?MON/.test(text) ? 1 : 0;
+  return uppercaseWords * 10 + legacyPokemonWord;
+}
+
+function chooseGroupedDisplayText(entries) {
+  return entries
+    .slice()
+    .sort((left, right) => getDisplayTextPriority(left.text) - getDisplayTextPriority(right.text))[0]
+    .text;
+}
+
+function normalizeGroupedSourceLabel(sources) {
+  const normalized = [];
+  const seen = new Set();
+  const remakePairs = [
+    { base: 'Red', remake: 'FireRed', label: '(Fire)Red' },
+    { base: 'Gold', remake: 'HeartGold', label: '(Heart)Gold' },
+    { base: 'Silver', remake: 'SoulSilver', label: '(Soul)Silver' },
+    { base: 'Ruby', remake: 'Omega Ruby', label: '(Omega)Ruby' },
+    { base: 'Sapphire', remake: 'Alpha Sapphire', label: '(Alpha)Sapphire' },
+    { base: 'Diamond', remake: 'Brilliant Diamond', label: '(Brilliant)Diamond' },
+    { base: 'Pearl', remake: 'Shining Pearl', label: '(Shining)Pearl' }
+  ];
+
+  function findRemakePair(source) {
+    return remakePairs.find((pair) => pair.base === source || pair.remake === source);
+  }
+
+  for (const source of sources) {
+    if (seen.has(source)) {
+      continue;
+    }
+
+    const remakePair = findRemakePair(source);
+    if (remakePair && sources.includes(remakePair.base) && sources.includes(remakePair.remake)) {
+      normalized.push(remakePair.label);
+      seen.add(remakePair.base);
+      seen.add(remakePair.remake);
+      continue;
+    }
+
+    const sequelMatch = source.match(/^(.*) 2$/);
+    if (sequelMatch && seen.has(sequelMatch[1])) {
+      continue;
+    }
+
+    if (sequelMatch) {
+      normalized.push(source);
+      seen.add(source);
+      continue;
+    }
+
+    const sequelSource = source + ' 2';
+    if (sources.includes(sequelSource)) {
+      normalized.push(source + ' (2)');
+      seen.add(source);
+      seen.add(sequelSource);
+      continue;
+    }
+
+    normalized.push(source);
+    seen.add(source);
+  }
+
+  return normalized.join('/');
+}
+
+function buildGroupedEntries(entries) {
+  const grouped = new Map();
+  const textOrder = [];
+
+  for (const entry of entries) {
+    const textKey = normalizeTextForGrouping(entry.text);
+    if (!grouped.has(textKey)) {
+      grouped.set(textKey, []);
+      textOrder.push(textKey);
+    }
+
+    grouped.get(textKey).push(entry);
+  }
+
+  return textOrder.map((textKey) => {
+    const groupEntries = grouped.get(textKey);
+    const sources = groupEntries.map((entry) => entry.source);
+    return {
+      source: normalizeGroupedSourceLabel(sources),
+      text: chooseGroupedDisplayText(groupEntries)
+    };
+  });
 }
 
 function stripEmbeddedEntries(data) {
@@ -369,7 +474,8 @@ async function main() {
 
   for (const item of speciesResults) {
     entries[item.number] = {
-      default: item.entries
+      default: item.entries,
+      defaultGrouped: buildGroupedEntries(item.entries)
     };
     totalEntries += item.entries.length;
     if (item.entries.length === 0) {
@@ -393,7 +499,7 @@ async function main() {
 
   const payload = {
     _meta: {
-      schemaVersion: 1,
+      schemaVersion: 2,
       source: 'https://pokeapi.co/',
       generatedAt: new Date().toISOString(),
       totalPokemon: TOTAL_POKEMON,
