@@ -154,7 +154,7 @@
         ]
       },
       {
-        "label": "Mega Charizard Y",
+        "label": "Shiny Mega Charizard X",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -162,7 +162,7 @@
         ]
       },
       {
-        "label": "Shiny Mega Charizard X",
+        "label": "Mega Charizard Y",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -1422,22 +1422,6 @@
         ]
       },
       {
-        "label": "Alolan Meowth",
-        "position": "center",
-        "fit": "contain",
-        "images": [
-          "https://your-image-url-here.jpg"
-        ]
-      },
-      {
-        "label": "Galarian Meowth",
-        "position": "center",
-        "fit": "contain",
-        "images": [
-          "https://your-image-url-here.jpg"
-        ]
-      },
-      {
         "label": "Shiny Meowth",
         "position": "center",
         "fit": "contain",
@@ -1446,7 +1430,23 @@
         ]
       },
       {
+        "label": "Alolan Meowth",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ]
+      },
+      {
         "label": "Shiny Alolan Meowth",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ]
+      },
+      {
+        "label": "Galarian Meowth",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -4156,7 +4156,7 @@
         ]
       },
       {
-        "label": "Mega Mewtwo Y",
+        "label": "Shiny Mega Mewtwo X",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -4164,7 +4164,7 @@
         ]
       },
       {
-        "label": "Shiny Mega Mewtwo X",
+        "label": "Mega Mewtwo Y",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -25398,6 +25398,14 @@
         ]
       },
       {
+        "label": "Curly",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ]
+      },
+      {
         "label": "Shiny Curly",
         "position": "center",
         "fit": "contain",
@@ -25415,14 +25423,6 @@
       },
       {
         "label": "Shiny Droopy",
-        "position": "center",
-        "fit": "contain",
-        "images": [
-          "https://your-image-url-here.jpg"
-        ]
-      },
-      {
-        "label": "Curly",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -26212,7 +26212,7 @@
         ]
       },
       {
-        "label": "Shiny Dipplin",
+        "label": "Shiny Regular",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -26220,7 +26220,7 @@
         ]
       },
       {
-        "label": "Shiny Regular",
+        "label": "Shiny Dipplin",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -26318,7 +26318,7 @@
         ]
       },
       {
-        "label": "Shiny Okidogi",
+        "label": "Shiny Regular",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -26326,7 +26326,7 @@
         ]
       },
       {
-        "label": "Shiny Regular",
+        "label": "Shiny Okidogi",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -26348,7 +26348,7 @@
         ]
       },
       {
-        "label": "Shiny Munkidori",
+        "label": "Shiny Regular",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -26356,7 +26356,7 @@
         ]
       },
       {
-        "label": "Shiny Regular",
+        "label": "Shiny Munkidori",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -26378,7 +26378,7 @@
         ]
       },
       {
-        "label": "Shiny Fezandipiti",
+        "label": "Shiny Regular",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -26386,7 +26386,7 @@
         ]
       },
       {
-        "label": "Shiny Regular",
+        "label": "Shiny Fezandipiti",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -26478,7 +26478,7 @@
         ]
       },
       {
-        "label": "Shiny Archaludon",
+        "label": "Shiny Regular",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -26486,7 +26486,7 @@
         ]
       },
       {
-        "label": "Shiny Regular",
+        "label": "Shiny Archaludon",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -26508,7 +26508,7 @@
         ]
       },
       {
-        "label": "Shiny Hydrapple",
+        "label": "Shiny Regular",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -26516,7 +26516,7 @@
         ]
       },
       {
-        "label": "Shiny Regular",
+        "label": "Shiny Hydrapple",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -26538,7 +26538,7 @@
         ]
       },
       {
-        "label": "Shiny Gouging-fire",
+        "label": "Shiny Regular",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -26546,7 +26546,7 @@
         ]
       },
       {
-        "label": "Shiny Regular",
+        "label": "Shiny Gouging-fire",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -26568,7 +26568,7 @@
         ]
       },
       {
-        "label": "Shiny Raging-bolt",
+        "label": "Shiny Regular",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -26576,7 +26576,7 @@
         ]
       },
       {
-        "label": "Shiny Regular",
+        "label": "Shiny Raging-bolt",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -26598,7 +26598,7 @@
         ]
       },
       {
-        "label": "Shiny Iron-boulder",
+        "label": "Shiny Regular",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -26606,7 +26606,7 @@
         ]
       },
       {
-        "label": "Shiny Regular",
+        "label": "Shiny Iron-boulder",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -26628,7 +26628,7 @@
         ]
       },
       {
-        "label": "Shiny Iron-crown",
+        "label": "Shiny Regular",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -26636,7 +26636,7 @@
         ]
       },
       {
-        "label": "Shiny Regular",
+        "label": "Shiny Iron-crown",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -26658,7 +26658,7 @@
         ]
       },
       {
-        "label": "Shiny Terapagos",
+        "label": "Shiny Regular",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -26666,7 +26666,7 @@
         ]
       },
       {
-        "label": "Shiny Regular",
+        "label": "Shiny Terapagos",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -26688,7 +26688,7 @@
         ]
       },
       {
-        "label": "Shiny Pecharunt",
+        "label": "Shiny Regular",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -26696,7 +26696,7 @@
         ]
       },
       {
-        "label": "Shiny Regular",
+        "label": "Shiny Pecharunt",
         "position": "center",
         "fit": "contain",
         "images": [

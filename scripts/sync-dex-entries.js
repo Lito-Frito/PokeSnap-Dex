@@ -204,6 +204,115 @@ function stripEmbeddedEntries(data) {
   return removedCount;
 }
 
+function isShinyLabel(label) {
+  return /^Shiny\b/.test(label || '');
+}
+
+function baseVariantLabel(label) {
+  return (label || '').replace(/^Shiny\s+/, '').trim();
+}
+
+function isMegaLabel(label) {
+  return /\bMega\b/.test(baseVariantLabel(label));
+}
+
+function reorderVariantsForPokemon(pokemon) {
+  const variants = pokemon.variants || [];
+  if (variants.length <= 1) {
+    return false;
+  }
+
+  const nonShinyLabels = new Set(
+    variants
+      .filter((variant) => !isShinyLabel(variant.label))
+      .map((variant) => (variant.label || '').trim())
+  );
+
+  function getGroupKey(variant) {
+    const label = (variant.label || '').trim();
+    if (!isShinyLabel(label)) {
+      return label;
+    }
+
+    const shinyBase = baseVariantLabel(label);
+    if (nonShinyLabels.has(shinyBase)) {
+      return shinyBase;
+    }
+
+    if (nonShinyLabels.has('Regular')) {
+      return 'Regular';
+    }
+
+    return shinyBase;
+  }
+
+  const grouped = new Map();
+  const groupOrder = [];
+  for (const variant of variants) {
+    const baseLabel = getGroupKey(variant);
+    if (!grouped.has(baseLabel)) {
+      grouped.set(baseLabel, []);
+      groupOrder.push(baseLabel);
+    }
+    grouped.get(baseLabel).push(variant);
+  }
+
+  const name = pokemon.name || '';
+  const baseGroups = [];
+  const nonMegaGroups = [];
+  const megaGroups = [];
+
+  for (const label of groupOrder) {
+    if (label === name || label === 'Regular') {
+      baseGroups.push(label);
+    } else if (isMegaLabel(label)) {
+      megaGroups.push(label);
+    } else {
+      nonMegaGroups.push(label);
+    }
+  }
+
+  const orderedGroups = baseGroups.concat(nonMegaGroups, megaGroups);
+  const reordered = [];
+
+  for (const groupLabel of orderedGroups) {
+    const groupVariants = grouped.get(groupLabel) || [];
+    const normal = groupVariants.filter((item) => !isShinyLabel(item.label));
+    const shiny = groupVariants
+      .filter((item) => isShinyLabel(item.label))
+      .sort((a, b) => {
+        const aLabel = (a.label || '').trim();
+        const bLabel = (b.label || '').trim();
+        const preferred = 'Shiny ' + groupLabel;
+        const aPreferred = aLabel === preferred ? 0 : 1;
+        const bPreferred = bLabel === preferred ? 0 : 1;
+        return aPreferred - bPreferred;
+      });
+    reordered.push(...normal, ...shiny);
+  }
+
+  const before = variants.map((item) => item.label || '').join('|');
+  const after = reordered.map((item) => item.label || '').join('|');
+  if (before !== after) {
+    pokemon.variants = reordered;
+    return true;
+  }
+
+  return false;
+}
+
+function reorderAllPokemonVariants(data) {
+  let changedCount = 0;
+
+  for (const number of Object.keys(data)) {
+    if (reorderVariantsForPokemon(data[number])) {
+      changedCount += 1;
+    }
+  }
+
+  return changedCount;
+}
+
 async function mapWithConcurrency(items, worker, concurrency) {
   const result = new Array(items.length);
   let cursor = 0;
@@ -231,6 +340,7 @@ async function mapWithConcurrency(items, worker, concurrency) {
 async function main() {
   const data = readJson(DATA_FILE);
   const removedCount = stripEmbeddedEntries(data);
+  const reorderedCount = reorderAllPokemonVariants(data);
 
   const numbers = [];
   for (let i = 1; i <= TOTAL_POKEMON; i += 1) {
@@ -319,6 +429,7 @@ async function main() {
 
   console.log('Done.');
   console.log('- Removed embedded variant entries from data.json:', removedCount);
+  console.log('- Reordered variant lists in data.json:', reorderedCount);
   console.log('- Wrote', OUTPUT_FILE, 'with', totalEntries, 'entries across', TOTAL_POKEMON, 'Pokemon');
   console.log('- Species with no English entries:', emptyCount);
 }
