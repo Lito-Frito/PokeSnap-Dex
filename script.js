@@ -90,6 +90,7 @@ const gallery = document.getElementById('gallery');
 const galleryImage = document.getElementById('gallery-image');
 const galleryName = document.getElementById('gallery-name');
 const dexEntry = document.getElementById('dex-entry');
+const dexEntryScrollHint = document.getElementById('dex-entry-scroll-hint');
 const prevButton = document.getElementById('prev-variant');
 const nextButton = document.getElementById('next-variant');
 const prevDescriptionButton = document.getElementById('prev-description');
@@ -101,22 +102,46 @@ let currentImageIndex = 0;
 let currentEntryIndex = 0;
 let showAll = false;
 
+function updateDexEntryScrollHint() {
+    if (!dexEntryScrollHint) return;
+
+    const hasOverflow = dexEntry.scrollHeight > dexEntry.clientHeight + 1;
+    dexEntryScrollHint.classList.toggle('visible', hasOverflow);
+}
+
 // Function to update the Dex entry display with styling
 function updateDexEntry() {
     if (currentEntry && pokedexData[currentEntry]) {
         const imgObj = pokedexData[currentEntry].allImages[currentImageIndex];
         const entries = imgObj.entries;
+        dexEntry.innerHTML = '';
+
         if (entries && entries.length > 0) {
             const entryText = entries[currentEntryIndex];
+            const entryLayout = document.createElement('div');
+            entryLayout.className = 'dex-entry-layout';
+            const sourceColumn = document.createElement('div');
+            sourceColumn.className = 'dex-entry-source';
+            const descriptionColumn = document.createElement('div');
+            descriptionColumn.className = 'dex-entry-description';
+
             if (entryText.includes(' - ')) {
                 const [game, desc] = entryText.split(' - ', 2);
-                dexEntry.innerHTML = `<p class="dex-entry-text"><strong><em>${game}</em></strong> - ${desc}</p>`;
+                sourceColumn.textContent = game;
+                descriptionColumn.textContent = desc;
             } else {
-                dexEntry.innerHTML = `<p class="dex-entry-text">${entryText}</p>`;
+                sourceColumn.textContent = 'Entry';
+                descriptionColumn.textContent = entryText;
             }
+
+            entryLayout.appendChild(sourceColumn);
+            entryLayout.appendChild(descriptionColumn);
+            dexEntry.appendChild(entryLayout);
         } else {
             dexEntry.innerHTML = '';
         }
+
+        requestAnimationFrame(updateDexEntryScrollHint);
     }
 }
 
@@ -326,27 +351,8 @@ function updateGalleryImage() {
         if (imageSrc === "https://your-image-url-here.jpg") {
             imageSrc = "https://i.imgur.com/m3idMCk.png";
         }
-        galleryImage.onload = () => {
-            const naturalWidth = galleryImage.naturalWidth;
-            const naturalHeight = galleryImage.naturalHeight;
-            const container = document.getElementById('dex-container');
-            const containerWidth = container.clientWidth - 40; // account for padding
-            const containerHeight = container.clientHeight - 40;
-            const reservedHeight = 200; // space for name, dex-entry, buttons
-            const availableHeight = containerHeight - reservedHeight;
-            const scale = Math.min(containerWidth / naturalWidth, availableHeight / naturalHeight);
-            if (scale < 1) {
-                galleryImage.style.width = (naturalWidth * scale) + 'px';
-                galleryImage.style.height = (naturalHeight * scale) + 'px';
-            } else {
-                galleryImage.style.width = naturalWidth + 'px';
-                galleryImage.style.height = naturalHeight + 'px';
-            }
-            galleryImage.style.maxWidth = containerWidth + 'px';
-            galleryImage.style.maxHeight = availableHeight + 'px';
-            galleryImage.style.objectFit = 'contain';
-            galleryImage.style.backgroundColor = '#000';
-        };
+        galleryImage.style.objectFit = 'contain';
+        galleryImage.style.backgroundColor = '#000';
         galleryImage.src = imageSrc;
         const baseName = pokedexData[currentEntry].name;
         const label = imgObj.label;
@@ -368,9 +374,6 @@ function updateGalleryImage() {
         const maxIndex = newEntries && newEntries.length > 0 ? newEntries.length - 1 : 0;
         currentEntryIndex = Math.min(currentEntryIndex, maxIndex);
         updateDexEntry();
-        // Set dex entry width to fit container
-        const container = document.getElementById('dex-container');
-        dexEntry.style.maxWidth = (container.clientWidth - 80) + 'px';
         const prevButton = document.getElementById('prev-variant');
         const nextButton = document.getElementById('next-variant');
         const isSingleImage = pokedexData[currentEntry].allImages.length <= 1;
@@ -413,6 +416,12 @@ nextDescriptionButton.addEventListener('click', () => {
             currentEntryIndex = (currentEntryIndex + 1) % entries.length;
             updateDexEntry();
         }
+    }
+});
+
+window.addEventListener('resize', () => {
+    if (!gallery.classList.contains('hidden')) {
+        updateDexEntryScrollHint();
     }
 });
 
