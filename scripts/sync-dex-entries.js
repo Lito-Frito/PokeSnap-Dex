@@ -13,6 +13,7 @@ function readJson(path) {
   return JSON.parse(fs.readFileSync(path, 'utf8'));
 }
 
+
 function writeJson(path, payload) {
   fs.writeFileSync(path, JSON.stringify(payload, null, 2) + '\n', 'utf8');
 }
@@ -477,6 +478,7 @@ async function main() {
       default: item.entries,
       defaultGrouped: buildGroupedEntries(item.entries)
     };
+
     totalEntries += item.entries.length;
     if (item.entries.length === 0) {
       emptyCount += 1;

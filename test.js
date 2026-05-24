@@ -326,6 +326,20 @@ function testNoEmbeddedEntriesInDataJson() {
 function testEntriesFileIntegrity() {
   const payload = loadEntriesData();
 
+  function assertEntryArray(items, errorMessage) {
+    if (!Array.isArray(items)) {
+      console.log(errorMessage);
+      process.exit(1);
+    }
+
+    for (const item of items) {
+      if (!item || typeof item.source !== 'string' || typeof item.text !== 'string') {
+        console.log(errorMessage.replace('array', 'item format'));
+        process.exit(1);
+      }
+    }
+  }
+
   if (!payload || typeof payload !== 'object') {
     console.log('✗ data-entries.json payload is invalid');
     process.exit(1);
@@ -356,22 +370,24 @@ function testEntriesFileIntegrity() {
       process.exit(1);
     }
 
-    if (!Array.isArray(speciesEntries.defaultGrouped)) {
-      console.log(`✗ data-entries.json ${key} missing defaultGrouped entry array`);
-      process.exit(1);
-    }
+    assertEntryArray(speciesEntries.default, `✗ data-entries.json ${key} has invalid entry array`);
+    assertEntryArray(speciesEntries.defaultGrouped, `✗ data-entries.json ${key} has invalid defaultGrouped entry array`);
 
-    for (const item of speciesEntries.default) {
-      if (!item || typeof item.source !== 'string' || typeof item.text !== 'string') {
-        console.log(`✗ data-entries.json ${key} has invalid entry item format`);
-        process.exit(1);
+    if (speciesEntries.variants) {
+      for (const variantLabel of Object.keys(speciesEntries.variants)) {
+        assertEntryArray(
+          speciesEntries.variants[variantLabel],
+          `✗ data-entries.json ${key} has invalid variants entry array for ${variantLabel}`
+        );
       }
     }
 
-    for (const item of speciesEntries.defaultGrouped) {
-      if (!item || typeof item.source !== 'string' || typeof item.text !== 'string') {
-        console.log(`✗ data-entries.json ${key} has invalid grouped entry item format`);
-        process.exit(1);
+    if (speciesEntries.variantsGrouped) {
+      for (const variantLabel of Object.keys(speciesEntries.variantsGrouped)) {
+        assertEntryArray(
+          speciesEntries.variantsGrouped[variantLabel],
+          `✗ data-entries.json ${key} has invalid variantsGrouped entry array for ${variantLabel}`
+        );
       }
     }
   }
