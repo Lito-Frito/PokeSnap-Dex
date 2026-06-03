@@ -123,9 +123,10 @@ function getEntriesForVariant(number, variantLabel) {
 async function loadData() {
   console.log('Starting to load data...');
   try {
-        const [response, entriesResponse] = await Promise.all([
+        const [response, entriesResponse, overridesResponse] = await Promise.all([
             fetch('data.json'),
-            fetch('data-entries.json')
+            fetch('data-entries.json'),
+            fetch('data-entries-overrides.json').catch(() => null)
         ]);
         console.log('Fetch response:', response);
         pokedexData = await response.json();
@@ -135,6 +136,26 @@ async function loadData() {
         } else {
             dexEntriesByNumber = {};
             console.warn('Could not load data-entries.json, continuing with empty entries.');
+        }
+        if (overridesResponse && overridesResponse.ok) {
+            const overridesPayload = await overridesResponse.json();
+            const overrideEntries = overridesPayload.entries || {};
+            for (const num in overrideEntries) {
+                if (!dexEntriesByNumber[num]) {
+                    dexEntriesByNumber[num] = {};
+                }
+                const src = overrideEntries[num];
+                if (src.variants) {
+                    dexEntriesByNumber[num].variants = Object.assign(
+                        {}, dexEntriesByNumber[num].variants || {}, src.variants
+                    );
+                }
+                if (src.variantsGrouped) {
+                    dexEntriesByNumber[num].variantsGrouped = Object.assign(
+                        {}, dexEntriesByNumber[num].variantsGrouped || {}, src.variantsGrouped
+                    );
+                }
+            }
         }
     console.log('Data loaded:', Object.keys(pokedexData).length, 'entries');
     // Create flattened allImages for each entry
