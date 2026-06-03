@@ -434,6 +434,40 @@ header p {
     opacity: 1;
 }
 
+.dex-entry-locked {
+    color: #9ca3af;
+    font-style: italic;
+    text-align: center;
+    padding: 6px 0;
+}
+
+#spoiler-toggle {
+    background-color: #374151;
+    border: 2px solid #4b5563;
+    border-radius: 5px;
+    color: #d1d5db;
+    font-size: 0.8em;
+    padding: 4px 14px;
+    cursor: pointer;
+    margin: 2px 0 6px;
+    font-weight: normal;
+    align-self: center;
+}
+
+#spoiler-toggle:hover {
+    background-color: #4b5563;
+}
+
+#spoiler-toggle.spoilers-active {
+    background-color: #92400e;
+    border-color: #b45309;
+    color: #fde68a;
+}
+
+#spoiler-toggle.spoilers-active:hover {
+    background-color: #b45309;
+}
+
 .gallery-buttons {
     display: grid;
     grid-template-columns: auto var(--gallery-center-gap, 12px) auto;

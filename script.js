@@ -197,6 +197,11 @@ let currentEntry = null;
 let currentImageIndex = 0;
 let currentEntryIndex = 0;
 let showAll = false;
+let showSpoilers = localStorage.getItem('showSpoilers') === 'true';
+
+function isPlaceholderImage(url) {
+    return url === 'https://your-image-url-here.jpg';
+}
 
 function updateDexEntryScrollHint() {
     if (!dexEntryScrollHint) return;
@@ -210,9 +215,27 @@ function updateDexEntry() {
     if (currentEntry && pokedexData[currentEntry]) {
         const imgObj = pokedexData[currentEntry].allImages[currentImageIndex];
         const entries = imgObj.entries;
+        const locked = isPlaceholderImage(imgObj.image) && !showSpoilers;
+
         dexEntry.innerHTML = '';
 
-        if (entries && entries.length > 0) {
+        // Sync spoiler button state
+        const spoilerToggle = document.getElementById('spoiler-toggle');
+        if (spoilerToggle) {
+            spoilerToggle.textContent = showSpoilers ? 'Hide Spoilers' : 'Show Spoilers';
+            spoilerToggle.classList.toggle('spoilers-active', showSpoilers);
+        }
+
+        // Disable entry navigation when locked
+        prevDescriptionButton.disabled = locked || !entries || entries.length === 0;
+        nextDescriptionButton.disabled = locked || !entries || entries.length === 0;
+
+        if (locked) {
+            const lockedMsg = document.createElement('div');
+            lockedMsg.className = 'dex-entry-locked';
+            lockedMsg.textContent = 'Entry locked until captured.';
+            dexEntry.appendChild(lockedMsg);
+        } else if (entries && entries.length > 0) {
             const entryData = normalizeEntryItem(entries[currentEntryIndex]);
             const entryLayout = document.createElement('div');
             entryLayout.className = 'dex-entry-layout';
@@ -227,8 +250,6 @@ function updateDexEntry() {
             entryLayout.appendChild(sourceColumn);
             entryLayout.appendChild(descriptionColumn);
             dexEntry.appendChild(entryLayout);
-        } else {
-            dexEntry.innerHTML = '';
         }
 
         requestAnimationFrame(updateDexEntryScrollHint);
@@ -535,6 +556,12 @@ window.addEventListener('resize', () => {
 
 closeButton.addEventListener('click', () => {
     closeGalleryModal();
+});
+
+document.getElementById('spoiler-toggle').addEventListener('click', () => {
+    showSpoilers = !showSpoilers;
+    localStorage.setItem('showSpoilers', showSpoilers);
+    updateDexEntry();
 });
 
 gallery.addEventListener('click', (event) => {
