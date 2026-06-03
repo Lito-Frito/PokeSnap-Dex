@@ -1,0 +1,18 @@
+{
+  "_meta": {
+    "description": "Hand-curated form-specific Pokédex entries for forms not exposed by PokeAPI (e.g. Mega Evolutions). Only 'variants' and 'variantsGrouped' keys are used — 'default'/'defaultGrouped' are reserved for data-entries.json. Do not add species-level entries here.",
+    "schema": "overrides-v1"
+  },
+  "entries": {
+    "006": {
+      "variantsGrouped": {
+        "Mega Charizard X": [
+          {
+            "source": "X/(Omega)Ruby/(Alpha)Sapphire",
+            "text": "The overwhelming power that fills its entire body causes it to turn black and create intense blue flames."
+          }
+        ]
+      }
+    }
+  }
+}
