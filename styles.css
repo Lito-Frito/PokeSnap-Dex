@@ -441,6 +441,14 @@ header p {
     padding: 6px 0;
 }
 
+#dex-entry-footer {
+    width: 100%;
+    max-width: 560px;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 2px;
+}
+
 #spoiler-toggle {
     background-color: #374151;
     border: 2px solid #4b5563;
@@ -449,9 +457,8 @@ header p {
     font-size: 0.8em;
     padding: 4px 14px;
     cursor: pointer;
-    margin: 2px 0 6px;
+    margin: 0;
     font-weight: normal;
-    align-self: center;
 }
 
 #spoiler-toggle:hover {
