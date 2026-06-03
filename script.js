@@ -197,7 +197,7 @@ let currentEntry = null;
 let currentImageIndex = 0;
 let currentEntryIndex = 0;
 let showAll = false;
-let showSpoilers = localStorage.getItem('showSpoilers') === 'true';
+let showSpoilers = false;
 
 function isPlaceholderImage(url) {
     return url === 'https://your-image-url-here.jpg';
@@ -449,6 +449,7 @@ function openGallery(number, imgIndex) {
     currentEntry = number;
     currentImageIndex = imgIndex;
     currentEntryIndex = 0;
+    showSpoilers = false;
     document.body.classList.add('gallery-open');
     updateGalleryImage();
     gallery.classList.remove('hidden');
@@ -560,7 +561,6 @@ closeButton.addEventListener('click', () => {
 
 document.getElementById('spoiler-toggle').addEventListener('click', () => {
     showSpoilers = !showSpoilers;
-    localStorage.setItem('showSpoilers', showSpoilers);
     updateDexEntry();
 });
 
