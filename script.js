@@ -324,20 +324,15 @@ themeToggle.addEventListener('click', () => {
 // Set initial toggle text
 themeToggle.textContent = 'Toggle';
 
-// Search functionality
-searchInput.addEventListener('input', (e) => {
-    const query = e.target.value.toLowerCase();
-    const entries = dexContainer.querySelectorAll('.entry');
-    let visibleCount = 0;
-    entries.forEach(entry => {
-        const name = entry.dataset.name.toLowerCase();
-        if (name.includes(query)) {
-            entry.style.display = '';
-            visibleCount++;
-        } else {
-            entry.style.display = 'none';
-        }
-    });
+function parseSearchTerms(query) {
+    return query
+        .toLowerCase()
+        .split(',')
+        .map(term => term.trim())
+        .filter(Boolean);
+}
+
+function updateDexLayoutForVisibleCount(visibleCount) {
     if (visibleCount <= 2) {
         dexContainer.classList.add('flex-layout');
         dexContainer.classList.remove('grid-layout');
@@ -345,7 +340,30 @@ searchInput.addEventListener('input', (e) => {
         dexContainer.classList.add('grid-layout');
         dexContainer.classList.remove('flex-layout');
     }
-});
+}
+
+function applySearchFilter() {
+    const searchTerms = parseSearchTerms(searchInput.value);
+    const entries = dexContainer.querySelectorAll('.entry');
+    let visibleCount = 0;
+
+    entries.forEach(entry => {
+        const name = entry.dataset.name.toLowerCase();
+        const matchesSearch = searchTerms.length === 0 || searchTerms.some(term => name.includes(term));
+
+        if (matchesSearch) {
+            entry.style.display = '';
+            visibleCount++;
+        } else {
+            entry.style.display = 'none';
+        }
+    });
+
+    updateDexLayoutForVisibleCount(visibleCount);
+}
+
+// Search functionality
+searchInput.addEventListener('input', applySearchFilter);
 
 // Captured modal
 capturedCountBtn.addEventListener('click', () => {
