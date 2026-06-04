@@ -165,7 +165,24 @@ header p {
     font-size: 0.9em;
 }
 
+#capture-filter {
+    padding: 6px;
+    margin: 0;
+    width: 150px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.9em;
+    background-color: white;
+    color: #111;
+}
+
 .dark-mode #search-input {
+    background-color: #555;
+    color: white;
+    border-color: #777;
+}
+
+.dark-mode #capture-filter {
     background-color: #555;
     color: white;
     border-color: #777;
@@ -754,6 +771,14 @@ button {
         font-size: clamp(0.80rem, 2.5vw, 0.9rem);
         width: 100%;
         order: 3;
+    }
+
+    #capture-filter {
+        padding: 6px 8px;
+        flex-basis: 100%;
+        font-size: clamp(0.80rem, 2.5vw, 0.9rem);
+        width: 100%;
+        order: 4;
     }
 
     #theme-toggle {
