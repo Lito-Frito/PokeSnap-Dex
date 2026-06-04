@@ -280,6 +280,7 @@ function updateDexEntry() {
 // Theme toggle with persistence
 const themeToggle = document.getElementById('theme-toggle');
 const searchInput = document.getElementById('search-input');
+const captureFilter = document.getElementById('capture-filter');
 const capturedCountBtn = document.getElementById('captured-count');
 const capturedModal = document.getElementById('captured-modal');
 const capturedList = document.getElementById('captured-list');
@@ -324,20 +325,15 @@ themeToggle.addEventListener('click', () => {
 // Set initial toggle text
 themeToggle.textContent = 'Toggle';
 
-// Search functionality
-searchInput.addEventListener('input', (e) => {
-    const query = e.target.value.toLowerCase();
-    const entries = dexContainer.querySelectorAll('.entry');
-    let visibleCount = 0;
-    entries.forEach(entry => {
-        const name = entry.dataset.name.toLowerCase();
-        if (name.includes(query)) {
-            entry.style.display = '';
-            visibleCount++;
-        } else {
-            entry.style.display = 'none';
-        }
-    });
+function parseSearchTerms(query) {
+    return query
+        .toLowerCase()
+        .split(',')
+        .map(term => term.trim())
+        .filter(Boolean);
+}
+
+function updateDexLayoutForVisibleCount(visibleCount) {
     if (visibleCount <= 2) {
         dexContainer.classList.add('flex-layout');
         dexContainer.classList.remove('grid-layout');
@@ -345,7 +341,45 @@ searchInput.addEventListener('input', (e) => {
         dexContainer.classList.add('grid-layout');
         dexContainer.classList.remove('flex-layout');
     }
-});
+}
+
+function matchesCaptureFilter(entry, filterValue) {
+    if (filterValue === 'caught') {
+        return entry.dataset.caught === 'true';
+    }
+
+    if (filterValue === 'uncaught') {
+        return entry.dataset.caught === 'false';
+    }
+
+    return true;
+}
+
+function applyDexFilters() {
+    const searchTerms = parseSearchTerms(searchInput.value);
+    const filterValue = captureFilter.value;
+    const entries = dexContainer.querySelectorAll('.entry');
+    let visibleCount = 0;
+
+    entries.forEach(entry => {
+        const name = entry.dataset.name.toLowerCase();
+        const matchesSearch = searchTerms.length === 0 || searchTerms.some(term => name.includes(term));
+        const matchesStatus = matchesCaptureFilter(entry, filterValue);
+
+        if (matchesSearch && matchesStatus) {
+            entry.style.display = '';
+            visibleCount++;
+        } else {
+            entry.style.display = 'none';
+        }
+    });
+
+    updateDexLayoutForVisibleCount(visibleCount);
+}
+
+// Search functionality
+searchInput.addEventListener('input', applyDexFilters);
+captureFilter.addEventListener('change', applyDexFilters);
 
 // Captured modal
 capturedCountBtn.addEventListener('click', () => {
@@ -419,9 +453,11 @@ function renderDex() {
         const number = i.toString().padStart(3, '0');
         const entryData = pokedexData[number];
         const entryDiv = document.createElement('div');
+        const isCaught = entryData.allImages.some(imgObj => imgObj.image && !isPlaceholderImage(imgObj.image));
         entryDiv.className = 'entry';
         entryDiv.dataset.number = number;
         entryDiv.dataset.name = entryData.name;
+        entryDiv.dataset.caught = String(isCaught);
 
         const firstRealImageIndex = entryData.allImages.findIndex(imgObj => imgObj.image && imgObj.image !== "https://your-image-url-here.jpg");
         if (entryData && firstRealImageIndex !== -1) {
@@ -462,6 +498,7 @@ function renderDex() {
 
         dexContainer.appendChild(entryDiv);
     }
+    applyDexFilters();
     console.log('Dex rendered, total entries:', dexContainer.children.length);
 }
 
