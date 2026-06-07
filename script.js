@@ -326,11 +326,58 @@ themeToggle.addEventListener('click', () => {
 themeToggle.textContent = 'Toggle';
 
 function parseSearchTerms(query) {
-    return query
-        .toLowerCase()
-        .split(',')
-        .map(term => term.trim())
-        .filter(Boolean);
+    if (!query || typeof query !== 'string') {
+        return { terms: [], globalShiny: false, globalOnlyShiny: false };
+    }
+
+    const raw = query.trim();
+
+    // Bare 'Shiny' -> global-only behavior (show captured shinies)
+    if (/^shiny$/i.test(raw)) {
+        return { terms: [], globalShiny: true, globalOnlyShiny: true };
+    }
+
+    let q = raw;
+    let globalShiny = false;
+    // Leading 'Shiny &' or 'Shiny and' applies to all following names
+    if (/^shiny\s*(?:&|and)(?=\s|$)/i.test(q)) {
+        globalShiny = true;
+        q = q.replace(/^shiny\s*(?:&|and)(?=\s|$)\s*/i, '');
+    }
+
+    const parts = q.split(/\s*,\s*/).filter(Boolean);
+    const terms = [];
+
+    parts.forEach(part => {
+        // allow multiple names joined by '&' inside a part
+        part.split(/\s*&\s*/).forEach(sub => {
+            let s = sub.trim();
+            if (!s) return;
+            let shiny = false;
+            let excludeShiny = false;
+
+            if (/^(not\s+shiny|non[- ]?shiny)\b/i.test(s)) {
+                excludeShiny = true;
+                s = s.replace(/^(not\s+shiny|non[- ]?shiny)\b\s*/i, '').trim();
+            }
+
+            if (/^shiny\b/i.test(s)) {
+                shiny = true;
+                s = s.replace(/^shiny\b\s*/i, '').trim();
+            }
+
+            if (!s) return;
+
+            // If leader was 'Shiny &' (global), apply to terms without explicit shiny/exclude
+            if (globalShiny && !shiny && !excludeShiny) {
+                shiny = true;
+            }
+
+            terms.push({ term: s.toLowerCase(), shiny, excludeShiny });
+        });
+    });
+
+    return { terms, globalShiny, globalOnlyShiny: false };
 }
 
 function updateDexLayoutForVisibleCount(visibleCount) {
@@ -356,17 +403,111 @@ function matchesCaptureFilter(entry, filterValue) {
 }
 
 function applyDexFilters() {
-    const searchTerms = parseSearchTerms(searchInput.value);
+    const parsed = parseSearchTerms(searchInput.value);
+    const terms = parsed.terms || [];
+    const globalShiny = !!parsed.globalShiny;
+    const globalOnlyShiny = !!parsed.globalOnlyShiny;
     const filterValue = captureFilter.value;
     const entries = dexContainer.querySelectorAll('.entry');
     let visibleCount = 0;
 
     entries.forEach(entry => {
-        const name = entry.dataset.name.toLowerCase();
-        const matchesSearch = searchTerms.length === 0 || searchTerms.some(term => name.includes(term));
-        const matchesStatus = matchesCaptureFilter(entry, filterValue);
+        const number = entry.dataset.number;
+        const name = (entry.dataset.name || '').toLowerCase();
+        const entryData = pokedexData[number] || { allImages: [] };
+        const labels = (entryData.allImages || []).map(i => (i.label || '').toLowerCase());
 
-        if (matchesSearch && matchesStatus) {
+        const isCaught = entry.dataset.caught === 'true';
+        const hasShinyVariant = (entryData.allImages || []).some(i => /^Shiny\b/i.test(i.label || '') && i.image && !isPlaceholderImage(i.image));
+        const hasCapturedShiny = (entryData.allImages || []).some(i => /^Shiny\b/i.test(i.label || '') && i.image && !isPlaceholderImage(i.image));
+
+        const imgEl = entry.querySelector('img');
+
+        // Case: bare 'Shiny' -> show captured shiny entries only
+        if (globalOnlyShiny) {
+            if (hasCapturedShiny) {
+                // prefer shiny image
+                if (hasShinyVariant && imgEl) {
+                    const shinyImgObj = (entryData.allImages || []).find(i => /^Shiny\b/i.test(i.label || '') && i.image && !isPlaceholderImage(i.image));
+                    if (shinyImgObj) {
+                        if (!imgEl.dataset.originalSrc) imgEl.dataset.originalSrc = imgEl.dataset.src || imgEl.src || '';
+                        if (imgEl.src) imgEl.src = shinyImgObj.image; else imgEl.dataset.src = shinyImgObj.image;
+                        imgEl.alt = (shinyImgObj.label || entry.dataset.name || '').replace(/-/g, ' ');
+                    }
+                }
+                entry.style.display = '';
+                visibleCount++;
+            } else {
+                entry.style.display = 'none';
+            }
+            return;
+        }
+
+        // No specific search terms -> fallback to capture filter
+        if (terms.length === 0) {
+            const matchesStatus = matchesCaptureFilter(entry, filterValue);
+            if (matchesStatus) {
+                // restore original if needed
+                if (imgEl && imgEl.dataset.originalSrc) {
+                    const orig = imgEl.dataset.originalSrc;
+                    if (orig) { if (imgEl.src) imgEl.src = orig; else imgEl.dataset.src = orig; }
+                }
+                entry.style.display = '';
+                visibleCount++;
+            } else {
+                entry.style.display = 'none';
+            }
+            return;
+        }
+
+        // Per-term matching: entry is shown if any term matches and its status/constraints pass
+        let matched = false;
+        let preferShinyDisplay = false;
+
+        for (const t of terms) {
+            const term = (t.term || '').toLowerCase();
+            if (!term) continue;
+
+            const termShiny = !!t.shiny;
+            const termExclude = !!t.excludeShiny;
+
+            const nameMatches = name.includes(term) || labels.some(l => l.includes(term));
+            if (!nameMatches) continue;
+
+            if (termShiny && !hasShinyVariant) continue;
+            if (termExclude) {
+                const hasNonShiny = (entryData.allImages || []).some(i => !/^Shiny\b/i.test(i.label || '') && i.image && !isPlaceholderImage(i.image));
+                if (!hasNonShiny) continue;
+            }
+
+            // Apply capture filter per-term
+            let statusOk = true;
+            if (filterValue === 'caught') {
+                statusOk = termShiny ? hasCapturedShiny : isCaught;
+            } else if (filterValue === 'uncaught') {
+                statusOk = termShiny ? !hasCapturedShiny : !isCaught;
+            }
+
+            if (!statusOk) continue;
+
+            matched = true;
+            if (termShiny) preferShinyDisplay = true;
+            break;
+        }
+
+        if (matched) {
+            if (preferShinyDisplay && hasShinyVariant && imgEl) {
+                const shinyImgObj = (entryData.allImages || []).find(i => /^Shiny\b/i.test(i.label || '') && i.image && !isPlaceholderImage(i.image));
+                if (shinyImgObj) {
+                    if (!imgEl.dataset.originalSrc) imgEl.dataset.originalSrc = imgEl.dataset.src || imgEl.src || '';
+                    if (imgEl.src) imgEl.src = shinyImgObj.image; else imgEl.dataset.src = shinyImgObj.image;
+                    imgEl.alt = (shinyImgObj.label || entry.dataset.name || '').replace(/-/g, ' ');
+                }
+            } else if (imgEl && imgEl.dataset.originalSrc) {
+                const orig = imgEl.dataset.originalSrc;
+                if (orig) { if (imgEl.src) imgEl.src = orig; else imgEl.dataset.src = orig; }
+            }
+
             entry.style.display = '';
             visibleCount++;
         } else {

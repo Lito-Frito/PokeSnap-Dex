@@ -126,7 +126,14 @@ Key entry helpers:
 - `getEntriesForVariant(number, variantLabel)`: full lookup chain described above.
 
 #### Search and Filtering
-- **`search-input`**: On input, filters entries by name (case-insensitive). Hides non-matching entries. For 1–2 results, switches to centered flex layout.
+- **`search-input`**: On input, filters entries by name and variant label (case-insensitive) and hides non-matching entries.
+- Multiple entries can be retrieved with commas: `Pikachu, Gastly`.
+- Search is case-insensitive.
+- Bare `Shiny` returns all captured shiny variants and prefers shiny images in the grid.
+- `Shiny <Pokemon>` returns that specific shiny while leaving other comma terms regular.
+- `Shiny & <Pokemon1>, <Pokemon2>` or `Shiny and <Pokemon1>, <Pokemon2>` applies shiny to all listed names.
+- `Shiny <Pokemon1>, <Pokemon2>` mixes shiny and regular results: shiny for the first name, regular for the second.
+- For 1–2 results, the layout switches to centered flex.
 
 #### Theme Toggle
 - **`theme-toggle`**: Toggles `dark-mode` class on `body`. Persists in `localStorage`.
@@ -179,7 +186,10 @@ The `variants` / `variantsGrouped` schema keys are reserved in `data-entries.jso
 ## Branch Differences
 - **`main`**: Public branch with placeholder images in `data.json`. Deployed to GitHub Pages.
 - **`LitoFrito`**: Personal branch with real Imgur URLs in `data.json`.
-- See `BRANCH_NOTES.md` for merge rules (never merge `data.json` from `main` to `LitoFrito`).
+- Create fix branches from `LitoFrito` for bug fixes and feature work.
+- Merge fix branches into `LitoFrito` and push to GitHub.
+- Cherry-pick UI/docs-only changes from `LitoFrito` into `main`; never merge `data.json` from `main` into `LitoFrito`.
+- See `BRANCH_NOTES.md` for merge rules.
 - Remote is named `origin`.
 
 ## Common Tasks
