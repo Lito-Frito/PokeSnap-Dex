@@ -13,6 +13,15 @@ Gotta snap 'em all! A simple, static Pokédex for displaying your Pokémon photo
 - Dark/light theme toggle
 - Capture count tracking
 
+## Search Syntax
+
+- Search is case-insensitive.
+- Use commas to search multiple entries: `Pikachu, Gastly`.
+- Search `Shiny` alone to show all captured shiny variants.
+- Search `Shiny <Pokemon>` to return that specific shiny variant.
+- Use `Shiny &` or `Shiny and` to request shinies for all listed Pokémon: `Shiny & Pikachu, Gastly, Combee`.
+- Mix shiny and regular results with commas: `Shiny Pikachu, Meowth` returns shiny Pikachu and regular Meowth.
+
 ## Quick Start
 
 ### Option 1: Host Locally (Easiest for Testing)
