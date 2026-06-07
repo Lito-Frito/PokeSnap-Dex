@@ -186,7 +186,10 @@ The `variants` / `variantsGrouped` schema keys are reserved in `data-entries.jso
 ## Branch Differences
 - **`main`**: Public branch with placeholder images in `data.json`. Deployed to GitHub Pages.
 - **`LitoFrito`**: Personal branch with real Imgur URLs in `data.json`.
-- See `BRANCH_NOTES.md` for merge rules (never merge `data.json` from `main` to `LitoFrito`).
+- Create fix branches from `LitoFrito` for bug fixes and feature work.
+- Merge fix branches into `LitoFrito` and push to GitHub.
+- Cherry-pick UI/docs-only changes from `LitoFrito` into `main`; never merge `data.json` from `main` into `LitoFrito`.
+- See `BRANCH_NOTES.md` for merge rules.
 - Remote is named `origin`.
 
 ## Common Tasks
