@@ -158,8 +158,13 @@ function normalizeSource(versionName) {
 }
 
 function normalizeEntryText(text) {
-  return text
+  return String(text || '')
+    .replace(/[\u00AD\u200B\u200C\u200D\u2060]+\s*/g, '')
     .replace(/[\n\f\r\t]+/g, ' ')
+    .replace(/\s*-\s*/g, '-')
+    .replace(/\b([A-Z\u00C0-\u017F]{3,})\b/g, (word) => {
+      return word.charAt(0) + word.slice(1).toLowerCase();
+    })
     .replace(/\s+/g, ' ')
     .trim();
 }

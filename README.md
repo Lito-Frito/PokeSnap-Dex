@@ -15,7 +15,7 @@ Gotta snap 'em all! A simple, static Pokédex for displaying your Pokémon photo
 
 ## Search Syntax
 
-- Search is case-insensitive.
+- Search is not case-sensitive.
 - Use commas to search multiple entries: `Pikachu, Gastly`.
 - Search `Shiny` alone to show all captured shiny variants.
 - Search `Shiny <Pokemon>` to return that specific shiny variant.
