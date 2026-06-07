@@ -196,11 +196,12 @@ The `variants` / `variantsGrouped` schema keys are reserved in `data-entries.jso
 - **Serve locally**: `python3 -m http.server 8000`.
 - **Deploy**: Push to GitHub, enable Pages on the desired branch.
 - **Propagate UI changes** from LitoFrito to main: cherry-pick or diff-apply non-data files only; never touch `data.json` on main.
-
+ 
 ## Notes for AI
 - Use `fetch` for data loading (no libraries).
 - Gallery uses DOM manipulation for modal (no frameworks).
 - Positioning (`left`, `right`) crops images for variants (e.g., Gastly shares image).
+- Use atomic commits for issue fixes and include a note in the commit message that the issue is being closed (for example: `closes #55`).
 - Avoid upscaling images in gallery to prevent pixelation.
 - For changes, update both branches if UI-related, but keep `data.json` separate.
 - `data-entries.json` is in `.gitignore` on `main` (placeholder branch has no entries). It is committed on `LitoFrito`.
