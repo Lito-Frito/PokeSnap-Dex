@@ -25434,7 +25434,7 @@
         ]
       },
       {
-        "label": "Mega Tatsugiri",
+        "label": "Mega Tatsugiri (Curly Form)",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -25442,7 +25442,39 @@
         ]
       },
       {
-        "label": "Shiny Mega Tatsugiri",
+        "label": "Shiny Mega Tatsugiri (Curly Form)",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ]
+      },
+      {
+        "label": "Mega Tatsugiri (Droopy Form)",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ]
+      },
+      {
+        "label": "Shiny Mega Tatsugiri (Droopy Form)",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ]
+      },
+      {
+        "label": "Mega Tatsugiri (Stretchy Form)",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ]
+      },
+      {
+        "label": "Shiny Mega Tatsugiri (Stretchy Form)",
         "position": "center",
         "fit": "contain",
         "images": [
