@@ -186,8 +186,17 @@ The `variants` / `variantsGrouped` schema keys are reserved in `data-entries.jso
 ## Branch Differences
 - **`main`**: Public branch with placeholder images in `data.json`. Deployed to GitHub Pages.
 - **`LitoFrito`**: Personal branch with real Imgur URLs in `data.json`.
-- See `BRANCH_NOTES.md` for merge rules (never merge `data.json` from `main` to `LitoFrito`).
-- Remote is named `origin`.
+- Create fix branches from `main` for bug fixes and feature work.
+- After approval, merge the fix branch into `main`.
+- Then propagate the same fix to `LitoFrito` while preserving real `data.json` image URLs.
+- `main` and `LitoFrito` should be synchronized on all issue fixes and new features outside of real image URIs.
+- See `BRANCH_NOTES.md` for merge rules.
+- Remote is named `GitHub`.
+
+## AI Agent Workflow Prompt
+When you want the AI to execute the expected workflow, say:
+- `AI, read issue #<number>, explain the issue, propose the fix, then implement it after approval, test locally, merge to main and LitoFrito without overwriting real image URLs, then delete the feature branch.`
+- `AI, follow the issue workflow for issue #<number>`
 
 ## Common Tasks
 - **Add Pokémon images**: Update `data.json` with real image URLs.
