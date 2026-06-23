@@ -12,6 +12,7 @@
 - When applying UI or docs changes from `main` to `LitoFrito`, use cherry-pick or manual edits to avoid `data.json` conflicts.
 - Always keep `LitoFrito`'s `data.json` intact to preserve personal photo data.
 - `main` and `LitoFrito` should remain synchronized on all issue fixes and feature work outside of real image URIs.
+- Only `data.json` real image URLs and `data-entries.json` content may intentionally differ between `main` and `LitoFrito`.
 
 ## Issue / Feature Workflow
 - Read the issue and explain it before implementing anything.

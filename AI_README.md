@@ -190,6 +190,7 @@ The `variants` / `variantsGrouped` schema keys are reserved in `data-entries.jso
 - After approval, merge the fix branch into `main`.
 - Then propagate the same fix to `LitoFrito` while preserving real `data.json` image URLs.
 - `main` and `LitoFrito` should be synchronized on all issue fixes and new features outside of real image URIs.
+- The only intentional differences are real `data.json` image URLs and `data-entries.json` content on `LitoFrito`.
 - See `BRANCH_NOTES.md` for merge rules.
 - Remote is named `GitHub`.
 
