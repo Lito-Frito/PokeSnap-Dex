@@ -112,6 +112,43 @@ function testNoDuplicatesInVariants() {
   }
 }
 
+function testIssueVariantCoverage() {
+  const data = loadData();
+  let passed = 0;
+  let failed = 0;
+
+  const unown = data['201'];
+  const unownLabels = (unown && unown.variants ? unown.variants.map(v => v.label) : []);
+  const requiredUnownForms = ['Unown (A)', 'Unown (Z)', 'Unown (!)'];
+  requiredUnownForms.forEach(label => {
+    if (unownLabels.includes(label)) {
+      console.log(`✓ Unown includes ${label}`);
+      passed++;
+    } else {
+      console.log(`✗ Unown missing ${label}`);
+      failed++;
+    }
+  });
+
+  const keldeo = data['647'];
+  const keldeoLabels = (keldeo && keldeo.variants ? keldeo.variants.map(v => v.label) : []);
+  const requiredKeldeoForms = ['Keldeo - Resolute Form', 'Shiny Keldeo - Resolute Form'];
+  requiredKeldeoForms.forEach(label => {
+    if (keldeoLabels.includes(label)) {
+      console.log(`✓ Keldeo includes ${label}`);
+      passed++;
+    } else {
+      console.log(`✗ Keldeo missing ${label}`);
+      failed++;
+    }
+  });
+
+  console.log(`\nIssue Variant Coverage Test - Passed: ${passed}, Failed: ${failed}`);
+  if (failed > 0) {
+    process.exit(1);
+  }
+}
+
 function testNameFormatting() {
   const data = loadData();
   const tests = [
@@ -398,6 +435,7 @@ function testEntriesFileIntegrity() {
 testDataIntegrity();
 testNumericFileOrder();
 testNoDuplicatesInVariants();
+testIssueVariantCoverage();
 testNameFormatting();
 testPositionArray();
 testCaptureCountLogic();
