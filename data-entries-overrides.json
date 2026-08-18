@@ -369,6 +369,34 @@
           }
         ]
       }
+    },
+    "845": {
+      "variants": {
+        "Cramorant - Gulping Form": [
+          {
+            "source": "Pok\u00e9dex",
+            "text": "It swallows prey whole and stores it in its expandable stomach, making its body heavier and more sluggish until it digests it."
+          }
+        ],
+        "Shiny Cramorant - Gulping Form": [
+          {
+            "source": "Pok\u00e9dex",
+            "text": "It swallows prey whole and stores it in its expandable stomach, making its body heavier and more sluggish until it digests it."
+          }
+        ],
+        "Cramorant - Gorging Form": [
+          {
+            "source": "Pok\u00e9dex",
+            "text": "After eating an enormous amount of food, its body grows bulky and heavy, but it can still unleash a fierce, massive attack when provoked."
+          }
+        ],
+        "Shiny Cramorant - Gorging Form": [
+          {
+            "source": "Pok\u00e9dex",
+            "text": "After eating an enormous amount of food, its body grows bulky and heavy, but it can still unleash a fierce, massive attack when provoked."
+          }
+        ]
+      }
     }
   }
 }

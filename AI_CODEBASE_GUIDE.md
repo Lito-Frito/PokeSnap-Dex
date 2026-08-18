@@ -131,10 +131,12 @@ Manages app state and interactions.
 - 1,025 entries, keyed by number.
 - Variants: Base, shiny, regional, etc.
 - Placeholders: "https://your-image-url-here.jpg" for missing images.
+- If a new form or variant label is added to `data.json`, its exact label must also be mirrored in `data-entries-overrides.json` whenever the default dex data does not include it. The UI resolves dex entries by exact label match, so mismatches silently fail.
 
 **Nuances:**
 - Keys are strings (e.g., "001") for consistency.
 - Images are URLs; app skips placeholders in display/count.
+- Run `node test.js` after form changes to verify the matching labels still resolve.
 
 ## 4. Data Flow and User Interactions
 1. **Load:** script.js fetches data.json on DOMContentLoaded.
