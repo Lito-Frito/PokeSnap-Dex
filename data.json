@@ -17162,7 +17162,8 @@
         "fit": "contain",
         "images": [
           "https://your-image-url-here.jpg"
-       ,
+        ]
+      },
       {
         "label": "Keldeo - Resolute Form",
         "position": "center",
@@ -17178,7 +17179,6 @@
         "images": [
           "https://your-image-url-here.jpg"
         ]
-      } ]
       }
     ],
     "genus": "Colt Pokémon"
