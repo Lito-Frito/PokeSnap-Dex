@@ -143,6 +143,24 @@ function testIssueVariantCoverage() {
     }
   });
 
+  const cramorant = data['845'];
+  const cramorantLabels = (cramorant && cramorant.variants ? cramorant.variants.map(v => v.label) : []);
+  const requiredCramorantForms = [
+    'Cramorant - Gulping Form',
+    'Shiny Cramorant - Gulping Form',
+    'Cramorant - Gorging Form',
+    'Shiny Cramorant - Gorging Form'
+  ];
+  requiredCramorantForms.forEach(label => {
+    if (cramorantLabels.includes(label)) {
+      console.log(`✓ Cramorant includes ${label}`);
+      passed++;
+    } else {
+      console.log(`✗ Cramorant missing ${label}`);
+      failed++;
+    }
+  });
+
   console.log(`\nIssue Variant Coverage Test - Passed: ${passed}, Failed: ${failed}`);
   if (failed > 0) {
     process.exit(1);

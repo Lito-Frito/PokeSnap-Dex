@@ -43,6 +43,8 @@ Object keyed `"001"` to `"1025"`. Each entry:
 - Placeholders use `"https://your-image-url-here.jpg"`. Thumbnails skip placeholders.
 - `genus` is populated automatically by `sync-dex-entries.js` from PokeAPI and shown in the gallery header.
 - **Variant ordering rule**: Regular form first, then Mega/regional/shiny variants (see BRANCH_NOTES.md for ordering conventions).
+- **Consistency rule**: Any new variant label added to `data.json` must also be added to the matching dex-entry source if it needs a specific Pokédex entry. For form variants not in PokeAPI, use `data-entries-overrides.json` with the exact same label string.
+- **Required validation**: After changing variant labels, run `node test.js` and confirm the matching dex lookup works for both the regular and shiny form names.
 
 ### `data-entries.json`
 Generated file. Schema v2:
@@ -173,6 +175,16 @@ Run: `node scripts/sync-dex-entries.js`
 
 ### Form-Specific Entries
 The `variants` / `variantsGrouped` schema keys are reserved in `data-entries.json` and the app-side lookup chain is fully wired, but **no form-specific data is currently populated** because PokeAPI does not expose per-form Pokédex text. All gallery views fall through to `defaultGrouped`. If a future data source is added (separate issue), the infrastructure is ready.
+
+### Required Override Workflow for New Forms
+When a form or variant is added to `data.json` but does not exist in the default PokeAPI entry set, treat it as a required follow-up task:
+1. Add the exact label text to `data.json`.
+2. Add the same label text to `data-entries-overrides.json` under the matching species number.
+3. Mirror the shiny version with the same pattern (`Shiny <Label>`).
+4. Match the wording exactly; the UI resolves dex text by label match, so mismatches silently fail.
+5. Run `node test.js` before closing the issue.
+
+This is required for forms like Unown, Keldeo - Resolute Form, and Cramorant - Gulping/Gorging Form. The override file is the safety net for species-specific forms that PokeAPI leaves out.
 
 ---
 

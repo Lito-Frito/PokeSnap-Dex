@@ -13,6 +13,392 @@
           }
         ]
       }
+<<<<<<< HEAD
+=======
+    },
+    "201": {
+      "variants": {
+        "Unown (A)": [
+          {
+            "source": "Pok\u00e9dex",
+            "text": "This Pok\u00e9mon is shaped like ancient writing. It is a mystery as to which came first, the ancient writings or the various Unown. Research into this topic is ongoing but nothing is known."
+          }
+        ],
+        "Shiny Unown (A)": [
+          {
+            "source": "Pok\u00e9dex",
+            "text": "This Pok\u00e9mon is shaped like ancient writing. It is a mystery as to which came first, the ancient writings or the various Unown. Research into this topic is ongoing but nothing is known."
+          }
+        ],
+        "Unown (B)": [
+          {
+            "source": "Pok\u00e9dex",
+            "text": "This Pok\u00e9mon is shaped like ancient writing. It is a mystery as to which came first, the ancient writings or the various Unown. Research into this topic is ongoing but nothing is known."
+          }
+        ],
+        "Shiny Unown (B)": [
+          {
+            "source": "Pok\u00e9dex",
+            "text": "This Pok\u00e9mon is shaped like ancient writing. It is a mystery as to which came first, the ancient writings or the various Unown. Research into this topic is ongoing but nothing is known."
+          }
+        ],
+        "Unown (C)": [
+          {
+            "source": "Pok\u00e9dex",
+            "text": "This Pok\u00e9mon is shaped like ancient writing. It is a mystery as to which came first, the ancient writings or the various Unown. Research into this topic is ongoing but nothing is known."
+          }
+        ],
+        "Shiny Unown (C)": [
+          {
+            "source": "Pok\u00e9dex",
+            "text": "This Pok\u00e9mon is shaped like ancient writing. It is a mystery as to which came first, the ancient writings or the various Unown. Research into this topic is ongoing but nothing is known."
+          }
+        ],
+        "Unown (D)": [
+          {
+            "source": "Pok\u00e9dex",
+            "text": "This Pok\u00e9mon is shaped like ancient writing. It is a mystery as to which came first, the ancient writings or the various Unown. Research into this topic is ongoing but nothing is known."
+          }
+        ],
+        "Shiny Unown (D)": [
+          {
+            "source": "Pok\u00e9dex",
+            "text": "This Pok\u00e9mon is shaped like ancient writing. It is a mystery as to which came first, the ancient writings or the various Unown. Research into this topic is ongoing but nothing is known."
+          }
+        ],
+        "Unown (E)": [
+          {
+            "source": "Pok\u00e9dex",
+            "text": "This Pok\u00e9mon is shaped like ancient writing. It is a mystery as to which came first, the ancient writings or the various Unown. Research into this topic is ongoing but nothing is known."
+          }
+        ],
+        "Shiny Unown (E)": [
+          {
+            "source": "Pok\u00e9dex",
+            "text": "This Pok\u00e9mon is shaped like ancient writing. It is a mystery as to which came first, the ancient writings or the various Unown. Research into this topic is ongoing but nothing is known."
+          }
+        ],
+        "Unown (F)": [
+          {
+            "source": "Pok\u00e9dex",
+            "text": "This Pok\u00e9mon is shaped like ancient writing. It is a mystery as to which came first, the ancient writings or the various Unown. Research into this topic is ongoing but nothing is known."
+          }
+        ],
+        "Shiny Unown (F)": [
+          {
+            "source": "Pok\u00e9dex",
+            "text": "This Pok\u00e9mon is shaped like ancient writing. It is a mystery as to which came first, the ancient writings or the various Unown. Research into this topic is ongoing but nothing is known."
+          }
+        ],
+        "Unown (G)": [
+          {
+            "source": "Pok\u00e9dex",
+            "text": "This Pok\u00e9mon is shaped like ancient writing. It is a mystery as to which came first, the ancient writings or the various Unown. Research into this topic is ongoing but nothing is known."
+          }
+        ],
+        "Shiny Unown (G)": [
+          {
+            "source": "Pok\u00e9dex",
+            "text": "This Pok\u00e9mon is shaped like ancient writing. It is a mystery as to which came first, the ancient writings or the various Unown. Research into this topic is ongoing but nothing is known."
+          }
+        ],
+        "Unown (H)": [
+          {
+            "source": "Pok\u00e9dex",
+            "text": "This Pok\u00e9mon is shaped like ancient writing. It is a mystery as to which came first, the ancient writings or the various Unown. Research into this topic is ongoing but nothing is known."
+          }
+        ],
+        "Shiny Unown (H)": [
+          {
+            "source": "Pok\u00e9dex",
+            "text": "This Pok\u00e9mon is shaped like ancient writing. It is a mystery as to which came first, the ancient writings or the various Unown. Research into this topic is ongoing but nothing is known."
+          }
+        ],
+        "Unown (I)": [
+          {
+            "source": "Pok\u00e9dex",
+            "text": "This Pok\u00e9mon is shaped like ancient writing. It is a mystery as to which came first, the ancient writings or the various Unown. Research into this topic is ongoing but nothing is known."
+          }
+        ],
+        "Shiny Unown (I)": [
+          {
+            "source": "Pok\u00e9dex",
+            "text": "This Pok\u00e9mon is shaped like ancient writing. It is a mystery as to which came first, the ancient writings or the various Unown. Research into this topic is ongoing but nothing is known."
+          }
+        ],
+        "Unown (J)": [
+          {
+            "source": "Pok\u00e9dex",
+            "text": "This Pok\u00e9mon is shaped like ancient writing. It is a mystery as to which came first, the ancient writings or the various Unown. Research into this topic is ongoing but nothing is known."
+          }
+        ],
+        "Shiny Unown (J)": [
+          {
+            "source": "Pok\u00e9dex",
+            "text": "This Pok\u00e9mon is shaped like ancient writing. It is a mystery as to which came first, the ancient writings or the various Unown. Research into this topic is ongoing but nothing is known."
+          }
+        ],
+        "Unown (K)": [
+          {
+            "source": "Pok\u00e9dex",
+            "text": "This Pok\u00e9mon is shaped like ancient writing. It is a mystery as to which came first, the ancient writings or the various Unown. Research into this topic is ongoing but nothing is known."
+          }
+        ],
+        "Shiny Unown (K)": [
+          {
+            "source": "Pok\u00e9dex",
+            "text": "This Pok\u00e9mon is shaped like ancient writing. It is a mystery as to which came first, the ancient writings or the various Unown. Research into this topic is ongoing but nothing is known."
+          }
+        ],
+        "Unown (L)": [
+          {
+            "source": "Pok\u00e9dex",
+            "text": "This Pok\u00e9mon is shaped like ancient writing. It is a mystery as to which came first, the ancient writings or the various Unown. Research into this topic is ongoing but nothing is known."
+          }
+        ],
+        "Shiny Unown (L)": [
+          {
+            "source": "Pok\u00e9dex",
+            "text": "This Pok\u00e9mon is shaped like ancient writing. It is a mystery as to which came first, the ancient writings or the various Unown. Research into this topic is ongoing but nothing is known."
+          }
+        ],
+        "Unown (M)": [
+          {
+            "source": "Pok\u00e9dex",
+            "text": "This Pok\u00e9mon is shaped like ancient writing. It is a mystery as to which came first, the ancient writings or the various Unown. Research into this topic is ongoing but nothing is known."
+          }
+        ],
+        "Shiny Unown (M)": [
+          {
+            "source": "Pok\u00e9dex",
+            "text": "This Pok\u00e9mon is shaped like ancient writing. It is a mystery as to which came first, the ancient writings or the various Unown. Research into this topic is ongoing but nothing is known."
+          }
+        ],
+        "Unown (N)": [
+          {
+            "source": "Pok\u00e9dex",
+            "text": "This Pok\u00e9mon is shaped like ancient writing. It is a mystery as to which came first, the ancient writings or the various Unown. Research into this topic is ongoing but nothing is known."
+          }
+        ],
+        "Shiny Unown (N)": [
+          {
+            "source": "Pok\u00e9dex",
+            "text": "This Pok\u00e9mon is shaped like ancient writing. It is a mystery as to which came first, the ancient writings or the various Unown. Research into this topic is ongoing but nothing is known."
+          }
+        ],
+        "Unown (O)": [
+          {
+            "source": "Pok\u00e9dex",
+            "text": "This Pok\u00e9mon is shaped like ancient writing. It is a mystery as to which came first, the ancient writings or the various Unown. Research into this topic is ongoing but nothing is known."
+          }
+        ],
+        "Shiny Unown (O)": [
+          {
+            "source": "Pok\u00e9dex",
+            "text": "This Pok\u00e9mon is shaped like ancient writing. It is a mystery as to which came first, the ancient writings or the various Unown. Research into this topic is ongoing but nothing is known."
+          }
+        ],
+        "Unown (P)": [
+          {
+            "source": "Pok\u00e9dex",
+            "text": "This Pok\u00e9mon is shaped like ancient writing. It is a mystery as to which came first, the ancient writings or the various Unown. Research into this topic is ongoing but nothing is known."
+          }
+        ],
+        "Shiny Unown (P)": [
+          {
+            "source": "Pok\u00e9dex",
+            "text": "This Pok\u00e9mon is shaped like ancient writing. It is a mystery as to which came first, the ancient writings or the various Unown. Research into this topic is ongoing but nothing is known."
+          }
+        ],
+        "Unown (Q)": [
+          {
+            "source": "Pok\u00e9dex",
+            "text": "This Pok\u00e9mon is shaped like ancient writing. It is a mystery as to which came first, the ancient writings or the various Unown. Research into this topic is ongoing but nothing is known."
+          }
+        ],
+        "Shiny Unown (Q)": [
+          {
+            "source": "Pok\u00e9dex",
+            "text": "This Pok\u00e9mon is shaped like ancient writing. It is a mystery as to which came first, the ancient writings or the various Unown. Research into this topic is ongoing but nothing is known."
+          }
+        ],
+        "Unown (R)": [
+          {
+            "source": "Pok\u00e9dex",
+            "text": "This Pok\u00e9mon is shaped like ancient writing. It is a mystery as to which came first, the ancient writings or the various Unown. Research into this topic is ongoing but nothing is known."
+          }
+        ],
+        "Shiny Unown (R)": [
+          {
+            "source": "Pok\u00e9dex",
+            "text": "This Pok\u00e9mon is shaped like ancient writing. It is a mystery as to which came first, the ancient writings or the various Unown. Research into this topic is ongoing but nothing is known."
+          }
+        ],
+        "Unown (S)": [
+          {
+            "source": "Pok\u00e9dex",
+            "text": "This Pok\u00e9mon is shaped like ancient writing. It is a mystery as to which came first, the ancient writings or the various Unown. Research into this topic is ongoing but nothing is known."
+          }
+        ],
+        "Shiny Unown (S)": [
+          {
+            "source": "Pok\u00e9dex",
+            "text": "This Pok\u00e9mon is shaped like ancient writing. It is a mystery as to which came first, the ancient writings or the various Unown. Research into this topic is ongoing but nothing is known."
+          }
+        ],
+        "Unown (T)": [
+          {
+            "source": "Pok\u00e9dex",
+            "text": "This Pok\u00e9mon is shaped like ancient writing. It is a mystery as to which came first, the ancient writings or the various Unown. Research into this topic is ongoing but nothing is known."
+          }
+        ],
+        "Shiny Unown (T)": [
+          {
+            "source": "Pok\u00e9dex",
+            "text": "This Pok\u00e9mon is shaped like ancient writing. It is a mystery as to which came first, the ancient writings or the various Unown. Research into this topic is ongoing but nothing is known."
+          }
+        ],
+        "Unown (U)": [
+          {
+            "source": "Pok\u00e9dex",
+            "text": "This Pok\u00e9mon is shaped like ancient writing. It is a mystery as to which came first, the ancient writings or the various Unown. Research into this topic is ongoing but nothing is known."
+          }
+        ],
+        "Shiny Unown (U)": [
+          {
+            "source": "Pok\u00e9dex",
+            "text": "This Pok\u00e9mon is shaped like ancient writing. It is a mystery as to which came first, the ancient writings or the various Unown. Research into this topic is ongoing but nothing is known."
+          }
+        ],
+        "Unown (V)": [
+          {
+            "source": "Pok\u00e9dex",
+            "text": "This Pok\u00e9mon is shaped like ancient writing. It is a mystery as to which came first, the ancient writings or the various Unown. Research into this topic is ongoing but nothing is known."
+          }
+        ],
+        "Shiny Unown (V)": [
+          {
+            "source": "Pok\u00e9dex",
+            "text": "This Pok\u00e9mon is shaped like ancient writing. It is a mystery as to which came first, the ancient writings or the various Unown. Research into this topic is ongoing but nothing is known."
+          }
+        ],
+        "Unown (W)": [
+          {
+            "source": "Pok\u00e9dex",
+            "text": "This Pok\u00e9mon is shaped like ancient writing. It is a mystery as to which came first, the ancient writings or the various Unown. Research into this topic is ongoing but nothing is known."
+          }
+        ],
+        "Shiny Unown (W)": [
+          {
+            "source": "Pok\u00e9dex",
+            "text": "This Pok\u00e9mon is shaped like ancient writing. It is a mystery as to which came first, the ancient writings or the various Unown. Research into this topic is ongoing but nothing is known."
+          }
+        ],
+        "Unown (X)": [
+          {
+            "source": "Pok\u00e9dex",
+            "text": "This Pok\u00e9mon is shaped like ancient writing. It is a mystery as to which came first, the ancient writings or the various Unown. Research into this topic is ongoing but nothing is known."
+          }
+        ],
+        "Shiny Unown (X)": [
+          {
+            "source": "Pok\u00e9dex",
+            "text": "This Pok\u00e9mon is shaped like ancient writing. It is a mystery as to which came first, the ancient writings or the various Unown. Research into this topic is ongoing but nothing is known."
+          }
+        ],
+        "Unown (Y)": [
+          {
+            "source": "Pok\u00e9dex",
+            "text": "This Pok\u00e9mon is shaped like ancient writing. It is a mystery as to which came first, the ancient writings or the various Unown. Research into this topic is ongoing but nothing is known."
+          }
+        ],
+        "Shiny Unown (Y)": [
+          {
+            "source": "Pok\u00e9dex",
+            "text": "This Pok\u00e9mon is shaped like ancient writing. It is a mystery as to which came first, the ancient writings or the various Unown. Research into this topic is ongoing but nothing is known."
+          }
+        ],
+        "Unown (Z)": [
+          {
+            "source": "Pok\u00e9dex",
+            "text": "This Pok\u00e9mon is shaped like ancient writing. It is a mystery as to which came first, the ancient writings or the various Unown. Research into this topic is ongoing but nothing is known."
+          }
+        ],
+        "Shiny Unown (Z)": [
+          {
+            "source": "Pok\u00e9dex",
+            "text": "This Pok\u00e9mon is shaped like ancient writing. It is a mystery as to which came first, the ancient writings or the various Unown. Research into this topic is ongoing but nothing is known."
+          }
+        ],
+        "Unown (!)": [
+          {
+            "source": "Pok\u00e9dex",
+            "text": "This Pok\u00e9mon is shaped like ancient writing. It is a mystery as to which came first, the ancient writings or the various Unown. Research into this topic is ongoing but nothing is known."
+          }
+        ],
+        "Shiny Unown (!)": [
+          {
+            "source": "Pok\u00e9dex",
+            "text": "This Pok\u00e9mon is shaped like ancient writing. It is a mystery as to which came first, the ancient writings or the various Unown. Research into this topic is ongoing but nothing is known."
+          }
+        ],
+        "Unown (?)": [
+          {
+            "source": "Pok\u00e9dex",
+            "text": "This Pok\u00e9mon is shaped like ancient writing. It is a mystery as to which came first, the ancient writings or the various Unown. Research into this topic is ongoing but nothing is known."
+          }
+        ],
+        "Shiny Unown (?)": [
+          {
+            "source": "Pok\u00e9dex",
+            "text": "This Pok\u00e9mon is shaped like ancient writing. It is a mystery as to which came first, the ancient writings or the various Unown. Research into this topic is ongoing but nothing is known."
+          }
+        ]
+      }
+    },
+    "647": {
+      "variants": {
+        "Keldeo - Resolute Form": [
+          {
+            "source": "Pok\u00e9dex",
+            "text": "When it is resolute, its body fills with power and it becomes swifter. Its jumps are then too fast to follow."
+          }
+        ],
+        "Shiny Keldeo - Resolute Form": [
+          {
+            "source": "Pok\u00e9dex",
+            "text": "When it is resolute, its body fills with power and it becomes swifter. Its jumps are then too fast to follow."
+          }
+        ]
+      }
+    },
+    "845": {
+      "variants": {
+        "Cramorant - Gulping Form": [
+          {
+            "source": "Pok\u00e9dex",
+            "text": "It swallows prey whole and stores it in its expandable stomach, making its body heavier and more sluggish until it digests it."
+          }
+        ],
+        "Shiny Cramorant - Gulping Form": [
+          {
+            "source": "Pok\u00e9dex",
+            "text": "It swallows prey whole and stores it in its expandable stomach, making its body heavier and more sluggish until it digests it."
+          }
+        ],
+        "Cramorant - Gorging Form": [
+          {
+            "source": "Pok\u00e9dex",
+            "text": "After eating an enormous amount of food, its body grows bulky and heavy, but it can still unleash a fierce, massive attack when provoked."
+          }
+        ],
+        "Shiny Cramorant - Gorging Form": [
+          {
+            "source": "Pok\u00e9dex",
+            "text": "After eating an enormous amount of food, its body grows bulky and heavy, but it can still unleash a fierce, massive attack when provoked."
+          }
+        ]
+      }
     }
   }
 }
