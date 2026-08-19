@@ -123,10 +123,11 @@ function getEntriesForVariant(number, variantLabel) {
 async function loadData() {
   console.log('Starting to load data...');
   try {
+        const fetchOptions = { cache: 'no-store' };
         const [response, entriesResponse, overridesResponse] = await Promise.all([
-            fetch('data.json'),
-            fetch('data-entries.json'),
-            fetch('data-entries-overrides.json').catch(() => null)
+            fetch('data.json?v=20260818', fetchOptions),
+            fetch('data-entries.json?v=20260818', fetchOptions),
+            fetch('data-entries-overrides.json?v=20260818', fetchOptions).catch(() => null)
         ]);
         console.log('Fetch response:', response);
         pokedexData = await response.json();
