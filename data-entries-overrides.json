@@ -14,6 +14,46 @@
         ]
       }
     },
+    "128": {
+      "variants": {
+        "Tauros - Combat Breed": [
+          {
+            "source": "Pok\u00e9dex",
+            "text": "This Pok\u00e9mon has a muscular build and powerful horns. It is known for its fierce temperament and strength."
+          }
+        ],
+        "Shiny Tauros - Combat Breed": [
+          {
+            "source": "Pok\u00e9dex",
+            "text": "This Pok\u00e9mon has a muscular build and powerful horns. It is known for its fierce temperament and strength."
+          }
+        ],
+        "Tauros - Blaze Breed": [
+          {
+            "source": "Pok\u00e9dex",
+            "text": "This Pok\u00e9mon has a muscular build and powerful horns. It is known for its fierce temperament and strength."
+          }
+        ],
+        "Shiny Tauros - Blaze Breed": [
+          {
+            "source": "Pok\u00e9dex",
+            "text": "This Pok\u00e9mon has a muscular build and powerful horns. It is known for its fierce temperament and strength."
+          }
+        ],
+        "Tauros - Aqua Breed": [
+          {
+            "source": "Pok\u00e9dex",
+            "text": "This Pok\u00e9mon has a muscular build and powerful horns. It is known for its fierce temperament and strength."
+          }
+        ],
+        "Shiny Tauros - Aqua Breed": [
+          {
+            "source": "Pok\u00e9dex",
+            "text": "This Pok\u00e9mon has a muscular build and powerful horns. It is known for its fierce temperament and strength."
+          }
+        ]
+      }
+    },
     "201": {
       "variants": {
         "Unown (A)": [

@@ -3566,6 +3566,54 @@
         "images": [
           "https://your-image-url-here.jpg"
         ]
+      },
+      {
+        "label": "Tauros - Combat Breed",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ]
+      },
+      {
+        "label": "Shiny Tauros - Combat Breed",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ]
+      },
+      {
+        "label": "Tauros - Blaze Breed",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://i.imgur.com/ThS8Gq7.png"
+        ]
+      },
+      {
+        "label": "Shiny Tauros - Blaze Breed",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ]
+      },
+      {
+        "label": "Tauros - Aqua Breed",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ]
+      },
+      {
+        "label": "Shiny Tauros - Aqua Breed",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ]
       }
     ],
     "genus": "Wild Bull Pokémon"
