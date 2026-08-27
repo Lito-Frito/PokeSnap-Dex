@@ -125,9 +125,9 @@ async function loadData() {
   try {
         const fetchOptions = { cache: 'no-store' };
         const [response, entriesResponse, overridesResponse] = await Promise.all([
-            fetch('data.json?v=20260818', fetchOptions),
-            fetch('data-entries.json?v=20260818', fetchOptions),
-            fetch('data-entries-overrides.json?v=20260818', fetchOptions).catch(() => null)
+            fetch('data.json?v=20260827-1', fetchOptions),
+            fetch('data-entries.json?v=20260827-1', fetchOptions),
+            fetch('data-entries-overrides.json?v=20260827-1', fetchOptions).catch(() => null)
         ]);
         console.log('Fetch response:', response);
         pokedexData = await response.json();
