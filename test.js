@@ -161,6 +161,26 @@ function testIssueVariantCoverage() {
     }
   });
 
+  const tauros = data['128'];
+  const taurosLabels = (tauros && tauros.variants ? tauros.variants.map(v => v.label) : []);
+  const requiredTaurosForms = [
+    'Paldean Tauros - Combat Breed',
+    'Shiny Paldean Tauros - Combat Breed',
+    'Paldean Tauros - Blaze Breed',
+    'Shiny Paldean Tauros - Blaze Breed',
+    'Paldean Tauros - Aqua Breed',
+    'Shiny Paldean Tauros - Aqua Breed'
+  ];
+  requiredTaurosForms.forEach(label => {
+    if (taurosLabels.includes(label)) {
+      console.log(`✓ Tauros includes ${label}`);
+      passed++;
+    } else {
+      console.log(`✗ Tauros missing ${label}`);
+      failed++;
+    }
+  });
+
   console.log(`\nIssue Variant Coverage Test - Passed: ${passed}, Failed: ${failed}`);
   if (failed > 0) {
     process.exit(1);

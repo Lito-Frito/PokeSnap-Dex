@@ -676,6 +676,10 @@ function updateGalleryImage() {
                 variantSuffix = label;
             }
         }
+        const paldeanBreedMatch = variantSuffix.match(/^(Shiny )?Paldean Tauros - (.+)$/);
+        if (paldeanBreedMatch) {
+            variantSuffix = `${paldeanBreedMatch[1] || ''}Paldean (${paldeanBreedMatch[2]})`;
+        }
         const altName = variantSuffix ? `${baseName} - ${variantSuffix}` : baseName;
         galleryImage.alt = imageSrc === "https://i.imgur.com/m3idMCk.png" ? "Missing Snap" : altName;
         const dexNumber = currentEntry.padStart(3, '0');

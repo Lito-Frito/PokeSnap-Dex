@@ -3552,7 +3552,7 @@
         ]
       },
       {
-        "label": "Paldean Tauros",
+        "label": "Paldean Tauros - Combat Breed",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -3560,7 +3560,7 @@
         ]
       },
       {
-        "label": "Shiny Paldean Tauros",
+        "label": "Shiny Paldean Tauros - Combat Breed",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -3568,23 +3568,7 @@
         ]
       },
       {
-        "label": "Tauros - Combat Breed",
-        "position": "center",
-        "fit": "contain",
-        "images": [
-          "https://your-image-url-here.jpg"
-        ]
-      },
-      {
-        "label": "Shiny Tauros - Combat Breed",
-        "position": "center",
-        "fit": "contain",
-        "images": [
-          "https://your-image-url-here.jpg"
-        ]
-      },
-      {
-        "label": "Tauros - Blaze Breed",
+        "label": "Paldean Tauros - Blaze Breed",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -3592,7 +3576,7 @@
         ]
       },
       {
-        "label": "Shiny Tauros - Blaze Breed",
+        "label": "Shiny Paldean Tauros - Blaze Breed",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -3600,7 +3584,7 @@
         ]
       },
       {
-        "label": "Tauros - Aqua Breed",
+        "label": "Paldean Tauros - Aqua Breed",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -3608,7 +3592,7 @@
         ]
       },
       {
-        "label": "Shiny Tauros - Aqua Breed",
+        "label": "Shiny Paldean Tauros - Aqua Breed",
         "position": "center",
         "fit": "contain",
         "images": [
