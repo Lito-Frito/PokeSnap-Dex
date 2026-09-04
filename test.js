@@ -187,6 +187,75 @@ function testIssueVariantCoverage() {
   }
 }
 
+function normalizeVariantSuffixForTest(baseName, label) {
+  let variantSuffix = '';
+  if (label && label !== baseName) {
+    if (label.includes(baseName)) {
+      variantSuffix = label.replace(baseName, '').trim().replace(/^[- ]+/, '');
+    } else {
+      variantSuffix = label;
+    }
+  }
+
+  const paldeanBreedMatch = variantSuffix.match(/^(Shiny\s+)?Paldean(?:\s+Tauros)?\s*-\s*(.+)$/);
+  if (paldeanBreedMatch) {
+    variantSuffix = `${paldeanBreedMatch[1] || ''}Paldean (${paldeanBreedMatch[2].trim()})`;
+  }
+
+  return variantSuffix;
+}
+
+function testVariantFormattingAndImagePlacement() {
+  const data = loadData();
+  let passed = 0;
+  let failed = 0;
+
+  const taurosLabels = ['Paldean Tauros - Combat Breed', 'Shiny Paldean Tauros - Blaze Breed'];
+  taurosLabels.forEach(label => {
+    const normalized = normalizeVariantSuffixForTest('Tauros', label);
+    const expected = label.startsWith('Shiny') ? 'Shiny Paldean (Blaze Breed)' : 'Paldean (Combat Breed)';
+    const actual = normalized;
+    if (label.includes('Blaze Breed')) {
+      if (actual === 'Shiny Paldean (Blaze Breed)') {
+        console.log(`✓ ${label} normalizes to ${actual}`);
+        passed++;
+      } else {
+        console.log(`✗ ${label} normalized to ${actual}, expected Shiny Paldean (Blaze Breed)`);
+        failed++;
+      }
+    } else if (actual === 'Paldean (Combat Breed)') {
+      console.log(`✓ ${label} normalizes to ${actual}`);
+      passed++;
+    } else {
+      console.log(`✗ ${label} normalized to ${actual}, expected Paldean (Combat Breed)`);
+      failed++;
+    }
+  });
+
+  const shinyAlolanNinetales = data['038'].variants.find(v => v.label === 'Shiny Alolan Ninetales');
+  const shinyNinetales = data['038'].variants.find(v => v.label === 'Shiny Ninetales');
+  if (shinyAlolanNinetales && shinyAlolanNinetales.images[0] === 'https://i.imgur.com/kMBguWX.jpeg') {
+    console.log('✓ Shiny Alolan Ninetales owns the real image URL');
+    passed++;
+  } else {
+    console.log(`✗ Shiny Alolan Ninetales image is ${shinyAlolanNinetales ? shinyAlolanNinetales.images[0] : 'missing'}, expected the real URL`);
+    failed++;
+  }
+
+  if (shinyNinetales && shinyNinetales.images[0] === 'https://your-image-url-here.jpg') {
+    console.log('✓ Shiny Ninetales no longer holds the Alolan image');
+    passed++;
+  } else {
+    console.log(`✗ Shiny Ninetales image is ${shinyNinetales ? shinyNinetales.images[0] : 'missing'}, expected placeholder`);
+    failed++;
+  }
+
+  console.log(`\nVariant Formatting and Image Placement Test - Passed: ${passed}, Failed: ${failed}`);
+  if (failed > 0) {
+    process.exit(1);
+  }
+}
+
 function testNameFormatting() {
   const data = loadData();
   const tests = [

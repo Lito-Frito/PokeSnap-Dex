@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "description": "Hand-curated form-specific Pok\u00e9dex entries for forms not exposed by PokeAPI (e.g. Mega Evolutions). Only 'variants' and 'variantsGrouped' keys are used \u2014 'default'/'defaultGrouped' are reserved for data-entries.json. Do not add species-level entries here.",
+    "description": "Hand-curated form-specific Pokédex entries for forms not exposed by PokeAPI (e.g. Mega Evolutions). Only 'variants' and 'variantsGrouped' keys are used — 'default'/'defaultGrouped' are reserved for data-entries.json. Do not add species-level entries here.",
     "schema": "overrides-v1"
   },
   "entries": {

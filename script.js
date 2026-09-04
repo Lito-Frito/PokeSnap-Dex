@@ -676,14 +676,14 @@ function updateGalleryImage() {
                 variantSuffix = label;
             }
         }
-        const paldeanBreedMatch = variantSuffix.match(/^(Shiny )?Paldean Tauros - (.+)$/);
+        const paldeanBreedMatch = variantSuffix.match(/^(Shiny )?Paldean(?: Tauros)?\s*-\s*(.+)$/);
         if (paldeanBreedMatch) {
-            variantSuffix = `${paldeanBreedMatch[1] || ''}Paldean (${paldeanBreedMatch[2]})`;
+            variantSuffix = `${paldeanBreedMatch[1] || ''}Paldean (${paldeanBreedMatch[2].trim()})`;
         }
         const altName = variantSuffix ? `${baseName} - ${variantSuffix}` : baseName;
         galleryImage.alt = imageSrc === "https://i.imgur.com/m3idMCk.png" ? "Missing Snap" : altName;
         const dexNumber = currentEntry.padStart(3, '0');
-        let displayName = `## #${dexNumber} ${baseName}`;
+        let displayName = `#${dexNumber} ${baseName}`;
         const genus = pokedexData[currentEntry].genus;
         if (genus) {
             displayName = `${displayName} (${genus})`;

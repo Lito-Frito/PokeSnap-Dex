@@ -10,6 +10,27 @@ PokeSnap-Dex is a web-based Pokémon photo collection app inspired by Pokémon G
 - **Responsive Height**: Dex-container uses `height: calc(100vh - 100px)` to fill available space, capping rows before footer.
 - **Box-Sizing**: Dex-container uses `box-sizing: border-box` to ensure padding doesn't affect total width.
 
+### Dex UI Display Format Rule
+The gallery and dex header should follow a single, predictable pattern for species names with forms, regional variants, and breed-based forms:
+
+`NAME (GENUS) - SHINY (when needed) REGION (for variant) (FORM/BREED/ETC)`
+
+Examples:
+- `#128 Tauros (Wild Bull Pokémon) - Paldean (Blaze Breed)`
+- `#370 Loyal?`, `#` etc.
+- `#038 Ninetales (Fox Pokémon) - Shiny Alolan`
+
+Interpretation:
+- Always begin with the species name and genus in parentheses.
+- If the variant is shiny, add `Shiny` before the regional/form label.
+- Add regional names like `Alolan`, `Galarian`, or `Paldean` as the variant tag.
+- Add the final form or breed in parentheses when needed, such as `(Blaze Breed)`, `(Aqua Breed)`, `(Combat Breed)`, or `(Gulping Form)`.
+- Do not add redundant dashes or duplicate region separators.
+- Do not format as `NAME - REGION - FORM` when the correct structure is `NAME - REGION (FORM)`.
+- Prefer the compact, readable structure: `NAME (GENUS) - Shiny Alolan` or `NAME (GENUS) - Paldean (Blaze Breed)`.
+
+This rule is the default for all UI-facing label generation, including regional variants, breed forms, and special forms that are not plain “Shiny X” labels.
+
 ## File Structure
 - **`index.html`**: Main HTML structure. Includes header with controls (search, theme toggle, captured count), main grid container (`#dex-container`), and modals (gallery, captured list).
 - **`styles.css`**: CSS for layout (grid, flexbox), themes (dark/light), responsive design (mobile breakpoints), gallery modal styling, and animations.

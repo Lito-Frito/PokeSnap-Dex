@@ -26,6 +26,8 @@
 
 ## Branch Naming Conventions
 - Feature branches should match the issues they fix or close.
+- Delete feature/issue branches after the fix is merged or no longer needed.
+- Never delete `main` or `LitoFrito` without explicit approval.
 - Format: `Issue{number}-{Issue_Title_With_Underscores}`
 - Example: For issue #100 titled "Fix Thing", use branch name `Issue100-Fix_Thing`
 - Use this for new features, bug fixes, or enhancements tied to specific issues.
