@@ -1072,7 +1072,7 @@
         "position": "center",
         "fit": "contain",
         "images": [
-          "https://i.imgur.com/kMBguWX.jpeg"
+          "https://your-image-url-here.jpg"
         ]
       },
       {
@@ -1088,7 +1088,7 @@
         "position": "center",
         "fit": "contain",
         "images": [
-          "https://your-image-url-here.jpg"
+          "https://i.imgur.com/kMBguWX.jpeg"
         ]
       }
     ],

@@ -133,6 +133,23 @@ Manages app state and interactions.
 - Placeholders: "https://your-image-url-here.jpg" for missing images.
 - If a new form or variant label is added to `data.json`, its exact label must also be mirrored in `data-entries-overrides.json` whenever the default dex data does not include it. The UI resolves dex entries by exact label match, so mismatches silently fail.
 
+**Dex UI Formatting Rule:**
+Use this pattern for any UI-facing names that include forms, regional variants, or breed-specific labels:
+
+`NAME (GENUS) - SHINY (when needed) REGION (for variant) (FORM/BREED/ETC)`
+
+Examples:
+- `Tauros (Wild Bull Pokémon) - Paldean (Blaze Breed)`
+- `Ninetales (Fox Pokémon) - Shiny Alolan`
+- `Pikachu (Mouse Pokémon) - Shiny`
+
+Rules:
+- `Shiny` comes before the regional or form tag when applicable.
+- Regional names like `Alolan`, `Galarian`, and `Paldean` are displayed as a variant tag, not as a separate dash segment.
+- Form or breed details belong in parentheses at the end: `(Blaze Breed)`, `(Aqua Breed)`, `(Gulping Form)`, etc.
+- Do not produce redundant separators like `NAME - REGION - FORM` when the correct pattern is `NAME - REGION (FORM)`.
+- Do not duplicate the species name inside the variant label when the UI already shows the species name and genus.
+
 **Nuances:**
 - Keys are strings (e.g., "001") for consistency.
 - Images are URLs; app skips placeholders in display/count.
