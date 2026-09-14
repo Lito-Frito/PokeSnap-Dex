@@ -394,6 +394,38 @@
         ]
       }
     },
+    "483": {
+      "variants": {
+        "Dialga - Origin Forme": [
+          {
+            "source": "Legends Arceus",
+            "text": "This Pokémon is revered as a deity in Hisuian legend. The birth of Dialga was what caused the vast river of time to begin flowing in our world."
+          }
+        ],
+        "Shiny Dialga - Origin Forme": [
+          {
+            "source": "Legends Arceus",
+            "text": "This Pokémon is revered as a deity in Hisuian legend. The birth of Dialga was what caused the vast river of time to begin flowing in our world."
+          }
+        ]
+      }
+    },
+    "484": {
+      "variants": {
+        "Palkia - Origin Forme": [
+          {
+            "source": "Legends Arceus",
+            "text": "This Pokémon is feared as a deity in Hisuian legend. The birth of Palkia was what caused the walls of our world to disappear, creating a sky that spans for infinity."
+          }
+        ],
+        "Shiny Palkia - Origin Forme": [
+          {
+            "source": "Legends Arceus",
+            "text": "This Pokémon is feared as a deity in Hisuian legend. The birth of Palkia was what caused the walls of our world to disappear, creating a sky that spans for infinity."
+          }
+        ]
+      }
+    },
     "647": {
       "variants": {
         "Keldeo - Resolute Form": [
