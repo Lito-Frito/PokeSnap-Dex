@@ -13029,6 +13029,22 @@
         "images": [
           "https://your-image-url-here.jpg"
         ]
+      },
+      {
+        "label": "Dialga - Origin Forme",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ]
+      },
+      {
+        "label": "Shiny Dialga - Origin Forme",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ]
       }
     ],
     "genus": "Temporal Pokémon"
@@ -13046,6 +13062,22 @@
       },
       {
         "label": "Shiny Palkia",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ]
+      },
+      {
+        "label": "Palkia - Origin Forme",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ]
+      },
+      {
+        "label": "Shiny Palkia - Origin Forme",
         "position": "center",
         "fit": "contain",
         "images": [
