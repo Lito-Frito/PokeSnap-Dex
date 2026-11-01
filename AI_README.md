@@ -123,7 +123,7 @@ Generated file. Schema v2:
 - **`openGallery(number)`**: Sets current Pokémon, finds first real variant, updates image/name/entries, shows modal.
 - **`updateGalleryImage()`**: Updates image src, alt text, name, genus, styling (position, fit, background), and dex entries.
 - **Navigation**: `prev-variant`/`next-variant` buttons cycle through variants. `close-gallery` hides modal.
-- **Pokémon navigation**: `prev-pokemon`/`next-pokemon` buttons move to neighboring Pokédex numbers without closing the gallery and disable at either end of the Dex.
+- **Pokémon navigation**: `prev-pokemon`/`next-pokemon` buttons move through currently visible Pokédex entries, respecting capture and search filters without closing the gallery. They disable when no matching neighbor exists.
 
 #### Keyboard Navigation
 - `Left` / `Right`: navigate images within the current Pokémon.

@@ -40,7 +40,6 @@
 // Load data from JSON
 let pokedexData = {};
 let dexEntriesByNumber = {};
-let dexPokemonNumbers = [];
 
 function normalizeEntryItem(entryItem) {
     if (typeof entryItem === 'string') {
@@ -132,7 +131,6 @@ async function loadData() {
         ]);
         console.log('Fetch response:', response);
         pokedexData = await response.json();
-        dexPokemonNumbers = Object.keys(pokedexData).sort((a, b) => Number(a) - Number(b));
         if (entriesResponse.ok) {
             const entriesPayload = await entriesResponse.json();
             dexEntriesByNumber = entriesPayload.entries || {};
@@ -815,6 +813,7 @@ function applyDexFilters() {
     });
 
     updateDexLayoutForVisibleCount(visibleCount);
+    updatePokemonNavigationButtons();
 }
 
 // Search functionality
@@ -1001,17 +1000,32 @@ function updateGalleryImage() {
         const isSingleImage = pokedexData[currentEntry].allImages.length <= 1;
         prevButton.disabled = isSingleImage;
         nextButton.disabled = isSingleImage;
-        prevPokemonButton.disabled = !DexNavigationUtils.getAdjacentPokemonNumber(
-            dexPokemonNumbers,
-            currentEntry,
-            -1
-        );
-        nextPokemonButton.disabled = !DexNavigationUtils.getAdjacentPokemonNumber(
-            dexPokemonNumbers,
-            currentEntry,
-            1
-        );
+        updatePokemonNavigationButtons();
     }
+}
+
+function updatePokemonNavigationButtons() {
+    if (!currentEntry) {
+        return;
+    }
+
+    const visiblePokemonNumbers = getVisiblePokemonNumbers();
+    prevPokemonButton.disabled = !DexNavigationUtils.getAdjacentPokemonNumber(
+        visiblePokemonNumbers,
+        currentEntry,
+        -1
+    );
+    nextPokemonButton.disabled = !DexNavigationUtils.getAdjacentPokemonNumber(
+        visiblePokemonNumbers,
+        currentEntry,
+        1
+    );
+}
+
+function getVisiblePokemonNumbers() {
+    return Array.from(dexContainer.querySelectorAll('.entry'))
+        .filter(entry => entry.style.display !== 'none')
+        .map(entry => entry.dataset.number);
 }
 
 function navigateGalleryImage(delta) {
@@ -1045,7 +1059,7 @@ function navigateGalleryPokemon(delta) {
     }
 
     const nextPokemonNumber = DexNavigationUtils.getAdjacentPokemonNumber(
-        dexPokemonNumbers,
+        getVisiblePokemonNumbers(),
         currentEntry,
         delta
     );
