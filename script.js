@@ -40,6 +40,7 @@
 // Load data from JSON
 let pokedexData = {};
 let dexEntriesByNumber = {};
+let dexPokemonNumbers = [];
 
 function normalizeEntryItem(entryItem) {
     if (typeof entryItem === 'string') {
@@ -131,6 +132,7 @@ async function loadData() {
         ]);
         console.log('Fetch response:', response);
         pokedexData = await response.json();
+        dexPokemonNumbers = Object.keys(pokedexData).sort((a, b) => Number(a) - Number(b));
         if (entriesResponse.ok) {
             const entriesPayload = await entriesResponse.json();
             dexEntriesByNumber = entriesPayload.entries || {};
@@ -209,6 +211,8 @@ const galleryImage = document.getElementById('gallery-image');
 const galleryName = document.getElementById('gallery-name');
 const dexEntry = document.getElementById('dex-entry');
 const dexEntryScrollHint = document.getElementById('dex-entry-scroll-hint');
+const prevPokemonButton = document.getElementById('prev-pokemon');
+const nextPokemonButton = document.getElementById('next-pokemon');
 const prevButton = document.getElementById('prev-variant');
 const nextButton = document.getElementById('next-variant');
 const prevDescriptionButton = document.getElementById('prev-description');
@@ -997,6 +1001,16 @@ function updateGalleryImage() {
         const isSingleImage = pokedexData[currentEntry].allImages.length <= 1;
         prevButton.disabled = isSingleImage;
         nextButton.disabled = isSingleImage;
+        prevPokemonButton.disabled = !DexNavigationUtils.getAdjacentPokemonNumber(
+            dexPokemonNumbers,
+            currentEntry,
+            -1
+        );
+        nextPokemonButton.disabled = !DexNavigationUtils.getAdjacentPokemonNumber(
+            dexPokemonNumbers,
+            currentEntry,
+            1
+        );
     }
 }
 
@@ -1025,6 +1039,30 @@ function navigateGalleryEntry(delta) {
     updateDexEntry();
 }
 
+function navigateGalleryPokemon(delta) {
+    if (!currentEntry || !pokedexData[currentEntry]) {
+        return;
+    }
+
+    const nextPokemonNumber = DexNavigationUtils.getAdjacentPokemonNumber(
+        dexPokemonNumbers,
+        currentEntry,
+        delta
+    );
+    if (!nextPokemonNumber) {
+        return;
+    }
+
+    currentEntry = nextPokemonNumber;
+    const images = pokedexData[currentEntry].allImages;
+    const firstRealImageIndex = images.findIndex(
+        image => image.image && !isPlaceholderImage(image.image)
+    );
+    currentImageIndex = firstRealImageIndex === -1 ? 0 : firstRealImageIndex;
+    currentEntryIndex = 0;
+    updateGalleryImage();
+}
+
 function closeGalleryModal() {
     cryRequestId++;
     stopCryPlayback();
@@ -1044,6 +1082,14 @@ prevButton.addEventListener('click', () => {
 
 nextButton.addEventListener('click', () => {
     navigateGalleryImage(1);
+});
+
+prevPokemonButton.addEventListener('click', () => {
+    navigateGalleryPokemon(-1);
+});
+
+nextPokemonButton.addEventListener('click', () => {
+    navigateGalleryPokemon(1);
 });
 
 prevDescriptionButton.addEventListener('click', () => {
@@ -1121,10 +1167,10 @@ document.addEventListener('keydown', (event) => {
 
     if (isCtrlOrMeta && event.key === 'ArrowLeft') {
         event.preventDefault();
-        navigateGalleryEntry(-1);
+        navigateGalleryPokemon(-1);
     } else if (isCtrlOrMeta && event.key === 'ArrowRight') {
         event.preventDefault();
-        navigateGalleryEntry(1);
+        navigateGalleryPokemon(1);
     } else if (event.key === 'ArrowUp') {
         event.preventDefault();
         navigateGalleryEntry(-1);

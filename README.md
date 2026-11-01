@@ -7,7 +7,7 @@ Gotta snap 'em all! A simple, static Pokédex for displaying your Pokémon photo
 ## Features
 
 - Browse all 1025 Pokémon (Gen 1–9) in a responsive grid
-- Gallery modal with variant navigation (regular, shiny, regional, mega forms)
+- Gallery modal with variant navigation and previous/next Pokémon controls (regular, shiny, regional, mega forms)
 - Play cached Pokémon cries for standard and Mega forms, with latest/legacy recordings when available
 - Pokédex entry text fetched from [PokeAPI](https://pokeapi.co/) — grouped by game entries that share identical text
 - Keyboard shortcuts for fast navigation (see below)
@@ -211,7 +211,7 @@ When the gallery is open:
 | Key | Action |
 |-----|--------|
 | `←` / `→` | Previous / next image for this Pokémon |
-| `Ctrl+←` / `Ctrl+→` | Jump to previous / next Pokémon in the dex |
+| `Ctrl+←` / `Ctrl+→` (or `Cmd` on macOS) | Jump to previous / next Pokémon in the dex |
 | `↑` / `↓` | Scroll through Pokédex entries |
 | `Escape` | Close the gallery |
 

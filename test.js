@@ -8,6 +8,7 @@
 
 const fs = require('fs');
 const { getPokemonCryIdentifier } = require('./pokemon-cry-utils.js');
+const { getAdjacentPokemonNumber } = require('./dex-navigation-utils.js');
 
 function loadData() {
   const data = JSON.parse(fs.readFileSync('data.json', 'utf8'));
@@ -566,6 +567,34 @@ function testPokemonCryIdentifiers() {
   }
 }
 
+function testPokemonNavigation() {
+  const numbers = ['010', '002', '001'].sort((a, b) => Number(a) - Number(b));
+  const tests = [
+    { current: '001', direction: -1, expected: null },
+    { current: '001', direction: 1, expected: '002' },
+    { current: '002', direction: -1, expected: '001' },
+    { current: '002', direction: 1, expected: '010' },
+    { current: '010', direction: 1, expected: null },
+    { current: '999', direction: 1, expected: null },
+    { current: '002', direction: 0, expected: null }
+  ];
+  let failed = 0;
+
+  tests.forEach(({ current, direction, expected }) => {
+    const actual = getAdjacentPokemonNumber(numbers, current, direction);
+    if (actual === expected) {
+      console.log(`✓ Pokémon navigation from ${current} (${direction}) resolves to ${expected}`);
+    } else {
+      console.log(`✗ Pokémon navigation from ${current} (${direction}) resolves to ${actual}, expected ${expected}`);
+      failed++;
+    }
+  });
+
+  if (failed > 0) {
+    process.exit(1);
+  }
+}
+
 testDataIntegrity();
 testNumericFileOrder();
 testNoDuplicatesInVariants();
@@ -576,3 +605,4 @@ testCaptureCountLogic();
 testNoEmbeddedEntriesInDataJson();
 testEntriesFileIntegrity();
 testPokemonCryIdentifiers();
+testPokemonNavigation();

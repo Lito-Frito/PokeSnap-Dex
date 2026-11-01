@@ -39,7 +39,7 @@ Notes for Future Development:
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PokeSnap-Dex</title>
     <link rel="icon" href="favicon.png" type="image/png">
-    <link rel="stylesheet" href="styles.css?v=20261101-3">
+    <link rel="stylesheet" href="styles.css?v=20261101-5">
 </head>
 <body class="dark-mode">
     <div id="app-container">
@@ -80,7 +80,6 @@ Notes for Future Development:
                 </div>
                 <div class="gallery-action-grid">
                     <button id="prev-variant">Prev Image</button>
-                    <button id="next-variant">Next Image</button>
                     <div class="cry-play-cell">
                         <button id="play-cry" type="button" aria-expanded="false" aria-controls="cry-version-menu" aria-label="Play cry. Hold to choose a recording." disabled>
                             <span>Play Cry</span>
@@ -88,10 +87,13 @@ Notes for Future Development:
                         </button>
                         <div id="cry-version-menu" role="group" aria-label="Choose cry recording" hidden></div>
                     </div>
+                    <button id="next-variant">Next Image</button>
                     <button id="prev-description">Prev Entry</button>
-                    <button id="next-description">Next Entry</button>
                     <button id="spoiler-toggle">Show Spoilers</button>
+                    <button id="next-description">Next Entry</button>
+                    <button id="prev-pokemon" type="button" aria-label="Previous Pokémon">← Prev Pokémon</button>
                     <button id="close-gallery">Close</button>
+                    <button id="next-pokemon" type="button" aria-label="Next Pokémon">Next Pokémon →</button>
                 </div>
             </div>
         </div>
@@ -104,7 +106,8 @@ Notes for Future Development:
             <div id="captured-list"></div>
         </div>
     </div>
+    <script src="dex-navigation-utils.js?v=20261101-1"></script>
     <script src="pokemon-cry-utils.js?v=20261101-1"></script>
-    <script src="script.js?v=20261101-3"></script>
+    <script src="script.js?v=20261101-4"></script>
 </body>
 </html>
