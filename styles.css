@@ -812,10 +812,6 @@ button {
     color: #fef3c7;
 }
 
-#gallery .gallery-action-grid > #close-gallery {
-    grid-column: 2;
-}
-
 #gallery .gallery-action-grid > button:focus-visible,
 #gallery #play-cry:focus-visible,
 #cry-version-menu button:focus-visible {
