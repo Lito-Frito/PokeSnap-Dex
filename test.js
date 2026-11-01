@@ -7,6 +7,7 @@
 // - Capture count logic: Counts only Pokémon with real images (not placeholders).
 
 const fs = require('fs');
+const { getPokemonCryIdentifier } = require('./pokemon-cry-utils.js');
 
 function loadData() {
   const data = JSON.parse(fs.readFileSync('data.json', 'utf8'));
@@ -539,6 +540,32 @@ function testEntriesFileIntegrity() {
   console.log('✓ data-entries.json schema and keys are valid');
 }
 
+function testPokemonCryIdentifiers() {
+  const tests = [
+    { dexNumber: '006', name: 'Charizard', label: 'Charizard', expected: '6' },
+    { dexNumber: '006', name: 'Charizard', label: 'Mega Charizard X', expected: 'charizard-mega-x' },
+    { dexNumber: '006', name: 'Charizard', label: 'Shiny Mega Charizard Y', expected: 'charizard-mega-y' },
+    { dexNumber: '003', name: 'Venusaur', label: 'Mega Venusaur', expected: 'venusaur-mega' },
+    { dexNumber: '026', name: 'Raichu', label: 'Mega Raichu X', expected: 'raichu-mega-x' },
+    { dexNumber: '359', name: 'Absol', label: 'Mega Absol Z', expected: 'absol-mega-z' }
+  ];
+  let failed = 0;
+
+  tests.forEach(({ dexNumber, name, label, expected }) => {
+    const actual = getPokemonCryIdentifier(dexNumber, name, label);
+    if (actual === expected) {
+      console.log(`✓ ${label} cry resolves to PokeAPI ${expected}`);
+    } else {
+      console.log(`✗ ${label} cry resolves to ${actual}, expected PokeAPI ${expected}`);
+      failed++;
+    }
+  });
+
+  if (failed > 0) {
+    process.exit(1);
+  }
+}
+
 testDataIntegrity();
 testNumericFileOrder();
 testNoDuplicatesInVariants();
@@ -548,4 +575,4 @@ testPositionArray();
 testCaptureCountLogic();
 testNoEmbeddedEntriesInDataJson();
 testEntriesFileIntegrity();
-
+testPokemonCryIdentifiers();

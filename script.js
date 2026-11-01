@@ -214,12 +214,25 @@ const nextButton = document.getElementById('next-variant');
 const prevDescriptionButton = document.getElementById('prev-description');
 const nextDescriptionButton = document.getElementById('next-description');
 const closeButton = document.getElementById('close-gallery');
+const playCryButton = document.getElementById('play-cry');
+const cryVersionMenu = document.getElementById('cry-version-menu');
+const cryStatus = document.getElementById('cry-status');
 
 let currentEntry = null;
 let currentImageIndex = 0;
 let currentEntryIndex = 0;
 let showAll = false;
 let showSpoilers = false;
+const pokemonCryCache = new Map();
+let currentCryAudio = null;
+let cryRequestId = 0;
+let availableCryOptions = [];
+let selectedCryUrl = '';
+let cryHoldTimer = null;
+let cryHoldPointerId = null;
+let cryHoldStart = null;
+let cryHoldOpenedMenu = false;
+let suppressCryClick = false;
 
 function isPlaceholderImage(url) {
     return url === 'https://your-image-url-here.jpg';
@@ -276,6 +289,287 @@ function updateDexEntry() {
 
         requestAnimationFrame(updateDexEntryScrollHint);
     }
+}
+
+function isCurrentPokemonCaptured() {
+    return Boolean(
+        currentEntry &&
+        pokedexData[currentEntry] &&
+        pokedexData[currentEntry].allImages.some(imgObj => imgObj.image && !isPlaceholderImage(imgObj.image))
+    );
+}
+
+function stopCryPlayback() {
+    if (currentCryAudio) {
+        currentCryAudio.pause();
+        currentCryAudio.removeAttribute('src');
+        currentCryAudio.load();
+        currentCryAudio = null;
+    }
+}
+
+function setCryStatus(message) {
+    cryStatus.textContent = message;
+}
+
+function closeCryVersionMenu() {
+    cryVersionMenu.hidden = true;
+    cryVersionMenu.style.removeProperty('left');
+    cryVersionMenu.style.removeProperty('top');
+    playCryButton.setAttribute('aria-expanded', 'false');
+    cryVersionMenu.querySelectorAll('.cry-version-option').forEach(option => {
+        option.classList.remove('is-selected');
+    });
+}
+
+function openCryVersionMenu() {
+    if (availableCryOptions.length < 2 || playCryButton.disabled) {
+        return false;
+    }
+
+    cryVersionMenu.replaceChildren();
+    availableCryOptions.forEach(option => {
+        const menuOption = document.createElement('button');
+        menuOption.type = 'button';
+        menuOption.className = 'cry-version-option';
+        menuOption.setAttribute('aria-pressed', String(option.url === selectedCryUrl));
+        menuOption.dataset.value = option.url;
+        menuOption.textContent = option.textContent;
+        menuOption.addEventListener('click', () => selectAndPlayCry(option.url));
+        cryVersionMenu.appendChild(menuOption);
+    });
+
+    cryVersionMenu.hidden = false;
+    const menuRect = cryVersionMenu.getBoundingClientRect();
+    const playRect = playCryButton.getBoundingClientRect();
+    const horizontalInset = 12;
+    const maxLeft = Math.max(horizontalInset, window.innerWidth - menuRect.width - horizontalInset);
+    const left = Math.min(
+        maxLeft,
+        Math.max(horizontalInset, playRect.left + (playRect.width - menuRect.width) / 2)
+    );
+    const aboveTop = playRect.top - menuRect.height - 8;
+    const top = aboveTop >= 8
+        ? aboveTop
+        : Math.min(window.innerHeight - menuRect.height - 8, playRect.bottom + 8);
+    cryVersionMenu.style.left = `${left}px`;
+    cryVersionMenu.style.top = `${Math.max(8, top)}px`;
+    playCryButton.setAttribute('aria-expanded', 'true');
+    return true;
+}
+
+function selectCryOptionAtPoint(clientX, clientY) {
+    const option = document.elementFromPoint(clientX, clientY)?.closest('.cry-version-option');
+    cryVersionMenu.querySelectorAll('.cry-version-option').forEach(item => {
+        item.classList.toggle('is-selected', item === option);
+    });
+    return option;
+}
+
+function selectAndPlayCry(url) {
+    selectedCryUrl = url;
+    closeCryVersionMenu();
+    playSelectedCry();
+}
+
+async function getPokemonCries(identifier) {
+    if (!pokemonCryCache.has(identifier)) {
+        const request = fetch(`https://pokeapi.co/api/v2/pokemon/${encodeURIComponent(identifier)}`, {
+            cache: 'force-cache'
+        }).then(response => {
+            if (!response.ok) {
+                throw new Error(`PokeAPI returned ${response.status} for ${identifier}`);
+            }
+            return response.json();
+        }).then(pokemon => pokemon.cries || {});
+
+        pokemonCryCache.set(identifier, request);
+        request.catch(() => {
+            if (pokemonCryCache.get(identifier) === request) {
+                pokemonCryCache.delete(identifier);
+            }
+        });
+    }
+
+    return pokemonCryCache.get(identifier);
+}
+
+async function updateCryControls() {
+    const requestId = ++cryRequestId;
+    stopCryPlayback();
+    availableCryOptions = [];
+    selectedCryUrl = '';
+    closeCryVersionMenu();
+    playCryButton.disabled = true;
+    document.getElementById('cry-hint').hidden = true;
+
+    if (!currentEntry || !pokedexData[currentEntry]) {
+        setCryStatus('');
+        return;
+    }
+
+    if (!isCurrentPokemonCaptured() && !showSpoilers) {
+        setCryStatus('Show Spoilers to unlock cries for uncaptured Pokémon.');
+        return;
+    }
+
+    const pokemon = pokedexData[currentEntry];
+    const image = pokemon.allImages[currentImageIndex];
+    const identifier = PokemonCryUtils.getPokemonCryIdentifier(
+        currentEntry,
+        pokemon.name,
+        image.label
+    );
+
+    setCryStatus('Loading cries…');
+    try {
+        const cries = await getPokemonCries(identifier);
+        if (requestId !== cryRequestId || gallery.classList.contains('hidden')) {
+            return;
+        }
+
+        availableCryOptions = ['latest', 'legacy']
+            .filter(version => typeof cries[version] === 'string' && cries[version])
+            .map(version => ({
+                version,
+                url: cries[version],
+                textContent: version === 'latest' ? 'Latest' : 'Legacy'
+            }));
+
+        if (availableCryOptions.length === 0) {
+            setCryStatus('No cry recordings are available for this form.');
+            return;
+        }
+
+        selectedCryUrl = availableCryOptions[0].url;
+        playCryButton.disabled = false;
+        playCryButton.setAttribute(
+            'aria-label',
+            availableCryOptions.length > 1
+                ? 'Play cry. Hold to choose Latest or Legacy.'
+                : 'Play cry.'
+        );
+        document.getElementById('cry-hint').hidden = availableCryOptions.length < 2;
+        setCryStatus('');
+    } catch (error) {
+        if (requestId !== cryRequestId) {
+            return;
+        }
+        console.error('Error loading Pokémon cries:', error);
+        setCryStatus('Could not load cries. Please try again.');
+    }
+}
+
+function playSelectedCry() {
+    if (playCryButton.disabled || !selectedCryUrl || currentCryAudio) {
+        return;
+    }
+
+    const audio = new Audio(selectedCryUrl);
+    currentCryAudio = audio;
+    playCryButton.disabled = true;
+    setCryStatus('Playing cry…');
+
+    const finishPlayback = () => {
+        if (currentCryAudio !== audio) {
+            return;
+        }
+        currentCryAudio = null;
+        playCryButton.disabled = false;
+        setCryStatus('');
+    };
+
+    audio.addEventListener('ended', finishPlayback, { once: true });
+    audio.addEventListener('error', () => {
+        finishPlayback();
+        setCryStatus('Could not play this cry.');
+    }, { once: true });
+
+    audio.play().catch(error => {
+        finishPlayback();
+        console.error('Error playing Pokémon cry:', error);
+        setCryStatus('Could not play this cry.');
+    });
+}
+
+function startCryHold(event) {
+    if (!event.isPrimary || event.button !== 0 || availableCryOptions.length < 2 || playCryButton.disabled) {
+        return;
+    }
+
+    cryHoldPointerId = event.pointerId;
+    cryHoldStart = { x: event.clientX, y: event.clientY };
+    cryHoldOpenedMenu = false;
+    playCryButton.setPointerCapture(event.pointerId);
+    cryHoldTimer = window.setTimeout(() => {
+        cryHoldOpenedMenu = openCryVersionMenu();
+    }, 450);
+}
+
+function moveCryHold(event) {
+    if (event.pointerId !== cryHoldPointerId) {
+        return;
+    }
+
+    if (!cryHoldOpenedMenu && cryHoldTimer !== null) {
+        const distance = Math.hypot(
+            event.clientX - cryHoldStart.x,
+            event.clientY - cryHoldStart.y
+        );
+        if (distance > 12) {
+            window.clearTimeout(cryHoldTimer);
+            cryHoldTimer = null;
+        }
+    }
+
+    if (cryHoldOpenedMenu) {
+        event.preventDefault();
+        selectCryOptionAtPoint(event.clientX, event.clientY);
+    }
+}
+
+function finishCryHold(event) {
+    if (event.pointerId !== cryHoldPointerId) {
+        return;
+    }
+
+    if (cryHoldTimer !== null) {
+        window.clearTimeout(cryHoldTimer);
+        cryHoldTimer = null;
+    }
+
+    if (cryHoldOpenedMenu) {
+        const option = selectCryOptionAtPoint(event.clientX, event.clientY);
+        if (option) {
+            selectAndPlayCry(option.dataset.value);
+        } else {
+            closeCryVersionMenu();
+        }
+        suppressCryClick = true;
+        window.setTimeout(() => {
+            suppressCryClick = false;
+        }, 500);
+    }
+
+    cryHoldPointerId = null;
+    cryHoldStart = null;
+    cryHoldOpenedMenu = false;
+}
+
+function cancelCryHold(event) {
+    if (event.pointerId !== cryHoldPointerId) {
+        return;
+    }
+    if (cryHoldTimer !== null) {
+        window.clearTimeout(cryHoldTimer);
+        cryHoldTimer = null;
+    }
+    if (cryHoldOpenedMenu) {
+        closeCryVersionMenu();
+    }
+    cryHoldPointerId = null;
+    cryHoldStart = null;
+    cryHoldOpenedMenu = false;
 }
 
 // Theme toggle with persistence
@@ -651,8 +945,8 @@ function openGallery(number, imgIndex) {
     currentEntryIndex = 0;
     showSpoilers = false;
     document.body.classList.add('gallery-open');
-    updateGalleryImage();
     gallery.classList.remove('hidden');
+    updateGalleryImage();
 }
 
 // Update gallery image
@@ -697,6 +991,7 @@ function updateGalleryImage() {
         const maxIndex = newEntries && newEntries.length > 0 ? newEntries.length - 1 : 0;
         currentEntryIndex = Math.min(currentEntryIndex, maxIndex);
         updateDexEntry();
+        updateCryControls();
         const prevButton = document.getElementById('prev-variant');
         const nextButton = document.getElementById('next-variant');
         const isSingleImage = pokedexData[currentEntry].allImages.length <= 1;
@@ -731,9 +1026,15 @@ function navigateGalleryEntry(delta) {
 }
 
 function closeGalleryModal() {
+    cryRequestId++;
+    stopCryPlayback();
     gallery.classList.add('hidden');
     document.body.classList.remove('gallery-open');
     currentEntry = null;
+    availableCryOptions = [];
+    selectedCryUrl = '';
+    playCryButton.disabled = true;
+    setCryStatus('');
 }
 
 // Event listeners
@@ -766,6 +1067,44 @@ closeButton.addEventListener('click', () => {
 document.getElementById('spoiler-toggle').addEventListener('click', () => {
     showSpoilers = !showSpoilers;
     updateDexEntry();
+    updateCryControls();
+});
+
+playCryButton.addEventListener('pointerdown', startCryHold);
+playCryButton.addEventListener('pointermove', moveCryHold);
+playCryButton.addEventListener('pointerup', finishCryHold);
+playCryButton.addEventListener('pointercancel', cancelCryHold);
+playCryButton.addEventListener('lostpointercapture', cancelCryHold);
+playCryButton.addEventListener('click', event => {
+    if (suppressCryClick) {
+        event.preventDefault();
+        suppressCryClick = false;
+        return;
+    }
+    playSelectedCry();
+});
+playCryButton.addEventListener('keydown', event => {
+    if (event.key === 'ArrowDown' && openCryVersionMenu()) {
+        event.preventDefault();
+        cryVersionMenu.querySelector('.cry-version-option')?.focus();
+    }
+});
+cryVersionMenu.addEventListener('keydown', event => {
+    if (event.key === 'Escape') {
+        event.preventDefault();
+        event.stopPropagation();
+        closeCryVersionMenu();
+        playCryButton.focus();
+    } else if (event.key.startsWith('Arrow')) {
+        event.preventDefault();
+        event.stopPropagation();
+        if (event.key === 'ArrowRight' || event.key === 'ArrowLeft') {
+            const options = Array.from(cryVersionMenu.querySelectorAll('.cry-version-option'));
+            const currentIndex = options.indexOf(document.activeElement);
+            const direction = event.key === 'ArrowRight' ? 1 : -1;
+            options[(currentIndex + direction + options.length) % options.length]?.focus();
+        }
+    }
 });
 
 gallery.addEventListener('click', (event) => {

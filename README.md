@@ -8,6 +8,7 @@ Gotta snap 'em all! A simple, static Pokédex for displaying your Pokémon photo
 
 - Browse all 1025 Pokémon (Gen 1–9) in a responsive grid
 - Gallery modal with variant navigation (regular, shiny, regional, mega forms)
+- Play cached Pokémon cries for standard and Mega forms, with latest/legacy recordings when available
 - Pokédex entry text fetched from [PokeAPI](https://pokeapi.co/) — grouped by game entries that share identical text
 - Keyboard shortcuts for fast navigation (see below)
 - Dark/light theme toggle
@@ -21,6 +22,10 @@ Gotta snap 'em all! A simple, static Pokédex for displaying your Pokémon photo
 - Search `Shiny <Pokemon>` to return that specific shiny variant.
 - Use `Shiny &` or `Shiny and` to request shinies for all listed Pokémon: `Shiny & Pikachu, Gastly, Combee`.
 - Mix shiny and regular results with commas: `Shiny Pikachu, Meowth` returns shiny Pikachu and regular Meowth.
+
+### Pokémon Cries
+
+The gallery loads cry recordings from PokeAPI for the currently selected Pokémon form. Standard and Mega forms use their own PokeAPI cry when available. When both are available, press and hold **Play Cry**, then drag to **Latest** or **Legacy** and release to play that recording. PokeAPI does not provide a separate recording for every game generation. Repeated Pokémon API lookups are cached in memory and by the browser's HTTP cache. Uncaptured Pokémon remain locked until **Show Spoilers** is enabled.
 
 ## Quick Start
 
