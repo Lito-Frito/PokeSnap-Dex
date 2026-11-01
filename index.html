@@ -39,7 +39,7 @@ Notes for Future Development:
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PokeSnap-Dex</title>
     <link rel="icon" href="favicon.png" type="image/png">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=20261101-3">
 </head>
 <body class="dark-mode">
     <div id="app-container">
@@ -72,18 +72,27 @@ Notes for Future Development:
             <img id="gallery-image" src="" alt="Gallery Image">
             <h2 id="gallery-name"></h2>
             <div id="dex-entry"></div>
-            <div id="dex-entry-footer">
-                <button id="spoiler-toggle">Show Spoilers</button>
-            </div>
             <p id="dex-entry-scroll-hint" class="hidden">Scroll description for more</p>
             <div class="gallery-controls">
-                <div class="gallery-nav-buttons">
+                <div id="cry-controls">
+                    <span id="cry-status" role="status" aria-live="polite"></span>
+                    <span id="cry-hint" hidden>Hold Play Cry to choose a recording</span>
+                </div>
+                <div class="gallery-action-grid">
                     <button id="prev-variant">Prev Image</button>
                     <button id="next-variant">Next Image</button>
+                    <div class="cry-play-cell">
+                        <button id="play-cry" type="button" aria-expanded="false" aria-controls="cry-version-menu" aria-label="Play cry. Hold to choose a recording." disabled>
+                            <span>Play Cry</span>
+                            <span class="cry-options-indicator" aria-hidden="true">▾</span>
+                        </button>
+                        <div id="cry-version-menu" role="group" aria-label="Choose cry recording" hidden></div>
+                    </div>
                     <button id="prev-description">Prev Entry</button>
                     <button id="next-description">Next Entry</button>
+                    <button id="spoiler-toggle">Show Spoilers</button>
+                    <button id="close-gallery">Close</button>
                 </div>
-                <button id="close-gallery">Close</button>
             </div>
         </div>
     </div>
@@ -95,6 +104,7 @@ Notes for Future Development:
             <div id="captured-list"></div>
         </div>
     </div>
-    <script src="script.js?v=20260827-1"></script>
+    <script src="pokemon-cry-utils.js?v=20261101-1"></script>
+    <script src="script.js?v=20261101-3"></script>
 </body>
 </html>

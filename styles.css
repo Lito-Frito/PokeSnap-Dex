@@ -501,99 +501,6 @@ header p {
     padding: 6px 0;
 }
 
-#dex-entry-footer {
-    width: 100%;
-    max-width: 560px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    min-height: 32px;
-    margin-top: 2px;
-}
-
-#gallery #spoiler-toggle {
-    background: rgba(20, 20, 20, 0.45);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 6px;
-    color: #d1d5db;
-    font-size: 0.78em;
-    font-style: italic;
-    padding: 3px 10px;
-    cursor: pointer;
-    margin: 0;
-    font-weight: normal;
-    line-height: 1.4;
-    transition: color 0.15s ease, background 0.15s ease;
-}
-
-#gallery #spoiler-toggle:hover {
-    background: rgba(40, 40, 40, 0.65);
-    color: #f3f4f6;
-}
-
-#gallery #spoiler-toggle.spoilers-active {
-    background: rgba(146, 64, 14, 0.5);
-    border-color: rgba(180, 83, 9, 0.6);
-    color: #fbbf24;
-}
-
-#gallery #spoiler-toggle.spoilers-active:hover {
-    background: rgba(180, 83, 9, 0.6);
-    color: #fde68a;
-}
-
-.gallery-nav-buttons button {
-    border-radius: 5px;
-}
-
-.gallery-controls {
-    width: 100%;
-    max-width: 560px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-    padding-top: 10px;
-    border-top: 1px solid rgba(255, 255, 255, 0.14);
-}
-
-.gallery-nav-buttons {
-    display: flex;
-    flex-direction: row;
-    gap: 8px;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-#close-gallery {
-    background-color: #007BFF;
-    border: 2px solid #007BFF;
-    color: white;
-    min-width: 88px;
-}
-
-#close-gallery:hover {
-    background-color: #0069d9;
-}
-
-#prev-description, #next-description {
-    background-color: #007BFF;
-    border: 2px solid #007BFF;
-}
-
-.dark-mode #prev-description, .dark-mode #next-description {
-    background-color: #555;
-    border: 2px solid #555;
-}
-
-.dark-mode #close-gallery {
-    background-color: #555;
-    border: 2px solid #555;
-    color: white;
-}
-
-
-
 .gallery-buttons button:disabled {
     opacity: 0.5;
     cursor: not-allowed;
@@ -814,26 +721,210 @@ button {
         order: 2;
     }
 
-    .gallery-nav-buttons {
-        gap: 6px;
-    }
-
-    .gallery-controls {
-        gap: 6px;
-    }
-
-    .gallery-nav-buttons button {
-        padding: 4px 8px;
-    }
-
-    .gallery-nav-buttons button:disabled {
-        opacity: 0.5;
-        cursor: not-allowed;
-    }
 }
 
 @media (orientation: landscape) and (max-width: 768px) {
     #gallery-image {
         height: 40vh;
+    }
+}
+
+/* Gallery actions share sizing and visual treatment across devices. */
+#gallery .gallery-controls {
+    display: grid;
+    gap: 8px;
+    width: 100%;
+    max-width: 560px;
+    margin-top: -4px;
+    padding-top: 5px;
+    border-top: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+#cry-controls {
+    position: relative;
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    align-items: center;
+    gap: 6px 10px;
+    width: 100%;
+    max-width: none;
+    color: #d1d5db;
+    font-size: 0.88em;
+}
+
+#cry-status,
+#cry-hint {
+    grid-column: 1 / -1;
+    min-height: 1.2em;
+}
+
+#cry-status:empty {
+    display: none;
+}
+
+#cry-hint {
+    display: block;
+    color: #d1d5db;
+    font-size: 0.82em;
+    text-align: center;
+}
+
+#cry-hint[hidden] {
+    display: none;
+}
+
+.gallery-action-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+    width: 100%;
+}
+
+#gallery .gallery-action-grid > button,
+#gallery #play-cry {
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 0;
+    height: 48px;
+    min-height: 48px;
+    margin: 0;
+    padding: 8px 10px;
+    border: 1px solid #007bff;
+    border-radius: 8px;
+    background: #007bff;
+    color: #fff;
+    font: inherit;
+    font-size: 0.88em;
+    font-weight: 600;
+    line-height: 1.15;
+    cursor: pointer;
+    touch-action: manipulation;
+}
+
+#gallery .gallery-action-grid > button:hover,
+#gallery #play-cry:hover {
+    background: #0069d9;
+}
+
+#gallery .gallery-action-grid > #spoiler-toggle.spoilers-active {
+    border-color: #b45309;
+    background: #92400e;
+    color: #fef3c7;
+}
+
+#gallery .gallery-action-grid > #close-gallery {
+    grid-column: 2;
+}
+
+#gallery .gallery-action-grid > button:focus-visible,
+#gallery #play-cry:focus-visible,
+#cry-version-menu button:focus-visible {
+    outline: 3px solid #93c5fd;
+    outline-offset: 2px;
+}
+
+#gallery .gallery-action-grid > button:disabled,
+#gallery #play-cry:disabled {
+    opacity: 0.52;
+    cursor: not-allowed;
+}
+
+#gallery .cry-play-cell {
+    position: relative;
+    min-width: 0;
+}
+
+#gallery #play-cry {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    touch-action: none;
+}
+
+.cry-options-indicator {
+    font-size: 0.75em;
+}
+
+#cry-version-menu {
+    position: fixed;
+    z-index: 3;
+    top: 50%;
+    left: 50%;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(78px, 1fr));
+    gap: 5px;
+    width: max-content;
+    max-width: min(190px, calc(100vw - 24px));
+    padding: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    border-radius: 10px;
+    background: #20242b;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+    transform: none;
+}
+
+#cry-version-menu[hidden] {
+    display: none;
+}
+
+#gallery #cry-version-menu .cry-version-option {
+    min-width: 78px;
+    min-height: 42px;
+    margin: 0;
+    padding: 6px 8px;
+    border: 1px solid #4b5563;
+    border-radius: 7px;
+    background: #374151;
+    color: #fff;
+    font: inherit;
+    font-size: 0.9rem;
+    cursor: pointer;
+    touch-action: none;
+}
+
+#gallery #cry-version-menu .cry-version-option.is-selected,
+#gallery #cry-version-menu .cry-version-option:hover {
+    border-color: #93c5fd;
+    background: #1d4ed8;
+}
+
+.dark-mode #gallery .gallery-action-grid > button,
+.dark-mode #gallery #play-cry {
+    border-color: #555;
+    background: #555;
+}
+
+.dark-mode #gallery .gallery-action-grid > button:hover,
+.dark-mode #gallery #play-cry:hover {
+    background: #666;
+}
+
+@media (hover: none) and (pointer: coarse) {
+    #cry-controls {
+        display: block;
+    }
+
+    #cry-hint {
+        margin-top: 4px;
+    }
+}
+
+@media (max-width: 767px) {
+    #gallery .gallery-controls {
+        gap: 8px;
+        padding-top: 4px;
+    }
+
+    .gallery-action-grid {
+        gap: 6px;
+    }
+
+    #gallery .gallery-action-grid > button,
+    #gallery #play-cry {
+        height: 52px;
+        min-height: 52px;
+        padding: 6px 4px;
+        font-size: clamp(0.72rem, 3.2vw, 0.88rem);
     }
 }
