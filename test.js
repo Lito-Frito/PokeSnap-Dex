@@ -576,12 +576,17 @@ function testPokemonNavigation() {
     { current: '002', direction: 1, expected: '010' },
     { current: '010', direction: 1, expected: null },
     { current: '999', direction: 1, expected: null },
+    { current: '001', direction: 1, candidates: ['001', '010'], expected: '010' },
+    { current: '002', direction: -1, candidates: ['001', '010'], expected: '001' },
+    { current: '002', direction: 1, candidates: ['001', '010'], expected: '010' },
+    { current: '004', direction: -1, candidates: ['001', '003', '006'], expected: '003' },
+    { current: '004', direction: 1, candidates: ['001', '003', '006'], expected: '006' },
     { current: '002', direction: 0, expected: null }
   ];
   let failed = 0;
 
-  tests.forEach(({ current, direction, expected }) => {
-    const actual = getAdjacentPokemonNumber(numbers, current, direction);
+  tests.forEach(({ current, direction, candidates = numbers, expected }) => {
+    const actual = getAdjacentPokemonNumber(candidates, current, direction);
     if (actual === expected) {
       console.log(`✓ Pokémon navigation from ${current} (${direction}) resolves to ${expected}`);
     } else {
