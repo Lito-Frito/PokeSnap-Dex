@@ -9529,6 +9529,54 @@
         "images": [
           "https://your-image-url-here.jpg"
         ]
+      },
+      {
+        "label": "Castform - Sunny Form",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ]
+      },
+      {
+        "label": "Shiny Castform - Sunny Form",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ]
+      },
+      {
+        "label": "Castform - Rainy Form",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ]
+      },
+      {
+        "label": "Shiny Castform - Rainy Form",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ]
+      },
+      {
+        "label": "Castform - Snowy Form",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ]
+      },
+      {
+        "label": "Shiny Castform - Snowy Form",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ]
       }
     ],
     "genus": "Weather Pokémon"
