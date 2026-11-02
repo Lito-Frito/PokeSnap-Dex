@@ -131,7 +131,7 @@ Manages app state and interactions.
 - 1,025 entries, keyed by number.
 - Variants: Base, shiny, regional, etc.
 - Placeholders: "https://your-image-url-here.jpg" for missing images.
-- If a new form or variant label is added to `data.json`, its exact label must also be mirrored in `data-entries-overrides.json` whenever the default dex data does not include it. The UI resolves dex entries by exact label match, so mismatches silently fail.
+- If a new form or variant label is added to `data.json`, make sure its Pokédex entry resolves. Overrides normally use the exact label; intentionally shared text can use a canonical shared key with an explicit lookup fallback. The UI does not infer arbitrary label matches.
 
 **Dex UI Formatting Rule:**
 Use this pattern for any UI-facing names that include forms, regional variants, or breed-specific labels:
