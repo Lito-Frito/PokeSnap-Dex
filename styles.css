@@ -445,6 +445,18 @@ header p {
     text-align: center;
 }
 
+#first-encountered {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: 0.35em;
+    margin-top: -14px;
+    width: 100%;
+    max-width: 560px;
+    text-align: center;
+    overflow-wrap: anywhere;
+}
+
 #dex-entry {
     color: white;
     font-size: 0.95em;
