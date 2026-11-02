@@ -56,8 +56,9 @@ Object keyed `"001"` to `"1025"`. Each entry:
   "genus": "Seed Pokémon",
   "variants": [
     {
-      "image": "https://i.imgur.com/xxxxx.png",
+      "images": ["https://i.imgur.com/xxxxx.png"],
       "label": "Bulbasaur",
+      "firstEncountered": ["Scarlet"],
       "position": "center",
       "fit": "contain"
     }
@@ -65,6 +66,7 @@ Object keyed `"001"` to `"1025"`. Each entry:
 }
 ```
 - `label` is the display name shown in the gallery (e.g. `"Shiny Charizard"`, `"Mega Charizard X"`).
+- `firstEncountered` is an optional array aligned by index with `images`; each value is the game or origin for that image (for example `"Scarlet"`, `"Pokémon GO"`, or `"IRL"`). Unset values display as `???`.
 - Placeholders use `"https://your-image-url-here.jpg"`. Thumbnails skip placeholders.
 - `genus` is populated automatically by `sync-dex-entries.js` from PokeAPI and shown in the gallery header.
 - **Variant ordering rule**: Regular form first, then Mega/regional/shiny variants (see BRANCH_NOTES.md for ordering conventions).

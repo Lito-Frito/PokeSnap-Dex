@@ -39,7 +39,7 @@ Notes for Future Development:
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PokeSnap-Dex</title>
     <link rel="icon" href="favicon.png" type="image/png">
-    <link rel="stylesheet" href="styles.css?v=20261101-5">
+    <link rel="stylesheet" href="styles.css?v=20261102-8">
 </head>
 <body class="dark-mode">
     <div id="app-container">
@@ -71,6 +71,10 @@ Notes for Future Development:
         <div class="gallery-content">
             <img id="gallery-image" src="" alt="Gallery Image">
             <h2 id="gallery-name"></h2>
+            <div id="first-encountered">
+                <span class="dex-entry-description">First Encountered:</span>
+                <span id="first-encountered-value" class="dex-entry-source">???</span>
+            </div>
             <div id="dex-entry"></div>
             <p id="dex-entry-scroll-hint" class="hidden">Scroll description for more</p>
             <div class="gallery-controls">
@@ -108,7 +112,8 @@ Notes for Future Development:
     </div>
     <script src="dex-navigation-utils.js?v=20261101-1"></script>
     <script src="dex-entry-utils.js?v=20261102-1"></script>
+    <script src="first-encountered-utils.js?v=20261102-1"></script>
     <script src="pokemon-cry-utils.js?v=20261101-1"></script>
-    <script src="script.js?v=20261102-1"></script>
+    <script src="script.js?v=20261102-3"></script>
 </body>
 </html>
