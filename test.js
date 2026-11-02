@@ -183,6 +183,26 @@ function testIssueVariantCoverage() {
     }
   });
 
+  const castform = data['351'];
+  const castformLabels = (castform && castform.variants ? castform.variants.map(v => v.label) : []);
+  const requiredCastformForms = [
+    'Castform - Sunny Form',
+    'Shiny Castform - Sunny Form',
+    'Castform - Rainy Form',
+    'Shiny Castform - Rainy Form',
+    'Castform - Snowy Form',
+    'Shiny Castform - Snowy Form'
+  ];
+  requiredCastformForms.forEach(label => {
+    if (castformLabels.includes(label)) {
+      console.log(`✓ Castform includes ${label}`);
+      passed++;
+    } else {
+      console.log(`✗ Castform missing ${label}`);
+      failed++;
+    }
+  });
+
   console.log(`\nIssue Variant Coverage Test - Passed: ${passed}, Failed: ${failed}`);
   if (failed > 0) {
     process.exit(1);
