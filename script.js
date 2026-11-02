@@ -41,85 +41,6 @@
 let pokedexData = {};
 let dexEntriesByNumber = {};
 
-function normalizeEntryItem(entryItem) {
-    if (typeof entryItem === 'string') {
-        if (entryItem.includes(' - ')) {
-            const [source, text] = entryItem.split(' - ', 2);
-            return { source, text };
-        }
-        return { source: 'Entry', text: entryItem };
-    }
-
-    if (entryItem && typeof entryItem === 'object') {
-        return {
-            source: entryItem.source || 'Entry',
-            text: entryItem.text || ''
-        };
-    }
-
-    return { source: 'Entry', text: '' };
-}
-
-function getVariantLabelCandidates(variantLabel) {
-    const candidates = [];
-
-    if (variantLabel) {
-        candidates.push(variantLabel);
-        if (/^Shiny\s+/.test(variantLabel)) {
-            candidates.push(variantLabel.replace(/^Shiny\s+/, '').trim());
-        }
-    }
-
-    return Array.from(new Set(candidates.filter(Boolean)));
-}
-
-function getVariantEntries(entryMap, labels) {
-    if (!entryMap || typeof entryMap !== 'object') {
-        return null;
-    }
-
-    for (const label of labels) {
-        if (Array.isArray(entryMap[label]) && entryMap[label].length > 0) {
-            return entryMap[label].map(normalizeEntryItem);
-        }
-    }
-
-    return null;
-}
-
-function getEntriesForVariant(number, variantLabel) {
-    const speciesEntries = dexEntriesByNumber[number];
-    if (!speciesEntries) {
-        return [];
-    }
-
-    if (Array.isArray(speciesEntries)) {
-        return speciesEntries.map(normalizeEntryItem);
-    }
-
-    const labelCandidates = getVariantLabelCandidates(variantLabel);
-
-    const variantEntries = getVariantEntries(speciesEntries.variants, labelCandidates);
-    if (variantEntries) {
-        return variantEntries;
-    }
-
-    const groupedVariantEntries = getVariantEntries(speciesEntries.variantsGrouped, labelCandidates);
-    if (groupedVariantEntries) {
-        return groupedVariantEntries;
-    }
-
-    if (Array.isArray(speciesEntries.defaultGrouped)) {
-        return speciesEntries.defaultGrouped.map(normalizeEntryItem);
-    }
-
-    if (Array.isArray(speciesEntries.default)) {
-        return speciesEntries.default.map(normalizeEntryItem);
-    }
-
-    return [];
-}
-
 async function loadData() {
   console.log('Starting to load data...');
   try {
@@ -127,7 +48,7 @@ async function loadData() {
         const [response, entriesResponse, overridesResponse] = await Promise.all([
             fetch('data.json?v=20260827-1', fetchOptions),
             fetch('data-entries.json?v=20260827-1', fetchOptions),
-            fetch('data-entries-overrides.json?v=20260827-1', fetchOptions).catch(() => null)
+            fetch('data-entries-overrides.json?v=20261102-1', fetchOptions).catch(() => null)
         ]);
         console.log('Fetch response:', response);
         pokedexData = await response.json();
@@ -183,7 +104,7 @@ async function loadData() {
               label: variant.label,
               position: pos,
               fit: variant.fit || 'contain',
-              entries: getEntriesForVariant(num, variant.label)
+              entries: DexEntryUtils.getEntriesForVariant(dexEntriesByNumber[num], variant.label)
             });
           }
         }
@@ -273,7 +194,7 @@ function updateDexEntry() {
             lockedMsg.textContent = 'Entry locked until captured.';
             dexEntry.appendChild(lockedMsg);
         } else if (entries && entries.length > 0) {
-            const entryData = normalizeEntryItem(entries[currentEntryIndex]);
+            const entryData = DexEntryUtils.normalizeEntryItem(entries[currentEntryIndex]);
             const entryLayout = document.createElement('div');
             entryLayout.className = 'dex-entry-layout';
             const sourceColumn = document.createElement('div');
