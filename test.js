@@ -8,6 +8,7 @@
 
 const fs = require('fs');
 const { getPokemonCryIdentifier } = require('./pokemon-cry-utils.js');
+const DexEntryUtils = require('./dex-entry-utils.js');
 const { getAdjacentPokemonNumber } = require('./dex-navigation-utils.js');
 const { buildMegaCoverageReport, isMegaPokemonName } = require('./scripts/mega-coverage-utils.js');
 const { getDexNumber } = require('./scripts/check-mega-coverage.js');
@@ -23,6 +24,10 @@ function loadRawDataText() {
 
 function loadEntriesData() {
   return JSON.parse(fs.readFileSync('data-entries.json', 'utf8'));
+}
+
+function loadEntriesOverrides() {
+  return JSON.parse(fs.readFileSync('data-entries-overrides.json', 'utf8'));
 }
 
 function testDataIntegrity() {
@@ -207,6 +212,39 @@ function testIssueVariantCoverage() {
 
   console.log(`\nIssue Variant Coverage Test - Passed: ${passed}, Failed: ${failed}`);
   if (failed > 0) {
+    process.exit(1);
+  }
+}
+
+function testSharedUnownEntryOverride() {
+  const data = loadData();
+  const unownVariants = data['201'].variants;
+  const unownOverrides = loadEntriesOverrides().entries['201'] || {};
+  const groupedOverrides = unownOverrides.variantsGrouped || {};
+  const sharedEntry = groupedOverrides.Unown;
+  let failed = 0;
+
+  if (
+    unownVariants.length !== 56 ||
+    unownOverrides.variants ||
+    Object.keys(groupedOverrides).length !== 1 ||
+    !Array.isArray(sharedEntry)
+  ) {
+    console.log('✗ Unown should have 56 labels and exactly one shared variant entry');
+    failed++;
+  }
+
+  unownVariants.forEach(({ label }) => {
+    const entries = DexEntryUtils.getEntriesForVariant(unownOverrides, label);
+    if (JSON.stringify(entries) !== JSON.stringify(sharedEntry)) {
+      console.log(`✗ ${label} does not resolve to the shared Unown entry`);
+      failed++;
+    }
+  });
+
+  if (failed === 0) {
+    console.log(`✓ All ${unownVariants.length} Unown labels resolve to one shared entry`);
+  } else {
     process.exit(1);
   }
 }
@@ -729,6 +767,7 @@ testDataIntegrity();
 testNumericFileOrder();
 testNoDuplicatesInVariants();
 testIssueVariantCoverage();
+testSharedUnownEntryOverride();
 testNameFormatting();
 testPositionArray();
 testCaptureCountLogic();
