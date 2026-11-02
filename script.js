@@ -16,7 +16,7 @@
  *
  * Data Structure (data.json):
  * - Keys: '001' to '1025' (Pokémon numbers).
- * - Each entry: { name: string, variants: [{ label: string, images: [url], position: string, fit: string }] }
+ * - Each entry: { name: string, variants: [{ label: string, images: [url], firstEncountered?: [source], position: string, fit: string }] }
  * - Placeholders: "https://your-image-url-here.jpg" for missing images.
  *
  * Data Structure (data-entries.json):
@@ -102,6 +102,10 @@ async function loadData() {
             pokedexData[num].allImages.push({
               image: img,
               label: variant.label,
+              firstEncountered: FirstEncounteredUtils.getFirstEncounteredLabel(
+                variant.firstEncountered,
+                i
+              ),
               position: pos,
               fit: variant.fit || 'contain',
               entries: DexEntryUtils.getEntriesForVariant(dexEntriesByNumber[num], variant.label)
@@ -910,6 +914,7 @@ function updateGalleryImage() {
             displayName = `${displayName} - ${variantSuffix}`;
         }
         galleryName.textContent = displayName;
+        document.getElementById('first-encountered-value').textContent = imgObj.firstEncountered;
         // Display Dex entries — clamp index to valid range for new image's entries
         const newEntries = imgObj.entries;
         const maxIndex = newEntries && newEntries.length > 0 ? newEntries.length - 1 : 0;

@@ -10,6 +10,7 @@ const fs = require('fs');
 const { getPokemonCryIdentifier } = require('./pokemon-cry-utils.js');
 const DexEntryUtils = require('./dex-entry-utils.js');
 const { getAdjacentPokemonNumber } = require('./dex-navigation-utils.js');
+const { getFirstEncounteredLabel } = require('./first-encountered-utils.js');
 const { buildMegaCoverageReport, isMegaPokemonName } = require('./scripts/mega-coverage-utils.js');
 const { getDexNumber } = require('./scripts/check-mega-coverage.js');
 
@@ -507,6 +508,54 @@ function testCaptureCountLogic() {
   }
 }
 
+function testFirstEncounteredMetadata() {
+  const labelTests = [
+    { encounters: ['Scarlet', 'IRL'], imageIndex: 0, expected: 'Scarlet' },
+    { encounters: [' Scarlet '], imageIndex: 0, expected: 'Scarlet' },
+    { encounters: ['Scarlet'], imageIndex: 1, expected: '???' },
+    { encounters: [], imageIndex: 0, expected: '???' },
+    { encounters: [''], imageIndex: 0, expected: '???' },
+    { encounters: [null], imageIndex: 0, expected: '???' },
+    { encounters: 'Scarlet', imageIndex: 0, expected: '???' }
+  ];
+  let failed = 0;
+
+  labelTests.forEach(({ encounters, imageIndex, expected }) => {
+    const actual = getFirstEncounteredLabel(encounters, imageIndex);
+    if (actual !== expected) {
+      console.log(`✗ First Encountered label resolved to ${actual}, expected ${expected}`);
+      failed++;
+    }
+  });
+
+  const data = loadData();
+  for (const [key, entry] of Object.entries(data)) {
+    for (const variant of entry.variants || []) {
+      if (variant.firstEncountered === undefined) {
+        continue;
+      }
+
+      if (!Array.isArray(variant.firstEncountered) || variant.firstEncountered.length > variant.images.length) {
+        console.log(`✗ ${key}: ${variant.label} has invalid firstEncountered metadata`);
+        failed++;
+        continue;
+      }
+
+      if (variant.firstEncountered.some(value => value !== null && typeof value !== 'string')) {
+        console.log(`✗ ${key}: ${variant.label} has a non-string firstEncountered value`);
+        failed++;
+      }
+    }
+  }
+
+  if (failed === 0) {
+    console.log('✓ First Encountered metadata resolves per image and falls back to ???');
+    return;
+  }
+
+  process.exit(1);
+}
+
 function testNoEmbeddedEntriesInDataJson() {
   const data = loadData();
   let failed = 0;
@@ -770,6 +819,7 @@ testIssueVariantCoverage();
 testSharedUnownEntryOverride();
 testNameFormatting();
 testPositionArray();
+testFirstEncounteredMetadata();
 testCaptureCountLogic();
 testNoEmbeddedEntriesInDataJson();
 testEntriesFileIntegrity();
