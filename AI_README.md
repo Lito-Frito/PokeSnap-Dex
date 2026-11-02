@@ -209,6 +209,15 @@ Run `node scripts/check-mega-coverage.js` to fetch Mega-form identifiers from Po
 
 The audit never writes data files or invents dex text. Missing overrides still display the species-level fallback; add a distinct Mega entry only when its wording and source have been verified. Review unmatched form names manually because upstream identifiers and gallery labels may differ.
 
+#### When PokeAPI Adds a Mega Form
+New forms are not added to the app automatically. When checking for a new Mega:
+1. Run `node scripts/check-mega-coverage.js` from the repository root; it requires internet access and only prints a report.
+2. Review reported missing forms and label mismatches. Decide whether the form belongs in the Dex and choose a clear label consistent with existing variants. Do not blindly copy or rename to an upstream slug.
+3. Add the confirmed regular and shiny variant labels to the matching species in `data.json`, with the appropriate images or placeholders. For form-specific cries, verify the expected PokeAPI form identifier and update `pokemon-cry-utils.js` and tests if its naming does not follow the existing pattern.
+4. Add an exact-label entry in `data-entries-overrides.json` only if a verified form-specific Pokédex entry is available. PokeAPI supplies species-level text, so without an override the app intentionally falls back to the species entry. Never invent text to clear the report.
+5. Run `node test.js` and rerun the coverage audit. Review remaining unmatched labels and missing overrides; a non-empty report can be intentional.
+6. Propagate code, tests, and docs between `main` and `LitoFrito` without overwriting `LitoFrito`'s real image URLs in `data.json` or its branch-specific `data-entries.json`. Follow `BRANCH_NOTES.md`.
+
 ### Required Override Workflow for New Forms
 When a form or variant is added to `data.json` but does not exist in the default PokeAPI entry set, treat it as a required follow-up task:
 1. Add the exact label text to `data.json`.

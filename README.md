@@ -226,6 +226,9 @@ Run `node scripts/check-mega-coverage.js` to compare Mega forms listed by PokeAP
 
 PokeAPI provides species-level Pokédex text, not separate Mega-form flavor text. The app therefore falls back to the species entry when a Mega override is missing. Add form-specific text only after verifying it from a suitable source, then run `node test.js`. PokeAPI names and curated gallery labels can differ, so review unmatched items rather than renaming labels automatically.
 
+#### If a New Mega Form Is Added to PokeAPI
+New forms are not imported automatically. Run `node scripts/check-mega-coverage.js` to identify possible additions, then review the report before changing `data.json`. Confirm the correct species, display label, shiny variant, and any form-specific cry mapping; add images or placeholders and run `node test.js`. Only add an override when you have verified form-specific Pokédex text—otherwise the app uses the species-level entry. Rerun the audit after updating the data, and propagate the reviewed changes to both branches while preserving `LitoFrito`'s image URLs and `data-entries.json`.
+
 ## Understanding Key Features
 
 ### Captured Count
