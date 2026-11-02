@@ -220,6 +220,15 @@ When the gallery is open:
 
 Entry text is sourced from [PokeAPI](https://pokeapi.co/) via `scripts/sync-dex-entries.js` and stored in `data-entries.json`. Entries are grouped so that games with identical text are shown together (e.g. `Red/FireRed`, `(Heart)Gold`, `Diamond/Pearl/Platinum`). This keeps the entry list readable without losing source attribution.
 
+### Audit Mega Forms
+
+Run `node scripts/check-mega-coverage.js` to compare Mega forms listed by PokeAPI with the Mega labels in `data.json` and form-specific entries in `data-entries-overrides.json`. The report is read-only and flags forms or labels that need review; it does not edit either data file.
+
+PokeAPI provides species-level Pokédex text, not separate Mega-form flavor text. The app therefore falls back to the species entry when a Mega override is missing. Add form-specific text only after verifying it from a suitable source, then run `node test.js`. PokeAPI names and curated gallery labels can differ, so review unmatched items rather than renaming labels automatically.
+
+#### If a New Mega Form Is Added to PokeAPI
+New forms are not imported automatically. Run `node scripts/check-mega-coverage.js` to identify possible additions, then review the report before changing `data.json`. Confirm the correct species, display label, shiny variant, and any form-specific cry mapping; add images or placeholders and run `node test.js`. Only add an override when you have verified form-specific Pokédex text—otherwise the app uses the species-level entry. Rerun the audit after updating the data, and propagate the reviewed changes to both branches while preserving `LitoFrito`'s image URLs and `data-entries.json`.
+
 ## Understanding Key Features
 
 ### Captured Count

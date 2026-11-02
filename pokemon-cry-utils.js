@@ -28,6 +28,10 @@ const PokemonCryUtils = (() => {
     const formSuffix = slugifyPokemonName(suffix);
     const speciesSlug = slugifyPokemonName(pokemonName);
 
+    if (pokemonName.toLowerCase() === 'tatsugiri' && /^(curly|droopy|stretchy)$/i.test(suffix)) {
+      return `${speciesSlug}-${formSuffix}-mega`;
+    }
+
     return `${speciesSlug}-mega${formSuffix ? `-${formSuffix}` : ''}`;
   }
 
