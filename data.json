@@ -26000,6 +26000,14 @@
         ]
       },
       {
+        "label": "Shiny Stretchy",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ]
+      },
+      {
         "label": "Curly",
         "position": "center",
         "fit": "contain",
@@ -26032,7 +26040,7 @@
         ]
       },
       {
-        "label": "Mega Tatsugiri",
+        "label": "Mega Tatsugiri Curly",
         "position": "center",
         "fit": "contain",
         "images": [
@@ -26040,7 +26048,39 @@
         ]
       },
       {
-        "label": "Shiny Mega Tatsugiri",
+        "label": "Shiny Mega Tatsugiri Curly",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ]
+      },
+      {
+        "label": "Mega Tatsugiri Droopy",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ]
+      },
+      {
+        "label": "Shiny Mega Tatsugiri Droopy",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ]
+      },
+      {
+        "label": "Mega Tatsugiri Stretchy",
+        "position": "center",
+        "fit": "contain",
+        "images": [
+          "https://your-image-url-here.jpg"
+        ]
+      },
+      {
+        "label": "Shiny Mega Tatsugiri Stretchy",
         "position": "center",
         "fit": "contain",
         "images": [

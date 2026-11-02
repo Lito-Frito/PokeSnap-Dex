@@ -9,6 +9,8 @@
 const fs = require('fs');
 const { getPokemonCryIdentifier } = require('./pokemon-cry-utils.js');
 const { getAdjacentPokemonNumber } = require('./dex-navigation-utils.js');
+const { buildMegaCoverageReport, isMegaPokemonName } = require('./scripts/mega-coverage-utils.js');
+const { getDexNumber } = require('./scripts/check-mega-coverage.js');
 
 function loadData() {
   const data = JSON.parse(fs.readFileSync('data.json', 'utf8'));
@@ -568,7 +570,10 @@ function testPokemonCryIdentifiers() {
     { dexNumber: '006', name: 'Charizard', label: 'Shiny Mega Charizard Y', expected: 'charizard-mega-y' },
     { dexNumber: '003', name: 'Venusaur', label: 'Mega Venusaur', expected: 'venusaur-mega' },
     { dexNumber: '026', name: 'Raichu', label: 'Mega Raichu X', expected: 'raichu-mega-x' },
-    { dexNumber: '359', name: 'Absol', label: 'Mega Absol Z', expected: 'absol-mega-z' }
+    { dexNumber: '359', name: 'Absol', label: 'Mega Absol Z', expected: 'absol-mega-z' },
+    { dexNumber: '978', name: 'Tatsugiri', label: 'Mega Tatsugiri Curly', expected: 'tatsugiri-curly-mega' },
+    { dexNumber: '978', name: 'Tatsugiri', label: 'Shiny Mega Tatsugiri Droopy', expected: 'tatsugiri-droopy-mega' },
+    { dexNumber: '978', name: 'Tatsugiri', label: 'Mega Tatsugiri Stretchy', expected: 'tatsugiri-stretchy-mega' }
   ];
   let failed = 0;
 
@@ -620,6 +625,106 @@ function testPokemonNavigation() {
   }
 }
 
+function testMegaCoverageReport() {
+  const pokemonForms = [
+    { dexNumber: '6', name: 'charizard-mega-x' },
+    { dexNumber: '94', name: 'gengar-mega' },
+    { dexNumber: '670', name: 'floette-mega' },
+    { dexNumber: '801', name: 'magearna-original-mega' },
+    { dexNumber: '154', name: 'meganium' }
+  ];
+  const data = {
+    '006': {
+      variants: [
+        { label: 'Mega Charizard X' },
+        { label: 'Shiny Mega Charizard X' },
+        { label: 'Mega Ditto' },
+        { label: 'Shiny Mega Ditto' }
+      ]
+    },
+    '670': {
+      variants: [
+        { label: 'Mega Floette Eternal Flower' },
+        { label: 'Shiny Mega Floette Eternal Flower' }
+      ]
+    },
+    '801': {
+      variants: [
+        { label: 'Mega Magearna Original Color' },
+        { label: 'Shiny Mega Magearna Original Color' }
+      ]
+    }
+  };
+  const overrides = {
+    '006': {
+      variantsGrouped: {
+        'Mega Charizard X': [{ source: 'Test', text: 'Mega entry' }]
+      }
+    }
+  };
+  const report = buildMegaCoverageReport(pokemonForms, data, overrides);
+  const checks = [
+    { label: 'Recognizes Mega form slugs without matching ordinary names', actual: isMegaPokemonName('charizard-mega-x') && !isMegaPokemonName('meganium') },
+    { label: 'Extracts Pokédex number from PokeAPI species URL', actual: getDexNumber('https://pokeapi.co/api/v2/pokemon-species/6/') === '6' },
+    { label: 'Finds API forms missing from data.json', actual: report.missingAppForms.length === 1 && report.missingAppForms[0].name === 'gengar-mega' },
+    { label: 'Finds data.json labels not matched to PokeAPI', actual: report.unmatchedAppForms.length === 1 && report.unmatchedAppForms[0].label === 'Mega Ditto' },
+    { label: 'Checks normal and shiny override coverage exactly', actual: report.missingOverrides.map(form => form.label).join('|') === 'Mega Ditto|Shiny Mega Charizard X|Shiny Mega Ditto|Mega Floette Eternal Flower|Shiny Mega Floette Eternal Flower|Mega Magearna Original Color|Shiny Mega Magearna Original Color' },
+    { label: 'Accepts grouped override entries as coverage', actual: !report.missingOverrides.some(form => form.label === 'Mega Charizard X') },
+    { label: 'Recognizes the curated Floette Mega alias', actual: !report.unmatchedAppForms.some(form => form.label.includes('Floette')) },
+    { label: 'Recognizes the curated Magearna Mega alias', actual: !report.unmatchedAppForms.some(form => form.label.includes('Magearna')) }
+  ];
+  let failed = 0;
+
+  checks.forEach(({ label, actual }) => {
+    if (actual) {
+      console.log(`✓ ${label}`);
+    } else {
+      console.log(`✗ ${label}`);
+      failed++;
+    }
+  });
+
+  if (failed > 0) {
+    process.exit(1);
+  }
+}
+
+function testTatsugiriMegaCoverage() {
+  const data = loadData();
+  const labels = (data['978'].variants || []).map(variant => variant.label);
+  const expectedLabels = [
+    'Stretchy',
+    'Shiny Stretchy',
+    'Mega Tatsugiri Curly',
+    'Shiny Mega Tatsugiri Curly',
+    'Mega Tatsugiri Droopy',
+    'Shiny Mega Tatsugiri Droopy',
+    'Mega Tatsugiri Stretchy',
+    'Shiny Mega Tatsugiri Stretchy'
+  ];
+  let failed = 0;
+
+  expectedLabels.forEach(label => {
+    if (labels.includes(label)) {
+      console.log(`✓ Tatsugiri includes ${label}`);
+    } else {
+      console.log(`✗ Tatsugiri missing ${label}`);
+      failed++;
+    }
+  });
+
+  if (labels.includes('Mega Tatsugiri') || labels.includes('Shiny Mega Tatsugiri')) {
+    console.log('✗ Tatsugiri still has ambiguous Mega labels');
+    failed++;
+  } else {
+    console.log('✓ Tatsugiri has no ambiguous Mega labels');
+  }
+
+  if (failed > 0) {
+    process.exit(1);
+  }
+}
+
 testDataIntegrity();
 testNumericFileOrder();
 testNoDuplicatesInVariants();
@@ -631,3 +736,5 @@ testNoEmbeddedEntriesInDataJson();
 testEntriesFileIntegrity();
 testPokemonCryIdentifiers();
 testPokemonNavigation();
+testMegaCoverageReport();
+testTatsugiriMegaCoverage();
