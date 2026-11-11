@@ -14,6 +14,8 @@ Gotta snap 'em all! A simple, static Pokédex for displaying your Pokémon photo
 - Keyboard shortcuts for fast navigation (see below)
 - Dark/light theme toggle
 - Capture count tracking
+- Stable image IDs, so changing carousel order or moving image hosting does not break collection references
+- Read-only published collections and a collection builder that previews and exports JSON for the site owner
 
 ## Search Syntax
 
@@ -23,6 +25,22 @@ Gotta snap 'em all! A simple, static Pokédex for displaying your Pokémon photo
 - Search `Shiny <Pokemon>` to return that specific shiny variant.
 - Use `Shiny &` or `Shiny and` to request shinies for all listed Pokémon: `Shiny & Pikachu, Gastly, Combee`.
 - Mix shiny and regular results with commas: `Shiny Pikachu, Meowth` returns shiny Pikachu and regular Meowth.
+
+## Collections
+
+Select **Collections** to browse the published collections one at a time with **Prev Collection / Next Collection**, or start building one. Set the grid size (1–5 rows and 1–5 columns), click a cell, search for a Pokémon in the usual search bar, and select a result. The image picker opens in carousel mode; use **Prev Image / Next Image**, **Select Image / Remove Image**, and **Close**. Empty cells appear black. Your in-progress draft is saved in this browser and can be resumed after closing or reloading the page; **Cancel** discards it. Add an optional description or audio URL (direct audio, a Spotify track link, or a SoundCloud link), then preview the grid and download `collections.json`.
+
+The site does not save visitor-created collections or change its published catalog. To publish a collection, the site owner reviews the downloaded JSON and commits it to the repository. Collections refer to image IDs, not URLs or list positions. Direct audio files use browser controls; Spotify and SoundCloud links use their provider players. Playback is never started automatically, and provider playback may depend on the visitor's account, region, or the track's availability.
+
+## Data schema version 2
+
+Image identity is separate from image hosting:
+
+- `data.json` keeps each Pokémon and its variants. `variants[].images` contains stable image IDs in carousel order.
+- `images.json` maps each ID to its current URL. Keep an ID when moving an image or changing its URL; assign a new ID only for a different image.
+- `collections.json` stores collection name, optional description/audio URL, grid dimensions (`x` rows by `y` columns), and row-major `cells`. Use `"blank"` for an empty cell. Both dimensions must be 1–5.
+
+The files are linked by `_meta.datasetId`; each branch has its own image dataset. The app checks that image references resolve and reports incompatible/missing data instead of silently selecting another image.
 
 ### Pokémon Cries
 
@@ -65,75 +83,42 @@ The gallery loads cry recordings from PokeAPI for the currently selected Pokémo
    - Your site will be available at `https://yourusername.github.io/PokeSnap-Dex/`.
 
 4. **Customize and Push**:
-   - Edit `data.json` with your photos (see below).
+   - Add photos using the helper command below; do not put image URLs directly in `data.json`.
    - Commit and push changes: `git add . && git commit -m "Update photos" && git push`.
 
-## How to Add Your Photos
+## How to Add a Photo
 
-To populate your PokeSnap-Dex with images, follow these steps:
+1. Host the photo at a publicly accessible HTTPS URL.
+2. Find the Pokémon number and exact variant label already used by the Dex. For example, Bulbasaur is `001`, and its regular label is `Bulbasaur`.
+3. From the repository root, run:
 
-1. **Host Your Images Online**:
-   - Upload your photos to a free image hosting service like [Imgur](https://imgur.com/), [GitHub](https://github.com/) (in a repo), or any public URL provider.
-   - Ensure the images are publicly accessible (no login required).
+   ```bash
+   node scripts/add-image.js --number 001 --label "Bulbasaur" --url "https://example.com/bulbasaur.png"
+   ```
 
-2. **Edit the Data File**:
-   - Open `data.json` in a text editor.
-   - Add entries for each Pokémon you want to include. Use the 3-digit number as the key (e.g., "001" for Bulbasaur).
+   Optional: add `--first-encountered "Scarlet"` (or another game/source name) to record where the image was first encountered. The helper adds an opaque UUID to `images.json` and appends that ID to the chosen variant in `data.json`. It reuses an existing ID if the exact URL is already registered. Keep the ID unchanged if you later update the URL.
 
-#### Simple Example (Minimum Required)
-Start with just the essential fields:
-```json
-"001": {
-  "name": "Bulbasaur",
-  "variants": [
-    { "image": "https://imgur.com/your-image-url.jpg", "label": "Bulbasaur" }
-  ]
-}
-```
-That's it! The app handles the rest with sensible defaults.
+4. Run `node test.js`, review both changed data files, and commit them together.
 
-#### Understanding Variants
-**"Variants" are different forms of the same Pokémon**, like:
-- **Shiny** versions (different color)
-- **Mega** forms (Mega Charizard X, Mega Charizard Y)
-- **Regional** variants (Alolan Pikachu, Galarian Weezing)
-- **Other forms** (Totem, Gmax, Tera)
+To migrate an older dataset, `node scripts/migrate-image-ids.js` creates stable IDs for the current `data.json` and writes `images.json`. It first saves the original data and registry under `.data-backups/pokesnap-dex-main/`; that directory is gitignored. Copy the backup somewhere safe off-device. The migration is safe to rerun and keeps IDs from the matching dataset.
 
-You can add multiple variants to show different captures. Always put the regular form first.
-
-#### Advanced Example (With Variants and Positioning)
-Here's a more complete entry using optional fields:
-```json
-"006": {
-  "name": "Charizard",
-  "variants": [
-    { "image": "https://imgur.com/charizard.jpg", "label": "Charizard", "fit": "cover", "position": "center" },
-    { "image": "https://imgur.com/mega-charizard-x.jpg", "label": "Mega Charizard X", "fit": "cover", "position": "left" },
-    { "image": "https://imgur.com/shiny-charizard.jpg", "label": "Shiny Charizard", "fit": "contain" }
-  ]
-}
-```
-
-3. **Save and Refresh**:
-   - Save `data.json`.
-   - Refresh your browser (if running locally) or redeploy (if hosted online).
-   - Your new entries will appear in the grid. Click them to view variants in the gallery.
+For the separate LitoFrito image dataset, run the migration on that branch's own checkout using `node scripts/migrate-image-ids.js --dataset-id pokesnap-dex-litofrito`. Never copy `main`'s migrated `data.json` or `images.json` over LitoFrito; the images differ. Each branch gets its own ignored pre-migration backup.
 
 ## Data Structure Reference
 
-This section explains all fields in `data.json` entries. **Fields marked Required are necessary; all others are optional.**
+This section explains the migrated fields in `data.json`. **Fields marked Required are necessary; all others are optional.**
 
 | Field | Required | Type | Description | Default |
 |-------|----------|------|-------------|---------|
 | `name` | ✅ Yes | string | Official Pokémon name | — |
 | `variants` | ✅ Yes | array | Array of image objects | — |
-| `variants[].image` | ✅ Yes | string | Direct URL to the image | — |
+| `variants[].images` | ✅ Yes | array of strings | Stable image IDs in carousel order; each ID must exist in `images.json` | — |
 | `variants[].label` | ✅ Yes | string | Display name in gallery (e.g., "Shiny Charizard", "Mega Charizard X") | — |
 | `variants[].fit` | No | string | How to scale image in thumbnail: `"contain"` or `"cover"` | `"contain"` |
 | `variants[].position` | No | string | Which part to show if cropped: `"center"`, `"left"`, `"right"`, `"top"`, `"bottom"` | `"center"` |
 | `genus` | No | string | Pokémon genus (e.g., "Seed Pokémon") | Auto-populated by sync script |
 
-**Note:** The `genus` field is automatically populated by `scripts/sync-dex-entries.js` from PokeAPI. You don't need to add it manually.
+**Note:** The `genus` field is automatically populated by `scripts/sync-dex-entries.js` from PokeAPI. Image IDs are mapped to URLs through `images.json`.
 
 ## Thumbnail Positioning and Fit
 
@@ -232,7 +217,7 @@ New forms are not imported automatically. Run `node scripts/check-mega-coverage.
 ## Understanding Key Features
 
 ### Captured Count
-The **"Captured: X"** count shows how many Pokémon have **at least one real image**. Placeholder images (`"https://your-image-url-here.jpg"`) don't count—only real image URLs are considered "captured."
+The **"Captured: X"** count shows how many Pokémon have **at least one real image**. The app resolves each image ID through `images.json`; placeholder URLs (`"https://your-image-url-here.jpg"`) don't count as captured.
 
 ### Gallery View
 Click any Pokémon thumbnail to open the gallery. Use the navigation buttons or keyboard shortcuts to:

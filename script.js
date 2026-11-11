@@ -16,8 +16,8 @@
  *
  * Data Structure (data.json):
  * - Keys: '001' to '1025' (Pokémon numbers).
- * - Each entry: { name: string, variants: [{ label: string, images: [url], firstEncountered?: [source], position: string, fit: string }] }
- * - Placeholders: "https://your-image-url-here.jpg" for missing images.
+ * - Each entry: { name: string, variants: [{ label: string, images: [stableImageId], firstEncountered?: [source], position: string, fit: string }] }
+ * - images.json maps stable image IDs to URLs; the placeholder URL is registered there.
  *
  * Data Structure (data-entries.json):
  * - entries[number].default: [{ source: string, text: string }]
@@ -25,8 +25,7 @@
  * - Optional future extension: entries[number].variants[label] for variant-specific text.
  *
  * Branches:
- * - main/Public: Placeholder images for public demo.
- * - LitoFrito: Real image URLs for personal use.
+ * - main/Public and LitoFrito use separate image registries and dataset IDs.
  *
  * Notes for Future Development:
  * - Ensure capture count excludes placeholders.
@@ -40,18 +39,33 @@
 // Load data from JSON
 let pokedexData = {};
 let dexEntriesByNumber = {};
+let imageRegistry = null;
+let collectionsData = [];
+let currentCollectionIndex = null;
+const imageLabelsById = new Map();
 
 async function loadData() {
   console.log('Starting to load data...');
   try {
         const fetchOptions = { cache: 'no-store' };
-        const [response, entriesResponse, overridesResponse] = await Promise.all([
-            fetch('data.json?v=20260827-1', fetchOptions),
+        const [response, entriesResponse, overridesResponse, imagesResponse, collectionsResponse] = await Promise.all([
+            fetch('data.json?v=20261107-1', fetchOptions),
             fetch('data-entries.json?v=20260827-1', fetchOptions),
-            fetch('data-entries-overrides.json?v=20261102-1', fetchOptions).catch(() => null)
+            fetch('data-entries-overrides.json?v=20261102-1', fetchOptions).catch(() => null),
+            fetch('images.json?v=20261107-1', fetchOptions),
+            fetch('collections.json?v=20261107-1', fetchOptions)
         ]);
         console.log('Fetch response:', response);
+        if (!response.ok || !imagesResponse.ok || !collectionsResponse.ok) {
+            throw new Error('Required Pokédex, image registry, or collections data could not be loaded.');
+        }
         pokedexData = await response.json();
+        imageRegistry = ImageCollectionsUtils.validateImageRegistry(await imagesResponse.json());
+        ImageCollectionsUtils.validatePokemonImageReferences(pokedexData, imageRegistry);
+        collectionsData = ImageCollectionsUtils.validateCollectionsFile(
+            await collectionsResponse.json(),
+            imageRegistry
+        ).collections;
         if (entriesResponse.ok) {
             const entriesPayload = await entriesResponse.json();
             dexEntriesByNumber = entriesPayload.entries || {};
@@ -97,9 +111,18 @@ async function loadData() {
             positions = new Array(variant.images.length).fill('center');
           }
           for (let i = 0; i < variant.images.length; i++) {
-            let img = variant.images[i];
+            const imageId = variant.images[i];
+            const registryEntry = imageRegistry.images[imageId];
+            const img = registryEntry.url;
             let pos = positions[i];
+            imageLabelsById.set(imageId, {
+              number: num,
+              name: pokedexData[num].name,
+              label: variant.label,
+              imageIndex: pokedexData[num].allImages.length
+            });
             pokedexData[num].allImages.push({
+              id: imageId,
               image: img,
               label: variant.label,
               firstEncountered: FirstEncounteredUtils.getFirstEncounteredLabel(
@@ -121,17 +144,23 @@ async function loadData() {
         }
     }
     document.getElementById('captured-count').textContent = `Captured: ${capturedCount}`;
+    document.getElementById('data-load-error').hidden = true;
     renderDex();
   } catch (error) {
     console.error('Error loading data:', error);
+    const errorMessage = document.getElementById('data-load-error');
+    errorMessage.textContent = `Could not load the Pokédex data: ${error.message}`;
+    errorMessage.hidden = false;
   }
 }
 
 // DOM elements
 const dexContainer = document.getElementById('dex-container');
 const gallery = document.getElementById('gallery');
-const galleryImage = document.getElementById('gallery-image');
+const galleryImage = document.getElementById('gallery-photo');
+const collectionCollage = document.getElementById('collection-collage');
 const galleryName = document.getElementById('gallery-name');
+const collectionDescription = document.getElementById('collection-description');
 const dexEntry = document.getElementById('dex-entry');
 const dexEntryScrollHint = document.getElementById('dex-entry-scroll-hint');
 const prevPokemonButton = document.getElementById('prev-pokemon');
@@ -148,6 +177,12 @@ const cryStatus = document.getElementById('cry-status');
 let currentEntry = null;
 let currentImageIndex = 0;
 let currentEntryIndex = 0;
+let currentCollectionView = null;
+let currentCollectionDraftPreview = false;
+let draftCollection = null;
+let selectingCollectionCell = null;
+let collectionSearchState = null;
+const COLLECTION_DRAFT_STORAGE_VERSION = 1;
 let showAll = false;
 let showSpoilers = false;
 const pokemonCryCache = new Map();
@@ -509,19 +544,26 @@ const capturedList = document.getElementById('captured-list');
 const closeCapturedModal = document.getElementById('close-captured-modal');
 const toggleShowAll = document.getElementById('toggle-show-all');
 const h1 = document.querySelector('h1');
-
-// Intersection Observer for lazy loading images
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            const img = entry.target.querySelector('img');
-            if (img && img.dataset.src) {
-                img.src = img.dataset.src;
-                observer.unobserve(entry.target);
-            }
-        }
-    });
-}, { root: dexContainer, threshold: 0.1 });
+const collectionsButton = document.getElementById('collections-button');
+const collectionsModal = document.getElementById('collections-modal');
+const collectionsManager = document.getElementById('collections-manager');
+const collectionsList = document.getElementById('collections-list');
+const collectionBuilderForm = document.getElementById('collection-builder');
+const collectionNameInput = document.getElementById('collection-name');
+const collectionDescriptionInput = document.getElementById('collection-description-input');
+const collectionRowsInput = document.getElementById('collection-rows');
+const collectionColumnsInput = document.getElementById('collection-columns');
+const collectionAudioInput = document.getElementById('collection-audio-url');
+const collectionGridEditor = document.getElementById('collection-grid-editor');
+const collectionsStatus = document.getElementById('collections-status');
+const newCollectionButton = document.getElementById('new-collection');
+const collectionAudioContainer = document.getElementById('collection-audio-container');
+let collectionAudioRenderToken = 0;
+const collectionPickerControls = document.getElementById('collection-picker-controls');
+const pickerStatus = document.getElementById('picker-status');
+const collectionNavigation = document.getElementById('collection-navigation');
+const prevCollectionButton = document.getElementById('prev-collection');
+const nextCollectionButton = document.getElementById('next-collection');
 
 // Reset search input on page load
 searchInput.value = '';
@@ -745,6 +787,469 @@ function applyDexFilters() {
 searchInput.addEventListener('input', applyDexFilters);
 captureFilter.addEventListener('change', applyDexFilters);
 
+function showCollectionsManager() {
+    collectionsManager.hidden = false;
+    collectionBuilderForm.hidden = true;
+    collectionsModal.style.display = 'block';
+    collectionsList.replaceChildren();
+    updateCollectionDraftButton();
+
+    if (collectionsData.length === 0) {
+        const emptyMessage = document.createElement('p');
+        emptyMessage.textContent = 'No collections have been published for this Pokédex yet.';
+        collectionsList.appendChild(emptyMessage);
+        return;
+    }
+
+    collectionsData.forEach(collection => {
+        const row = document.createElement('section');
+        row.className = 'collection-list-item';
+        const details = document.createElement('div');
+        const title = document.createElement('h3');
+        title.textContent = collection.name;
+        const description = document.createElement('p');
+        description.textContent = collection.description || `${collection.size.x} × ${collection.size.y} grid`;
+        details.append(title, description);
+        const viewButton = document.createElement('button');
+        viewButton.type = 'button';
+        viewButton.textContent = 'View collection';
+        viewButton.addEventListener('click', () => openCollectionGallery(collection, false, collectionsData.indexOf(collection)));
+        row.append(details, viewButton);
+        collectionsList.appendChild(row);
+    });
+}
+
+function getCollectionDraftStorageKey() {
+    return `pokesnap-dex:collection-draft:${imageRegistry._meta.datasetId}`;
+}
+
+function readStoredCollectionDraft() {
+    try {
+        const serializedDraft = localStorage.getItem(getCollectionDraftStorageKey());
+        if (!serializedDraft) {
+            return null;
+        }
+        const saved = JSON.parse(serializedDraft);
+        if (saved.version !== COLLECTION_DRAFT_STORAGE_VERSION ||
+            saved.datasetId !== imageRegistry._meta.datasetId ||
+            !saved.form || typeof saved.form !== 'object') {
+            throw new Error('Saved collection draft has unsupported or mismatched metadata.');
+        }
+        const draft = ImageCollectionsUtils.validateCollection({
+            ...saved.collection,
+            name: saved.collection.name || 'Draft',
+            audioUrl: null
+        }, imageRegistry, imageRegistry._meta.datasetId);
+        for (const key of ['name', 'description', 'rows', 'columns', 'audioUrl']) {
+            if (typeof saved.form[key] !== 'string') {
+                throw new Error(`Saved collection draft has invalid ${key} input.`);
+            }
+        }
+        draft.name = saved.collection.name || '';
+        draft.audioUrl = saved.form.audioUrl.trim() || null;
+        return { draft, form: saved.form };
+    } catch (error) {
+        collectionsStatus.textContent = `Could not restore the saved collection draft: ${error.message}`;
+        return null;
+    }
+}
+
+function updateCollectionDraftButton() {
+    const hasDraft = Boolean(draftCollection || readStoredCollectionDraft());
+    newCollectionButton.textContent = hasDraft ? 'Continue saved draft' : 'Build a collection';
+}
+
+function saveCollectionDraft() {
+    if (!draftCollection) {
+        return;
+    }
+    draftCollection.name = collectionNameInput.value;
+    draftCollection.description = collectionDescriptionInput.value;
+    draftCollection.audioUrl = collectionAudioInput.value.trim() || null;
+    try {
+        localStorage.setItem(getCollectionDraftStorageKey(), JSON.stringify({
+            version: COLLECTION_DRAFT_STORAGE_VERSION,
+            datasetId: imageRegistry._meta.datasetId,
+            collection: draftCollection,
+            form: {
+                name: collectionNameInput.value,
+                description: collectionDescriptionInput.value,
+                rows: collectionRowsInput.value,
+                columns: collectionColumnsInput.value,
+                audioUrl: collectionAudioInput.value
+            }
+        }));
+        updateCollectionDraftButton();
+    } catch (error) {
+        collectionsStatus.textContent = `Could not save your collection draft in this browser: ${error.message}`;
+    }
+}
+
+function startCollectionDraft() {
+    const savedDraft = draftCollection ? null : readStoredCollectionDraft();
+    if (savedDraft) {
+        draftCollection = savedDraft.draft;
+        collectionNameInput.value = savedDraft.form.name;
+        collectionDescriptionInput.value = savedDraft.form.description;
+        collectionRowsInput.value = savedDraft.form.rows;
+        collectionColumnsInput.value = savedDraft.form.columns;
+        collectionAudioInput.value = savedDraft.form.audioUrl;
+    } else if (!draftCollection) {
+        draftCollection = {
+            id: crypto.randomUUID(),
+            name: '',
+            description: '',
+            size: { x: 2, y: 2 },
+            cells: new Array(4).fill('blank'),
+            audioUrl: null,
+            datasetId: imageRegistry._meta.datasetId
+        };
+        collectionNameInput.value = '';
+        collectionDescriptionInput.value = '';
+        collectionAudioInput.value = '';
+        collectionRowsInput.value = '2';
+        collectionColumnsInput.value = '2';
+    }
+    collectionsManager.hidden = true;
+    collectionBuilderForm.hidden = false;
+    if (!savedDraft) {
+        collectionsStatus.textContent = '';
+    }
+    const rows = Number(collectionRowsInput.value);
+    const columns = Number(collectionColumnsInput.value);
+    if (Number.isInteger(rows) && rows >= 1 && rows <= 5 &&
+        Number.isInteger(columns) && columns >= 1 && columns <= 5 &&
+        (rows !== draftCollection.size.x || columns !== draftCollection.size.y)) {
+        resizeDraftGrid();
+    }
+    renderCollectionGrid();
+    saveCollectionDraft();
+}
+
+function renderCollectionGrid() {
+    if (!draftCollection) {
+        return;
+    }
+    collectionGridEditor.replaceChildren();
+    collectionGridEditor.style.gridTemplateColumns = `repeat(${draftCollection.size.y}, minmax(0, 1fr))`;
+    draftCollection.cells.forEach((imageId, index) => {
+        const row = Math.floor(index / draftCollection.size.y) + 1;
+        const column = (index % draftCollection.size.y) + 1;
+        const cellButton = document.createElement('button');
+        cellButton.type = 'button';
+        cellButton.className = `collection-cell-picker${imageId === 'blank' ? ' is-blank' : ''}`;
+        const imageLabel = imageId === 'blank' ? null : imageLabelsById.get(imageId);
+        cellButton.textContent = imageLabel
+            ? `Row ${row}, column ${column}: ${imageLabel.name} — ${imageLabel.label} (image ${imageLabel.imageIndex + 1})`
+            : `Row ${row}, column ${column}: Choose image`;
+        cellButton.setAttribute('aria-label', cellButton.textContent);
+        cellButton.addEventListener('click', () => startImagePicker(index));
+        collectionGridEditor.appendChild(cellButton);
+    });
+}
+
+function resizeDraftGrid() {
+    if (!draftCollection) {
+        return;
+    }
+    const rows = Number(collectionRowsInput.value);
+    const columns = Number(collectionColumnsInput.value);
+    if (!Number.isInteger(rows) || rows < 1 || rows > 5 ||
+        !Number.isInteger(columns) || columns < 1 || columns > 5) {
+        collectionsStatus.textContent = 'Grid rows and columns must each be between 1 and 5.';
+        return;
+    }
+    const previousSize = draftCollection.size;
+    const previousCells = draftCollection.cells;
+    const resizedCells = new Array(rows * columns).fill('blank');
+    for (let row = 0; row < Math.min(rows, previousSize.x); row++) {
+        for (let column = 0; column < Math.min(columns, previousSize.y); column++) {
+            resizedCells[row * columns + column] = previousCells[row * previousSize.y + column];
+        }
+    }
+    draftCollection.size = { x: rows, y: columns };
+    draftCollection.cells = resizedCells;
+    collectionsStatus.textContent = '';
+    renderCollectionGrid();
+    saveCollectionDraft();
+}
+
+function startImagePicker(cellIndex) {
+    selectingCollectionCell = cellIndex;
+    collectionsModal.style.display = 'none';
+    collectionSearchState = {
+        search: searchInput.value
+    };
+    searchInput.value = '';
+    searchInput.placeholder = 'Search for a Pokémon image to add...';
+    applyDexFilters();
+    document.getElementById('collection-picker-banner').hidden = false;
+    pickerStatus.textContent = 'Search for a Pokémon above, then select a result to choose its image.';
+    searchInput.focus();
+}
+
+function leaveImagePicker() {
+    selectingCollectionCell = null;
+    searchInput.placeholder = 'Search Pokémon, comma-separated...';
+    document.getElementById('collection-picker-banner').hidden = true;
+    if (collectionSearchState) {
+        searchInput.value = collectionSearchState.search;
+        collectionSearchState = null;
+        applyDexFilters();
+    }
+    pickerStatus.textContent = '';
+}
+
+function selectCurrentImageForCollection() {
+    if (selectingCollectionCell === null || !draftCollection || !currentEntry) {
+        return;
+    }
+    const image = pokedexData[currentEntry].allImages[currentImageIndex];
+    if (!image || !image.id) {
+        pickerStatus.textContent = 'This image does not have a valid registry ID.';
+        return;
+    }
+    if (isPlaceholderImage(image.image)) {
+        pickerStatus.textContent = 'Placeholder images cannot be added to a collection.';
+        return;
+    }
+    draftCollection.cells[selectingCollectionCell] = image.id;
+    saveCollectionDraft();
+    pickerStatus.textContent = `Selected ${pokedexData[currentEntry].name} — ${image.label} (image ${currentImageIndex + 1}).`;
+}
+
+function removeImageFromCollection() {
+    if (selectingCollectionCell === null || !draftCollection) {
+        return;
+    }
+    draftCollection.cells[selectingCollectionCell] = 'blank';
+    saveCollectionDraft();
+    pickerStatus.textContent = 'This collection cell is now blank.';
+}
+
+function buildDraftCollection() {
+    if (!draftCollection) {
+        throw new Error('Start a collection before previewing it.');
+    }
+    const collection = {
+        ...draftCollection,
+        name: collectionNameInput.value,
+        description: collectionDescriptionInput.value,
+        size: { x: Number(collectionRowsInput.value), y: Number(collectionColumnsInput.value) },
+        audioUrl: collectionAudioInput.value.trim() || null,
+        cells: draftCollection.cells.slice()
+    };
+    return ImageCollectionsUtils.validateCollection(
+        collection,
+        imageRegistry,
+        imageRegistry._meta.datasetId
+    );
+}
+
+function previewCollectionDraft() {
+    try {
+        openCollectionGallery(buildDraftCollection(), true);
+    } catch (error) {
+        collectionsStatus.textContent = error.message;
+    }
+}
+
+function exportCollectionsJson() {
+    try {
+        const collection = buildDraftCollection();
+        const payload = ImageCollectionsUtils.createCollectionsFile(
+            imageRegistry._meta.datasetId,
+            [...collectionsData.filter(item => item.id !== collection.id), collection]
+        );
+        ImageCollectionsUtils.validateCollectionsFile(payload, imageRegistry);
+        const blob = new Blob([`${JSON.stringify(payload, null, 2)}\n`], { type: 'application/json' });
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = 'collections.json';
+        link.click();
+        URL.revokeObjectURL(url);
+        collectionsStatus.textContent = 'Downloaded collections.json. Review it and add it to the site repository to publish.';
+    } catch (error) {
+        collectionsStatus.textContent = error.message;
+    }
+}
+
+function closeCollectionsModal() {
+    collectionsModal.style.display = 'none';
+}
+
+function clearCollectionAudio() {
+    collectionAudioRenderToken++;
+    collectionAudioContainer.replaceChildren();
+    collectionAudioContainer.hidden = true;
+}
+
+async function renderCollectionAudio(audioUrl) {
+    clearCollectionAudio();
+    if (!audioUrl) {
+        return;
+    }
+
+    const renderToken = collectionAudioRenderToken;
+    collectionAudioContainer.hidden = false;
+    const playback = ImageCollectionsUtils.getCollectionAudioPlayback(audioUrl);
+    try {
+        const player = document.createElement(playback.type === 'audio' ? 'audio' : 'iframe');
+        if (playback.type === 'audio') {
+            player.controls = true;
+            player.preload = 'none';
+            player.src = playback.src;
+        } else {
+            player.title = playback.type === 'spotify' ? 'Spotify track player' : 'SoundCloud player';
+            player.src = playback.type === 'soundcloud'
+                ? await ImageCollectionsUtils.resolveSoundCloudPlayerUrl(audioUrl)
+                : playback.src;
+            if (renderToken !== collectionAudioRenderToken) {
+                return;
+            }
+            player.loading = 'lazy';
+            player.allow = playback.type === 'spotify'
+                ? 'clipboard-write; encrypted-media; fullscreen; picture-in-picture'
+                : 'encrypted-media';
+            player.height = playback.type === 'spotify' ? '152' : '166';
+            player.setAttribute('frameborder', '0');
+            if (playback.type === 'spotify') {
+                player.allowFullscreen = true;
+            } else {
+                player.scrolling = 'no';
+            }
+        }
+        if (renderToken !== collectionAudioRenderToken) {
+            return;
+        }
+        collectionAudioContainer.replaceChildren(player);
+    } catch (error) {
+        if (renderToken !== collectionAudioRenderToken) {
+            return;
+        }
+        const message = document.createElement('p');
+        message.textContent = `Could not load the audio player: ${error.message}`;
+        collectionAudioContainer.replaceChildren(message);
+        if (playback.type === 'soundcloud') {
+            const link = document.createElement('a');
+            link.href = audioUrl;
+            link.target = '_blank';
+            link.rel = 'noopener noreferrer';
+            link.textContent = 'Open this track on SoundCloud';
+            collectionAudioContainer.appendChild(link);
+        }
+    }
+}
+
+function clearSavedCollectionDraft() {
+    try {
+        localStorage.removeItem(getCollectionDraftStorageKey());
+        return true;
+    } catch (error) {
+        collectionsStatus.textContent = `Could not remove the saved collection draft: ${error.message}`;
+        return false;
+    }
+}
+
+function openCollectionGallery(collection, draft = false, collectionIndex = null) {
+    try {
+        const validated = ImageCollectionsUtils.validateCollection(
+            collection,
+            imageRegistry,
+            imageRegistry._meta.datasetId
+        );
+        currentCollectionView = validated;
+        currentCollectionDraftPreview = draft;
+        currentEntry = null;
+        const foundCollectionIndex = draft
+            ? -1
+            : (collectionIndex ?? collectionsData.findIndex(item => item.id === validated.id));
+        currentCollectionIndex = foundCollectionIndex >= 0 ? foundCollectionIndex : null;
+        collectionNavigation.hidden = currentCollectionIndex === null || collectionsData.length < 2;
+        collectionsModal.style.display = 'none';
+        gallery.classList.add('collection-gallery');
+        collectionDescription.textContent = validated.description || '';
+        galleryName.textContent = validated.name;
+        collectionCollage.replaceChildren();
+        collectionCollage.style.gridTemplateColumns = `repeat(${validated.size.y}, minmax(0, 1fr))`;
+        collectionCollage.style.gridTemplateRows = `repeat(${validated.size.x}, minmax(0, 1fr))`;
+        validated.cells.forEach((imageId, index) => {
+            const cell = document.createElement('div');
+            cell.className = 'collection-gallery-cell';
+            const row = Math.floor(index / validated.size.y) + 1;
+            const column = (index % validated.size.y) + 1;
+            cell.style.gridRow = String(row);
+            cell.style.gridColumn = String(column);
+            if (imageId !== 'blank') {
+                const image = document.createElement('img');
+                image.src = imageRegistry.images[imageId].url;
+                image.className = 'collection-gallery-image';
+                image.style.objectFit = 'contain';
+                image.style.objectPosition = 'center center';
+                const imageDetails = imageLabelsById.get(imageId);
+                image.alt = imageDetails
+                    ? `${imageDetails.name} — ${imageDetails.label}`
+                    : `Collection image ${index + 1}`;
+                cell.appendChild(image);
+            }
+            collectionCollage.appendChild(cell);
+        });
+        renderCollectionAudio(validated.audioUrl);
+        document.body.classList.add('gallery-open');
+        gallery.classList.remove('hidden');
+    } catch (error) {
+        if (draft) {
+            collectionsStatus.textContent = error.message;
+        } else {
+            console.error('Could not display collection:', error);
+            closeGalleryModal();
+        }
+    }
+}
+
+function navigateCollection(delta) {
+    if (currentCollectionIndex === null || collectionsData.length < 2) {
+        return;
+    }
+    const nextIndex = (currentCollectionIndex + delta + collectionsData.length) % collectionsData.length;
+    openCollectionGallery(collectionsData[nextIndex], false, nextIndex);
+}
+
+collectionsButton.addEventListener('click', showCollectionsManager);
+document.getElementById('close-collections').addEventListener('click', closeCollectionsModal);
+document.getElementById('new-collection').addEventListener('click', startCollectionDraft);
+collectionBuilderForm.addEventListener('submit', event => event.preventDefault());
+document.getElementById('cancel-collection').addEventListener('click', () => {
+    if (!clearSavedCollectionDraft()) {
+        showCollectionsManager();
+        return;
+    }
+    draftCollection = null;
+    collectionBuilderForm.reset();
+    showCollectionsManager();
+});
+for (const input of [
+    collectionNameInput,
+    collectionDescriptionInput,
+    collectionRowsInput,
+    collectionColumnsInput,
+    collectionAudioInput
+]) {
+    input.addEventListener('input', saveCollectionDraft);
+}
+collectionRowsInput.addEventListener('change', resizeDraftGrid);
+collectionColumnsInput.addEventListener('change', resizeDraftGrid);
+document.getElementById('preview-collection').addEventListener('click', previewCollectionDraft);
+document.getElementById('export-collection').addEventListener('click', exportCollectionsJson);
+prevCollectionButton.addEventListener('click', () => navigateCollection(-1));
+nextCollectionButton.addEventListener('click', () => navigateCollection(1));
+document.getElementById('picker-prev-image').addEventListener('click', () => navigateGalleryImage(-1));
+document.getElementById('picker-next-image').addEventListener('click', () => navigateGalleryImage(1));
+document.getElementById('picker-select-image').addEventListener('click', selectCurrentImageForCollection);
+document.getElementById('picker-remove-image').addEventListener('click', removeImageFromCollection);
+document.getElementById('picker-close').addEventListener('click', closeGalleryModal);
+
 // Captured modal
 capturedCountBtn.addEventListener('click', () => {
     showCapturedModal();
@@ -827,7 +1332,7 @@ function renderDex() {
         if (entryData && firstRealImageIndex !== -1) {
             const imgObj = entryData.allImages[firstRealImageIndex];
             const img = document.createElement('img');
-            img.dataset.src = imgObj.image;
+            img.src = imgObj.image;
             img.loading = 'lazy';
             const baseName = entryData.name;
             const label = imgObj.label;
@@ -853,7 +1358,6 @@ function renderDex() {
                 // entryDiv.style.backgroundColor = document.body.classList.contains('dark-mode') ? '#555' : '#ddd';
             }
             entryDiv.appendChild(img);
-            observer.observe(entryDiv);
             entryDiv.addEventListener('click', () => openGallery(number, firstRealImageIndex));
         } else {
             entryDiv.className += ' empty';
@@ -869,9 +1373,20 @@ function renderDex() {
 // Open gallery for an entry
 function openGallery(number, imgIndex) {
     currentEntry = number;
+    currentCollectionView = null;
+    currentCollectionDraftPreview = false;
+    currentCollectionIndex = null;
+    collectionNavigation.hidden = true;
     currentImageIndex = imgIndex;
     currentEntryIndex = 0;
     showSpoilers = false;
+    gallery.classList.remove('collection-gallery');
+    collectionDescription.textContent = '';
+    collectionCollage.replaceChildren();
+    clearCollectionAudio();
+    const isPickingCollectionImage = selectingCollectionCell !== null;
+    gallery.classList.toggle('collection-image-picker', isPickingCollectionImage);
+    collectionPickerControls.hidden = !isPickingCollectionImage;
     document.body.classList.add('gallery-open');
     gallery.classList.remove('hidden');
     updateGalleryImage();
@@ -926,6 +1441,8 @@ function updateGalleryImage() {
         const isSingleImage = pokedexData[currentEntry].allImages.length <= 1;
         prevButton.disabled = isSingleImage;
         nextButton.disabled = isSingleImage;
+        document.getElementById('picker-prev-image').disabled = isSingleImage;
+        document.getElementById('picker-next-image').disabled = isSingleImage;
         updatePokemonNavigationButtons();
     }
 }
@@ -1004,15 +1521,40 @@ function navigateGalleryPokemon(delta) {
 }
 
 function closeGalleryModal() {
+    const wasPickingCollectionImage = selectingCollectionCell !== null;
+    const wasCollectionDraftPreview = currentCollectionDraftPreview;
+    const wasCollectionView = currentCollectionView !== null;
     cryRequestId++;
     stopCryPlayback();
     gallery.classList.add('hidden');
     document.body.classList.remove('gallery-open');
+    gallery.classList.remove('collection-gallery', 'collection-image-picker');
+    collectionPickerControls.hidden = true;
     currentEntry = null;
+    currentCollectionView = null;
+    currentCollectionDraftPreview = false;
+    currentCollectionIndex = null;
+    collectionNavigation.hidden = true;
     availableCryOptions = [];
     selectedCryUrl = '';
     playCryButton.disabled = true;
     setCryStatus('');
+    clearCollectionAudio();
+    collectionDescription.textContent = '';
+    collectionCollage.replaceChildren();
+    if (wasPickingCollectionImage) {
+        leaveImagePicker();
+        collectionsManager.hidden = true;
+        collectionBuilderForm.hidden = false;
+        collectionsModal.style.display = 'block';
+        renderCollectionGrid();
+    } else if (wasCollectionView && wasCollectionDraftPreview) {
+        collectionsManager.hidden = true;
+        collectionBuilderForm.hidden = false;
+        collectionsModal.style.display = 'block';
+    } else if (wasCollectionView) {
+        showCollectionsManager();
+    }
 }
 
 // Event listeners
@@ -1101,7 +1643,27 @@ gallery.addEventListener('click', (event) => {
 
 // Keyboard navigation for gallery
 document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && collectionsModal.style.display === 'block') {
+        event.preventDefault();
+        closeCollectionsModal();
+        return;
+    }
+
     if (gallery.classList.contains('hidden')) return;
+
+    if (selectingCollectionCell !== null) {
+        if (event.key === 'ArrowLeft') {
+            event.preventDefault();
+            navigateGalleryImage(-1);
+        } else if (event.key === 'ArrowRight') {
+            event.preventDefault();
+            navigateGalleryImage(1);
+        } else if (event.key === 'Escape') {
+            event.preventDefault();
+            closeGalleryModal();
+        }
+        return;
+    }
 
     const isCtrlOrMeta = event.ctrlKey || event.metaKey;
 
