@@ -5,7 +5,7 @@
 - **LitoFrito**: Personal dataset with real images, identified by `pokesnap-dex-litofrito`. Its data and image registry must be migrated independently.
 
 ## Git Remote
-- The remote repository is named `GitHub` (not `origin`). Use `git push GitHub LitoFrito` to push changes to the LitoFrito branch.
+- Use the repository's configured remote when fetching or pushing. Check its name with `git remote -v` rather than assuming it is `GitHub` or `origin`.
 
 ## Merge Guidelines
 - **Do not merge `data.json` or `images.json` from `main` into `LitoFrito`**: Image IDs and URLs belong to different datasets.

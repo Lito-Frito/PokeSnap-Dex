@@ -293,7 +293,7 @@ For Unown, all letter and punctuation forms (regular and shiny) intentionally sh
 - `main` and `LitoFrito` should be synchronized on all issue fixes and new features outside of real image URIs.
 - `data.json`, `images.json`, `collections.json`, and `data-entries.json` may be branch-specific; preserve the image-to-ID mapping and keep dataset IDs distinct.
 - See `BRANCH_NOTES.md` for merge rules.
-- Remote is named `GitHub`.
+- Use the repository's configured Git remote; check its name with `git remote -v` rather than assuming it is `GitHub` or `origin`.
 
 ## AI Agent Workflow Prompt
 When you want the AI to execute the expected workflow, say:
