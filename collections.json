@@ -1,0 +1,11 @@
+{
+  "_meta": {
+    "schemaVersion": 1,
+    "datasetId": "pokesnap-dex-litofrito",
+    "description": "Collection catalog for the LitoFrito dataset. Each collection defines a grid and references images by their stable IDs from images.json.",
+    "cellOrder": "Cells are listed row by row, left to right. Use the string \"blank\" for an empty (black) cell.",
+    "size": "x is the row count and y is the column count. Both must be from 1 through 5, and cells must contain exactly x * y values.",
+    "audioUrl": "Optional HTTP(S) URL for background music; use null when the collection has no song. Playback is user-initiated."
+  },
+  "collections": []
+}

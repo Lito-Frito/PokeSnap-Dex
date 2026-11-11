@@ -176,6 +176,23 @@ header p {
     color: #111;
 }
 
+#collections-button {
+    background-color: #004085;
+    color: white;
+    border: 2px solid #004085;
+    padding: 6px 12px;
+    font-weight: bold;
+    font-size: 0.95em;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 150px;
+}
+
+.dark-mode #collections-button {
+    background-color: #555;
+    border-color: #666;
+}
+
 .dark-mode #search-input {
     background-color: #555;
     color: white;
@@ -285,6 +302,18 @@ header p {
     position: relative;
     width: 100%;
     box-sizing: border-box;
+}
+
+#data-load-error {
+    position: fixed;
+    inset: 20% 12px auto;
+    z-index: 1500;
+    margin: 0 auto;
+    max-width: 560px;
+    padding: 12px;
+    border-radius: 8px;
+    color: #7f1d1d;
+    background: #fee2e2;
 }
 
 #dex-container.flex-layout {
@@ -422,12 +451,145 @@ header p {
 }
 
 #gallery-image {
+    position: relative;
+    display: grid;
+    place-items: center;
     width: 100%;
     max-width: 560px;
     height: min(48vh, 420px);
-    object-fit: contain;
     background-color: #000;
     flex-shrink: 0;
+    overflow: hidden;
+}
+
+#gallery-photo {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    min-width: 0;
+    min-height: 0;
+    object-fit: contain;
+    object-position: center center;
+}
+
+#collection-collage {
+    display: none;
+    width: 100%;
+    height: 100%;
+    gap: 3px;
+    padding: 6px;
+    box-sizing: border-box;
+}
+
+.collection-gallery #gallery-photo {
+    display: none;
+}
+
+.collection-gallery #collection-collage {
+    display: grid;
+}
+
+.collection-gallery #first-encountered,
+.collection-gallery #dex-entry,
+.collection-gallery #dex-entry-scroll-hint,
+.collection-gallery #cry-controls,
+.collection-gallery .gallery-action-grid > :not(#close-gallery) {
+    display: none;
+}
+
+.collection-gallery .gallery-action-grid {
+    grid-template-columns: minmax(0, 1fr);
+}
+
+#collection-description {
+    display: none;
+    color: #f3f4f6;
+    width: 100%;
+    max-width: 560px;
+    margin: -4px 0 4px;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+#collection-audio-container {
+    width: 100%;
+    max-width: 560px;
+}
+
+#collection-audio-container[hidden] {
+    display: none;
+}
+
+#collection-audio-container audio,
+#collection-audio-container iframe {
+    display: block;
+    width: 100%;
+    border: 0;
+}
+
+#collection-audio-container iframe {
+    border-radius: 12px;
+}
+
+.collection-gallery #collection-description {
+    display: block;
+}
+
+#collection-navigation:not([hidden]) {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    width: 100%;
+    max-width: 560px;
+}
+
+#collection-navigation[hidden] {
+    display: none;
+}
+
+#collection-navigation button {
+    width: calc(50% - 4px);
+    min-height: 42px;
+}
+
+.collection-image-picker #cry-controls,
+.collection-image-picker .gallery-action-grid {
+    display: none;
+}
+
+#collection-picker-controls:not([hidden]) {
+    display: grid;
+    gap: 8px;
+    width: 100%;
+}
+
+.collection-picker-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+}
+
+.collection-picker-row button {
+    min-height: 42px;
+    width: 100%;
+}
+
+.collection-picker-close-row {
+    display: flex;
+    justify-content: center;
+}
+
+.collection-picker-close-row button {
+    width: calc(50% - 4px);
+    min-height: 42px;
+}
+
+#picker-status {
+    min-height: 1.2em;
+    color: #f3f4f6;
+    margin: 0;
 }
 
 #gallery-name {
@@ -684,6 +846,137 @@ button {
     background-color: #555;
 }
 
+.collections-content {
+    width: min(94%, 760px);
+    max-height: 86%;
+    margin: 4vh auto;
+    box-sizing: border-box;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.collections-content > h2,
+.collections-content > p {
+    padding-right: 36px;
+}
+
+.collections-content label {
+    display: block;
+    margin: 8px 0 4px;
+    font-weight: 700;
+}
+
+.collections-content input,
+.collections-content textarea {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    font: inherit;
+}
+
+.collections-content > button,
+.collections-content button {
+    margin: 6px 0;
+    border-radius: 5px;
+}
+
+.collection-list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 0;
+    border-top: 1px solid #aaa;
+}
+
+.collection-list-item h3,
+.collection-list-item p {
+    margin: 2px 0;
+}
+
+.collection-dimensions {
+    display: flex;
+    gap: 14px;
+}
+
+.collection-dimensions label {
+    flex: 1;
+}
+
+#collection-grid-editor {
+    display: grid;
+    gap: 6px;
+    margin: 12px 0;
+}
+
+.collection-cell-picker {
+    min-height: 74px;
+    margin: 0 !important;
+    padding: 8px !important;
+    overflow-wrap: anywhere;
+    background: #333 !important;
+    color: #fff !important;
+    border: 1px solid #777 !important;
+}
+
+.collection-cell-picker.is-blank {
+    background: #111 !important;
+    color: #ddd !important;
+    border-style: dashed !important;
+}
+
+#collection-builder-help {
+    margin: 8px 0;
+}
+
+#collections-status {
+    min-height: 1.2em;
+    color: #9b1c1c;
+}
+
+.collection-gallery-cell {
+    min-width: 0;
+    min-height: 0;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    background: #000;
+    padding: 4px;
+    box-sizing: border-box;
+}
+
+.collection-gallery-cell .collection-gallery-image {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    min-width: 0;
+    min-height: 0;
+    object-fit: contain !important;
+    object-position: center center !important;
+}
+
+.dark-mode .collections-content input,
+.dark-mode .collections-content textarea {
+    background: #444;
+    color: #fff;
+    border-color: #777;
+}
+
+@media (max-width: 600px) {
+    .collection-list-item {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .collections-content {
+        padding: 14px;
+    }
+}
+
 @media (max-width: 768px) {
     header {
         padding: 16px;
@@ -726,6 +1019,14 @@ button {
     }
 
     #theme-toggle {
+        padding: 6px 8px;
+        font-size: clamp(0.80rem, 2.5vw, 0.9rem);
+        flex: 1;
+        width: auto;
+        order: 2;
+    }
+
+    #collections-button {
         padding: 6px 8px;
         font-size: clamp(0.80rem, 2.5vw, 0.9rem);
         flex: 1;

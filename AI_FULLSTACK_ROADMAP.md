@@ -13,7 +13,7 @@ This is an engineering roadmap. It intentionally does not cover monetization, pr
 V3 is the static, single-user dex experience:
 
 - Vanilla HTML, CSS, and JavaScript.
-- `data.json` contains the dex and image variant metadata.
+- `data.json` contains the Dex and image-variant IDs; `images.json` maps IDs to URLs and `collections.json` stores curated collections.
 - `data-entries.json` contains generated Pokédex text.
 - GitHub Pages is the deployment target.
 - There is no account system, server API, database, or user-owned cloud state.
@@ -149,7 +149,7 @@ The browser should receive storage URLs only when needed for rendering. The serv
 
 ### Phase 5: Build Collections
 
-Implement issue #56 as the first major V4 feature:
+The V3 issue #56 baseline uses repository-authored, read-only collections with a browser builder that exports JSON for the site owner; there are no visitor accounts or public writes. A later full-stack implementation may:
 
 - Create, rename, archive, and delete collections.
 - Add the same photo to multiple collections.
