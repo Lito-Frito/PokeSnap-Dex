@@ -12,19 +12,21 @@ Key Features:
 - Grid view: Shows first available real image variant per Pokémon (ignores placeholders).
 - Capture count: Counts only Pokémon with at least one real image (not placeholders).
 - Gallery: Modal view with variant navigation (keyboard: arrows, escape).
+- Collections: Read-only collection albums plus a browser builder that exports JSON for the site owner.
 - Responsive design: Adapts to mobile with dynamic grid sizing. Dex-container height adjusts to viewport.
 - Theme toggle: Dark/light mode.
 - Sticky UI: Header sticks to top, footer to bottom, both on same layer above dex-container.
 - Data integrity: 1025 entries, no duplicates, proper naming.
 
 Data Structure (data.json):
-- Keys: '001' to '1025' (Pokémon numbers).
-- Each entry: { name: string, variants: [{ label: string, images: [url], position: string, fit: string, entries: [string] }] }
+- Keys: '001' to '1025' (Pokémon numbers); each variant's images array contains stable IDs resolved through images.json.
+- images.json maps stable image IDs to URLs.
+- collections.json lists read-only collections that reference those IDs.
+- Collection grid cells reference image IDs; drafts stay in memory until exported.
 - Placeholders: "https://your-image-url-here.jpg" for missing images.
 
 Branches:
-- main/Public: Placeholder images for public demo.
-- LitoFrito: Real image URLs for personal use.
+- main/Public and LitoFrito use separate dataset IDs and image registries.
 
 Notes for Future Development:
 - Ensure capture count excludes placeholders.
@@ -39,7 +41,8 @@ Notes for Future Development:
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PokeSnap-Dex</title>
     <link rel="icon" href="favicon.png" type="image/png">
-    <link rel="stylesheet" href="styles.css?v=20261102-8">
+    <meta name="pokesnap-data-schema" content="2">
+    <link rel="stylesheet" href="styles.css?v=20261109-1">
 </head>
 <body class="dark-mode">
     <div id="app-container">
@@ -49,6 +52,7 @@ Notes for Future Development:
                 <p>Gotta snap 'em all!</p>
                 <div class="header-controls">
                     <button id="captured-count">Captured: 0</button>
+                    <button id="collections-button" type="button">Collections</button>
                     <input type="text" id="search-input" placeholder="Search Pokémon, comma-separated...">
                     <select id="capture-filter" aria-label="Filter by capture status">
                         <option value="all">All Pokémon</option>
@@ -64,13 +68,26 @@ Notes for Future Development:
         <main id="dex-container">
             <!-- Grid will be populated by JS -->
         </main>
+        <p id="collection-picker-banner" role="status" aria-live="polite" hidden>
+            Search for a Pokémon above, then select a result to choose an image for this collection cell.
+        </p>
+        <p id="data-load-error" role="alert" hidden></p>
         <div class="divider footer-divider"></div>
         <div class="footer"></div>
     </div>
     <div id="gallery" class="hidden">
         <div class="gallery-content">
-            <img id="gallery-image" src="" alt="Gallery Image">
+            <div id="gallery-image">
+                <img id="gallery-photo" src="" alt="Gallery Image">
+                <div id="collection-collage" role="img"></div>
+            </div>
             <h2 id="gallery-name"></h2>
+            <p id="collection-description"></p>
+            <div id="collection-navigation" hidden>
+                <button id="prev-collection" type="button">Prev Collection</button>
+                <button id="next-collection" type="button">Next Collection</button>
+            </div>
+            <div id="collection-audio-container" hidden></div>
             <div id="first-encountered">
                 <span class="dex-entry-description">First Encountered:</span>
                 <span id="first-encountered-value" class="dex-entry-source">???</span>
@@ -99,6 +116,20 @@ Notes for Future Development:
                     <button id="close-gallery">Close</button>
                     <button id="next-pokemon" type="button" aria-label="Next Pokémon">Next Pokémon →</button>
                 </div>
+                <div id="collection-picker-controls" hidden>
+                    <div class="collection-picker-row">
+                        <button id="picker-prev-image" type="button">Prev Image</button>
+                        <button id="picker-next-image" type="button">Next Image</button>
+                    </div>
+                    <div class="collection-picker-row">
+                        <button id="picker-select-image" type="button">Select Image</button>
+                        <button id="picker-remove-image" type="button">Remove Image</button>
+                    </div>
+                    <div class="collection-picker-close-row">
+                        <button id="picker-close" type="button">Close</button>
+                    </div>
+                    <p id="picker-status" role="status" aria-live="polite"></p>
+                </div>
             </div>
         </div>
     </div>
@@ -110,10 +141,42 @@ Notes for Future Development:
             <div id="captured-list"></div>
         </div>
     </div>
+    <div id="collections-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="collections-title">
+        <div class="modal-content collections-content">
+            <button id="close-collections" class="close" type="button" aria-label="Close collections">&times;</button>
+            <h2 id="collections-title">Collections</h2>
+            <p>Browse the collections published with this Pokédex, or build a collection and export JSON for the site owner to review.</p>
+            <section id="collections-manager">
+                <button id="new-collection" type="button">Build a collection</button>
+                <div id="collections-list"></div>
+            </section>
+            <form id="collection-builder" hidden>
+                <label for="collection-name">Collection name</label>
+                <input id="collection-name" type="text" maxlength="100" required>
+                <label for="collection-description-input">Description (optional)</label>
+                <textarea id="collection-description-input" maxlength="500" rows="2"></textarea>
+                <div class="collection-dimensions">
+                    <label>Rows (x)<input id="collection-rows" type="number" min="1" max="5" value="2" required></label>
+                    <label>Columns (y)<input id="collection-columns" type="number" min="1" max="5" value="2" required></label>
+                </div>
+                <label for="collection-audio-url">Background song or player link (optional)</label>
+                <input id="collection-audio-url" type="url" placeholder="Direct audio URL, Spotify track, or SoundCloud link">
+                <p id="collection-builder-help">Click an empty cell, then search the Pokédex and select a result to choose an image in carousel mode.</p>
+                <div id="collection-grid-editor"></div>
+                <p id="collections-status" role="status" aria-live="polite"></p>
+                <div class="collection-manager-actions">
+                    <button id="preview-collection" type="button">Preview collection</button>
+                    <button id="export-collection" type="button">Export JSON</button>
+                    <button id="cancel-collection" type="button">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="image-collections-utils.js?v=20261107-1"></script>
     <script src="dex-navigation-utils.js?v=20261101-1"></script>
     <script src="dex-entry-utils.js?v=20261102-1"></script>
     <script src="first-encountered-utils.js?v=20261102-1"></script>
     <script src="pokemon-cry-utils.js?v=20261101-1"></script>
-    <script src="script.js?v=20261102-3"></script>
+    <script src="script.js?v=20261109-1"></script>
 </body>
 </html>

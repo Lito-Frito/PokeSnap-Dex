@@ -1,18 +1,21 @@
 # Branch Notes for PokeSnap-Dex
 
 ## Branch Overview
-- **main**: Public branch with placeholder data in `data.json` for demo purposes.
-- **LitoFrito**: Personal branch with real image data in `data.json`.
+- **main**: Public dataset, identified by `pokesnap-dex-main`. `data.json` references IDs in `images.json`.
+- **LitoFrito**: Personal dataset with real images, identified by `pokesnap-dex-litofrito`. Its data and image registry must be migrated independently.
 
 ## Git Remote
-- The remote repository is named `GitHub` (not `origin`). Use `git push GitHub LitoFrito` to push changes to the LitoFrito branch.
+- Use the repository's configured remote when fetching or pushing. Check its name with `git remote -v` rather than assuming it is `GitHub` or `origin`.
 
 ## Merge Guidelines
-- **Do not merge `data.json` from `main` into `LitoFrito`**: This would overwrite real images with placeholders.
-- When applying UI or docs changes from `main` to `LitoFrito`, use cherry-pick or manual edits to avoid `data.json` conflicts.
-- Always keep `LitoFrito`'s `data.json` intact to preserve personal photo data.
-- `main` and `LitoFrito` should remain synchronized on all issue fixes and feature work outside of real image URIs.
-- Only `data.json` real image URLs and `data-entries.json` content may intentionally differ between `main` and `LitoFrito`.
+- **Do not merge `data.json` or `images.json` from `main` into `LitoFrito`**: Image IDs and URLs belong to different datasets.
+- When propagating code or docs, preserve each branch's `data.json`, `images.json`, `collections.json`, and branch-specific `data-entries.json`.
+- Preserve `LitoFrito`'s `data.json` and `images.json` to retain the personal photo data and branch-specific image IDs.
+- `main` and `LitoFrito` should remain synchronized on code changes, while keeping their data files and image registries independent.
+- `data.json`, `images.json`, `collections.json`, and branch-specific `data-entries.json` may intentionally differ. Image IDs are not interchangeable between datasets.
+- Migrate LitoFrito from its own checkout with `node scripts/migrate-image-ids.js --dataset-id pokesnap-dex-litofrito`; do not run that command against a `main` checkout.
+- Before migration, the script makes exact backups under `.data-backups/<datasetId>/`. This path is gitignored; copy backups off-device. Never overwrite a non-identical backup.
+- Add future images using `node scripts/add-image.js --number <dex-number> --label "<exact variant label>" --url "<https URL>"`; commit `data.json` and `images.json` together.
 
 ## Issue / Feature Workflow
 - Read the issue and explain it before implementing anything.
@@ -20,7 +23,7 @@
 - Create a new branch from `main` with a name like `Issue{number}-{Issue_Title_With_Underscores}`.
 - Implement the fix and test locally.
 - Merge the branch into `main`.
-- Propagate the same fix to `LitoFrito` without overwriting real `data.json` image URLs.
+- Propagate the same code fix to `LitoFrito` without overwriting its branch-specific data files or image registry.
 - Delete the feature branch locally and remotely once merged.
 - Never delete `main` or `LitoFrito` without explicit approval.
 

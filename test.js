@@ -13,6 +13,7 @@ const { getAdjacentPokemonNumber } = require('./dex-navigation-utils.js');
 const { getFirstEncounteredLabel } = require('./first-encountered-utils.js');
 const { buildMegaCoverageReport, isMegaPokemonName } = require('./scripts/mega-coverage-utils.js');
 const { getDexNumber } = require('./scripts/check-mega-coverage.js');
+const ImageCollectionsUtils = require('./image-collections-utils.js');
 
 function loadData() {
   const data = JSON.parse(fs.readFileSync('data.json', 'utf8'));
@@ -29,6 +30,206 @@ function loadEntriesData() {
 
 function loadEntriesOverrides() {
   return JSON.parse(fs.readFileSync('data-entries-overrides.json', 'utf8'));
+}
+
+function loadImageRegistry() {
+  return JSON.parse(fs.readFileSync('images.json', 'utf8'));
+}
+
+function testImageIdDataIntegrity() {
+  const data = loadData();
+  const registry = loadImageRegistry();
+  let failed = 0;
+  try {
+    const imageCount = ImageCollectionsUtils.validatePokemonImageReferences(data, registry);
+    const ids = new Set();
+    for (const [number, pokemon] of Object.entries(data)) {
+      for (const variant of pokemon.variants || []) {
+        for (const imageId of variant.images || []) {
+          ids.add(imageId);
+          if (/^https?:\/\//i.test(imageId)) {
+            throw new Error(`${number} ${variant.label} still stores a URL in data.json.`);
+          }
+        }
+      }
+    }
+    if (imageCount === 0 || ids.size !== Object.keys(registry.images).length) {
+      throw new Error('Image registry entries do not match referenced image IDs.');
+    }
+    if (!Object.values(registry.images).some(image => image.url === 'https://your-image-url-here.jpg')) {
+      throw new Error('The missing-image placeholder is not present in the image registry.');
+    }
+    console.log(`✓ ${imageCount} data image references resolve through ${ids.size} stable image IDs`);
+    console.log(`✓ Image registry schema v${registry._meta.dataSchemaVersion} is identified`);
+  } catch (error) {
+    console.log(`✗ Image ID data integrity: ${error.message}`);
+    failed++;
+  }
+  if (failed > 0) {
+    process.exit(1);
+  }
+}
+
+function testCollectionsSchema() {
+  const registry = loadImageRegistry();
+  const payload = JSON.parse(fs.readFileSync('collections.json', 'utf8'));
+  try {
+    ImageCollectionsUtils.validateCollectionsFile(payload, registry);
+    const imageId = Object.keys(registry.images)[0];
+    const blankCollection = {
+      id: 'test-blank-grid',
+      name: 'Blank test',
+      size: { x: 1, y: 1 },
+      cells: ['blank'],
+      audioUrl: null,
+      datasetId: registry._meta.datasetId
+    };
+    ImageCollectionsUtils.validateCollection(blankCollection, registry, registry._meta.datasetId);
+    const withImage = {
+      ...blankCollection,
+      id: 'test-image-grid',
+      size: { x: 1, y: 2 },
+      cells: [imageId, 'blank']
+    };
+    ImageCollectionsUtils.validateCollection(withImage, registry, registry._meta.datasetId);
+
+    const checks = [
+      { label: 'Accepts 1×1 blank collections', actual: !throws(() => ImageCollectionsUtils.validateCollection(blankCollection, registry, registry._meta.datasetId)) },
+      { label: 'Accepts row-major image and blank cells', actual: !throws(() => ImageCollectionsUtils.validateCollection(withImage, registry, registry._meta.datasetId)) },
+      { label: 'Rejects 0-sized grids', actual: throws(() => ImageCollectionsUtils.validateCollection({ ...blankCollection, size: { x: 0, y: 1 }, cells: [] }, registry, registry._meta.datasetId)) },
+      { label: 'Rejects grids larger than 5×5', actual: throws(() => ImageCollectionsUtils.validateCollection({ ...blankCollection, size: { x: 6, y: 1 }, cells: new Array(6).fill('blank') }, registry, registry._meta.datasetId)) },
+      { label: 'Rejects incorrect cell counts', actual: throws(() => ImageCollectionsUtils.validateCollection({ ...blankCollection, size: { x: 1, y: 2 }, cells: ['blank'] }, registry, registry._meta.datasetId)) },
+      { label: 'Rejects unknown image IDs', actual: throws(() => ImageCollectionsUtils.validateCollection({ ...blankCollection, cells: ['missing-image'] }, registry, registry._meta.datasetId)) },
+      { label: 'Rejects non-HTTP audio URLs', actual: throws(() => ImageCollectionsUtils.validateCollection({ ...blankCollection, audioUrl: 'javascript:alert(1)' }, registry, registry._meta.datasetId)) },
+      { label: 'Converts Spotify track links to Spotify embeds', actual: ImageCollectionsUtils.getCollectionAudioPlayback('https://open.spotify.com/track/7A4y1S67TbSG0BSADQy8Aj?si=829048126a8a4d07').src === 'https://open.spotify.com/embed/track/7A4y1S67TbSG0BSADQy8Aj' },
+      { label: 'Creates a SoundCloud oEmbed resolver for short share links', actual: (() => {
+        const playback = ImageCollectionsUtils.getCollectionAudioPlayback('https://on.soundcloud.com/iO4PuVCeZ1WVDNxzDE');
+        const resolver = new URL(playback.oembedUrl);
+        return playback.type === 'soundcloud' &&
+          resolver.origin === 'https://soundcloud.com' &&
+          resolver.pathname === '/oembed' &&
+          resolver.searchParams.get('url') === 'https://on.soundcloud.com/iO4PuVCeZ1WVDNxzDE';
+      })() },
+      { label: 'Keeps direct audio URLs on the native audio player', actual: (() => {
+        const playback = ImageCollectionsUtils.getCollectionAudioPlayback('https://example.com/song.mp3');
+        return playback.type === 'audio' && playback.src === 'https://example.com/song.mp3';
+      })() },
+      { label: 'Rejects unsupported Spotify page types', actual: throws(() => ImageCollectionsUtils.getCollectionAudioPlayback('https://open.spotify.com/artist/example')) }
+    ];
+    let failed = 0;
+    checks.forEach(({ label, actual }) => {
+      if (actual) {
+        console.log(`✓ ${label}`);
+      } else {
+        console.log(`✗ ${label}`);
+        failed++;
+      }
+    });
+    if (failed > 0) {
+      process.exit(1);
+    }
+    ImageCollectionsUtils.resolveSoundCloudPlayerUrl(
+      'https://on.soundcloud.com/iO4PuVCeZ1WVDNxzDE',
+      async () => ({
+        ok: true,
+        json: async () => ({
+          html: '<iframe src="https://w.soundcloud.com/player/?visual=true&amp;url=https%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F2429178885"></iframe>'
+        })
+      })
+    ).then(url => {
+      const player = new URL(url);
+      if (player.origin !== 'https://w.soundcloud.com' ||
+          player.searchParams.get('url') !== 'https://api.soundcloud.com/tracks/2429178885' ||
+          player.searchParams.get('auto_play') !== 'false' ||
+          player.searchParams.get('visual') !== 'false') {
+        throw new Error('SoundCloud player URL was not safely resolved.');
+      }
+      console.log('✓ Resolves SoundCloud short links to trusted, non-autoplay player URLs');
+    }).catch(error => {
+      console.log(`✗ SoundCloud embed resolution: ${error.message}`);
+      process.exit(1);
+    });
+  } catch (error) {
+    console.log(`✗ Collections data integrity: ${error.message}`);
+    process.exit(1);
+  }
+}
+
+function testImageIdMigration() {
+  const datasetId = 'migration-test';
+  const legacyData = {
+    '001': {
+      name: 'Bulbasaur',
+      variants: [
+        { label: 'Bulbasaur', images: ['https://example.test/a.png', 'https://example.test/b.png'] },
+        { label: 'Shiny Bulbasaur', images: ['https://example.test/a.png', 'https://your-image-url-here.jpg'] }
+      ]
+    }
+  };
+  const generatedIds = ['uuid-a', 'uuid-b', 'uuid-placeholder'];
+  const migrated = ImageCollectionsUtils.migratePokemonData(
+    legacyData,
+    null,
+    datasetId,
+    () => generatedIds.shift()
+  );
+  const rerun = ImageCollectionsUtils.migratePokemonData(
+    migrated.pokemonData,
+    migrated.imageRegistry,
+    datasetId,
+    () => 'should-not-be-used'
+  );
+  const checks = [
+    { label: 'Generates stable IDs and reuses duplicate URLs', actual: migrated.pokemonData['001'].variants[0].images[0] === migrated.pokemonData['001'].variants[1].images[0] },
+    { label: 'Preserves per-variant image ordering and metadata', actual: migrated.pokemonData['001'].variants[0].images.join(',') === 'uuid-a,uuid-b' && migrated.pokemonData['001'].variants[1].label === 'Shiny Bulbasaur' },
+    { label: 'Registers placeholder URLs for later display logic', actual: migrated.imageRegistry.images['uuid-placeholder'].url === 'https://your-image-url-here.jpg' },
+    { label: 'Preserves IDs when migration is rerun', actual: JSON.stringify(rerun) === JSON.stringify(migrated) },
+    { label: 'Rejects unresolved image IDs', actual: throws(() => ImageCollectionsUtils.validatePokemonImageReferences({ '001': { name: 'Bulbasaur', variants: [{ images: ['missing'] }] } }, migrated.imageRegistry)) },
+    { label: 'Rejects missing IDs instead of treating them as URLs', actual: throws(() => ImageCollectionsUtils.migratePokemonData({ '001': { name: 'Bulbasaur', variants: [{ images: ['missing-id'] }] } }, migrated.imageRegistry, datasetId)) }
+  ];
+  let failed = 0;
+  checks.forEach(({ label, actual }) => {
+    if (actual) {
+      console.log(`✓ ${label}`);
+    } else {
+      console.log(`✗ ${label}`);
+      failed++;
+    }
+  });
+  if (failed > 0) {
+    process.exit(1);
+  }
+
+  const added = ImageCollectionsUtils.addImageReference(
+    migrated.pokemonData,
+    migrated.imageRegistry,
+    '001',
+    'Bulbasaur',
+    'https://example.test/c.png',
+    'IRL',
+    () => 'uuid-c'
+  );
+  const reused = ImageCollectionsUtils.addImageReference(
+    added.pokemonData,
+    added.imageRegistry,
+    '001',
+    'Shiny Bulbasaur',
+    'https://example.test/c.png',
+    'IRL',
+    () => 'should-not-be-used'
+  );
+  const addChecks = [
+    { label: 'Adds an image with a stable generated ID and encounter source', actual: added.imageId === 'uuid-c' && added.pokemonData['001'].variants[0].firstEncountered[2] === 'IRL' },
+    { label: 'Reuses an image ID when the same URL is added to another variant', actual: reused.imageId === 'uuid-c' && reused.pokemonData['001'].variants[1].images[2] === 'uuid-c' }
+  ];
+  addChecks.forEach(({ label, actual }) => {
+    if (actual) {
+      console.log(`✓ ${label}`);
+    } else {
+      console.log(`✗ ${label}`);
+      process.exit(1);
+    }
+  });
 }
 
 function testDataIntegrity() {
@@ -483,6 +684,7 @@ function testPositionArray() {
 
 function testCaptureCountLogic() {
   const data = loadData();
+  const registry = loadImageRegistry();
   let capturedCount = 0;
   for (let num in data) {
     // Create allImages for counting
@@ -490,11 +692,11 @@ function testCaptureCountLogic() {
     if (data[num].variants) {
       for (let variant of data[num].variants) {
         if (variant.images && variant.images.length > 0) {
-          allImages.push(...variant.images);
+          allImages.push(...variant.images.map(imageId => registry.images[imageId]?.url));
         }
       }
     }
-    if (allImages.some(img => img && img !== "https://your-image-url-here.jpg")) {
+    if (allImages.some(img => img && img !== 'https://your-image-url-here.jpg')) {
       capturedCount++;
     }
   }
@@ -505,6 +707,15 @@ function testCaptureCountLogic() {
   } else {
     console.log('✗ Capture count out of range');
     process.exit(1);
+  }
+}
+
+function throws(callback) {
+  try {
+    callback();
+    return false;
+  } catch {
+    return true;
   }
 }
 
@@ -813,6 +1024,9 @@ function testTatsugiriMegaCoverage() {
 }
 
 testDataIntegrity();
+testImageIdDataIntegrity();
+testCollectionsSchema();
+testImageIdMigration();
 testNumericFileOrder();
 testNoDuplicatesInVariants();
 testIssueVariantCoverage();
