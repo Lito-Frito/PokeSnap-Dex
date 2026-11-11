@@ -1,7 +1,7 @@
 # AI README for PokeSnap-Dex
 
 ## Overview
-PokeSnap-Dex is a web-based Pokémon photo collection app inspired by Pokémon GO's AR photo feature. It displays a grid of 1025 Pokémon (Gen 1–9 with variants) with thumbnails. Users can click thumbnails to open a gallery modal for viewing variants and Pokédex entries, search Pokémon, toggle themes, and see a capture count. The app uses vanilla HTML, CSS, and JavaScript with two JSON data files. **No frameworks, no build step, no bundler.**
+PokeSnap-Dex is a web-based Pokémon photo collection app inspired by Pokémon GO's AR photo feature. It displays a grid of 1025 Pokémon (Gen 1–9 with variants) with thumbnails. Users can click thumbnails to open a gallery modal for viewing variants and Pokédex entries, search Pokémon, toggle themes, and see a capture count. The app uses vanilla HTML, CSS, and JavaScript with JSON data files for Pokémon, image URLs, published collections, and Pokédex entries. **No frameworks, no build step, no bundler.**
 
 ## UI Design Rules
 - **Layering**: Header and footer are always on top of dex-container (z-index: 1000). Header and footer share the same layer.
@@ -35,6 +35,11 @@ This rule is the default for all UI-facing label generation, including regional 
 - **`index.html`**: Main HTML structure. Includes header with controls (search, theme toggle, captured count), main grid container (`#dex-container`), and modals (gallery, captured list).
 - **`styles.css`**: CSS for layout (grid, flexbox), themes (dark/light), responsive design (mobile breakpoints), gallery modal styling, and animations.
 - **`script.js`**: All app logic — data loading, grid rendering, gallery modal, keyboard nav, dex entry display. No dependencies.
+- **`image-collections-utils.js`**: Shared data-schema validation, migration, and image-addition helpers for Node.js and the browser.
+- **`images.json`**: Stable image ID to current URL registry. Each branch has its own dataset ID.
+- **`collections.json`**: Read-only published collection catalog for this dataset.
+- **`scripts/migrate-image-ids.js`**: Backs up and migrates a branch-local legacy `data.json` to stable IDs.
+- **`scripts/add-image.js`**: Adds an image by Pokémon number, exact variant label, and URL; generates/reuses the ID and updates both data files.
 - **`dex-navigation-utils.js`**: Pure helper for finding the neighboring Pokémon number, with Dex boundaries.
 - **`dex-entry-utils.js`**: Shared Pokédex entry normalization and variant-override lookup used by the app and integrity tests.
 - **`data.json`**: Pokémon image/variant metadata (1025 entries — name, variants array, genus). **Never contains embedded dex entry text.**
@@ -43,7 +48,7 @@ This rule is the default for all UI-facing label generation, including regional 
 - **`scripts/check-mega-coverage.js`**: Read-only PokeAPI audit that compares discovered Mega forms with `data.json` labels and form-specific override entries.
 - **`scripts/mega-coverage-utils.js`**: Pure matching/report helpers used by the Mega coverage audit and integrity tests.
 - **`test.js`**: Node.js integrity suite — 99 name/format assertions, position array validation, capture count logic, and `data-entries.json` schema validation.
-- **`BRANCH_NOTES.md`**: Branch-specific guidance (never merge `data.json` from `main` to `LitoFrito`).
+- **`BRANCH_NOTES.md`**: Branch-specific guidance (keep each branch's data and registry files independent).
 - **`README.md`**: User-facing setup and customization docs.
 
 ## Data Structure
@@ -56,7 +61,7 @@ Object keyed `"001"` to `"1025"`. Each entry:
   "genus": "Seed Pokémon",
   "variants": [
     {
-      "images": ["https://i.imgur.com/xxxxx.png"],
+      "images": ["8b1f1234-5678-4abc-8def-0123456789ab"],
       "label": "Bulbasaur",
       "firstEncountered": ["Scarlet"],
       "position": "center",
@@ -66,12 +71,48 @@ Object keyed `"001"` to `"1025"`. Each entry:
 }
 ```
 - `label` is the display name shown in the gallery (e.g. `"Shiny Charizard"`, `"Mega Charizard X"`).
+- `images` is an ordered array of stable IDs resolved through `images.json`, not URLs or array-index keys.
 - `firstEncountered` is an optional array aligned by index with `images`; each value is the game or origin for that image (for example `"Scarlet"`, `"Pokémon GO"`, or `"IRL"`). Unset values display as `???`.
-- Placeholders use `"https://your-image-url-here.jpg"`. Thumbnails skip placeholders.
+- The placeholder URL `"https://your-image-url-here.jpg"` is registered in `images.json`. Thumbnails skip placeholders.
 - `genus` is populated automatically by `sync-dex-entries.js` from PokeAPI and shown in the gallery header.
 - **Variant ordering rule**: Regular form first, then Mega/regional/shiny variants (see BRANCH_NOTES.md for ordering conventions).
 - **Consistency rule**: Any new variant label added to `data.json` must resolve to the intended dex-entry source. Form-specific overrides normally use the exact same label string; when several forms intentionally share one override, use a canonical shared key and add an explicit lookup fallback instead of duplicating the entry text.
 - **Required validation**: After changing variant labels, run `node test.js` and confirm the matching dex lookup works for both the regular and shiny form names.
+
+### `images.json`
+Schema version 2 for the overall image data:
+```json
+{
+  "_meta": {
+    "schemaVersion": 1,
+    "dataSchemaVersion": 2,
+    "datasetId": "pokesnap-dex-main"
+  },
+  "images": {
+    "8b1f1234-5678-4abc-8def-0123456789ab": {
+      "url": "https://example.com/photo.jpg"
+    }
+  }
+}
+```
+- UUID keys are permanent identity; update the URL in place when hosting changes. Do not derive IDs from URL, species, variant label, or order.
+- Exact duplicate URL strings share one ID. The placeholder URL is also registered and remains excluded from capture counts.
+- `datasetId` distinguishes branch-specific images. Never copy `main`'s registry onto `LitoFrito`.
+
+### `collections.json`
+Schema version 1. Collections contain `id`, `name`, optional `description`, `size: {x, y}`, row-major `cells`, optional `audioUrl`, and the matching `datasetId`. Dimensions are 1–5 each and `cells` contains exactly x*y values. Use `"blank"` for an empty black cell. Only curated repo data appears in the published catalog; the builder previews and exports JSON but never writes to the catalog.
+- `audioUrl` supports direct HTTP(S) audio URLs, Spotify track links, and SoundCloud links (including `on.soundcloud.com` shares). SoundCloud links are resolved through its public oEmbed endpoint and checked before creating a trusted player iframe; Spotify track links use a fixed embed URL. Other HTTP(S) URLs stay on the native `<audio>` player.
+- Never autoplay collection audio. Provider iframe hosts are fixed and chosen by the shared URL classifier; do not embed arbitrary collection URLs.
+- Spotify and SoundCloud playback can be subject to account, region, or track availability restrictions.
+- Collection exports should be validated against `images.json` before being published.
+
+### Image data migration and authoring workflow
+- Main dataset: `node scripts/migrate-image-ids.js`.
+- LitoFrito dataset (run from its own checkout): `node scripts/migrate-image-ids.js --dataset-id pokesnap-dex-litofrito`.
+- The migration script makes exact pre-migration copies in `.data-backups/<datasetId>/`, an ignored directory. Do not overwrite a non-identical backup; copy the backup off-device for disaster recovery.
+- To add an image after migration: `node scripts/add-image.js --number 001 --label "Bulbasaur" --url "https://example.com/photo.png"`; optionally add `--first-encountered "Scarlet"`. Review and commit `data.json` and `images.json` together.
+- The image picker starts from a collection cell; the user searches the existing Dex, opens a result, and selects an image in a simplified carousel. The owner downloads the complete collection catalog JSON and manually reviews/commits it.
+- Run `node test.js` after data updates.
 
 ### `data-entries.json`
 Generated file. Schema v2:
@@ -116,12 +157,12 @@ Generated file. Schema v2:
 ### JavaScript Logic (`script.js`)
 
 #### Initialization (`DOMContentLoaded`)
-- Loads `data.json` and `data-entries.json` via `fetch` in parallel.
+- Loads `data.json`, `images.json`, `collections.json`, and dex-entry data via `fetch`.
 - Calls `renderDex()` to populate grid.
 - Sets up event listeners (search, theme toggle, gallery close, keyboard navigation).
 
 #### Data Loading and Rendering
-- **`renderDex()`**: Loops through `pokedexData`, creates `<div class="entry">` for each Pokémon. Sets thumbnail to first non-placeholder variant. Adds click handler to `openGallery(number)`.
+- **`renderDex()`**: Loops through `pokedexData`, creates `<div class="entry">` for each Pokémon. Sets thumbnail to first non-placeholder variant after resolving its image ID.
 - **Thumbnail Logic**: Finds first variant with real image URL. Sets `background-image` and `object-position` for cropping. If no image, shows name in black box.
 
 #### Gallery Modal
@@ -219,7 +260,7 @@ New forms are not added to the app automatically. When checking for a new Mega:
 3. Add the confirmed regular and shiny variant labels to the matching species in `data.json`, with the appropriate images or placeholders. For form-specific cries, verify the expected PokeAPI form identifier and update `pokemon-cry-utils.js` and tests if its naming does not follow the existing pattern.
 4. Add an exact-label entry in `data-entries-overrides.json` only if a verified form-specific Pokédex entry is available. PokeAPI supplies species-level text, so without an override the app intentionally falls back to the species entry. Never invent text to clear the report.
 5. Run `node test.js` and rerun the coverage audit. Review remaining unmatched labels and missing overrides; a non-empty report can be intentional.
-6. Propagate code, tests, and docs between `main` and `LitoFrito` without overwriting `LitoFrito`'s real image URLs in `data.json` or its branch-specific `data-entries.json`. Follow `BRANCH_NOTES.md`.
+6. Propagate code, tests, and docs between `main` and `LitoFrito` without overwriting either branch's dataset-specific `data.json`, `images.json`, `collections.json`, or `data-entries.json`. Follow `BRANCH_NOTES.md`.
 
 ### Required Override Workflow for New Forms
 When a form or variant is added to `data.json` but does not exist in the default PokeAPI entry set, treat it as a required follow-up task:
@@ -236,30 +277,31 @@ For Unown, all letter and punctuation forms (regular and shiny) intentionally sh
 ---
 
 ## Workflows
-1. **Page Load**: Fetch `data.json` + `data-entries.json` → Render grid → Set up listeners.
+1. **Page Load**: Fetch `data.json`, `images.json`, `collections.json`, and dex-entry files → validate all IDs → resolve image URLs → render the grid.
 2. **Thumbnail Click**: Open gallery → Show first real variant → Allow image + entry navigation.
 3. **Search**: Filter grid → Update layout for few results.
 4. **Theme Change**: Toggle class → Update styles.
-5. **Capture Check**: Count real images → Update UI.
+5. **Collection Authoring**: Select a grid cell → search/select a Pokémon → choose a carousel image → preview/export JSON for owner review.
+6. **Capture Check**: Count resolved non-placeholder images → Update UI.
 
 ## Branch Differences
-- **`main`**: Public branch with placeholder images in `data.json`. Deployed to GitHub Pages.
-- **`LitoFrito`**: Personal branch with real Imgur URLs in `data.json`.
+- **`main`**: Public dataset, identified by `pokesnap-dex-main`. Its image registry is in `images.json`.
+- **`LitoFrito`**: Separate personal image dataset, identified by `pokesnap-dex-litofrito`; migrate it on that branch only.
 - Create fix branches from `main` for bug fixes and feature work.
 - After approval, merge the fix branch into `main`.
-- Then propagate the same fix to `LitoFrito` while preserving real `data.json` image URLs.
+- Then propagate the same code fix to `LitoFrito` while preserving its branch-specific data files and image registry.
 - `main` and `LitoFrito` should be synchronized on all issue fixes and new features outside of real image URIs.
-- The only intentional differences are real `data.json` image URLs and `data-entries.json` content on `LitoFrito`.
+- `data.json`, `images.json`, `collections.json`, and `data-entries.json` may be branch-specific; preserve the image-to-ID mapping and keep dataset IDs distinct.
 - See `BRANCH_NOTES.md` for merge rules.
 - Remote is named `GitHub`.
 
 ## AI Agent Workflow Prompt
 When you want the AI to execute the expected workflow, say:
-- `AI, read issue #<number>, explain the issue, propose the fix, then implement it after approval, test locally, merge to main and LitoFrito without overwriting real image URLs, then delete the feature branch.`
+- `AI, read issue #<number>, explain the issue, propose the fix, then implement it after approval and test locally. Propagate code changes to main and LitoFrito while preserving each branch's data files, then delete the feature branch after merge.`
 - `AI, follow the issue workflow for issue #<number>`
 
 ## Common Tasks
-- **Add Pokémon images**: Update `data.json` with real image URLs.
+- **Add Pokémon images**: Run `node scripts/add-image.js` to update `data.json` and `images.json` together.
 - **Regenerate dex entries**: `node scripts/sync-dex-entries.js` (requires internet; ~2-3 min).
 - **Audit Mega coverage**: `node scripts/check-mega-coverage.js` (requires internet; reports discrepancies without changing files).
 - **Run tests**: `node test.js`.

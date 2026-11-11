@@ -1,0 +1,25 @@
+{
+  "_meta": {
+    "schemaVersion": 1,
+    "dataSchemaVersion": 2,
+    "datasetId": "pokesnap-dex-main",
+    "description": "Stable image IDs mapped to the current URLs used to fetch each Dex image. Pokémon variants and collections reference IDs, not URLs or array positions."
+  },
+  "images": {
+    "4fa2bdd3-f3b9-454b-a1b9-cc44608789ac": {
+      "url": "https://your-image-url-here.jpg"
+    },
+    "d3db1120-7ef6-489b-b6c0-7c3421b524a7": {
+      "url": "https://i.imgur.com/ThS8Gq7.png"
+    },
+    "7cec68ba-6b6a-454f-8818-073ccdc24e8b": {
+      "url": "https://i.imgur.com/bHKUlR0.png"
+    },
+    "e4a2cba5-2f53-4f60-846d-202bdb1f7517": {
+      "url": "https://i.imgur.com/s6xq95Z.png"
+    },
+    "1370e687-92c3-47b8-b915-f09d557b3fcd": {
+      "url": "https://i.imgur.com/0D0OtG1.jpeg"
+    }
+  }
+}

@@ -13,7 +13,7 @@ PokeSnap-Dex is a web-based Pokémon photo collection app inspired by Pokémon G
 
 **Tech Stack:**
 - **Frontend:** HTML5, CSS3, JavaScript (ES6+).
-- **Data:** JSON (data.json for Pokémon entries).
+- **Data:** JSON (`data.json` for Pokémon entries, `images.json` for image IDs/URLs, `collections.json` for published collections).
 - **Styling:** CSS with media queries, flexbox/grid, pseudo-elements.
 - **Deployment:** Static files, served via Node.js (e.g., 'serve' package).
 
@@ -26,13 +26,15 @@ The app follows a single-page application (SPA) structure with modular component
 - **HTML (index.html):** Defines the DOM structure.
 - **CSS (styles.css):** Handles layout, responsiveness, and theming.
 - **JavaScript (script.js):** Manages state, events, and data rendering.
-- **Data (data.json):** Static JSON for Pokémon data.
+- **Data (data.json):** Pokémon metadata and ordered stable image-ID references; schema v2 image data is resolved using `images.json`.
 
 ### File Breakdown
 - **index.html:** Main HTML file. Includes meta tags, favicon, and structure for header, main content, and footer.
 - **styles.css:** Comprehensive stylesheet with base styles, media queries, and component-specific rules.
 - **script.js:** Handles DOM manipulation, event listeners, and data processing.
-- **data.json:** Array of Pokémon objects with variants.
+- **data.json:** Object keyed by Pokédex number, with variants that reference stable image IDs.
+- **images.json:** Dataset-scoped registry mapping stable image IDs to current image URLs.
+- **collections.json:** Read-only curated collections using the image IDs and row-major 1–5 grids.
 - **Other:** test.js (data integrity tests), LICENSE, README.md.
 
 ### Component Hierarchy
@@ -111,14 +113,14 @@ Styles are organized by component, with media queries for responsiveness.
 Manages app state and interactions.
 
 #### Key Functions
-- **loadData():** Fetches data.json, processes entries.
+- **loadData():** Fetches and validates data.json, images.json, collections.json, and Dex entry files.
 - **renderGrid():** Builds grid from data, filters by search/theme.
 - **handleCapture():** Toggles captured state, updates count.
 - **openGallery():** Shows modal with variant images.
 - **Keyboard Navigation:** Arrows for gallery, escape to close.
 
 **Data Processing:**
-- Filters placeholders (images starting with "https://your-image-url-here").
+- Resolves image IDs to URLs and filters the placeholder URL.
 - Capture count: Counts entries with at least one real image.
 
 **Nuances:**
@@ -126,11 +128,13 @@ Manages app state and interactions.
 - Event listeners on dynamic elements.
 - No state management library; relies on DOM and variables.
 
-### 3.4 Data Structure (data.json)
-- Array of objects: { "001": { name: "Bulbasaur", variants: [{ label: "Base", image: "url" }] } }
-- 1,025 entries, keyed by number.
+### 3.4 Data Structure (schema v2)
+- `data.json` remains keyed by Pokémon number; `variants[].images` contains stable ID strings in carousel order.
+- `images.json` maps each ID to `{ "url": "..." }`. Keep IDs when URLs or ordering change.
+- `collections.json` uses `size: { "x": rows, "y": columns }` and row-major cell IDs or `"blank"` values.
+- Generate IDs with `scripts/migrate-image-ids.js` for legacy data or `scripts/add-image.js` for a new image. Keep the matching branch's gitignored `.data-backups/` safe and copy it off-device.
 - Variants: Base, shiny, regional, etc.
-- Placeholders: "https://your-image-url-here.jpg" for missing images.
+- Placeholder URLs remain in `images.json` and are excluded from capture counts after resolution.
 - If a new form or variant label is added to `data.json`, make sure its Pokédex entry resolves. Overrides normally use the exact label; intentionally shared text can use a canonical shared key with an explicit lookup fallback. The UI does not infer arbitrary label matches.
 
 **Dex UI Formatting Rule:**
@@ -156,7 +160,7 @@ Rules:
 - Run `node test.js` after form changes to verify the matching labels still resolve.
 
 ## 4. Data Flow and User Interactions
-1. **Load:** script.js fetches data.json on DOMContentLoaded.
+1. **Load:** script.js fetches the Pokémon data, image registry, collection catalog, and Dex entries on DOMContentLoaded.
 2. **Render:** Grid renders based on data, search input, theme.
 3. **Interact:** Click Pokémon → open gallery; toggle theme/capture.
 4. **Responsive:** Media queries adjust layout on resize.
@@ -176,7 +180,7 @@ Based on troubleshooting:
 - **Modularity:** Keep CSS organized by component; use variables for colors.
 - **Testing:** Run test.js for data integrity; manual test on multiple devices.
 - **Extensions:** Add localStorage for capture state; implement lazy loading for images.
-- **Maintenance:** Update data.json for new Pokémon; monitor media query breakpoints.
+- **Maintenance:** Use `scripts/add-image.js` to update data.json and images.json together; monitor media query breakpoints.
 - **Documentation:** Comment CSS/JS for clarity; this doc as reference.
 
 This should give a future engineer a solid foundation. If you need expansions or corrections, let me know!
@@ -184,10 +188,10 @@ This should give a future engineer a solid foundation. If you need expansions or
 ## 7. Commit Guidelines
 
 ### Image Addition Commits
-When committing changes that add real image URLs to `data.json` (replacing placeholders), use the following standardized format for commit messages to ensure easy searching and consistency:
+Add images with `node scripts/add-image.js`; it updates the selected variant's stable image IDs in `data.json` and the URL registry in `images.json`. Commit both files together. Use a message format that makes image additions easy to search:
 
 ```
-Add real image URLs for select Pokémon:
+Add images for select Pokémon:
 
 Shinies:
 - [Pokémon Name]
