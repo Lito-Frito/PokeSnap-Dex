@@ -475,9 +475,11 @@ header p {
 }
 
 #collection-collage {
+    position: absolute;
+    inset: 0;
     display: none;
-    width: 100%;
-    height: 100%;
+    width: auto;
+    height: auto;
     gap: 3px;
     padding: 6px;
     box-sizing: border-box;
@@ -489,6 +491,15 @@ header p {
 
 .collection-gallery #collection-collage {
     display: grid;
+}
+
+.collection-gallery-single #collection-collage {
+    gap: 0;
+    padding: 0;
+}
+
+.collection-gallery-single .collection-gallery-cell {
+    padding: 0;
 }
 
 .collection-gallery #first-encountered,
@@ -942,7 +953,7 @@ button {
     display: grid;
     place-items: center;
     overflow: hidden;
-    background: #000;
+    background: #2a3439;
     padding: 4px;
     box-sizing: border-box;
 }
