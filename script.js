@@ -157,6 +157,7 @@ async function loadData() {
 // DOM elements
 const dexContainer = document.getElementById('dex-container');
 const gallery = document.getElementById('gallery');
+const galleryFrame = document.getElementById('gallery-image');
 const galleryImage = document.getElementById('gallery-photo');
 const collectionCollage = document.getElementById('collection-collage');
 const galleryName = document.getElementById('gallery-name');
@@ -1152,6 +1153,31 @@ function clearSavedCollectionDraft() {
     }
 }
 
+function sizeCollectionGalleryFrame(collection) {
+    const rows = collection.size.x;
+    const columns = collection.size.y;
+    if (rows === 1 && columns === 1 && collection.cells[0] !== 'blank') {
+        galleryFrame.style.width = '';
+        galleryFrame.style.height = '';
+        return;
+    }
+
+    const availableWidth = Math.min(560, galleryFrame.parentElement.clientWidth);
+    const isMobile = window.matchMedia('(max-width: 767px)').matches;
+    const isLandscapeMobile = window.matchMedia('(orientation: landscape) and (max-width: 768px)').matches;
+    const availableHeight = isLandscapeMobile
+        ? window.innerHeight * 0.4
+        : (isMobile ? window.innerHeight * 0.35 : Math.min(window.innerHeight * 0.42, 360));
+    const gap = 3;
+    const padding = 6;
+    const cellWidth = (availableWidth - padding * 2 - gap * (columns - 1)) / columns;
+    const cellHeight = (availableHeight - padding * 2 - gap * (rows - 1)) / rows;
+    const cellSize = Math.max(1, Math.min(cellWidth, cellHeight));
+
+    galleryFrame.style.width = `${columns * cellSize + padding * 2 + gap * (columns - 1)}px`;
+    galleryFrame.style.height = `${rows * cellSize + padding * 2 + gap * (rows - 1)}px`;
+}
+
 function openCollectionGallery(collection, draft = false, collectionIndex = null) {
     try {
         const validated = ImageCollectionsUtils.validateCollection(
@@ -1169,6 +1195,8 @@ function openCollectionGallery(collection, draft = false, collectionIndex = null
         collectionNavigation.hidden = currentCollectionIndex === null || collectionsData.length < 2;
         collectionsModal.style.display = 'none';
         gallery.classList.add('collection-gallery');
+        gallery.classList.toggle('collection-gallery-single',
+            validated.size.x === 1 && validated.size.y === 1 && validated.cells[0] !== 'blank');
         collectionDescription.textContent = validated.description || '';
         galleryName.textContent = validated.name;
         collectionCollage.replaceChildren();
@@ -1198,6 +1226,7 @@ function openCollectionGallery(collection, draft = false, collectionIndex = null
         renderCollectionAudio(validated.audioUrl);
         document.body.classList.add('gallery-open');
         gallery.classList.remove('hidden');
+        sizeCollectionGalleryFrame(validated);
     } catch (error) {
         if (draft) {
             collectionsStatus.textContent = error.message;
@@ -1380,7 +1409,9 @@ function openGallery(number, imgIndex) {
     currentImageIndex = imgIndex;
     currentEntryIndex = 0;
     showSpoilers = false;
-    gallery.classList.remove('collection-gallery');
+    gallery.classList.remove('collection-gallery', 'collection-gallery-single');
+    galleryFrame.style.width = '';
+    galleryFrame.style.height = '';
     collectionDescription.textContent = '';
     collectionCollage.replaceChildren();
     clearCollectionAudio();
@@ -1528,7 +1559,9 @@ function closeGalleryModal() {
     stopCryPlayback();
     gallery.classList.add('hidden');
     document.body.classList.remove('gallery-open');
-    gallery.classList.remove('collection-gallery', 'collection-image-picker');
+    gallery.classList.remove('collection-gallery', 'collection-gallery-single', 'collection-image-picker');
+    galleryFrame.style.width = '';
+    galleryFrame.style.height = '';
     collectionPickerControls.hidden = true;
     currentEntry = null;
     currentCollectionView = null;
@@ -1584,6 +1617,9 @@ nextDescriptionButton.addEventListener('click', () => {
 
 window.addEventListener('resize', () => {
     if (!gallery.classList.contains('hidden')) {
+        if (currentCollectionView) {
+            sizeCollectionGalleryFrame(currentCollectionView);
+        }
         updateDexEntryScrollHint();
     }
 });

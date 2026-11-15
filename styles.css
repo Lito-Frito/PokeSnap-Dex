@@ -493,6 +493,15 @@ header p {
     display: grid;
 }
 
+.collection-gallery-single #collection-collage {
+    gap: 0;
+    padding: 0;
+}
+
+.collection-gallery-single .collection-gallery-cell {
+    padding: 0;
+}
+
 .collection-gallery #first-encountered,
 .collection-gallery #dex-entry,
 .collection-gallery #dex-entry-scroll-hint,
@@ -944,7 +953,7 @@ button {
     display: grid;
     place-items: center;
     overflow: hidden;
-    background: #000;
+    background: #2a3439;
     padding: 4px;
     box-sizing: border-box;
 }
